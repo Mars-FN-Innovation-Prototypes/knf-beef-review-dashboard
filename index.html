@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Interactive analysis of written consumer reviews for eight Kevin's Natural Foods beef HMR products.">
+  <meta name="theme-color" content="#0c1f2c">
+  <title>Beef HMR Review Intelligence</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 rx=%226%22 fill=%22%230c1f2c%22/><path d=%22M8 22V10h5.5c3 0 4.7 1.5 4.7 3.8 0 1.4-.7 2.5-1.9 3.1 1.7.5 2.7 1.7 2.7 3.4 0 .6-.1 1.2-.4 1.7H15c.2-.4.3-.8.3-1.2 0-1.5-1-2.2-3-2.2H11V22H8zm3-6h2c1.5 0 2.3-.6 2.3-1.8s-.8-1.7-2.3-1.7h-2V16z%22 fill=%22%23fff%22/></svg>">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#workspace">Skip to dashboard</a>
+  <div id="loading" class="loading-screen" role="status"><div class="loader"></div><p>Loading review data…</p></div>
+
+  <header class="topbar">
+    <a class="identity" href="#overview" aria-label="Review Intelligence home">
+      <span class="identity-mark">RI</span>
+      <span><strong>Review Intelligence</strong><small>Beef HMR portfolio</small></span>
+    </a>
+    <nav aria-label="Dashboard sections">
+      <a href="#overview">Overview</a>
+      <a href="#products">Products</a>
+      <a href="#retailers">Retailers</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#actions">Actions</a>
+    </nav>
+    <div class="top-actions">
+      <span class="data-date">Data through <strong>Jul 14, 2026</strong></span>
+      <button id="exportCsv" class="button button-primary" type="button">Export filtered CSV</button>
+    </div>
+  </header>
+
+  <div class="app-shell">
+    <aside class="filter-rail" aria-label="Dashboard filters">
+      <div class="filter-header">
+        <div><span class="kicker">Current view</span><strong id="viewCount">— reviews</strong></div>
+        <button id="resetFilters" class="text-button" type="button">Reset</button>
+      </div>
+
+      <fieldset class="filter-group segmented-field">
+        <legend>Date coverage</legend>
+        <label><input type="radio" name="dateMode" value="analysis" checked><span>Trend window</span></label>
+        <label><input type="radio" name="dateMode" value="all"><span>All captured</span></label>
+      </fieldset>
+
+      <fieldset class="filter-group">
+        <legend>Products <button class="select-link" type="button" data-select="products">All</button></legend>
+        <div id="productFilters" class="check-list"></div>
+      </fieldset>
+
+      <fieldset class="filter-group">
+        <legend>Retail sources <button class="select-link" type="button" data-select="sources">All</button></legend>
+        <div id="sourceFilters" class="check-list compact"></div>
+      </fieldset>
+
+      <fieldset class="filter-group">
+        <legend>Star rating</legend>
+        <div class="rating-filter">
+          <label><input type="checkbox" name="rating" value="1" checked><span>1</span></label>
+          <label><input type="checkbox" name="rating" value="2" checked><span>2</span></label>
+          <label><input type="checkbox" name="rating" value="3" checked><span>3</span></label>
+          <label><input type="checkbox" name="rating" value="4" checked><span>4</span></label>
+          <label><input type="checkbox" name="rating" value="5" checked><span>5</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="filter-group">
+        <legend>Review topics</legend>
+        <select id="topicFilter" aria-label="Review topics">
+          <option value="all">All topics</option>
+          <option value="texture">Texture</option>
+          <option value="taste">Taste / flavor</option>
+          <option value="sauce">Sauce / gravy</option>
+          <option value="value">Price / portion</option>
+          <option value="packaging">Packaging</option>
+          <option value="changed">Product changed</option>
+        </select>
+      </fieldset>
+
+      <div class="filter-group">
+        <label for="searchReviews">Search review text</label>
+        <div class="search-box"><span aria-hidden="true">⌕</span><input id="searchReviews" type="search" placeholder="Try “tough” or “bland”"></div>
+      </div>
+
+      <div class="rail-note">
+        <span class="status-dot"></span>
+        <p><strong>Exact eight-product scope</strong><br>Duplicate records removed. Rating-only retailer snapshots remain separate.</p>
+      </div>
+    </aside>
+
+    <main id="workspace" class="workspace">
+      <section id="overview" class="intro panel-anchor">
+        <div>
+          <span class="kicker">Consumer review dashboard</span>
+          <h1>Beef HMR Review Intelligence</h1>
+          <p>Explore written-review performance across the eight specified products. Every chart and table responds to the filters at left.</p>
+        </div>
+        <div class="scope-badge"><strong>8</strong><span>products in scope</span></div>
+      </section>
+
+      <section class="kpi-grid" aria-label="Filtered view metrics">
+        <article class="kpi-card"><span>Written reviews</span><strong id="kpiReviews">—</strong><small id="kpiCoverage">—</small></article>
+        <article class="kpi-card"><span>Average rating</span><strong id="kpiRating">—</strong><small id="kpiRatingNote">Computed from written reviews</small></article>
+        <article class="kpi-card"><span>1–2 star share</span><strong id="kpiLow">—</strong><small id="kpiLowNote">— reviews</small></article>
+        <article class="kpi-card"><span>Texture mentions</span><strong id="kpiTexture">—</strong><small id="kpiTextureNote">Keyword-coded</small></article>
+        <article class="kpi-card"><span>Taste mentions</span><strong id="kpiTaste">—</strong><small id="kpiTasteNote">Keyword-coded</small></article>
+      </section>
+
+      <section class="dashboard-grid">
+        <article class="panel panel-wide trend-panel">
+          <div class="panel-heading">
+            <div><span class="kicker">Time series</span><h2>Monthly review signal</h2></div>
+            <div class="control-row">
+              <label for="trendMetric">Metric</label>
+              <select id="trendMetric">
+                <option value="rating">Average rating</option>
+                <option value="low">1–2 star share</option>
+                <option value="texture">Texture mention share</option>
+                <option value="volume">Review volume</option>
+              </select>
+            </div>
+          </div>
+          <div class="chart-wrap"><canvas id="trendChart" role="img" aria-label="Monthly filtered review trend"></canvas><div id="chartTooltip" class="chart-tooltip" hidden></div></div>
+          <div class="chart-legend"><span><i class="legend-line"></i><b id="trendLegend">Average rating</b></span><span class="legend-cutoff"><i></i>Nov 2025 comparison point</span></div>
+          <div id="trendTable" class="sr-only" aria-live="polite"></div>
+        </article>
+
+        <article class="panel distribution-panel">
+          <div class="panel-heading"><div><span class="kicker">Composition</span><h2>Rating distribution</h2></div></div>
+          <div id="ratingDistribution" class="bar-list"></div>
+        </article>
+
+        <article class="panel source-panel">
+          <div class="panel-heading"><div><span class="kicker">Coverage</span><h2>Source mix</h2></div></div>
+          <div id="sourceMix" class="source-mix"></div>
+        </article>
+
+        <article class="panel themes-panel">
+          <div class="panel-heading"><div><span class="kicker">Language signals</span><h2>Topic prevalence</h2></div><span class="panel-note">Reviews may match more than one topic</span></div>
+          <div id="themeBars" class="theme-grid"></div>
+        </article>
+      </section>
+
+      <section id="products" class="section-block panel-anchor">
+        <div class="section-heading">
+          <div><span class="kicker">Product comparison</span><h2>Find the products driving the signal</h2><p>Click any product row to isolate it across the dashboard.</p></div>
+          <button id="clearProductFocus" class="button button-secondary" type="button" hidden>Clear product focus</button>
+        </div>
+        <div class="table-shell">
+          <table id="productTable">
+            <thead><tr><th scope="col" data-sort="product">Product <span>↕</span></th><th scope="col" data-sort="n">Reviews <span>↕</span></th><th scope="col" data-sort="rating">Avg. rating <span>↕</span></th><th scope="col" data-sort="pre">Pre avg. <span>↕</span></th><th scope="col" data-sort="post">Post avg. <span>↕</span></th><th scope="col" data-sort="delta">Change <span>↕</span></th><th scope="col" data-sort="low">1–2 star <span>↕</span></th><th scope="col" data-sort="texture">Texture <span>↕</span></th><th scope="col" data-sort="taste">Taste <span>↕</span></th><th scope="col">Evidence status</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <p class="table-note">Pre: Nov 1, 2024–Oct 31, 2025. Post: Nov 1, 2025–Jul 14, 2026. Source, rating, topic, and text filters apply to the comparison; the date-coverage toggle does not redefine these fixed periods.</p>
+      </section>
+
+      <section id="retailers" class="section-block panel-anchor">
+        <div class="section-heading"><div><span class="kicker">Rating-only context</span><h2>Retailer snapshots</h2><p>Point-in-time rating distributions are presented separately and never blended into the dated written-review trend.</p></div></div>
+        <div id="retailerSnapshots" class="snapshot-grid"></div>
+      </section>
+
+      <section id="reviews" class="section-block panel-anchor">
+        <div class="section-heading review-heading">
+          <div><span class="kicker">Underlying evidence</span><h2>Review explorer</h2><p id="reviewResultLabel">—</p></div>
+          <div class="control-row"><label for="reviewSort">Sort</label><select id="reviewSort"><option value="newest">Newest first</option><option value="oldest">Oldest first</option><option value="lowest">Lowest rating</option><option value="highest">Highest rating</option></select></div>
+        </div>
+        <div id="reviewList" class="review-list"></div>
+        <button id="loadMore" class="button button-secondary load-more" type="button">Load more reviews</button>
+      </section>
+
+      <section id="actions" class="section-block actions-section panel-anchor">
+        <div class="section-heading"><div><span class="kicker">From evidence to action</span><h2>Recommended investigation sequence</h2><p>Recommendations are operational next steps, not conclusions about manufacturing cause.</p></div></div>
+        <div class="action-grid">
+          <article><span>01</span><div><strong>Prioritize Mongolian and Sirloin</strong><p>Review production changes, supplier and lot records, and sensory results. Evaluate meat and sauce separately.</p></div></article>
+          <article><span>02</span><div><strong>Close the three coverage gaps</strong><p>Obtain syndicated exports for Peppercorn, Chimichurri, and Sirloin with Mushroom, including review IDs and rating-only submissions.</p></div></article>
+          <article><span>03</span><div><strong>Validate current assortment</strong><p>Distinguish product-page presence, local out-of-stock status, delisting, and true distribution at Kroger and Walmart.</p></div></article>
+          <article><span>04</span><div><strong>Establish monthly monitoring</strong><p>Track rating, low-rating share, texture, taste, and sample size with minimum-volume thresholds before escalation.</p></div></article>
+        </div>
+      </section>
+
+      <section id="method" class="method-section">
+        <details>
+          <summary><span><b>Methodology and data quality</b><small>Scope, dates, deduplication, coding, and limitations</small></span><span aria-hidden="true">+</span></summary>
+          <div class="method-grid">
+            <article><strong>Scope</strong><p>Only the eight products specified for this review. Chicken products, controls, and Frozen Beef Bolognese are excluded.</p></article>
+            <article><strong>Written-review archive</strong><p>153 unique records from Target, Amazon, Kroger, and Walmart. The default trend window contains 116 reviews dated Nov 1, 2024 through Jul 14, 2026.</p></article>
+            <article><strong>Deduplication</strong><p>Exact matches on source, product, date, rating, title, and review text were removed. The Amazon file declined from 600 raw rows to 60 unique rows across all products.</p></article>
+            <article><strong>Topic coding</strong><p>Transparent keyword rules tag texture, taste, sauce, value, packaging, and “product changed” language. Topic shares are directional.</p></article>
+            <article><strong>Evidence layers</strong><p>Dated written reviews drive trends. Retailer rating distributions include rating-only submissions and are retained as contextual snapshots.</p></article>
+            <article><strong>Interpretation</strong><p>Review language identifies where to investigate. It does not establish manufacturing, ingredient, supplier, or formulation causality.</p></article>
+          </div>
+        </details>
+      </section>
+    </main>
+  </div>
+
+  <footer><span>Beef HMR Review Intelligence</span><span>Public consumer-review data · Updated July 14, 2026</span><a href="#method">Methodology</a></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+{
+  "as_of": "2026-07-14",
+  "scope_note": "Primary analysis is restricted to the eight beef HMR items named in the original request.",
+  "products": [
+    {
+      "id": "korean_bbq_beef",
+      "name": "Korean BBQ Style Beef",
+      "aliases": ["Korean BBQ Style Beef", "Korean BBQ-Style Beef", "Korean BBQ-Style Beef 16oz"],
+      "upcs": ["0081026402498"],
+      "retailer_pages": {"kroger": "https://www.kroger.com/p/kevin-s-natural-foods-korean-bbq-style-beef-16-oz/0081026402498"}
+    },
+    {
+      "id": "honey_garlic_beef",
+      "name": "Honey Garlic Beef",
+      "aliases": ["Honey Garlic Beef", "Honey Garlic Beef 16oz"],
+      "upcs": [],
+      "retailer_pages": {"walmart": "https://www.walmart.com/ip/2455684608", "brand": "https://www.kevinsnaturalfoods.com/products/honey-garlic-beef"}
+    },
+    {
+      "id": "sirloin_gravy",
+      "name": "Sirloin Steak Tips with Gravy",
+      "aliases": ["Sirloin Steak Tips with Gravy", "Sirloin Steak Tips with Gravy 16oz"],
+      "upcs": ["0081026402811"],
+      "retailer_pages": {"kroger": "https://www.kroger.com/p/kevin-s-natural-foods-sirloin-steak-tips-with-gravy-meal/0081026402811"}
+    },
+    {
+      "id": "teriyaki_beef",
+      "name": "Teriyaki Style Beef",
+      "aliases": ["Teriyaki Style Beef", "Teriyaki-Style Beef", "Teriyaki-Style Beef 16oz"],
+      "upcs": ["0081026402585"],
+      "retailer_pages": {"kroger": "https://www.kroger.com/p/kevin-s-natural-foods-teriyaki-style-beef/0081026402585"}
+    },
+    {
+      "id": "mongolian_beef",
+      "name": "Mongolian Style Beef",
+      "aliases": ["Mongolian Style Beef", "Mongolian-Style Beef", "Mongolian Beef 16oz", "Beef Sous Vide Mongolian Style 16oz", "Mongolian Beef 16oz (Amazon)", "Beef Sous Vide Mongolian Style 16oz (Amazon)"],
+      "upcs": ["0081026402550"],
+      "retailer_pages": {"kroger": "https://www.kroger.com/p/kevin-s-natural-foods-mongolian-style-beef/0081026402550"}
+    },
+    {
+      "id": "peppercorn_steak_tips",
+      "name": "Peppercorn Steak Tips",
+      "aliases": ["Peppercorn Steak Tips", "Peppercorn Steak Tips 16oz"],
+      "upcs": [],
+      "retailer_pages": {}
+    },
+    {
+      "id": "chimichurri_beef",
+      "name": "Chimichurri Beef",
+      "aliases": ["Chimichurri Beef", "Chimichurri Beef 16oz"],
+      "upcs": [],
+      "retailer_pages": {}
+    },
+    {
+      "id": "sirloin_mushroom",
+      "name": "Sirloin Beef Tips with Mushroom",
+      "aliases": ["Sirloin Beef Tips with Mushroom", "Sirloin Beef Tips with Mushrooms", "Sirloin Beef Tips with Mushroom 16oz"],
+      "upcs": [],
+      "retailer_pages": {}
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "as_of": "2026-07-14",
+  "collection_note": "Retailer pages and counts are location- and time-dependent. Rating distributions are retained separately from dated written reviews and are not blended into the time trend.",
+  "rating_snapshots": [
+    {"product_id": "korean_bbq_beef", "source": "Kroger", "rating_count": 26, "distribution": {"5": 8, "4": 4, "3": 1, "2": 7, "1": 6}, "page_status": "Product page found; 8 written reviews visible."},
+    {"product_id": "teriyaki_beef", "source": "Kroger", "rating_count": 1, "distribution": {"5": 1, "4": 0, "3": 0, "2": 0, "1": 0}, "page_status": "Product page found; 1 written review visible."},
+    {"product_id": "mongolian_beef", "source": "Kroger", "rating_count": 1, "distribution": {"5": 0, "4": 0, "3": 0, "2": 1, "1": 0}, "page_status": "Product page found; 1 written review visible."},
+    {"product_id": "sirloin_gravy", "source": "Kroger", "rating_count": 0, "distribution": {"5": 0, "4": 0, "3": 0, "2": 0, "1": 0}, "page_status": "Product page found; no rating history visible."},
+    {"product_id": "honey_garlic_beef", "source": "Walmart", "rating_count": 179, "written_review_count": 39, "distribution": {"5": 111, "4": 16, "3": 23, "2": 7, "1": 22}, "page_status": "Indexed product/review snapshot found; current product availability is location-dependent."}
+  ],
+  "written_reviews": [
+    {"product_id": "korean_bbq_beef", "source": "Kroger", "date": "2025-09-27", "rating": 5, "title": "Love it", "text": "Love this brand. Tasty. Convenient.", "capture": "verbatim visible review"},
+    {"product_id": "korean_bbq_beef", "source": "Kroger", "date": "2025-03-23", "rating": 5, "title": "Delicious", "text": "Delicious; reviewer expected a texture issue but found the beef tender.", "capture": "analyst summary"},
+    {"product_id": "korean_bbq_beef", "source": "Kroger", "date": "2025-08-24", "rating": 5, "title": "Positive review", "text": "Positive overall experience.", "capture": "analyst summary"},
+    {"product_id": "korean_bbq_beef", "source": "Kroger", "date": "2025-12-15", "rating": 5, "title": "Positive review", "text": "Positive overall experience.", "capture": "analyst summary"},
+    {"product_id": "korean_bbq_beef", "source": "Kroger", "date": "2024-03-24", "rating": 5, "title": "Positive review", "text": "Positive overall experience.", "capture": "analyst summary"},
+    {"product_id": "korean_bbq_beef", "source": "Kroger", "date": "2024-10-14", "rating": 5, "title": "Positive review", "text": "Positive overall experience.", "capture": "analyst summary"},
+    {"product_id": "korean_bbq_beef", "source": "Kroger", "date": "2025-02-03", "rating": 5, "title": "", "text": "", "capture": "rating-only visible entry"},
+    {"product_id": "korean_bbq_beef", "source": "Kroger", "date": "2025-02-05", "rating": 5, "title": "Positive review", "text": "Positive product feedback; criticism concerned Kroger pricing rather than product quality.", "capture": "analyst summary"},
+    {"product_id": "teriyaki_beef", "source": "Kroger", "date": "2024-04-24", "rating": 5, "title": "Very tasty", "text": "Very tasty and the meat is tender.", "capture": "verbatim visible review"},
+    {"product_id": "mongolian_beef", "source": "Kroger", "date": "2026-05-11", "rating": 2, "title": "Below average flavor, but good quality meat", "text": "Sauce flavor was rated poorly, while the beef was described as tender and juicy.", "capture": "analyst summary"},
+    {"product_id": "honey_garlic_beef", "source": "Walmart", "date": "2025-11-16", "rating": 5, "title": "Positive review", "text": "Positive overall experience.", "capture": "indexed review summary"},
+    {"product_id": "honey_garlic_beef", "source": "Walmart", "date": "2025-09-10", "rating": 5, "title": "Positive review", "text": "Positive overall experience.", "capture": "indexed review summary"},
+    {"product_id": "honey_garlic_beef", "source": "Walmart", "date": "2026-01-31", "rating": 5, "title": "Mixed texture note", "text": "Positive overall rating, but some pieces were described as tough and not chewable.", "capture": "indexed review summary"}
+  ],
+  "coverage_notes": [
+    {"product_id": "peppercorn_steak_tips", "note": "No reliable Kroger or Walmart product/review page was indexed in this pass."},
+    {"product_id": "chimichurri_beef", "note": "No reliable Kroger or Walmart product/review page was indexed in this pass."},
+    {"product_id": "sirloin_mushroom", "note": "No reliable Kroger or Walmart product/review page was indexed in this pass."}
+  ]
+}
