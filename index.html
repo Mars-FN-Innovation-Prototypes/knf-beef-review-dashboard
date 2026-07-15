@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Interactive analysis of written consumer reviews for eight Kevin's Natural Foods beef HMR products.">
-  <meta name="theme-color" content="#0c1f2c">
+  <meta name="theme-color" content="#0000A0">
   <title>Beef HMR Review Intelligence</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 rx=%226%22 fill=%22%230c1f2c%22/><path d=%22M8 22V10h5.5c3 0 4.7 1.5 4.7 3.8 0 1.4-.7 2.5-1.9 3.1 1.7.5 2.7 1.7 2.7 3.4 0 .6-.1 1.2-.4 1.7H15c.2-.4.3-.8.3-1.2 0-1.5-1-2.2-3-2.2H11V22H8zm3-6h2c1.5 0 2.3-.6 2.3-1.8s-.8-1.7-2.3-1.7h-2V16z%22 fill=%22%23fff%22/></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 rx=%226%22 fill=%22%230000A0%22/><circle cx=%2216%22 cy=%2216%22 r=%226%22 fill=%22%2362BB46%22/></svg>">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -14,8 +14,9 @@
   <div id="loading" class="loading-screen" role="status"><div class="loader"></div><p>Loading review data…</p></div>
 
   <header class="topbar">
-    <a class="identity" href="#overview" aria-label="Review Intelligence home">
-      <span class="identity-mark">RI</span>
+    <a class="identity" href="#overview" aria-label="Mars Food and Nutrition Review Intelligence home">
+      <img src="brand/better-food-text.png" alt="Mars Food - Better food today. A better world tomorrow.">
+      <span class="identity-divider" aria-hidden="true"></span>
       <span><strong>Review Intelligence</strong><small>Beef HMR portfolio</small></span>
     </a>
     <nav aria-label="Dashboard sections">
@@ -33,6 +34,7 @@
 
   <div class="app-shell">
     <aside class="filter-rail" aria-label="Dashboard filters">
+      <div class="rail-brand"><img src="brand/logo-lockup.png" alt="Mars Food and Nutrition"></div>
       <div class="filter-header">
         <div><span class="kicker">Current view</span><strong id="viewCount">— reviews</strong></div>
         <button id="resetFilters" class="text-button" type="button">Reset</button>
@@ -92,11 +94,11 @@
     <main id="workspace" class="workspace">
       <section id="overview" class="intro panel-anchor">
         <div>
-          <span class="kicker">Consumer review dashboard</span>
+          <span class="kicker">Today, we're listening to consumers</span>
           <h1>Beef HMR Review Intelligence</h1>
-          <p>Explore written-review performance across the eight specified products. Every chart and table responds to the filters at left.</p>
+          <p>Explore written-review performance across the eight specified products. Because in the world we want tomorrow, every product decision starts with clear consumer evidence.</p>
         </div>
-        <div class="scope-badge"><strong>8</strong><span>products in scope</span></div>
+        <div class="scope-badge"><img src="brand/globe-badge.png" alt=""><strong>8</strong><span>products in scope</span></div>
       </section>
 
       <section class="kpi-grid" aria-label="Filtered view metrics">
@@ -193,10 +195,18 @@
           </div>
         </details>
       </section>
+
+      <section class="brand-signoff" aria-label="Mars Food and Nutrition purpose">
+        <div class="signoff-copy">
+          <img src="brand/logo-combined.png" alt="Mars Food and Nutrition - Better food today. A better world tomorrow.">
+          <p><strong>Today, we're turning consumer feedback into focused action.</strong> Because in the world we want tomorrow, every food experience earns trust through better listening and better decisions.</p>
+        </div>
+        <img class="portfolio-grid" src="brand/food-brands-grid.png" alt="Illustrated Mars Food and Nutrition brand portfolio">
+      </section>
     </main>
   </div>
 
-  <footer><span>Beef HMR Review Intelligence</span><span>Public consumer-review data · Updated July 14, 2026</span><a href="#method">Methodology</a></footer>
+  <footer><span>Mars Food &amp; Nutrition · Beef HMR Review Intelligence</span><span>Public consumer-review data · Updated July 14, 2026</span><a href="#method">Methodology</a></footer>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <script src="app.js" defer></script>
 </body>

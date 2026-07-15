@@ -7,7 +7,7 @@ const DATA_FILES = {
 
 const ANALYSIS_START = "2024-11-01";
 const ANALYSIS_END = "2026-07-14";
-const COLORS = ["#246fa8", "#52b9c5", "#e77a3e", "#6e8c74", "#8a6aa6", "#b8a056"];
+const COLORS = ["#0000A0", "#19738D", "#62BB46", "#EB6916", "#FFD131", "#3C3C3C"];
 const TOPICS = {
   texture: { label: "Texture", rx: /\b(texture|tough|chew\w*|rubber\w*|grist\w*|grisly|fatty|mushy|slimy|spongy|soggy|mealy|stringy|tender|sinew\w*|powdery|blob|meat quality|fake meat|dry)\b/i },
   taste: { label: "Taste / flavor", rx: /\b(taste|flavor|bland|salty|sweet|sour|spic\w*|season\w*|delicious|gross|disgust\w*|smell\w*)\b/i },
@@ -230,8 +230,8 @@ function renderTrend(reviews) {
   const plotH = height - pad.top - pad.bottom;
   ctx.font = "10px Segoe UI, Arial";
   ctx.textBaseline = "middle";
-  ctx.strokeStyle = "#dfe6e9";
-  ctx.fillStyle = "#7b8991";
+  ctx.strokeStyle = "#e5ddd5";
+  ctx.fillStyle = "#68625e";
   ctx.lineWidth = 1;
   for (let i = 0; i <= 4; i++) {
     const y = pad.top + plotH * i / 4;
@@ -240,7 +240,7 @@ function renderTrend(reviews) {
     ctx.fillText(state.trendMetric === "rating" ? value.toFixed(1) : Math.round(value).toString(), 6, y);
   }
   if (!groups.length) {
-    ctx.fillStyle = "#73828b"; ctx.textAlign = "center"; ctx.font = "13px Segoe UI, Arial";
+    ctx.fillStyle = "#68625e"; ctx.textAlign = "center"; ctx.font = '13px "Mars Centra", Arial';
     ctx.fillText("No reviews match the current filters", width / 2, height / 2);
     chartPoints = [];
     return;
@@ -250,11 +250,11 @@ function renderTrend(reviews) {
   const cutoffIndex = groups.findIndex(group => group.month === "2025-11");
   if (cutoffIndex >= 0) {
     const x = xAt(cutoffIndex);
-    ctx.strokeStyle = "#e77a3e"; ctx.setLineDash([4, 4]); ctx.beginPath(); ctx.moveTo(x, pad.top); ctx.lineTo(x, pad.top + plotH); ctx.stroke(); ctx.setLineDash([]);
+    ctx.strokeStyle = "#EB6916"; ctx.setLineDash([4, 4]); ctx.beginPath(); ctx.moveTo(x, pad.top); ctx.lineTo(x, pad.top + plotH); ctx.stroke(); ctx.setLineDash([]);
   }
-  ctx.fillStyle = "#7b8991"; ctx.textAlign = "center"; ctx.font = "9px Segoe UI, Arial";
+  ctx.fillStyle = "#68625e"; ctx.textAlign = "center"; ctx.font = '9px "Mars Centra", Arial';
   groups.forEach((group, index) => { if (index % Math.max(1, Math.ceil(groups.length / 8)) === 0 || index === groups.length - 1) ctx.fillText(monthLabel(group.month, true), xAt(index), height - 13); });
-  ctx.strokeStyle = "#246fa8"; ctx.lineWidth = 2.5; ctx.lineJoin = "round"; ctx.lineCap = "round";
+  ctx.strokeStyle = "#19738D"; ctx.lineWidth = 2.5; ctx.lineJoin = "round"; ctx.lineCap = "round";
   let drawing = false;
   ctx.beginPath();
   values.forEach((value, index) => {
@@ -267,7 +267,7 @@ function renderTrend(reviews) {
   values.forEach((value, index) => {
     if (!Number.isFinite(value)) return;
     const x = xAt(index), y = yAt(value);
-    ctx.fillStyle = "white"; ctx.strokeStyle = "#246fa8"; ctx.lineWidth = 2;
+    ctx.fillStyle = "white"; ctx.strokeStyle = "#0000A0"; ctx.lineWidth = 2;
     ctx.beginPath(); ctx.arc(x, y, 3.5, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
     chartPoints.push({ x, y, month: groups[index].month, value, n: groups[index].reviews.length, suffix: meta.suffix, label: meta.label });
   });
