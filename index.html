@@ -27,7 +27,7 @@
       <a href="#actions">Actions</a>
     </nav>
     <div class="top-actions">
-      <span class="data-date">Data through <strong>Jul 14, 2026</strong></span>
+      <span class="data-date">Data through <strong>Jul 15, 2026</strong></span>
       <button id="exportCsv" class="button button-primary" type="button">Export filtered CSV</button>
     </div>
   </header>
@@ -54,6 +54,7 @@
       <fieldset class="filter-group">
         <legend>Retail sources <button class="select-link" type="button" data-select="sources">All</button></legend>
         <div id="sourceFilters" class="check-list compact"></div>
+        <small class="filter-context">Costco has no public dated reviews in this capture; its six club-pack listings appear in Retailer coverage.</small>
       </fieldset>
 
       <fieldset class="filter-group">
@@ -155,11 +156,20 @@
             <tbody></tbody>
           </table>
         </div>
-        <p class="table-note">Pre: Nov 1, 2024–Oct 31, 2025. Post: Nov 1, 2025–Jul 14, 2026. Source, rating, topic, and text filters apply to the comparison; the date-coverage toggle does not redefine these fixed periods.</p>
+        <p class="table-note">Pre: Nov 1, 2024–Oct 31, 2025. Post: Nov 1, 2025–Jul 15, 2026. Source, rating, topic, and text filters apply to the comparison; the date-coverage toggle does not redefine these fixed periods.</p>
       </section>
 
       <section id="retailers" class="section-block panel-anchor">
-        <div class="section-heading"><div><span class="kicker">Rating-only context</span><h2>Retailer snapshots</h2><p>Point-in-time rating distributions are presented separately and never blended into the dated written-review trend.</p></div></div>
+        <div class="section-heading"><div><span class="kicker">Retailer coverage</span><h2>Where each product was found</h2><p>Kroger and Walmart exact-SKU evidence is separated from Costco 32 oz club-pack variants. Availability is location- and time-dependent.</p></div></div>
+        <div id="coverageSummary" class="coverage-summary" aria-label="Retailer coverage summary"></div>
+        <div class="table-shell coverage-shell">
+          <table id="coverageTable">
+            <thead><tr><th scope="col">Product</th><th scope="col">Kroger</th><th scope="col">Walmart</th><th scope="col">Costco</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <p class="table-note">Costco evidence reflects same-flavor 32 oz club packs and is not blended into exact 16 oz review trends. “Not located” means no reliable public listing was found in this collection pass, not confirmed absence from every store.</p>
+        <div class="section-heading snapshot-heading"><div><span class="kicker">Rating-only context</span><h2>Retailer rating snapshots</h2><p>Point-in-time distributions remain separate from dated written-review trends.</p></div></div>
         <div id="retailerSnapshots" class="snapshot-grid"></div>
       </section>
 
@@ -176,8 +186,8 @@
         <div class="section-heading"><div><span class="kicker">From evidence to action</span><h2>Recommended investigation sequence</h2><p>Recommendations are operational next steps, not conclusions about manufacturing cause.</p></div></div>
         <div class="action-grid">
           <article><span>01</span><div><strong>Prioritize Mongolian and Sirloin</strong><p>Review production changes, supplier and lot records, and sensory results. Evaluate meat and sauce separately.</p></div></article>
-          <article><span>02</span><div><strong>Close the three coverage gaps</strong><p>Obtain syndicated exports for Peppercorn, Chimichurri, and Sirloin with Mushroom, including review IDs and rating-only submissions.</p></div></article>
-          <article><span>03</span><div><strong>Validate current assortment</strong><p>Distinguish product-page presence, local out-of-stock status, delisting, and true distribution at Kroger and Walmart.</p></div></article>
+          <article><span>02</span><div><strong>Close written-review gaps</strong><p>Costco expands assortment visibility, but Peppercorn and Chimichurri still lack dated written-review evidence; Sirloin with Mushroom remains unlocated.</p></div></article>
+          <article><span>03</span><div><strong>Validate distribution</strong><p>Confirm store-level availability for the four Kroger exact SKUs, the retired Walmart Honey Garlic page, and six Costco club-pack variants.</p></div></article>
           <article><span>04</span><div><strong>Establish monthly monitoring</strong><p>Track rating, low-rating share, texture, taste, and sample size with minimum-volume thresholds before escalation.</p></div></article>
         </div>
       </section>
@@ -187,10 +197,10 @@
           <summary><span><b>Methodology and data quality</b><small>Scope, dates, deduplication, coding, and limitations</small></span><span aria-hidden="true">+</span></summary>
           <div class="method-grid">
             <article><strong>Scope</strong><p>Only the eight products specified for this review. Chicken products, controls, and Frozen Beef Bolognese are excluded.</p></article>
-            <article><strong>Written-review archive</strong><p>153 unique records from Target, Amazon, Kroger, and Walmart. The default trend window contains 116 reviews dated Nov 1, 2024 through Jul 14, 2026.</p></article>
+            <article><strong>Written-review archive</strong><p>171 unique records from Target, Amazon, Kroger, and Walmart. The default trend window contains 134 reviews dated Nov 1, 2024 through Jul 15, 2026.</p></article>
             <article><strong>Deduplication</strong><p>Exact matches on source, product, date, rating, title, and review text were removed. The Amazon file declined from 600 raw rows to 60 unique rows across all products.</p></article>
             <article><strong>Topic coding</strong><p>Transparent keyword rules tag texture, taste, sauce, value, packaging, and “product changed” language. Topic shares are directional.</p></article>
-            <article><strong>Evidence layers</strong><p>Dated written reviews drive trends. Retailer rating distributions include rating-only submissions and are retained as contextual snapshots.</p></article>
+            <article><strong>Evidence layers</strong><p>Dated written reviews drive trends. Rating distributions, availability, and Costco 32 oz club-pack listings are separate contextual layers.</p></article>
             <article><strong>Interpretation</strong><p>Review language identifies where to investigate. It does not establish manufacturing, ingredient, supplier, or formulation causality.</p></article>
           </div>
         </details>
@@ -206,7 +216,7 @@
     </main>
   </div>
 
-  <footer><span>Mars Food &amp; Nutrition · Beef HMR Review Intelligence</span><span>Public consumer-review data · Updated July 14, 2026</span><a href="#method">Methodology</a></footer>
+  <footer><span>Mars Food &amp; Nutrition · Beef HMR Review Intelligence</span><span>Public consumer-review data · Updated July 15, 2026</span><a href="#method">Methodology</a></footer>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <script src="app.js" defer></script>
 </body>

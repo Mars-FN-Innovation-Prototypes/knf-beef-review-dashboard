@@ -2,7 +2,7 @@
   "as_of": "2026-07-14",
   "collection_note": "Retailer pages and counts are location- and time-dependent. Rating distributions are retained separately from dated written reviews and are not blended into the time trend.",
   "rating_snapshots": [
-    {"product_id": "korean_bbq_beef", "source": "Kroger", "rating_count": 26, "distribution": {"5": 8, "4": 4, "3": 1, "2": 7, "1": 6}, "page_status": "Product page found; 8 written reviews visible."},
+    {"product_id": "korean_bbq_beef", "source": "Kroger", "rating_count": 26, "distribution": {"5": 8, "4": 4, "3": 1, "2": 7, "1": 6}, "page_status": "Complete public set captured: 25 written comments plus one rating-only entry."},
     {"product_id": "teriyaki_beef", "source": "Kroger", "rating_count": 1, "distribution": {"5": 1, "4": 0, "3": 0, "2": 0, "1": 0}, "page_status": "Product page found; 1 written review visible."},
     {"product_id": "mongolian_beef", "source": "Kroger", "rating_count": 1, "distribution": {"5": 0, "4": 0, "3": 0, "2": 1, "1": 0}, "page_status": "Product page found; 1 written review visible."},
     {"product_id": "sirloin_gravy", "source": "Kroger", "rating_count": 0, "distribution": {"5": 0, "4": 0, "3": 0, "2": 0, "1": 0}, "page_status": "Product page found; no rating history visible."},

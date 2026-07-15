@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-07-14",
+  "as_of": "2026-07-15",
   "scope": [
     "Korean BBQ Style Beef",
     "Honey Garlic Beef",
@@ -11,7 +11,7 @@
     "Sirloin Beef Tips with Mushroom"
   ],
   "methodology": {
-    "analysis_window": "2024-11-01 through 2026-07-14",
+    "analysis_window": "2024-11-01 through 2026-07-15",
     "trend_cutoff": "2025-11-01",
     "pre_definition": "Reviews dated 2024-11-01 through 2025-10-31",
     "post_definition": "Reviews dated 2025-11-01 through the data-as-of date",
@@ -20,57 +20,57 @@
   },
   "data_quality": {
     "dashboard_rows_in_scope_before_dedup": 320,
-    "written_reviews_after_dedup_and_retailer_additions": 153,
-    "written_reviews_in_analysis_window": 116,
+    "written_reviews_after_dedup_and_retailer_additions": 171,
+    "written_reviews_in_analysis_window": 134,
     "amazon_raw_rows": 600,
     "amazon_unique_rows_all_products": 60,
     "amazon_exact_duplicate_rows_removed": 540,
     "source_counts": {
       "Amazon": 20,
-      "Kroger": 10,
+      "Kroger": 28,
       "Target": 120,
       "Walmart": 3
     }
   },
   "overall": {
     "pre": {
-      "n": 51,
-      "avg_rating": 2.92,
-      "negative_pct": 51.0,
-      "texture_pct": 41.2,
-      "taste_pct": 52.9
+      "n": 63,
+      "avg_rating": 2.71,
+      "negative_pct": 57.1,
+      "texture_pct": 41.3,
+      "taste_pct": 58.7
     },
     "post": {
-      "n": 65,
-      "avg_rating": 2.12,
-      "negative_pct": 69.2,
+      "n": 71,
+      "avg_rating": 2.18,
+      "negative_pct": 67.6,
       "texture_pct": 33.8,
-      "taste_pct": 47.7
+      "taste_pct": 52.1
     },
-    "delta_rating": -0.8,
-    "delta_texture_pp": -7.4
+    "delta_rating": -0.53,
+    "delta_texture_pp": -7.5
   },
   "products": [
     {
       "product_id": "korean_bbq_beef",
       "product": "Korean BBQ Style Beef",
-      "total_n": 6,
+      "total_n": 24,
       "pre": {
-        "n": 5,
-        "avg_rating": 5,
-        "negative_pct": 0.0,
-        "texture_pct": 20.0,
-        "taste_pct": 0.0
+        "n": 17,
+        "avg_rating": 2.76,
+        "negative_pct": 58.8,
+        "texture_pct": 35.3,
+        "taste_pct": 58.8
       },
       "post": {
-        "n": 1,
-        "avg_rating": 5,
-        "negative_pct": 0.0,
-        "texture_pct": 0.0,
-        "taste_pct": 0.0
+        "n": 7,
+        "avg_rating": 3.14,
+        "negative_pct": 42.9,
+        "texture_pct": 28.6,
+        "taste_pct": 85.7
       },
-      "rating_delta": 0,
-      "texture_delta_pp": -20.0
+      "rating_delta": 0.38,
+      "texture_delta_pp": -6.7
     },
     {
       "product_id": "honey_garlic_beef",
@@ -223,11 +223,11 @@
   "monthly": [
     {
       "month": "2024-11",
-      "n": 3,
-      "avg_rating": 3,
-      "negative_pct": 66.7,
-      "texture_pct": 33.3,
-      "taste_pct": 66.7
+      "n": 4,
+      "avg_rating": 2.75,
+      "negative_pct": 75.0,
+      "texture_pct": 50.0,
+      "taste_pct": 75.0
     },
     {
       "month": "2024-12",
@@ -239,11 +239,11 @@
     },
     {
       "month": "2025-01",
-      "n": 7,
-      "avg_rating": 3.71,
-      "negative_pct": 28.6,
-      "texture_pct": 14.3,
-      "taste_pct": 42.9
+      "n": 10,
+      "avg_rating": 3.3,
+      "negative_pct": 40.0,
+      "texture_pct": 20.0,
+      "taste_pct": 60.0
     },
     {
       "month": "2025-02",
@@ -255,27 +255,27 @@
     },
     {
       "month": "2025-03",
-      "n": 2,
-      "avg_rating": 3,
-      "negative_pct": 50.0,
-      "texture_pct": 100.0,
-      "taste_pct": 50.0
+      "n": 4,
+      "avg_rating": 2,
+      "negative_pct": 75.0,
+      "texture_pct": 50.0,
+      "taste_pct": 75.0
     },
     {
       "month": "2025-04",
-      "n": 5,
-      "avg_rating": 4.2,
-      "negative_pct": 20.0,
-      "texture_pct": 60.0,
-      "taste_pct": 60.0
+      "n": 6,
+      "avg_rating": 3.83,
+      "negative_pct": 33.3,
+      "texture_pct": 66.7,
+      "taste_pct": 50.0
     },
     {
       "month": "2025-05",
-      "n": 1,
-      "avg_rating": 2,
-      "negative_pct": 100.0,
-      "texture_pct": 0.0,
-      "taste_pct": 100.0
+      "n": 3,
+      "avg_rating": 2.33,
+      "negative_pct": 66.7,
+      "texture_pct": 33.3,
+      "taste_pct": 66.7
     },
     {
       "month": "2025-06",
@@ -287,19 +287,19 @@
     },
     {
       "month": "2025-07",
-      "n": 3,
-      "avg_rating": 1,
+      "n": 4,
+      "avg_rating": 1.25,
       "negative_pct": 100.0,
-      "texture_pct": 33.3,
-      "taste_pct": 33.3
+      "texture_pct": 50.0,
+      "taste_pct": 50.0
     },
     {
       "month": "2025-08",
-      "n": 6,
-      "avg_rating": 2.67,
-      "negative_pct": 50.0,
-      "texture_pct": 50.0,
-      "taste_pct": 50.0
+      "n": 8,
+      "avg_rating": 2.25,
+      "negative_pct": 62.5,
+      "texture_pct": 37.5,
+      "taste_pct": 62.5
     },
     {
       "month": "2025-09",
@@ -319,19 +319,19 @@
     },
     {
       "month": "2025-11",
-      "n": 11,
-      "avg_rating": 2.27,
-      "negative_pct": 63.6,
-      "texture_pct": 36.4,
-      "taste_pct": 54.5
+      "n": 13,
+      "avg_rating": 2.38,
+      "negative_pct": 61.5,
+      "texture_pct": 38.5,
+      "taste_pct": 61.5
     },
     {
       "month": "2025-12",
-      "n": 5,
-      "avg_rating": 2.2,
-      "negative_pct": 60.0,
-      "texture_pct": 40.0,
-      "taste_pct": 20.0
+      "n": 6,
+      "avg_rating": 2.5,
+      "negative_pct": 50.0,
+      "texture_pct": 50.0,
+      "taste_pct": 50.0
     },
     {
       "month": "2026-01",
@@ -343,11 +343,11 @@
     },
     {
       "month": "2026-02",
-      "n": 12,
-      "avg_rating": 2.33,
-      "negative_pct": 58.3,
-      "texture_pct": 33.3,
-      "taste_pct": 16.7
+      "n": 13,
+      "avg_rating": 2.38,
+      "negative_pct": 53.8,
+      "texture_pct": 30.8,
+      "taste_pct": 23.1
     },
     {
       "month": "2026-03",
@@ -375,16 +375,16 @@
     },
     {
       "month": "2026-06",
-      "n": 3,
-      "avg_rating": 1.67,
-      "negative_pct": 66.7,
-      "texture_pct": 66.7,
-      "taste_pct": 66.7
+      "n": 4,
+      "avg_rating": 1.75,
+      "negative_pct": 75.0,
+      "texture_pct": 50.0,
+      "taste_pct": 75.0
     },
     {
       "month": "2026-07",
-      "n": 1,
-      "avg_rating": 1,
+      "n": 2,
+      "avg_rating": 1.5,
       "negative_pct": 100.0,
       "texture_pct": 0.0,
       "taste_pct": 0.0
@@ -402,7 +402,7 @@
         "2": 7,
         "1": 6
       },
-      "page_status": "Product page found; 8 written reviews visible."
+      "page_status": "Complete public set captured: 25 written comments plus one rating-only entry."
     },
     {
       "product_id": "teriyaki_beef",
@@ -458,6 +458,150 @@
       "page_status": "Indexed product/review snapshot found; current product availability is location-dependent."
     }
   ],
+  "assortment_snapshots": [
+    {
+      "product_id": "korean_bbq_beef",
+      "source": "Kroger",
+      "match_type": "exact_16oz",
+      "pack_size": "16 oz",
+      "item_id": "0081026402498",
+      "page_url": "https://www.kroger.com/p/kevin-s-natural-foods-korean-bbq-style-beef-16-oz/0081026402498",
+      "status": "page_live",
+      "rating_count": 26,
+      "written_review_count": 25
+    },
+    {
+      "product_id": "sirloin_gravy",
+      "source": "Kroger",
+      "match_type": "exact_16oz",
+      "pack_size": "16 oz",
+      "item_id": "0081026402811",
+      "page_url": "https://www.kroger.com/p/kevin-s-natural-foods-sirloin-steak-tips-with-gravy-meal/0081026402811",
+      "status": "page_live",
+      "rating_count": 0,
+      "written_review_count": 0
+    },
+    {
+      "product_id": "teriyaki_beef",
+      "source": "Kroger",
+      "match_type": "exact_16oz",
+      "pack_size": "16 oz",
+      "item_id": "0081026402585",
+      "page_url": "https://www.kroger.com/p/kevin-s-natural-foods-teriyaki-style-beef/0081026402585",
+      "status": "page_live",
+      "rating_count": 1,
+      "written_review_count": 1
+    },
+    {
+      "product_id": "mongolian_beef",
+      "source": "Kroger",
+      "match_type": "exact_16oz",
+      "pack_size": "16 oz",
+      "item_id": "0081026402550",
+      "page_url": "https://www.kroger.com/p/kevin-s-natural-foods-mongolian-style-beef/0081026402550",
+      "status": "page_live",
+      "rating_count": 1,
+      "written_review_count": 1
+    },
+    {
+      "product_id": "honey_garlic_beef",
+      "source": "Walmart",
+      "match_type": "exact_16oz",
+      "pack_size": "16 oz",
+      "item_id": "2455684608",
+      "page_url": "https://www.walmart.com/ip/2455684608",
+      "status": "page_retired",
+      "rating_count": 179,
+      "written_review_count": 39
+    },
+    {
+      "product_id": "korean_bbq_beef",
+      "source": "Costco",
+      "match_type": "club_pack_variant",
+      "pack_size": "32 oz",
+      "item_id": "1474060",
+      "page_url": "https://www.costco.com/p/-/kevins-natural-foods-korean-bbq-style-beef-32-oz/4000060876",
+      "status": "listed_unavailable",
+      "rating_count": 0,
+      "written_review_count": 0
+    },
+    {
+      "product_id": "honey_garlic_beef",
+      "source": "Costco",
+      "match_type": "club_pack_variant",
+      "pack_size": "32 oz",
+      "item_id": "1081297",
+      "page_url": "https://sameday.costco.com/store/costco/products/29823413-kevin-s-natural-foods-paleo-honey-garlic-beef-32-oz",
+      "status": "listed_location_dependent",
+      "rating_count": null,
+      "written_review_count": null
+    },
+    {
+      "product_id": "sirloin_gravy",
+      "source": "Costco",
+      "match_type": "club_pack_variant",
+      "pack_size": "32 oz",
+      "item_id": "1758836",
+      "page_url": "https://sameday.costco.com/store/costco/products/33216969-kevin-s-natural-foods-sirloin-steak-tips-with-gravy-32-oz",
+      "status": "listed_location_dependent",
+      "rating_count": null,
+      "written_review_count": null
+    },
+    {
+      "product_id": "mongolian_beef",
+      "source": "Costco",
+      "match_type": "club_pack_variant",
+      "pack_size": "32 oz",
+      "item_id": "1512666",
+      "page_url": "https://sameday.costco.com/store/costco/products/24881251-kevin-s-natural-foods-mongolian-style-beef-32-0-oz",
+      "status": "listed_location_dependent",
+      "rating_count": null,
+      "written_review_count": null
+    },
+    {
+      "product_id": "peppercorn_steak_tips",
+      "source": "Costco",
+      "match_type": "club_pack_variant",
+      "pack_size": "32 oz",
+      "item_id": "1538438",
+      "page_url": "https://sameday.costco.com/store/costco/products/24730843",
+      "status": "listed_location_dependent",
+      "rating_count": null,
+      "written_review_count": null
+    },
+    {
+      "product_id": "chimichurri_beef",
+      "source": "Costco",
+      "match_type": "club_pack_variant",
+      "pack_size": "32 oz",
+      "item_id": "1743194",
+      "page_url": "https://sameday.costco.com/store/costco/products/30856680-kevin-s-natural-foods-paleo-chimichurri-beef-32-oz",
+      "status": "listed_location_dependent",
+      "rating_count": null,
+      "written_review_count": null
+    }
+  ],
+  "retailer_expansion": {
+    "as_of": "2026-07-15",
+    "collection_note": "Public retailer evidence captured without bypassing authentication or access controls. Availability and price are location- and time-dependent. Costco listings are 32 oz club-pack flavor variants and are not blended into exact 16 oz written-review trends.",
+    "complete_public_review_sets": [
+      {
+        "product_id": "korean_bbq_beef",
+        "source": "Kroger",
+        "page_url": "https://www.kroger.com/p/kevin-s-natural-foods-korean-bbq-style-beef-16-oz/0081026402498",
+        "rating_count": 26,
+        "written_comment_count": 25,
+        "distribution": {
+          "5": 8,
+          "4": 4,
+          "3": 1,
+          "2": 7,
+          "1": 6
+        },
+        "capture": "complete public review set"
+      }
+    ]
+  },
   "coverage_notes": [
     {
       "product_id": "peppercorn_steak_tips",

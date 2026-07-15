@@ -6,7 +6,7 @@ const DATA_FILES = {
 };
 
 const ANALYSIS_START = "2024-11-01";
-const ANALYSIS_END = "2026-07-14";
+const ANALYSIS_END = "2026-07-15";
 const COLORS = ["#0000A0", "#19738D", "#62BB46", "#EB6916", "#FFD131", "#3C3C3C"];
 const TOPICS = {
   texture: { label: "Texture", rx: /\b(texture|tough|chew\w*|rubber\w*|grist\w*|grisly|fatty|mushy|slimy|spongy|soggy|mealy|stringy|tender|sinew\w*|powdery|blob|meat quality|fake meat|dry)\b/i },
@@ -164,6 +164,7 @@ function render() {
   renderThemes(reviews);
   renderProductTable();
   renderSnapshots();
+  renderCoverage();
   renderReviews(reviews);
   const allProducts = state.products.size === data.registry.products.length;
   $("#clearProductFocus").hidden = allProducts;
@@ -381,6 +382,31 @@ function renderSnapshots() {
     const product = data.registry.products.find(item => item.id === snapshot.product_id);
     const page = product?.retailer_pages?.[snapshot.source.toLowerCase()];
     return `<article class="snapshot-card"><header><span>${escapeHTML(snapshot.source)}</span><strong>${escapeHTML(productNames[snapshot.product_id])}</strong></header><div class="snapshot-score"><strong>${fmtRating(average)}</strong><span>${snapshot.rating_count} rating${snapshot.rating_count === 1 ? "" : "s"}</span></div><div class="snapshot-stars">${bars}</div><p>${escapeHTML(snapshot.page_status)}${page ? `<br><a href="${escapeHTML(page)}" target="_blank" rel="noopener noreferrer">Open retailer page ↗</a>` : ""}</p></article>`;
+  }).join("");
+}
+
+function renderCoverage() {
+  const retailers = ["Kroger", "Walmart", "Costco"];
+  const snapshots = data.analysis.assortment_snapshots || [];
+  const labels = { exact_16oz: "Exact 16 oz", club_pack_variant: "32 oz club pack" };
+  $("#coverageSummary").innerHTML = retailers.map(source => {
+    const matches = snapshots.filter(item => item.source === source);
+    const exact = matches.filter(item => item.match_type === "exact_16oz").length;
+    const club = matches.filter(item => item.match_type === "club_pack_variant").length;
+    const ratings = matches.reduce((sum, item) => sum + (item.rating_count || 0), 0);
+    const detail = source === "Costco" ? `${club} club-pack flavor variants` : `${exact} exact 16 oz product pages`;
+    return `<article><span>${escapeHTML(source)}</span><strong>${matches.length}/8</strong><p>${detail}${ratings ? ` · ${ratings.toLocaleString()} rating records` : ""}</p></article>`;
+  }).join("");
+
+  $("#coverageTable tbody").innerHTML = data.registry.products.map(product => {
+    const cells = retailers.map(source => {
+      const match = snapshots.find(item => item.product_id === product.id && item.source === source);
+      if (!match) return `<td><span class="coverage-pill gap">Not located</span><small>No reliable public listing found</small></td>`;
+      const counts = match.rating_count == null ? "No review module exposed" : `${match.rating_count.toLocaleString()} ratings · ${(match.written_review_count || 0).toLocaleString()} written`;
+      const status = match.status === "page_retired" ? "Historical page; now retired" : match.status === "page_live" ? "Public page live" : "Listed; availability varies by location";
+      return `<td><a class="coverage-pill ${match.match_type === "club_pack_variant" ? "variant" : ""}" href="${escapeHTML(match.page_url)}" target="_blank" rel="noopener noreferrer">${labels[match.match_type]} ↗</a><small>${escapeHTML(match.pack_size)} · ${escapeHTML(counts)}<br>${escapeHTML(status)}</small></td>`;
+    }).join("");
+    return `<tr><th scope="row">${escapeHTML(product.name)}</th>${cells}</tr>`;
   }).join("");
 }
 

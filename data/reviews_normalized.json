@@ -1,5 +1,15 @@
 [
   {
+    "product_id": "korean_bbq_beef",
+    "product": "Korean BBQ Style Beef",
+    "source": "Kroger",
+    "date": "2026-07-06",
+    "rating": 2,
+    "title": "Good but poor serving size",
+    "text": "It's delicious but the serving size is definitely deceptive. We weighed it before we cooked it after we opened it and there was 8 oz of meat. Enough for two people but we had our son as well.",
+    "capture": "verbatim public review"
+  },
+  {
     "product_id": "sirloin_gravy",
     "product": "Sirloin Steak Tips with Gravy",
     "source": "Target",
@@ -38,6 +48,16 @@
     "title": "Gross, go with the chicken",
     "text": "I have had other Kevin’s meals and generally found they are not the most flavorful but I like the ingredients and that it’s a convenience item that still falls Within how I choose to eat. When I saw the reviews I ignored them because sometimes choosing health doesn’t taste as flavorful but if it is fueling your body and half decent, sometimes that’s good enough for a busy working mom…This meal on the other hand was so god awful I feel like it should never have made it past R&D testing. I would liken the texture to one big dog food clump and the steak tastes like it came from a can (not su vide",
     "capture": "original dashboard review"
+  },
+  {
+    "product_id": "korean_bbq_beef",
+    "product": "Korean BBQ Style Beef",
+    "source": "Kroger",
+    "date": "2026-06-03",
+    "rating": 2,
+    "title": "You're not getting 16 ounces",
+    "text": "I followed the cooking instructions exactly as stated. The Korean barbecue lists 16 ounces on the front of the package. After preparing this meal the total weight was 11.4 ounces. For a family of three that's less than 4 ounces per serving. The chicken did taste good, but not worth the money.",
+    "capture": "verbatim public review"
   },
   {
     "product_id": "sirloin_gravy",
@@ -228,6 +248,16 @@
     "title": "",
     "text": "They had more gristle than I would have expected from a sous vide cooking process",
     "capture": "original dashboard review"
+  },
+  {
+    "product_id": "korean_bbq_beef",
+    "product": "Korean BBQ Style Beef",
+    "source": "Kroger",
+    "date": "2026-02-21",
+    "rating": 3,
+    "title": "Not very impressed",
+    "text": "This stuff is just ok. The flavors are pretty mediocre, I see red pepper flakes but there's ZERO heat, even in the curry one. It tastes like some low quality buffet food to be honest. For the price, I could get a larger portion from a local restaurant with significantly better taste. But it's convenient and not terrible so, 3 stars I guess.",
+    "capture": "verbatim public review"
   },
   {
     "product_id": "sirloin_gravy",
@@ -515,9 +545,9 @@
     "source": "Kroger",
     "date": "2025-12-15",
     "rating": 5,
-    "title": "Positive review",
-    "text": "Positive overall experience.",
-    "capture": "analyst summary"
+    "title": "quality and tastes good!",
+    "text": "We liked this very much! I appreciate that it is grass fed beef without antibiotics and soy free. Certified Paleo. 1 g of added sugar! I thought this was impossible in convenience foods! Thank you Kevin's for putting out a quality food! I WILL BE purchasing this again!",
+    "capture": "verbatim public review"
   },
   {
     "product_id": "sirloin_gravy",
@@ -528,6 +558,16 @@
     "title": "",
     "text": "I went to cook this and it looks so gross I just threw it away.",
     "capture": "original dashboard review"
+  },
+  {
+    "product_id": "korean_bbq_beef",
+    "product": "Korean BBQ Style Beef",
+    "source": "Kroger",
+    "date": "2025-12-12",
+    "rating": 4,
+    "title": "Tasty but deceptive serving size",
+    "text": "The taste and texture are very enjoyable. I got it on clearance half price but don't know if full price is worth it. I was disappointed by the amount as it says there are three 5 oz servings but I couldn't even get two 4 oz servings out of it. I don't know if they're including the broth weight which would be dumb since the instructions say drain the broth before cooking, or the raw meat weight which is also dumb since it's sold fully cooked. Just glad I didn't plan on feeding 3 people with it.",
+    "capture": "verbatim public review"
   },
   {
     "product_id": "sirloin_gravy",
@@ -640,6 +680,16 @@
     "capture": "original dashboard review"
   },
   {
+    "product_id": "korean_bbq_beef",
+    "product": "Korean BBQ Style Beef",
+    "source": "Kroger",
+    "date": "2025-11-08",
+    "rating": 4,
+    "title": "Approved",
+    "text": "The meat looks a bit scary when you open it and you'll need to manually break it apart yourself but I followed all the directions and it tastes like legit beef and I think the sauce was delicious. The meat doesn't taste grainy either. It's a bit pricey but very convenient and easy to make.",
+    "capture": "verbatim public review"
+  },
+  {
     "product_id": "sirloin_gravy",
     "product": "Sirloin Steak Tips with Gravy",
     "source": "Target",
@@ -648,6 +698,16 @@
     "title": "No",
     "text": "It tastes and smells EXACTLY like how I would imagine a can of wet dog food does",
     "capture": "original dashboard review"
+  },
+  {
+    "product_id": "korean_bbq_beef",
+    "product": "Korean BBQ Style Beef",
+    "source": "Kroger",
+    "date": "2025-11-01",
+    "rating": 2,
+    "title": "Eat Out for Lunch Instead for $14",
+    "text": "Too pricey at $14 and meat is chewy. Sauce is ok. I'd rather eat lunch out instead for this amount. No clean dishes to clean also.",
+    "capture": "verbatim public review"
   },
   {
     "product_id": "teriyaki_beef",
@@ -707,7 +767,7 @@
     "rating": 5,
     "title": "Love it",
     "text": "Love this brand. Tasty. Convenient.",
-    "capture": "verbatim visible review"
+    "capture": "verbatim public review"
   },
   {
     "product_id": "mongolian_beef",
@@ -783,11 +843,21 @@
     "product_id": "korean_bbq_beef",
     "product": "Korean BBQ Style Beef",
     "source": "Kroger",
+    "date": "2025-08-27",
+    "rating": 1,
+    "title": "ZERO STARS! GRAINY MEAT. TASTELESS SAUCE!",
+    "text": "DON'T BUY!! GRAINY AND CHALKY MEAT. TASTELESS SAUCE. SO DISAPPOINTED!!",
+    "capture": "verbatim public review"
+  },
+  {
+    "product_id": "korean_bbq_beef",
+    "product": "Korean BBQ Style Beef",
+    "source": "Kroger",
     "date": "2025-08-24",
     "rating": 5,
-    "title": "Positive review",
-    "text": "Positive overall experience.",
-    "capture": "analyst summary"
+    "title": "Highly Recommend",
+    "text": "Tasty. Made rice to add. Very filling. I recommend any of Kevin's fully-cooked entree.",
+    "capture": "verbatim public review"
   },
   {
     "product_id": "sirloin_gravy",
@@ -820,6 +890,16 @@
     "capture": "original dashboard review"
   },
   {
+    "product_id": "korean_bbq_beef",
+    "product": "Korean BBQ Style Beef",
+    "source": "Kroger",
+    "date": "2025-08-11",
+    "rating": 1,
+    "title": "DO NOT WASTE YOUR MONEY",
+    "text": "barely a serving of meat, the packaging is VERY misleading. minimal flavor, not even worth the effort to cook it. don't buy",
+    "capture": "verbatim public review"
+  },
+  {
     "product_id": "sirloin_gravy",
     "product": "Sirloin Steak Tips with Gravy",
     "source": "Target",
@@ -838,6 +918,16 @@
     "title": "Terrible!",
     "text": "Prepared according to package directions. Meat was a little gristly, and smelled weird, kind of raw, but I figured that was because it was precooked sous vide. Added sauce as directed at the end of cooking. No flavor, except a weird, off-putting tang. The meat itself was tough, and the gravy didn’t have any flavor either. Threw away, which angers me because I don’t like to waste food or money. Can’t believe that trash was $13!!!",
     "capture": "original dashboard review"
+  },
+  {
+    "product_id": "korean_bbq_beef",
+    "product": "Korean BBQ Style Beef",
+    "source": "Kroger",
+    "date": "2025-07-04",
+    "rating": 2,
+    "title": "Good sauce - not so good beef",
+    "text": "Sauce was good, but the meat was a little tough and chewy.",
+    "capture": "verbatim public review"
   },
   {
     "product_id": "sirloin_gravy",
@@ -880,6 +970,26 @@
     "capture": "original dashboard review"
   },
   {
+    "product_id": "korean_bbq_beef",
+    "product": "Korean BBQ Style Beef",
+    "source": "Kroger",
+    "date": "2025-05-16",
+    "rating": 4,
+    "title": "Senior on a fixed income, this is too pricey.",
+    "text": "I had an offer for 50% off so I thought I would give it a try. I found it to be tasty and somewhat tender but lacking vegetables. I put it on top of white rice. I ate about half the package; there is three servings in a package. I would only buy it again if I could get it for half off because I would not pay close to $12. Would like to try their chicken one if I get another 50% off offer.",
+    "capture": "verbatim public review"
+  },
+  {
+    "product_id": "korean_bbq_beef",
+    "product": "Korean BBQ Style Beef",
+    "source": "Kroger",
+    "date": "2025-05-14",
+    "rating": 1,
+    "title": "Maybe not",
+    "text": "I love bulgogi beef but this was not it. It tasted like beef jerky drenched in hoisin sauce.",
+    "capture": "verbatim public review"
+  },
+  {
     "product_id": "sirloin_gravy",
     "product": "Sirloin Steak Tips with Gravy",
     "source": "Target",
@@ -908,6 +1018,16 @@
     "title": "",
     "text": "My favourite out of all the Ken's Meals.  Meat is tender with a mouthwatering Mongolian BBQ sauce packet.  Doesn't need any added seasonings, great right outta the box, after you thaw in fridge overnight, and heat it up to the appropriate temperature.",
     "capture": "original dashboard review"
+  },
+  {
+    "product_id": "korean_bbq_beef",
+    "product": "Korean BBQ Style Beef",
+    "source": "Kroger",
+    "date": "2025-04-09",
+    "rating": 2,
+    "title": "Not good - do not buy",
+    "text": "Packaging looks like it would be good but it just was not. It had a smell when I opened it and started to cook. The appearance, texture and consistency was what I think dog food would be like. I tried to eat it and tossed it.",
+    "capture": "verbatim public review"
   },
   {
     "product_id": "mongolian_beef",
@@ -953,11 +1073,31 @@
     "product_id": "korean_bbq_beef",
     "product": "Korean BBQ Style Beef",
     "source": "Kroger",
+    "date": "2025-03-24",
+    "rating": 1,
+    "title": "Bulgogi? Not hardly.",
+    "text": "This is a very poor excuse for bulgogi. Best to make it yourself. Beef was chunked and not thinly sliced. Small portion of beef for the money. No spice flavor detected. It was sweet though.",
+    "capture": "verbatim public review"
+  },
+  {
+    "product_id": "korean_bbq_beef",
+    "product": "Korean BBQ Style Beef",
+    "source": "Kroger",
     "date": "2025-03-23",
     "rating": 5,
-    "title": "Delicious",
-    "text": "Delicious; reviewer expected a texture issue but found the beef tender.",
-    "capture": "analyst summary"
+    "title": "Delicious, quick, and easy!",
+    "text": "Very delicious, easy, and quick! We made this and put it over rice for dinner. I was worried about the beef being a weird texture or tasting weird, but it was so tender and the flavor was very good! We will definitely be buying this again!",
+    "capture": "verbatim public review"
+  },
+  {
+    "product_id": "korean_bbq_beef",
+    "product": "Korean BBQ Style Beef",
+    "source": "Kroger",
+    "date": "2025-03-19",
+    "rating": 1,
+    "title": "Terrible",
+    "text": "This was not good at all. I threw it away. The meat was not edible.",
+    "capture": "verbatim public review"
   },
   {
     "product_id": "teriyaki_beef",
@@ -995,9 +1135,9 @@
     "source": "Kroger",
     "date": "2025-02-05",
     "rating": 5,
-    "title": "Positive review",
-    "text": "Positive product feedback; criticism concerned Kroger pricing rather than product quality.",
-    "capture": "analyst summary"
+    "title": "Really Good",
+    "text": "never disappoints. overall easy to prepare, easy to move everything to the dishwasher afterward. these are also sold at whole foods. you're going to need more than one of these for a small family. especially if you have boys. Only complaint is Kroger's deceptive pricing, placing the Thai Version ONLY on a $2 off 3+ Sale. but without deceptive pricing, would it still be Kroger?",
+    "capture": "verbatim public review"
   },
   {
     "product_id": "korean_bbq_beef",
@@ -1007,7 +1147,7 @@
     "rating": 5,
     "title": "",
     "text": "",
-    "capture": "rating-only visible entry"
+    "capture": "rating-only public entry"
   },
   {
     "product_id": "teriyaki_beef",
@@ -1018,6 +1158,16 @@
     "title": "Convenient and tasty",
     "text": "I had this frozen for about 5 weeks? thawed it for ~15 hours, and prepared as directed. I started the pan with onions and garlic, only used 1/3 of the sauce packed at that was perfect. 3 servings? Eh. Barely. Very convenient and nutritious, though",
     "capture": "original dashboard review"
+  },
+  {
+    "product_id": "korean_bbq_beef",
+    "product": "Korean BBQ Style Beef",
+    "source": "Kroger",
+    "date": "2025-01-20",
+    "rating": 4,
+    "title": "Easy make quick dinner!",
+    "text": "My son and I both loved the flavor and it was super easy to make. I added some garlic mashed potatoes and it was a perfect dinner.",
+    "capture": "verbatim public review"
   },
   {
     "product_id": "teriyaki_beef",
@@ -1070,6 +1220,16 @@
     "capture": "original dashboard review"
   },
   {
+    "product_id": "korean_bbq_beef",
+    "product": "Korean BBQ Style Beef",
+    "source": "Kroger",
+    "date": "2025-01-12",
+    "rating": 1,
+    "title": "not great...not even close to as advertised",
+    "text": "not even close to bulgogi taste. the beef was thick and dry even though it was marinated with liquid mix",
+    "capture": "verbatim public review"
+  },
+  {
     "product_id": "teriyaki_beef",
     "product": "Teriyaki Style Beef",
     "source": "Target",
@@ -1078,6 +1238,16 @@
     "title": "YUMMY!",
     "text": "I loved it and so did my family 🩷",
     "capture": "original dashboard review"
+  },
+  {
+    "product_id": "korean_bbq_beef",
+    "product": "Korean BBQ Style Beef",
+    "source": "Kroger",
+    "date": "2025-01-09",
+    "rating": 2,
+    "title": "Kevin should be ashamed of himself",
+    "text": "For $13 I expect more than just the sauce to be edible. The meat is a sad grey-ish brown clump of mystery protein with virtually no beef flavor and a very unpleasant mealy texture. If you're looking for a quick dinner, buy some actual pre-marinated beef.",
+    "capture": "verbatim public review"
   },
   {
     "product_id": "sirloin_gravy",
@@ -1140,6 +1310,16 @@
     "capture": "original dashboard review"
   },
   {
+    "product_id": "korean_bbq_beef",
+    "product": "Korean BBQ Style Beef",
+    "source": "Kroger",
+    "date": "2024-11-23",
+    "rating": 2,
+    "title": "Not a fan",
+    "text": "The texture and flavor very questionable.",
+    "capture": "verbatim public review"
+  },
+  {
     "product_id": "teriyaki_beef",
     "product": "Teriyaki Style Beef",
     "source": "Target",
@@ -1185,9 +1365,9 @@
     "source": "Kroger",
     "date": "2024-10-14",
     "rating": 5,
-    "title": "Positive review",
-    "text": "Positive overall experience.",
-    "capture": "analyst summary"
+    "title": "Yummy healthy meat option, for a quick meal!",
+    "text": "Great quality & flavor!",
+    "capture": "verbatim public review"
   },
   {
     "product_id": "sirloin_gravy",
@@ -1345,9 +1525,9 @@
     "source": "Kroger",
     "date": "2024-03-24",
     "rating": 5,
-    "title": "Positive review",
-    "text": "Positive overall experience.",
-    "capture": "analyst summary"
+    "title": "Busy moms get on this!",
+    "text": "Perfect quick meal for busy moms. This is grassfed beef that is more on the nutritious side. I make a side of brown rice to go with. Fast, easy, healthy and delish!",
+    "capture": "verbatim public review"
   },
   {
     "product_id": "sirloin_gravy",
