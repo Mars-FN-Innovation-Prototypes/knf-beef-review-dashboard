@@ -57,14 +57,15 @@ async function loadData() {
       if (!response.ok) throw new Error(`Unable to load ${path}`);
       return response.json();
     })));
+    const eligibleReviews = reviews.filter(review => review.metric_eligible !== false);
     data = {
-      reviews: reviews.map((review, index) => ({ ...review, uid: index, topics: classifyTopics(review) })),
+      reviews: eligibleReviews.map((review, index) => ({ ...review, uid: index, topics: classifyTopics(review) })),
       analysis,
       registry,
       retailers,
     };
     registry.products.forEach(product => state.products.add(product.id));
-    [...new Set(reviews.map(review => review.source))].forEach(source => state.sources.add(source));
+    [...new Set(eligibleReviews.map(review => review.source))].forEach(source => state.sources.add(source));
     buildFilters();
     bindEvents();
     render();
@@ -177,7 +178,7 @@ function renderKPIs(reviews) {
   const textureCount = reviews.filter(review => review.topics.texture).length;
   const tasteCount = reviews.filter(review => review.topics.taste).length;
   $("#kpiReviews").textContent = reviews.length.toLocaleString();
-  $("#kpiCoverage").textContent = state.dateMode === "analysis" ? "Nov 2024–Jul 2026" : "Complete captured archive";
+  $("#kpiCoverage").textContent = state.dateMode === "analysis" ? "Nov 2024–Jul 2026" : "Jan 2023–Jul 2026 backfill";
   $("#kpiRating").textContent = fmtRating(rating);
   $("#kpiLow").textContent = fmtPct(percent(lowCount, reviews.length));
   $("#kpiLowNote").textContent = `${lowCount} low-rating review${lowCount === 1 ? "" : "s"}`;
@@ -330,6 +331,7 @@ function productMetrics() {
       id: product.id,
       product: product.name,
       n,
+      archiveCount: productPool.length,
       rating: mean(reviews.map(review => Number(review.rating))),
       pre,
       post,
@@ -355,7 +357,7 @@ function renderProductTable() {
       <td><div class="metric-cell"><span>${fmtRating(row.rating)}</span><span class="mini-track"><i style="width:${(row.rating || 0) * 20}%"></i></span></div></td>
       <td>${fmtRating(row.pre)}</td><td>${fmtRating(row.post)}</td><td class="${row.delta < 0 ? "delta-negative" : row.delta > 0 ? "delta-positive" : ""}">${Number.isFinite(row.delta) ? `${row.delta > 0 ? "+" : ""}${row.delta.toFixed(2)}` : "—"}</td>
       <td>${fmtPct(row.low)}</td><td>${fmtPct(row.texture)}</td><td>${fmtPct(row.taste)}</td>
-      <td><span class="status-pill ${row.n ? "" : "gap"}">${row.n ? "Written reviews" : "Coverage gap"}</span></td>
+      <td><span class="status-pill ${row.archiveCount ? "" : "gap"}">${row.n ? "Written reviews" : row.archiveCount ? "Archive only" : "Coverage gap"}</span></td>
     </tr>
   `).join("");
 }
@@ -373,14 +375,14 @@ function focusProductFromRow(event) {
 
 function renderSnapshots() {
   const productNames = Object.fromEntries(data.registry.products.map(product => [product.id, product.name]));
-  $("#retailerSnapshots").innerHTML = data.retailers.rating_snapshots.map(snapshot => {
+  $("#retailerSnapshots").innerHTML = data.analysis.rating_snapshots.map(snapshot => {
     const average = snapshot.rating_count ? Object.entries(snapshot.distribution).reduce((sum, [star, count]) => sum + Number(star) * count, 0) / snapshot.rating_count : null;
     const bars = [5, 4, 3, 2, 1].map(star => {
       const count = snapshot.distribution[String(star)] || 0;
       return `<div><span>${star}</span><i><b style="width:${percent(count, snapshot.rating_count) || 0}%"></b></i><span>${count}</span></div>`;
     }).join("");
     const product = data.registry.products.find(item => item.id === snapshot.product_id);
-    const page = product?.retailer_pages?.[snapshot.source.toLowerCase()];
+    const page = snapshot.page_url || (snapshot.source === "Kevin's Natural Foods" ? product?.retailer_pages?.brand : product?.retailer_pages?.[snapshot.source.toLowerCase()]);
     return `<article class="snapshot-card"><header><span>${escapeHTML(snapshot.source)}</span><strong>${escapeHTML(productNames[snapshot.product_id])}</strong></header><div class="snapshot-score"><strong>${fmtRating(average)}</strong><span>${snapshot.rating_count} rating${snapshot.rating_count === 1 ? "" : "s"}</span></div><div class="snapshot-stars">${bars}</div><p>${escapeHTML(snapshot.page_status)}${page ? `<br><a href="${escapeHTML(page)}" target="_blank" rel="noopener noreferrer">Open retailer page ↗</a>` : ""}</p></article>`;
   }).join("");
 }
@@ -429,7 +431,8 @@ function renderReviews(reviews) {
     $("#reviewList").innerHTML = visible.map(review => {
       const tags = Object.entries(review.topics).filter(([, match]) => match).map(([key]) => `<span class="topic-tag">${TOPICS[key].label}</span>`).join("");
       const stars = "★".repeat(Number(review.rating)) + "☆".repeat(5 - Number(review.rating));
-      return `<article class="review-card"><div class="review-rating" aria-label="${review.rating} out of 5 stars">${stars}<small>${review.date}</small></div><div class="review-copy"><h3>${escapeHTML(review.title || "Untitled review")}</h3><p>${escapeHTML(review.text || "No written comment captured.")}</p></div><div class="review-meta"><strong>${escapeHTML(review.product)}</strong><span>${escapeHTML(review.source)} · ${escapeHTML(review.capture)}</span><div class="topic-tags">${tags}</div></div></article>`;
+      const verification = review.verified_buyer ? " · Verified buyer" : "";
+      return `<article class="review-card"><div class="review-rating" aria-label="${review.rating} out of 5 stars">${stars}<small>${review.date}</small></div><div class="review-copy"><h3>${escapeHTML(review.title || "Untitled review")}</h3><p>${escapeHTML(review.text || "No written comment captured.")}</p></div><div class="review-meta"><strong>${escapeHTML(review.product)}</strong><span>${escapeHTML(review.source)} · ${escapeHTML(review.capture)}${verification}</span><div class="topic-tags">${tags}</div></div></article>`;
     }).join("");
   }
   $("#loadMore").hidden = state.reviewLimit >= reviews.length;
@@ -438,7 +441,7 @@ function renderReviews(reviews) {
 function exportCSV() {
   const reviews = sortedReviews(filteredReviews());
   if (!reviews.length) { showToast("No reviews to export"); return; }
-  const columns = ["product", "source", "date", "rating", "title", "text", "capture", ...Object.keys(TOPICS)];
+  const columns = ["product", "source", "date", "rating", "title", "text", "capture", "provider", "provider_review_id", "verified_buyer", "source_url", ...Object.keys(TOPICS)];
   const quote = value => `"${String(value ?? "").replace(/"/g, '""')}"`;
   const rows = reviews.map(review => columns.map(column => quote(column in review.topics ? review.topics[column] : review[column])).join(","));
   const blob = new Blob([[columns.join(","), ...rows].join("\r\n")], { type: "text/csv;charset=utf-8" });

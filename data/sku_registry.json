@@ -7,7 +7,7 @@
       "name": "Korean BBQ Style Beef",
       "aliases": ["Korean BBQ Style Beef", "Korean BBQ-Style Beef", "Korean BBQ-Style Beef 16oz"],
       "upcs": ["0081026402498"],
-      "retailer_pages": {"kroger": "https://www.kroger.com/p/kevin-s-natural-foods-korean-bbq-style-beef-16-oz/0081026402498"}
+      "retailer_pages": {"kroger": "https://www.kroger.com/p/kevin-s-natural-foods-korean-bbq-style-beef-16-oz/0081026402498", "brand": "https://www.kevinsnaturalfoods.com/products/korean-bbq-style-steak-tips"}
     },
     {
       "id": "honey_garlic_beef",
@@ -21,42 +21,42 @@
       "name": "Sirloin Steak Tips with Gravy",
       "aliases": ["Sirloin Steak Tips with Gravy", "Sirloin Steak Tips with Gravy 16oz"],
       "upcs": ["0081026402811"],
-      "retailer_pages": {"kroger": "https://www.kroger.com/p/kevin-s-natural-foods-sirloin-steak-tips-with-gravy-meal/0081026402811"}
+      "retailer_pages": {"kroger": "https://www.kroger.com/p/kevin-s-natural-foods-sirloin-steak-tips-with-gravy-meal/0081026402811", "brand": "https://www.kevinsnaturalfoods.com/products/sirloin-steak-tips-with-gravy"}
     },
     {
       "id": "teriyaki_beef",
       "name": "Teriyaki Style Beef",
       "aliases": ["Teriyaki Style Beef", "Teriyaki-Style Beef", "Teriyaki-Style Beef 16oz"],
       "upcs": ["0081026402585"],
-      "retailer_pages": {"kroger": "https://www.kroger.com/p/kevin-s-natural-foods-teriyaki-style-beef/0081026402585"}
+      "retailer_pages": {"kroger": "https://www.kroger.com/p/kevin-s-natural-foods-teriyaki-style-beef/0081026402585", "brand": "https://www.kevinsnaturalfoods.com/products/teriyaki-style-beef"}
     },
     {
       "id": "mongolian_beef",
       "name": "Mongolian Style Beef",
       "aliases": ["Mongolian Style Beef", "Mongolian-Style Beef", "Mongolian Beef 16oz", "Beef Sous Vide Mongolian Style 16oz", "Mongolian Beef 16oz (Amazon)", "Beef Sous Vide Mongolian Style 16oz (Amazon)"],
       "upcs": ["0081026402550"],
-      "retailer_pages": {"kroger": "https://www.kroger.com/p/kevin-s-natural-foods-mongolian-style-beef/0081026402550"}
+      "retailer_pages": {"kroger": "https://www.kroger.com/p/kevin-s-natural-foods-mongolian-style-beef/0081026402550", "brand": "https://www.kevinsnaturalfoods.com/products/mongolian-style-beef"}
     },
     {
       "id": "peppercorn_steak_tips",
       "name": "Peppercorn Steak Tips",
       "aliases": ["Peppercorn Steak Tips", "Peppercorn Steak Tips 16oz"],
       "upcs": [],
-      "retailer_pages": {}
+      "retailer_pages": {"brand": "https://www.kevinsnaturalfoods.com/products/peppercorn-steak-tips"}
     },
     {
       "id": "chimichurri_beef",
       "name": "Chimichurri Beef",
       "aliases": ["Chimichurri Beef", "Chimichurri Beef 16oz"],
       "upcs": [],
-      "retailer_pages": {}
+      "retailer_pages": {"brand": "https://www.kevinsnaturalfoods.com/products/chimichurri-beef"}
     },
     {
       "id": "sirloin_mushroom",
       "name": "Sirloin Beef Tips with Mushroom",
       "aliases": ["Sirloin Beef Tips with Mushroom", "Sirloin Beef Tips with Mushrooms", "Sirloin Beef Tips with Mushroom 16oz"],
       "upcs": [],
-      "retailer_pages": {}
+      "retailer_pages": {"brand": "https://www.kevinsnaturalfoods.com/products/top-sirloin-beef-with-creamy-mushroom-sauce"}
     }
   ]
 }
