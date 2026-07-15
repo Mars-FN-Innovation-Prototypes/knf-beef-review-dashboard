@@ -4,6 +4,7 @@ const DATA_FILES = {
   registry: "data/sku_registry.json",
   retailers: "data/retailer_evidence.json",
 };
+const RELEASE_VERSION = "2026-07-15-backfill";
 
 const ANALYSIS_START = "2024-11-01";
 const ANALYSIS_END = "2026-07-15";
@@ -53,7 +54,7 @@ function classifyTopics(review) {
 
 async function loadData() {
   try {
-    const [reviews, analysis, registry, retailers] = await Promise.all(Object.values(DATA_FILES).map(path => fetch(path).then(response => {
+    const [reviews, analysis, registry, retailers] = await Promise.all(Object.values(DATA_FILES).map(path => fetch(`${path}?v=${RELEASE_VERSION}`).then(response => {
       if (!response.ok) throw new Error(`Unable to load ${path}`);
       return response.json();
     })));
