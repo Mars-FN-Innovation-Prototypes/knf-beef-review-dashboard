@@ -3,8 +3,12 @@ const DATA_FILES = {
   analysis: "data/analysis_output.json",
   registry: "data/sku_registry.json",
   retailers: "data/retailer_evidence.json",
+  competitorReviews: "data/competitor_reviews_normalized.json",
+  competitorRegistry: "data/competitor_sku_registry.json",
+  competitorSnapshots: "data/competitor_rating_snapshots.json",
+  competitorCoverage: "data/competitor_coverage_audit.json",
 };
-const RELEASE_VERSION = "2026-07-15-backfill";
+const RELEASE_VERSION = "2026-07-21-benchmark";
 
 const ANALYSIS_START = "2024-11-01";
 const ANALYSIS_END = "2026-07-15";
@@ -29,9 +33,10 @@ const state = {
   reviewSort: "newest",
   reviewLimit: 12,
   productSort: { key: "n", direction: "desc" },
+  benchmarkMode: "off",
 };
 
-let data = { reviews: [], analysis: null, registry: null, retailers: null };
+let data = { reviews: [], analysis: null, registry: null, retailers: null, competitorReviews: [], competitorRegistry: null, competitorSnapshots: null, competitorCoverage: null };
 let chartPoints = [];
 let toastTimer;
 
@@ -54,7 +59,7 @@ function classifyTopics(review) {
 
 async function loadData() {
   try {
-    const [reviews, analysis, registry, retailers] = await Promise.all(Object.values(DATA_FILES).map(path => fetch(`${path}?v=${RELEASE_VERSION}`).then(response => {
+    const [reviews, analysis, registry, retailers, competitorReviews, competitorRegistry, competitorSnapshots, competitorCoverage] = await Promise.all(Object.values(DATA_FILES).map(path => fetch(`${path}?v=${RELEASE_VERSION}`).then(response => {
       if (!response.ok) throw new Error(`Unable to load ${path}`);
       return response.json();
     })));
@@ -64,6 +69,10 @@ async function loadData() {
       analysis,
       registry,
       retailers,
+      competitorReviews: competitorReviews.filter(review => review.metric_eligible !== false).map((review, index) => ({ ...review, uid: `competitor-${index}`, topics: classifyTopics(review) })),
+      competitorRegistry,
+      competitorSnapshots,
+      competitorCoverage,
     };
     registry.products.forEach(product => state.products.add(product.id));
     [...new Set(eligibleReviews.map(review => review.source))].forEach(source => state.sources.add(source));
@@ -88,6 +97,7 @@ function buildFilters() {
 }
 
 function bindEvents() {
+  $("#benchmarkMode").addEventListener("change", event => { state.benchmarkMode = event.target.value; render(); });
   $$('input[name="dateMode"]').forEach(input => input.addEventListener("change", () => { state.dateMode = input.value; state.reviewLimit = 12; render(); }));
   $("#productFilters").addEventListener("change", event => { if (event.target.matches('input[name="product"]')) { syncSet("product", state.products); state.reviewLimit = 12; render(); } });
   $("#sourceFilters").addEventListener("change", event => { if (event.target.matches('input[name="source"]')) { syncSet("source", state.sources); state.reviewLimit = 12; render(); } });
@@ -128,6 +138,7 @@ function selectAll(group) {
 
 function resetFilters() {
   state.dateMode = "analysis";
+  state.benchmarkMode = "off";
   state.topic = "all";
   state.search = "";
   state.reviewLimit = 12;
@@ -137,6 +148,7 @@ function resetFilters() {
   syncSet("source", state.sources);
   syncSet("rating", state.ratings, Number);
   $("#topicFilter").value = "all";
+  $("#benchmarkMode").value = "off";
   $("#searchReviews").value = "";
   render();
 }
@@ -157,8 +169,39 @@ function filteredReviews() {
   return data.reviews.filter(review => state.products.has(review.product_id) && passesNonProductFilters(review));
 }
 
+function benchmarkProducts() {
+  if (state.benchmarkMode === "off") return [];
+  return data.competitorRegistry.products.filter(product => state.benchmarkMode === "all" || product.benchmark_tier === "core");
+}
+
+function benchmarkReviews() {
+  const ids = new Set(benchmarkProducts().map(product => product.id));
+  return data.competitorReviews.filter(review => {
+    if (!ids.has(review.product_id) || !inDateMode(review) || !state.ratings.has(Number(review.rating))) return false;
+    if (state.topic !== "all" && !review.topics[state.topic]) return false;
+    if (state.search && !`${review.brand || ""} ${review.product} ${review.title || ""} ${review.text || ""}`.toLowerCase().includes(state.search)) return false;
+    return true;
+  });
+}
+
+function reviewMetrics(reviews) {
+  return {
+    n: reviews.length,
+    rating: mean(reviews.map(review => Number(review.rating))),
+    low: percent(reviews.filter(review => Number(review.rating) <= 2).length, reviews.length),
+    texture: percent(reviews.filter(review => review.topics.texture).length, reviews.length),
+    taste: percent(reviews.filter(review => review.topics.taste).length, reviews.length),
+  };
+}
+
+function formatDelta(value, suffix = "") {
+  if (!Number.isFinite(value)) return "No comparison";
+  return `${value > 0 ? "+" : ""}${value.toFixed(1)}${suffix} vs benchmark`;
+}
+
 function render() {
   const reviews = filteredReviews();
+  const competitor = benchmarkReviews();
   renderKPIs(reviews);
   renderTrend(reviews);
   renderRatingDistribution(reviews);
@@ -168,6 +211,7 @@ function render() {
   renderSnapshots();
   renderCoverage();
   renderReviews(reviews);
+  renderBenchmark(reviews, competitor);
   const allProducts = state.products.size === data.registry.products.length;
   $("#clearProductFocus").hidden = allProducts;
   $("#viewCount").textContent = `${reviews.length.toLocaleString()} review${reviews.length === 1 ? "" : "s"}`;
@@ -185,17 +229,30 @@ function renderKPIs(reviews) {
   $("#kpiLowNote").textContent = `${lowCount} low-rating review${lowCount === 1 ? "" : "s"}`;
   $("#kpiTexture").textContent = fmtPct(percent(textureCount, reviews.length));
   $("#kpiTaste").textContent = fmtPct(percent(tasteCount, reviews.length));
+  const benchmark = reviewMetrics(benchmarkReviews());
+  if (state.benchmarkMode === "off" || !benchmark.n) {
+    $("#kpiRatingNote").textContent = "Computed from written reviews";
+    $("#kpiTextureNote").textContent = "Keyword-coded";
+    $("#kpiTasteNote").textContent = "Keyword-coded";
+  } else {
+    $("#kpiRatingNote").textContent = formatDelta(rating - benchmark.rating);
+    $("#kpiLowNote").textContent = formatDelta(percent(lowCount, reviews.length) - benchmark.low, " pts");
+    $("#kpiTextureNote").textContent = formatDelta(percent(textureCount, reviews.length) - benchmark.texture, " pts");
+    $("#kpiTasteNote").textContent = formatDelta(percent(tasteCount, reviews.length) - benchmark.taste, " pts");
+  }
 }
 
-function groupByMonth(reviews) {
+function groupByMonth(reviews, months = null) {
   const groups = {};
   reviews.forEach(review => { const month = review.date.slice(0, 7); (groups[month] ||= []).push(review); });
-  if (!reviews.length) return [];
-  const dates = reviews.map(review => review.date).sort();
-  const start = new Date(`${dates[0].slice(0, 7)}-01T00:00:00`);
-  const end = new Date(`${dates.at(-1).slice(0, 7)}-01T00:00:00`);
-  const months = [];
-  for (const cursor = new Date(start); cursor <= end; cursor.setMonth(cursor.getMonth() + 1)) months.push(`${cursor.getFullYear()}-${String(cursor.getMonth() + 1).padStart(2, "0")}`);
+  if (!months) {
+    const startMonth = state.dateMode === "analysis" ? ANALYSIS_START.slice(0, 7) : "2023-01";
+    const endMonth = ANALYSIS_END.slice(0, 7);
+    months = [];
+    const start = new Date(`${startMonth}-01T00:00:00`);
+    const end = new Date(`${endMonth}-01T00:00:00`);
+    for (const cursor = new Date(start); cursor <= end; cursor.setMonth(cursor.getMonth() + 1)) months.push(`${cursor.getFullYear()}-${String(cursor.getMonth() + 1).padStart(2, "0")}`);
+  }
   return months.map(month => ({ month, reviews: groups[month] || [] }));
 }
 
@@ -220,14 +277,17 @@ function renderTrend(reviews) {
   ctx.scale(dpr, dpr);
   ctx.clearRect(0, 0, width, height);
   const groups = groupByMonth(reviews);
+  const competitorGroups = groupByMonth(benchmarkReviews(), groups.map(group => group.month));
   const values = groups.map(metricForGroup);
+  const competitorValues = competitorGroups.map(metricForGroup);
   const meta = {
     rating: { label: "Average rating", max: 5, suffix: "" },
     low: { label: "1–2 star share", max: 100, suffix: "%" },
     texture: { label: "Texture mention share", max: 100, suffix: "%" },
-    volume: { label: "Review volume", max: Math.max(5, ...values.filter(Number.isFinite)) * 1.15, suffix: "" },
+    volume: { label: "Review volume", max: Math.max(5, ...values.filter(Number.isFinite), ...competitorValues.filter(Number.isFinite)) * 1.15, suffix: "" },
   }[state.trendMetric];
-  $("#trendLegend").textContent = meta.label;
+  $("#trendLegend").textContent = `Kevin's ${meta.label.toLowerCase()}`;
+  $("#benchmarkLegend").hidden = state.benchmarkMode === "off";
   const pad = { left: 43, right: 15, top: 14, bottom: 35 };
   const plotW = width - pad.left - pad.right;
   const plotH = height - pad.top - pad.bottom;
@@ -242,7 +302,7 @@ function renderTrend(reviews) {
     const value = meta.max * (1 - i / 4);
     ctx.fillText(state.trendMetric === "rating" ? value.toFixed(1) : Math.round(value).toString(), 6, y);
   }
-  if (!groups.length) {
+  if (!groups.length || (!values.some(Number.isFinite) && !competitorValues.some(Number.isFinite))) {
     ctx.fillStyle = "#68625e"; ctx.textAlign = "center"; ctx.font = '13px "Mars Centra", Arial';
     ctx.fillText("No reviews match the current filters", width / 2, height / 2);
     chartPoints = [];
@@ -257,24 +317,27 @@ function renderTrend(reviews) {
   }
   ctx.fillStyle = "#68625e"; ctx.textAlign = "center"; ctx.font = '9px "Mars Centra", Arial';
   groups.forEach((group, index) => { if (index % Math.max(1, Math.ceil(groups.length / 8)) === 0 || index === groups.length - 1) ctx.fillText(monthLabel(group.month, true), xAt(index), height - 13); });
-  ctx.strokeStyle = "#19738D"; ctx.lineWidth = 2.5; ctx.lineJoin = "round"; ctx.lineCap = "round";
-  let drawing = false;
-  ctx.beginPath();
-  values.forEach((value, index) => {
-    if (!Number.isFinite(value)) { drawing = false; return; }
-    const x = xAt(index), y = yAt(value);
-    if (!drawing) { ctx.moveTo(x, y); drawing = true; } else ctx.lineTo(x, y);
-  });
-  ctx.stroke();
+  const drawSeries = (seriesValues, seriesGroups, color, dashed, seriesLabel) => {
+    ctx.strokeStyle = color; ctx.lineWidth = 2.5; ctx.lineJoin = "round"; ctx.lineCap = "round"; ctx.setLineDash(dashed ? [7, 5] : []);
+    let drawing = false; ctx.beginPath();
+    seriesValues.forEach((value, index) => {
+      if (!Number.isFinite(value)) { drawing = false; return; }
+      const x = xAt(index), y = yAt(value);
+      if (!drawing) { ctx.moveTo(x, y); drawing = true; } else ctx.lineTo(x, y);
+    });
+    ctx.stroke(); ctx.setLineDash([]);
+    seriesValues.forEach((value, index) => {
+      if (!Number.isFinite(value)) return;
+      const x = xAt(index), y = yAt(value);
+      ctx.fillStyle = "white"; ctx.strokeStyle = color; ctx.lineWidth = 2;
+      ctx.beginPath(); ctx.arc(x, y, dashed ? 3 : 3.5, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+      chartPoints.push({ x, y, month: groups[index].month, value, n: seriesGroups[index].reviews.length, suffix: meta.suffix, label: `${seriesLabel} ${meta.label.toLowerCase()}` });
+    });
+  };
   chartPoints = [];
-  values.forEach((value, index) => {
-    if (!Number.isFinite(value)) return;
-    const x = xAt(index), y = yAt(value);
-    ctx.fillStyle = "white"; ctx.strokeStyle = "#0000A0"; ctx.lineWidth = 2;
-    ctx.beginPath(); ctx.arc(x, y, 3.5, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
-    chartPoints.push({ x, y, month: groups[index].month, value, n: groups[index].reviews.length, suffix: meta.suffix, label: meta.label });
-  });
-  $("#trendTable").textContent = groups.map((group, index) => `${monthLabel(group.month)}: ${Number.isFinite(values[index]) ? values[index].toFixed(state.trendMetric === "volume" ? 0 : 1) + meta.suffix : "no data"}, ${group.reviews.length} reviews`).join("; ");
+  drawSeries(values, groups, "#0000A0", false, "Kevin's");
+  if (state.benchmarkMode !== "off") drawSeries(competitorValues, competitorGroups, "#EB6916", true, "Competitor");
+  $("#trendTable").textContent = groups.map((group, index) => `${monthLabel(group.month)}: Kevin's ${Number.isFinite(values[index]) ? values[index].toFixed(state.trendMetric === "volume" ? 0 : 1) + meta.suffix : "no data"}; competitor ${Number.isFinite(competitorValues[index]) ? competitorValues[index].toFixed(state.trendMetric === "volume" ? 0 : 1) + meta.suffix : "no data"}`).join("; ");
 }
 
 function showChartTooltip(event) {
@@ -284,17 +347,20 @@ function showChartTooltip(event) {
   const nearest = chartPoints.reduce((best, point) => Math.abs(point.x - x) < Math.abs(best.x - x) ? point : best, chartPoints[0]);
   if (Math.abs(nearest.x - x) > 28) { $("#chartTooltip").hidden = true; return; }
   const tooltip = $("#chartTooltip");
-  tooltip.innerHTML = `<strong>${monthLabel(nearest.month)}</strong>${escapeHTML(nearest.label)}: ${nearest.value.toFixed(state.trendMetric === "volume" ? 0 : 1)}${nearest.suffix}<br>${nearest.n} review${nearest.n === 1 ? "" : "s"}`;
+  const monthPoints = chartPoints.filter(point => point.month === nearest.month);
+  tooltip.innerHTML = `<strong>${monthLabel(nearest.month)}</strong>${monthPoints.map(point => `${escapeHTML(point.label)}: ${point.value.toFixed(state.trendMetric === "volume" ? 0 : 1)}${point.suffix}<br><small>${point.n} review${point.n === 1 ? "" : "s"}</small>`).join("<hr>")}`;
   tooltip.style.left = `${nearest.x}px`;
   tooltip.style.top = `${nearest.y}px`;
   tooltip.hidden = false;
 }
 
 function renderRatingDistribution(reviews) {
+  const competitor = benchmarkReviews();
   const counts = [5, 4, 3, 2, 1].map(star => ({ star, count: reviews.filter(review => Number(review.rating) === star).length }));
   $("#ratingDistribution").innerHTML = counts.map(({ star, count }) => {
     const share = percent(count, reviews.length) || 0;
-    return `<div class="bar-row"><span>${star} star</span><div class="bar-track"><i style="width:${share}%"></i></div><strong>${share.toFixed(0)}%</strong></div>`;
+    const competitorShare = percent(competitor.filter(review => Number(review.rating) === star).length, competitor.length) || 0;
+    return `<div class="bar-row"><span>${star} star</span><div class="bar-pair"><div class="bar-track" title="Kevin's ${share.toFixed(1)}%"><i style="width:${share}%"></i></div>${state.benchmarkMode !== "off" ? `<div class="bar-track benchmark" title="Competitor ${competitorShare.toFixed(1)}%"><i style="width:${competitorShare}%"></i></div>` : ""}</div><strong>${share.toFixed(0)}%${state.benchmarkMode !== "off" ? `<small>${competitorShare.toFixed(0)}%</small>` : ""}</strong></div>`;
   }).join("");
 }
 
@@ -306,10 +372,74 @@ function renderSourceMix(reviews) {
 }
 
 function renderThemes(reviews) {
+  const competitor = benchmarkReviews();
   $("#themeBars").innerHTML = Object.entries(TOPICS).map(([key, topic]) => {
     const count = reviews.filter(review => review.topics[key]).length;
     const share = percent(count, reviews.length) || 0;
-    return `<article class="theme-card"><header><span>${topic.label}</span><strong>${share.toFixed(1)}%</strong></header><div class="theme-meter"><i style="width:${share}%"></i></div><small>${count} matching review${count === 1 ? "" : "s"}</small></article>`;
+    const competitorCount = competitor.filter(review => review.topics[key]).length;
+    const competitorShare = percent(competitorCount, competitor.length) || 0;
+    return `<article class="theme-card"><header><span>${topic.label}</span><strong>${share.toFixed(1)}%</strong></header><div class="theme-meter"><i style="width:${share}%"></i></div>${state.benchmarkMode !== "off" ? `<div class="theme-meter benchmark"><i style="width:${competitorShare}%"></i></div>` : ""}<small>${count} Kevin's match${count === 1 ? "" : "es"}${state.benchmarkMode !== "off" ? ` · competitor ${competitorShare.toFixed(1)}%` : ""}</small></article>`;
+  }).join("");
+}
+
+function renderBenchmark(kevinReviews, competitorReviews) {
+  const active = state.benchmarkMode !== "off";
+  const section = $("#benchmark");
+  const banner = $("#benchmarkBanner");
+  section.hidden = !active;
+  banner.hidden = !active;
+  $("#benchmarkNav").hidden = !active;
+  if (!active) return;
+
+  const products = benchmarkProducts();
+  const metrics = reviewMetrics(competitorReviews);
+  const kevin = reviewMetrics(kevinReviews);
+  const productsWithText = products.filter(product => competitorReviews.some(review => review.product_id === product.id));
+  const equalProductRatings = productsWithText.map(product => mean(competitorReviews.filter(review => review.product_id === product.id).map(review => Number(review.rating)))).filter(Number.isFinite);
+  const equalProductAverage = mean(equalProductRatings);
+  const modeLabel = state.benchmarkMode === "core" ? "Core 14-20 oz benchmark" : "All supplied competitors";
+  banner.innerHTML = `<div><span class="benchmark-chip">Overlay active</span><strong>${escapeHTML(modeLabel)}</strong><p>${metrics.n.toLocaleString()} captured written reviews across ${productsWithText.length} products with text; ${products.length} normalized products remain visible for coverage.</p></div><div class="benchmark-key"><span><i></i>Kevin's</span><span><i></i>Competitor</span></div>`;
+
+  $("#benchmarkSummary").innerHTML = [
+    ["Captured text", metrics.n.toLocaleString(), `${productsWithText.length}/${products.length} products with written-review evidence`],
+    ["Review-weighted rating", fmtRating(metrics.rating), Number.isFinite(kevin.rating) ? `${metrics.rating - kevin.rating > 0 ? "+" : ""}${(metrics.rating - kevin.rating).toFixed(1)} vs Kevin's` : "Current competitor view"],
+    ["Equal-product rating", fmtRating(equalProductAverage), "Each evidenced product weighted equally"],
+    ["Low-rating share", fmtPct(metrics.low), Number.isFinite(kevin.low) ? `${Math.abs(metrics.low - kevin.low).toFixed(1)} pts ${metrics.low > kevin.low ? "above" : "below"} Kevin's` : "1-2 star reviews"],
+  ].map(([label, value, note]) => `<article><span>${label}</span><strong>${value}</strong><p>${note}</p></article>`).join("");
+
+  $("#benchmarkTable tbody").innerHTML = products.map(product => {
+    const rows = competitorReviews.filter(review => review.product_id === product.id);
+    const row = reviewMetrics(rows);
+    const sources = [...new Set(rows.map(review => review.source))];
+    const evidence = !rows.length ? "Coverage only" : sources.includes("Hormel") ? "Complete first-party + retailer sample" : "Retailer page sample";
+    return `<tr class="benchmark-row"><td class="product-name"><small>${escapeHTML(product.brand)}</small>${escapeHTML(product.name)}</td><td>${product.pack_oz} oz</td><td><span class="status-pill ${product.benchmark_tier === "adjacent" ? "variant" : ""}">${product.benchmark_tier}</span></td><td>${row.n}</td><td>${fmtRating(row.rating)}</td><td>${fmtPct(row.low)}</td><td>${fmtPct(row.texture)}</td><td>${fmtPct(row.taste)}</td><td><span class="status-pill ${rows.length ? "" : "gap"}">${evidence}</span></td></tr>`;
+  }).join("");
+
+  const productIds = new Set(products.map(product => product.id));
+  const snapshots = (data.competitorSnapshots.snapshots || []).filter(snapshot => productIds.has(snapshot.product_id));
+  $("#benchmarkSnapshots").innerHTML = snapshots.map(snapshot => {
+    const total = Number(snapshot.rating_count) || Object.values(snapshot.distribution || {}).reduce((sum, value) => sum + Number(value), 0);
+    const bars = [5, 4, 3, 2, 1].map(star => {
+      const count = Number(snapshot.distribution?.[String(star)] || 0);
+      return `<div><span>${star}</span><i><b style="width:${percent(count, total) || 0}%"></b></i><span>${count.toLocaleString()}</span></div>`;
+    }).join("");
+    const status = snapshot.capture_status === "complete_public_first_party_feed" ? "Complete public first-party feed" : `${snapshot.captured_written_reviews || 0} text sample; complete rating distribution`;
+    return `<article class="snapshot-card competitor-snapshot"><header><span>${escapeHTML(snapshot.brand)} · ${escapeHTML(snapshot.source)}</span><strong>${escapeHTML(snapshot.product)}</strong></header><div class="snapshot-score"><strong>${fmtRating(Number(snapshot.average_rating))}</strong><span>${total.toLocaleString()} ratings</span></div><div class="snapshot-stars">${bars}</div><p>${escapeHTML(status)}<br><a href="${escapeHTML(snapshot.page_url)}" target="_blank" rel="noopener noreferrer">Open source page ↗</a></p></article>`;
+  }).join("");
+
+  const auditRows = data.competitorCoverage.rows || [];
+  const auditSources = ["Brand", "Target", "Amazon", "Kroger", "Walmart", "Costco"];
+  const statusLabel = { review_evidence: "Review evidence", listing_only: "Exact listing", exact_page_not_confirmed: "Search only", not_located: "Not located" };
+  $("#benchmarkCoverageTable tbody").innerHTML = products.map(product => {
+    const cells = auditSources.map(source => {
+      const audit = auditRows.find(row => row.product_id === product.id && row.source === source);
+      if (!audit) return `<td><span class="coverage-pill gap">Not audited</span></td>`;
+      const label = statusLabel[audit.status] || audit.status;
+      const classes = audit.status === "not_located" ? "gap" : audit.match_type === "club_pack_variant" || audit.status === "exact_page_not_confirmed" ? "variant" : "";
+      const pill = audit.page_url ? `<a class="coverage-pill ${classes}" href="${escapeHTML(audit.page_url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(label)} ↗</a>` : `<span class="coverage-pill ${classes}">${escapeHTML(label)}</span>`;
+      return `<td>${pill}<small>${escapeHTML(audit.match_type.replaceAll("_", " "))}${audit.note ? `<br>${escapeHTML(audit.note)}` : ""}</small></td>`;
+    }).join("");
+    return `<tr><th scope="row">${escapeHTML(product.brand)}<br><small>${escapeHTML(product.name)}</small></th>${cells}</tr>`;
   }).join("");
 }
 

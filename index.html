@@ -22,6 +22,7 @@
     <nav aria-label="Dashboard sections">
       <a href="#overview">Overview</a>
       <a href="#products">Products</a>
+      <a id="benchmarkNav" href="#benchmark" hidden>Benchmark</a>
       <a href="#retailers">Retailers</a>
       <a href="#reviews">Reviews</a>
       <a href="#actions">Actions</a>
@@ -44,6 +45,16 @@
         <legend>Date coverage</legend>
         <label><input type="radio" name="dateMode" value="analysis" checked><span>Trend window</span></label>
         <label><input type="radio" name="dateMode" value="all"><span>Full backfill</span></label>
+      </fieldset>
+
+      <fieldset class="filter-group benchmark-filter">
+        <legend>Competitor benchmark</legend>
+        <select id="benchmarkMode" aria-label="Competitor benchmark">
+          <option value="off">Off - Kevin's only</option>
+          <option value="core">Core 14-20 oz set</option>
+          <option value="all">All supplied competitors</option>
+        </select>
+        <small class="filter-context">Optional overlay. Kevin's remains the default; competitor sources are never added to Kevin's review counts.</small>
       </fieldset>
 
       <fieldset class="filter-group">
@@ -102,6 +113,8 @@
         <div class="scope-badge"><img src="brand/globe-badge.png" alt=""><strong>8</strong><span>products in scope</span></div>
       </section>
 
+      <section id="benchmarkBanner" class="benchmark-banner" hidden aria-live="polite"></section>
+
       <section class="kpi-grid" aria-label="Filtered view metrics">
         <article class="kpi-card"><span>Written reviews</span><strong id="kpiReviews">—</strong><small id="kpiCoverage">—</small></article>
         <article class="kpi-card"><span>Average rating</span><strong id="kpiRating">—</strong><small id="kpiRatingNote">Computed from written reviews</small></article>
@@ -125,7 +138,7 @@
             </div>
           </div>
           <div class="chart-wrap"><canvas id="trendChart" role="img" aria-label="Monthly filtered review trend"></canvas><div id="chartTooltip" class="chart-tooltip" hidden></div></div>
-          <div class="chart-legend"><span><i class="legend-line"></i><b id="trendLegend">Average rating</b></span><span class="legend-cutoff"><i></i>Nov 2025 comparison point</span></div>
+          <div class="chart-legend"><span><i class="legend-line"></i><b id="trendLegend">Kevin's average rating</b></span><span id="benchmarkLegend" hidden><i class="legend-line competitor"></i><b>Competitor benchmark</b></span><span class="legend-cutoff"><i></i>Nov 2025 comparison point</span></div>
           <div id="trendTable" class="sr-only" aria-live="polite"></div>
         </article>
 
@@ -143,6 +156,30 @@
           <div class="panel-heading"><div><span class="kicker">Language signals</span><h2>Topic prevalence</h2></div><span class="panel-note">Reviews may match more than one topic</span></div>
           <div id="themeBars" class="theme-grid"></div>
         </article>
+      </section>
+
+      <section id="benchmark" class="section-block benchmark-section panel-anchor" hidden>
+        <div class="section-heading">
+          <div><span class="kicker">Optional comparison layer</span><h2>Competitor benchmark detail</h2><p>Compare like-for-like written-review signals while keeping rating snapshots and incomplete retailer samples clearly separated.</p></div>
+        </div>
+        <div id="benchmarkSummary" class="benchmark-summary" aria-label="Competitor benchmark summary"></div>
+        <div class="table-shell">
+          <table id="benchmarkTable">
+            <thead><tr><th scope="col">Brand / product</th><th scope="col">Pack</th><th scope="col">Tier</th><th scope="col">Written reviews</th><th scope="col">Avg. rating</th><th scope="col">1-2 star</th><th scope="col">Texture</th><th scope="col">Taste</th><th scope="col">Evidence</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <p class="table-note">Hormel histories are complete public first-party feeds within the date scope. Walmart text is the public server-rendered sample (up to 10 records per page); full point-in-time rating distributions are shown separately and are not treated as dated written reviews.</p>
+        <div class="section-heading snapshot-heading"><div><span class="kicker">Market-scale context</span><h2>Competitor rating snapshots</h2><p>Point-in-time distributions show scale and rating context; they do not enter trend, topic, or volume calculations.</p></div></div>
+        <div id="benchmarkSnapshots" class="snapshot-grid"></div>
+        <div class="section-heading snapshot-heading"><div><span class="kicker">Retailer audit</span><h2>Competitor availability by source</h2><p>Exact product pages, listings, search-only findings, and unresolved gaps are shown separately across the same retailer set.</p></div></div>
+        <div class="table-shell coverage-shell">
+          <table id="benchmarkCoverageTable">
+            <thead><tr><th scope="col">Product</th><th scope="col">Brand</th><th scope="col">Target</th><th scope="col">Amazon</th><th scope="col">Kroger</th><th scope="col">Walmart</th><th scope="col">Costco</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <p class="table-note">Search-only means a retailer search was identified but an exact public product page was not confirmed. “Not located” is not proof of nationwide absence; assortment can vary by store and date.</p>
       </section>
 
       <section id="products" class="section-block panel-anchor">
@@ -202,6 +239,9 @@
             <article><strong>Deduplication</strong><p>Exact source-level and same-day cross-source matches on product, rating, title, and review text were removed. The Amazon file declined from 600 raw rows to 60 unique rows across all products.</p></article>
             <article><strong>Topic coding</strong><p>Transparent keyword rules tag texture, taste, sauce, value, packaging, and “product changed” language. Topic shares are directional.</p></article>
             <article><strong>Evidence layers</strong><p>Full-text public reviews drive trends. Five summaries or rating-only entries are retained as context but excluded from KPIs; Costco 32 oz listings remain separate.</p></article>
+            <article><strong>Competitor overlay</strong><p>Thirteen supplied competitor products were normalized after merging duplicate or variant descriptions. Eight are core 14-20 oz comparators; five are adjacent products shown only in the expanded view.</p></article>
+            <article><strong>Competitor review evidence</strong><p>212 dated public written reviews are available in scope: complete Hormel first-party histories plus labeled Walmart page samples. Eleven complete point-in-time rating distributions remain a separate context layer.</p></article>
+            <article><strong>Benchmark guardrail</strong><p>Competitor volume is sample-dependent and must not be read as market share. Rating and topic comparisons use only captured full text; products without defensible review text remain visible as coverage gaps.</p></article>
             <article><strong>Interpretation</strong><p>Review language identifies where to investigate. It does not establish manufacturing, ingredient, supplier, or formulation causality.</p></article>
           </div>
         </details>
@@ -217,8 +257,8 @@
     </main>
   </div>
 
-  <footer><span>Mars Food &amp; Nutrition · Beef HMR Review Intelligence</span><span>Public consumer-review data · Updated July 15, 2026</span><a href="#method">Methodology</a></footer>
+  <footer><span>Mars Food &amp; Nutrition · Beef HMR Review Intelligence</span><span>Public consumer-review data · Benchmark update July 21, 2026</span><a href="#method">Methodology</a></footer>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script src="app.js?v=2026-07-15-backfill" defer></script>
+  <script src="app.js?v=2026-07-21-benchmark" defer></script>
 </body>
 </html>

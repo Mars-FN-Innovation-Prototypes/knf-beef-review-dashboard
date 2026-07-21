@@ -1,0 +1,214 @@
+{
+  "as_of": "2026-07-21",
+  "scope_note": "Competitor benchmark seed set supplied by the business. Kevin's Teriyaki Style Beef and Mongolian Style Beef remain anchors in the existing eight-product registry and are not duplicated here.",
+  "benchmark_rules": {
+    "archive_start": "2023-01-01",
+    "archive_end": "2026-07-15",
+    "trend_start": "2024-11-01",
+    "core_pack_range_oz": [14, 20],
+    "core_definition": "Ready-to-heat beef entrees in approximately the same 14-20 oz use occasion as Kevin's 16 oz items.",
+    "adjacent_definition": "Relevant prepared-beef products with materially different pack sizes or form factors; shown only when All competitors is selected."
+  },
+  "anchors": ["teriyaki_beef", "mongolian_beef"],
+  "products": [
+    {
+      "id": "hormel_roast_au_jus_15",
+      "brand": "Hormel",
+      "name": "Slow Simmered Beef Roast Au Jus",
+      "aliases": ["Hormel Beef Roast Au Jus, 15 oz", "Hormel Square Table Slow Simmered Beef Roast Au Jus"],
+      "pack_oz": 15,
+      "family": "pot_roast_gravy",
+      "benchmark_tier": "core",
+      "identity_status": "verified",
+      "upcs": ["00037600473712", "037600473712"],
+      "retailer_pages": {
+        "brand": "https://www.hormel.com/brands/hormel-square-table-entrees/product/beef-roast-au-jus/",
+        "walmart": "https://www.walmart.com/ip/10291008",
+        "kroger": "https://www.kroger.com/p/hormel-square-table-slow-simmered-beef-roast-au-jus/0003760047371"
+      }
+    },
+    {
+      "id": "hormel_beef_tips_gravy_15",
+      "brand": "Hormel",
+      "name": "Slow Simmered Beef Tips & Gravy",
+      "aliases": ["Hormel Beef Tips & Gravy, 15 oz", "Hormel Beef Tips"],
+      "pack_oz": 15,
+      "family": "steak_tips_gravy",
+      "benchmark_tier": "core",
+      "identity_status": "verified_duplicate_merged",
+      "upcs": ["00037600154918", "037600154918"],
+      "retailer_pages": {
+        "brand": "https://www.hormel.com/brands/hormel-square-table-entrees/product/beef-tips-and-gravy/",
+        "walmart": "https://www.walmart.com/ip/10290929",
+        "kroger": "https://www.kroger.com/p/hormel-slow-simmered-beef-tips-gravy-fully-cooked-entree-15-oz-/0003760015491"
+      }
+    },
+    {
+      "id": "soules_beef_fajitas_14",
+      "brand": "Soules Kitchen",
+      "name": "Fully Cooked Beef Steak Fajitas",
+      "aliases": ["Soules Beef Fajitas, 14 oz"],
+      "pack_oz": 14,
+      "family": "fajita_beef",
+      "benchmark_tier": "core",
+      "identity_status": "verified",
+      "upcs": [],
+      "retailer_pages": {
+        "brand": "https://www.souleskitchen.com/products/fajita-steak/",
+        "walmart": "https://www.walmart.com/ip/38227608",
+        "kroger": "https://www.kroger.com/p/soules-kitchen-family-size-fully-cooked-beef-fajita-steak/0003469512460",
+        "target_search": "https://www.target.com/s/john+soules+steak"
+      }
+    },
+    {
+      "id": "soules_fajita_steak_6",
+      "brand": "Soules Kitchen",
+      "name": "Fully Cooked Fajita Steak",
+      "aliases": ["Soules Kitchen Fajita Steak, 6 oz"],
+      "pack_oz": 6,
+      "family": "fajita_beef",
+      "benchmark_tier": "adjacent",
+      "identity_status": "verified",
+      "upcs": ["0003469512262"],
+      "retailer_pages": {
+        "brand": "https://www.souleskitchen.com/products/fajita-steak/",
+        "walmart": "https://www.walmart.com/ip/39496073",
+        "kroger": "https://www.kroger.com/p/soules-kitchen-fully-cooked-fajita-steak/0003469512262"
+      }
+    },
+    {
+      "id": "sadlers_brisket_32",
+      "brand": "Sadler's Smokehouse",
+      "name": "Seasoned Chopped Beef Brisket",
+      "aliases": ["Sadler's Beef Brisket, 32 oz"],
+      "pack_oz": 32,
+      "family": "brisket",
+      "benchmark_tier": "adjacent",
+      "identity_status": "verified",
+      "upcs": [],
+      "retailer_pages": {
+        "costco": "https://sameday.costco.com/store/costco/products/84342379-sadler-s-smokehouse-seasoned-chopped-beef-brisket-2-lb"
+      }
+    },
+    {
+      "id": "soules_angus_fajitas_24",
+      "brand": "Soules Kitchen",
+      "name": "Family Size Beef Steak Fajitas",
+      "aliases": ["Soules Angus Beef Fajitas, 24 oz"],
+      "pack_oz": 24,
+      "family": "fajita_beef",
+      "benchmark_tier": "adjacent",
+      "identity_status": "verified",
+      "upcs": ["0003469512460"],
+      "retailer_pages": {
+        "brand": "https://www.souleskitchen.com/products/fajita-steak/",
+        "walmart": "https://www.walmart.com/ip/10312195",
+        "kroger": "https://www.kroger.com/p/soules-kitchen-family-size-fully-cooked-beef-fajita-steak/0003469512460"
+      }
+    },
+    {
+      "id": "jack_daniels_brisket",
+      "brand": "Jack Daniel's",
+      "name": "Seasoned Beef Brisket",
+      "aliases": ["Jack Daniel's Thinly Sliced Beef Brisket, 20 oz", "Jack Daniel's Beef Brisket, 15 oz", "Jack Daniel's Beef Brisket, 16 oz"],
+      "pack_oz": 20,
+      "pack_size_note": "The supplied 15 oz and 20 oz descriptions resolve to the same Walmart item identifier; retailer titles also reference 16 oz. They are treated as one canonical SKU family to avoid duplicate reviews.",
+      "family": "brisket",
+      "benchmark_tier": "core",
+      "identity_status": "verified_variants_merged",
+      "upcs": [],
+      "retailer_pages": {
+        "walmart": "https://www.walmart.com/ip/46575488",
+        "target_search": "https://www.target.com/s/jack+daniels+brisket"
+      }
+    },
+    {
+      "id": "brookwood_brisket_16",
+      "brand": "Brookwood Farms",
+      "name": "Smoked Sliced Beef Brisket",
+      "aliases": ["Brookwood Farms Sliced Beef Brisket, 16 oz"],
+      "pack_oz": 16,
+      "family": "brisket",
+      "benchmark_tier": "core",
+      "identity_status": "verified",
+      "upcs": ["0007228711006"],
+      "retailer_pages": {
+        "walmart": "https://www.walmart.com/ip/1020754218",
+        "kroger": "https://www.kroger.com/p/brookwood-farms-sliced-brisket/0007228711006"
+      }
+    },
+    {
+      "id": "del_real_barbacoa_15",
+      "brand": "Del Real Foods",
+      "name": "Slow Cooked Beef Barbacoa",
+      "aliases": ["Del Real Barbacoa, 15 oz"],
+      "pack_oz": 15,
+      "family": "mexican_beef",
+      "benchmark_tier": "core",
+      "identity_status": "verified",
+      "upcs": ["0082979302003"],
+      "retailer_pages": {
+        "brand": "https://delrealfoods.com/products/barbacoa",
+        "walmart": "https://www.walmart.com/ip/169151306",
+        "kroger": "https://www.kroger.com/p/del-real-foods-barbacoa-seasoned-beef-and-sauce/0082979302003",
+        "costco": "https://sameday.costco.com/store/costco/products/19431977-del-real-foods-homestyle-recipe-seasoned-beef-and-sauce-barbacoa-36-oz"
+      }
+    },
+    {
+      "id": "del_real_birria_15",
+      "brand": "Del Real Foods",
+      "name": "Seasoned Beef Birria",
+      "aliases": ["Del Real Birria, 16 oz", "Del Real Birria, 15 oz"],
+      "pack_oz": 15,
+      "pack_size_note": "The supplied list says 16 oz; current retailer pages identify a 15 oz item. The live exact item and UPC are retained.",
+      "family": "mexican_beef",
+      "benchmark_tier": "core",
+      "identity_status": "verified_size_corrected",
+      "upcs": ["0082979302603"],
+      "retailer_pages": {
+        "walmart": "https://www.walmart.com/ip/3859154746",
+        "kroger": "https://www.kroger.com/p/del-real-foods-seasoned-and-sauced-beef-birra/0082979302603",
+        "target_search": "https://www.target.com/s/del+real+birria"
+      }
+    },
+    {
+      "id": "mama_mancinis_meatballs_48",
+      "brand": "Mama Mancini's",
+      "name": "Italian Style Jumbo Beef Meatballs",
+      "aliases": ["Mama Mancini's Italian Style Jumbo Beef Meatballs, 48 oz"],
+      "pack_oz": 48,
+      "family": "meatballs",
+      "benchmark_tier": "adjacent",
+      "identity_status": "verified",
+      "upcs": [],
+      "retailer_pages": {
+        "costco": "https://www.costco.com/p/-/mama-mancinis-jumbo-beef-meatballs-48-oz/100587787",
+        "amazon": "https://www.amazon.com/dp/B0CVSJM9CF"
+      }
+    },
+    {
+      "id": "ruprecht_braised_beef_32",
+      "brand": "Ruprecht",
+      "name": "Braised Beef Pot Roast",
+      "aliases": ["Burprecht Braised Beef Pot Roast, 32 oz", "Ruprecht Braised Beef Pot Roast, 32 oz"],
+      "pack_oz": 32,
+      "family": "pot_roast_gravy",
+      "benchmark_tier": "adjacent",
+      "identity_status": "name_normalized_listing_not_verified",
+      "upcs": [],
+      "retailer_pages": {}
+    },
+    {
+      "id": "harris_ranch_pot_roast_16",
+      "brand": "Harris Ranch",
+      "name": "Homestyle Beef Pot Roast",
+      "aliases": ["Harris Ranch Homestyle Beef Pot Roast, 16 oz"],
+      "pack_oz": 16,
+      "family": "pot_roast_gravy",
+      "benchmark_tier": "core",
+      "identity_status": "source_list_only_no_public_exact_page",
+      "upcs": [],
+      "retailer_pages": {}
+    }
+  ]
+}

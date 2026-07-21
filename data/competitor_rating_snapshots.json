@@ -1,0 +1,235 @@
+{
+  "as_of": "2026-07-21",
+  "method_note": "Rating distributions are point-in-time context. Walmart dated text is the public server-rendered sample, not the full written-review archive; Hormel PowerReviews histories are complete public first-party feeds.",
+  "snapshots": [
+    {
+      "product_id": "hormel_roast_au_jus_15",
+      "product": "Slow Simmered Beef Roast Au Jus",
+      "brand": "Hormel",
+      "source": "Hormel",
+      "provider": "PowerReviews",
+      "page_url": "https://www.hormel.com/brands/hormel-square-table-entrees/product/beef-roast-au-jus/",
+      "average_rating": 3.62,
+      "rating_count": 169,
+      "written_review_count": 169,
+      "distribution": {
+        "1": 32,
+        "2": 24,
+        "3": 11,
+        "4": 11,
+        "5": 91
+      },
+      "capture_status": "complete_public_first_party_feed",
+      "as_of": "2026-07-21"
+    },
+    {
+      "product_id": "hormel_beef_tips_gravy_15",
+      "product": "Slow Simmered Beef Tips & Gravy",
+      "brand": "Hormel",
+      "source": "Hormel",
+      "provider": "PowerReviews",
+      "page_url": "https://www.hormel.com/brands/hormel-square-table-entrees/product/beef-tips-and-gravy/",
+      "average_rating": 2.91,
+      "rating_count": 79,
+      "written_review_count": 79,
+      "distribution": {
+        "1": 26,
+        "2": 13,
+        "3": 9,
+        "4": 4,
+        "5": 27
+      },
+      "capture_status": "complete_public_first_party_feed",
+      "as_of": "2026-07-21"
+    },
+    {
+      "product_id": "hormel_roast_au_jus_15",
+      "product": "Slow Simmered Beef Roast Au Jus",
+      "brand": "Hormel",
+      "source": "Walmart",
+      "provider": "Walmart",
+      "page_url": "https://www.walmart.com/ip/10291008",
+      "average_rating": 4.5,
+      "rating_count": 7759,
+      "written_review_count": 1174,
+      "distribution": {
+        "1": 375,
+        "2": 204,
+        "3": 520,
+        "4": 1010,
+        "5": 5650
+      },
+      "captured_written_reviews": 10,
+      "capture_status": "public_ssr_sample_plus_complete_rating_distribution",
+      "as_of": "2026-07-21"
+    },
+    {
+      "product_id": "hormel_beef_tips_gravy_15",
+      "product": "Slow Simmered Beef Tips & Gravy",
+      "brand": "Hormel",
+      "source": "Walmart",
+      "provider": "Walmart",
+      "page_url": "https://www.walmart.com/ip/10290929",
+      "average_rating": 4.4,
+      "rating_count": 5815,
+      "written_review_count": 1005,
+      "distribution": {
+        "1": 281,
+        "2": 181,
+        "3": 381,
+        "4": 792,
+        "5": 4180
+      },
+      "captured_written_reviews": 10,
+      "capture_status": "public_ssr_sample_plus_complete_rating_distribution",
+      "as_of": "2026-07-21"
+    },
+    {
+      "product_id": "soules_beef_fajitas_14",
+      "product": "Fully Cooked Beef Steak Fajitas",
+      "brand": "Soules Kitchen",
+      "source": "Walmart",
+      "provider": "Walmart",
+      "page_url": "https://www.walmart.com/ip/38227608",
+      "average_rating": 4.2,
+      "rating_count": 9446,
+      "written_review_count": 2240,
+      "distribution": {
+        "1": 827,
+        "2": 398,
+        "3": 769,
+        "4": 1220,
+        "5": 6232
+      },
+      "captured_written_reviews": 10,
+      "capture_status": "public_ssr_sample_plus_complete_rating_distribution",
+      "as_of": "2026-07-21"
+    },
+    {
+      "product_id": "soules_fajita_steak_6",
+      "product": "Fully Cooked Fajita Steak",
+      "brand": "Soules Kitchen",
+      "source": "Walmart",
+      "provider": "Walmart",
+      "page_url": "https://www.walmart.com/ip/39496073",
+      "average_rating": 4.2,
+      "rating_count": 9446,
+      "written_review_count": 2240,
+      "distribution": {
+        "1": 827,
+        "2": 398,
+        "3": 769,
+        "4": 1220,
+        "5": 6232
+      },
+      "captured_written_reviews": 10,
+      "capture_status": "public_ssr_sample_plus_complete_rating_distribution",
+      "as_of": "2026-07-21"
+    },
+    {
+      "product_id": "soules_angus_fajitas_24",
+      "product": "Family Size Beef Steak Fajitas",
+      "brand": "Soules Kitchen",
+      "source": "Walmart",
+      "provider": "Walmart",
+      "page_url": "https://www.walmart.com/ip/10312195",
+      "average_rating": 4.3,
+      "rating_count": 2323,
+      "written_review_count": 528,
+      "distribution": {
+        "1": 191,
+        "2": 74,
+        "3": 170,
+        "4": 303,
+        "5": 1585
+      },
+      "captured_written_reviews": 10,
+      "capture_status": "public_ssr_sample_plus_complete_rating_distribution",
+      "as_of": "2026-07-21"
+    },
+    {
+      "product_id": "jack_daniels_brisket",
+      "product": "Seasoned Beef Brisket",
+      "brand": "Jack Daniel's",
+      "source": "Walmart",
+      "provider": "Walmart",
+      "page_url": "https://www.walmart.com/ip/46575488",
+      "average_rating": 4.3,
+      "rating_count": 3441,
+      "written_review_count": 710,
+      "distribution": {
+        "1": 279,
+        "2": 117,
+        "3": 224,
+        "4": 385,
+        "5": 2436
+      },
+      "captured_written_reviews": 10,
+      "capture_status": "public_ssr_sample_plus_complete_rating_distribution",
+      "as_of": "2026-07-21"
+    },
+    {
+      "product_id": "brookwood_brisket_16",
+      "product": "Smoked Sliced Beef Brisket",
+      "brand": "Brookwood Farms",
+      "source": "Walmart",
+      "provider": "Walmart",
+      "page_url": "https://www.walmart.com/ip/1020754218",
+      "average_rating": 4.3,
+      "rating_count": 2003,
+      "written_review_count": 374,
+      "distribution": {
+        "1": 166,
+        "2": 72,
+        "3": 146,
+        "4": 213,
+        "5": 1406
+      },
+      "captured_written_reviews": 10,
+      "capture_status": "public_ssr_sample_plus_complete_rating_distribution",
+      "as_of": "2026-07-21"
+    },
+    {
+      "product_id": "del_real_barbacoa_15",
+      "product": "Slow Cooked Beef Barbacoa",
+      "brand": "Del Real Foods",
+      "source": "Walmart",
+      "provider": "Walmart",
+      "page_url": "https://www.walmart.com/ip/169151306",
+      "average_rating": 4.2,
+      "rating_count": 819,
+      "written_review_count": 261,
+      "distribution": {
+        "1": 66,
+        "2": 32,
+        "3": 63,
+        "4": 132,
+        "5": 526
+      },
+      "captured_written_reviews": 10,
+      "capture_status": "public_ssr_sample_plus_complete_rating_distribution",
+      "as_of": "2026-07-21"
+    },
+    {
+      "product_id": "del_real_birria_15",
+      "product": "Seasoned Beef Birria",
+      "brand": "Del Real Foods",
+      "source": "Walmart",
+      "provider": "Walmart",
+      "page_url": "https://www.walmart.com/ip/3859154746",
+      "average_rating": 4.1,
+      "rating_count": 460,
+      "written_review_count": 122,
+      "distribution": {
+        "1": 49,
+        "2": 22,
+        "3": 53,
+        "4": 60,
+        "5": 276
+      },
+      "captured_written_reviews": 10,
+      "capture_status": "public_ssr_sample_plus_complete_rating_distribution",
+      "as_of": "2026-07-21"
+    }
+  ]
+}

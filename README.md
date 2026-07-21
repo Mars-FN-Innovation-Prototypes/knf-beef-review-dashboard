@@ -11,6 +11,9 @@ Interactive, static dashboard for exploring written consumer reviews across eigh
 - Kroger, Walmart, and Costco assortment coverage, with Costco 32 oz club packs separated from exact 16 oz SKUs
 - Exact scope limited to the eight products specified for the analysis
 - Five indexed-summary, analyst-summary, or rating-only records retained as context but excluded from written-review KPIs
+- An optional 13-product competitor registry derived from the supplied benchmark list: eight core 14-20 oz products and five adjacent pack/form-factor comparators
+- 212 dated competitor written reviews in scope, comprising complete Hormel first-party histories and clearly labeled Walmart public page samples
+- Eleven complete point-in-time competitor rating distributions kept separate from the written-review trend layer
 
 ## Dashboard capabilities
 
@@ -21,6 +24,8 @@ Interactive, static dashboard for exploring written consumer reviews across eigh
 - Product-by-retailer coverage matrix with exact-SKU and club-pack labeling
 - Searchable review explorer and filtered CSV export
 - Transparent methodology, exclusions, and limitations
+- Opt-in competitor overlays on KPIs, monthly trends, rating distribution, and topic prevalence; the default remains Kevin's-only
+- Core versus expanded competitor selection, equal-product and review-weighted benchmark views, product evidence status, and retailer snapshot context
 
 ## Collection methodology
 
@@ -29,5 +34,13 @@ Interactive, static dashboard for exploring written consumer reviews across eigh
 - Review HTML was converted to plain text; provider review IDs, verification status, source URLs, and provenance labels were retained. Reviewer names were intentionally omitted.
 - Exact source-level duplicates and same-day cross-source duplicates were removed before analysis.
 - Indexed summaries, analyst summaries, and rating-only entries remain in the archive for traceability but do not contribute to written-review metrics.
+
+### Competitor benchmark
+
+- The supplied product names were normalized into canonical products using brand, product name, pack size, UPC/item identifiers, and exact public product pages. Duplicate Hormel Beef Tips descriptions and the Jack Daniel's pack-title variants were merged to avoid double counting.
+- The public Hormel PowerReviews feeds provide the complete first-party histories displayed within the 2023-2026 scope. Walmart product pages provide a public server-rendered text sample (up to 10 reviews per page) plus complete point-in-time rating distributions.
+- Target, Amazon, Kroger, Walmart, Costco, and brand sites were audited across all 13 products. Listings without defensible dated text remain coverage context and are not manufactured into review metrics.
+- Competitor volume is sample-dependent and is not a market-share measure. Rating snapshots never enter the dated review trend, topic coding, or text-review KPIs.
+- `scripts/collect_competitor_reviews.py` rebuilds the public benchmark evidence from the normalized SKU registry; reviewer names are not retained.
 
 The site has no runtime dependencies and can be hosted directly with GitHub Pages.
