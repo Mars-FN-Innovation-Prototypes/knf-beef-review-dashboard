@@ -45,10 +45,10 @@
       "product": "Slow Simmered Beef Roast Au Jus",
       "benchmark_tier": "core",
       "source": "Amazon",
-      "status": "not_located",
-      "match_type": "not_located",
+      "status": "rating_evidence",
+      "match_type": "exact_listed_sku",
       "pack_oz": 15,
-      "page_url": null,
+      "page_url": "https://www.amazon.com/dp/B0012S1M6A",
       "note": null
     },
     {
@@ -117,10 +117,10 @@
       "product": "Slow Simmered Beef Tips & Gravy",
       "benchmark_tier": "core",
       "source": "Amazon",
-      "status": "not_located",
-      "match_type": "not_located",
+      "status": "rating_evidence",
+      "match_type": "exact_listed_sku",
       "pack_oz": 15,
-      "page_url": null,
+      "page_url": "https://www.amazon.com/dp/B01ITAXT3M",
       "note": null
     },
     {
@@ -621,10 +621,10 @@
       "product": "Slow Cooked Beef Barbacoa",
       "benchmark_tier": "core",
       "source": "Amazon",
-      "status": "not_located",
-      "match_type": "not_located",
+      "status": "rating_evidence",
+      "match_type": "exact_listed_sku",
       "pack_oz": 15,
-      "page_url": null,
+      "page_url": "https://www.amazon.com/dp/B00AFYPGCS",
       "note": null
     },
     {
@@ -693,11 +693,11 @@
       "product": "Seasoned Beef Birria",
       "benchmark_tier": "core",
       "source": "Amazon",
-      "status": "not_located",
-      "match_type": "not_located",
+      "status": "related_variant_excluded",
+      "match_type": "different_product_format",
       "pack_oz": 15,
-      "page_url": null,
-      "note": null
+      "page_url": "https://www.amazon.com/dp/B0BFDG62H2",
+      "note": "Related beef birria taco kit (564 ratings), excluded from the supplied 15 oz seasoned beef birria benchmark."
     },
     {
       "product_id": "del_real_birria_15",
@@ -765,11 +765,11 @@
       "product": "Italian Style Jumbo Beef Meatballs",
       "benchmark_tier": "adjacent",
       "source": "Amazon",
-      "status": "listing_only",
-      "match_type": "exact_listed_sku",
+      "status": "rating_evidence",
+      "match_type": "multipack_of_exact_48oz_unit",
       "pack_oz": 48,
       "page_url": "https://www.amazon.com/dp/B0CVSJM9CF",
-      "note": null
+      "note": "Amazon lists a pack of three 48 oz units. Its 35-rating aggregate is retained as multipack context and excluded from like-for-like benchmark totals."
     },
     {
       "product_id": "mama_mancinis_meatballs_48",

@@ -9,7 +9,7 @@ const DATA_FILES = {
   competitorSnapshots: "data/competitor_rating_snapshots.json",
   competitorCoverage: "data/competitor_coverage_audit.json",
 };
-const RELEASE_VERSION = "2026-07-22-vp-competitor-comparison";
+const RELEASE_VERSION = "2026-07-22-amazon-aggregate-audit";
 
 const ANALYSIS_START = "2024-11-01";
 const ANALYSIS_END = "2026-07-22";
@@ -206,7 +206,7 @@ function reviewMetrics(reviews) {
 
 function snapshotMetrics(snapshots) {
   const distribution = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
-  snapshots.forEach(snapshot => {
+  snapshots.filter(snapshot => snapshot.metric_eligible !== false).forEach(snapshot => {
     Object.keys(distribution).forEach(star => { distribution[star] += Number(snapshot.distribution?.[star] || 0); });
   });
   const n = Object.values(distribution).reduce((sum, count) => sum + count, 0);
@@ -223,7 +223,7 @@ function executiveComparisonData() {
   const coreIds = new Set(data.competitorRegistry.products.filter(product => product.benchmark_tier === "core").map(product => product.id));
   if (state.comparisonView === "ratings") {
     const kevinSnapshots = data.analysis.rating_snapshots.filter(snapshot => Object.values(snapshot.distribution || {}).reduce((sum, count) => sum + Number(count), 0) > 0);
-    const competitorSnapshots = data.competitorSnapshots.snapshots.filter(snapshot => coreIds.has(snapshot.product_id) && Object.values(snapshot.distribution || {}).reduce((sum, count) => sum + Number(count), 0) > 0);
+    const competitorSnapshots = data.competitorSnapshots.snapshots.filter(snapshot => snapshot.metric_eligible !== false && coreIds.has(snapshot.product_id) && Object.values(snapshot.distribution || {}).reduce((sum, count) => sum + Number(count), 0) > 0);
     const kevin = snapshotMetrics(kevinSnapshots);
     const competitor = snapshotMetrics(competitorSnapshots);
     return {
@@ -496,15 +496,19 @@ function renderBenchmark(kevinReviews, competitorReviews) {
   $("#benchmarkSnapshots").innerHTML = snapshots.map(snapshot => {
     const total = Number(snapshot.rating_count) || Object.values(snapshot.distribution || {}).reduce((sum, value) => sum + Number(value), 0);
     const hasDistribution = Object.keys(snapshot.distribution || {}).length > 0;
+    const roundedPercentages = snapshot.distribution_basis === "source_rounded_percentages_apportioned_to_rating_total";
     const bars = hasDistribution ? [5, 4, 3, 2, 1].map(star => {
       const count = Number(snapshot.distribution?.[String(star)] || 0);
-      return `<div><span>${star}</span><i><b style="width:${percent(count, total) || 0}%"></b></i><span>${count.toLocaleString()}</span></div>`;
+      const share = roundedPercentages ? Number(snapshot.distribution_percent?.[String(star)] || 0) : percent(count, total) || 0;
+      return `<div><span>${star}</span><i><b style="width:${share}%"></b></i><span>${roundedPercentages ? `${share}%` : count.toLocaleString()}</span></div>`;
     }).join("") : `<p class="snapshot-distribution-note">Star distribution not publicly available.</p>`;
     const status = {
       complete_public_first_party_feed: "Complete public first-party feed",
       bounded_public_text_sample_plus_complete_rating_distribution: `${snapshot.captured_written_reviews || 0} dated reviews in bounded public-page sample; complete point-in-time distribution`,
       complete_rating_distribution_shared_variant_text_excluded: "Shared variant-family rating distribution; unresolved written text excluded",
       rating_total_only_public_text_payload_unavailable: "Exact-SKU rating total only; reproducible public review text unavailable",
+      amazon_aggregate_exact_sku_no_dated_text: "Exact-SKU Amazon aggregate; rounded star percentages; dated review text not captured",
+      amazon_aggregate_related_variant_excluded: "Related Amazon variant aggregate; excluded from benchmark metrics",
     }[snapshot.capture_status] || "Public rating context; see methodology";
     return `<article class="snapshot-card competitor-snapshot"><header><span>${escapeHTML(snapshot.brand)} · ${escapeHTML(snapshot.source)}</span><strong>${escapeHTML(snapshot.product)}</strong></header><div class="snapshot-score"><strong>${fmtRating(Number(snapshot.average_rating))}</strong><span>${total.toLocaleString()} ratings</span></div><div class="snapshot-stars">${bars}</div><p>${escapeHTML(status)}<br><a href="${escapeHTML(snapshot.page_url)}" target="_blank" rel="noopener noreferrer">Open source page ↗</a></p></article>`;
   }).join("");

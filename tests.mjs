@@ -39,8 +39,10 @@ assert.equal(eligible.filter((r) => r.product_id === "sirloin_mushroom").length,
 assert.ok(reviews.filter((r) => r.source === "Kevin's Natural Foods").every((r) => !("reviewer_name" in r)));
 assert.equal(competitorReviews.filter((r) => r.metric_eligible !== false).length, 202);
 assert.equal(competitorReviews.filter((r) => r.metric_eligible === false && r.quality_status === "excluded_shared_variant_without_review_level_size").length, 10);
-assert.equal(competitorSnapshots.snapshots.length, 16);
+assert.equal(competitorSnapshots.snapshots.length, 21);
 assert.equal(competitorSnapshots.snapshots.filter((r) => r.source === "Kroger").length, 6);
+assert.equal(competitorSnapshots.snapshots.filter((r) => r.source === "Amazon").length, 5);
+assert.equal(competitorSnapshots.snapshots.filter((r) => r.source === "Amazon" && r.metric_eligible !== false).length, 3);
 assert.equal(competitorCoverage.rows.length, 78);
 
 const files = await Promise.all(["index.html", "styles.css", "app.js", "README.md"].map((name) => readFile(new URL("./" + name, import.meta.url), "utf8")));

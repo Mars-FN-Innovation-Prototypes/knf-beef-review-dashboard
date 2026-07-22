@@ -102,8 +102,95 @@ const krogerSnapshots = Object.entries(krogerRatings).map(([productId, [averageR
   };
 });
 
+function apportionedDistribution(ratingCount, percentages) {
+  const entries = Object.entries(percentages).map(([star, share]) => {
+    const exact = ratingCount * share / 100;
+    return { star, count: Math.floor(exact), remainder: exact - Math.floor(exact) };
+  });
+  let remaining = ratingCount - entries.reduce((sum, row) => sum + row.count, 0);
+  entries.sort((a, b) => b.remainder - a.remainder || Number(b.star) - Number(a.star));
+  for (let index = 0; index < remaining; index += 1) entries[index].count += 1;
+  return Object.fromEntries(entries.sort((a, b) => Number(a.star) - Number(b.star)).map(row => [row.star, row.count]));
+}
+
+const amazonRatings = [
+  {
+    productId: "hormel_roast_au_jus_15",
+    asin: "B0012S1M6A",
+    averageRating: 4.5,
+    ratingCount: 3069,
+    percentages: { 1: 2, 2: 1, 3: 9, 4: 15, 5: 73 },
+    scope: "exact_listed_sku",
+    metricEligible: true,
+  },
+  {
+    productId: "hormel_beef_tips_gravy_15",
+    asin: "B01ITAXT3M",
+    averageRating: 4.4,
+    ratingCount: 3361,
+    percentages: { 1: 4, 2: 3, 3: 8, 4: 11, 5: 74 },
+    scope: "exact_listed_sku",
+    metricEligible: true,
+  },
+  {
+    productId: "del_real_barbacoa_15",
+    asin: "B00AFYPGCS",
+    averageRating: 4.3,
+    ratingCount: 1026,
+    percentages: { 1: 7, 2: 4, 3: 10, 4: 12, 5: 67 },
+    scope: "exact_listed_sku",
+    metricEligible: true,
+  },
+  {
+    productId: "del_real_birria_15",
+    asin: "B0BFDG62H2",
+    averageRating: 4.0,
+    ratingCount: 564,
+    percentages: { 1: 11, 2: 8, 3: 9, 4: 11, 5: 61 },
+    scope: "related_birria_taco_kit",
+    metricEligible: false,
+    productLabel: "Beef Birria Taco Kit (related variant)",
+    qualityNote: "This Amazon page is a prepared taco kit with beef, consomme, and tortillas, not the supplied 15 oz seasoned beef birria entree. Its aggregate is shown as related channel context and excluded from benchmark metrics.",
+  },
+  {
+    productId: "mama_mancinis_meatballs_48",
+    asin: "B0CVSJM9CF",
+    averageRating: 4.6,
+    ratingCount: 35,
+    percentages: null,
+    scope: "multipack_of_exact_48oz_unit",
+    metricEligible: false,
+    qualityNote: "The listing is a pack of three 48 oz units. The aggregate is retained as multipack context; Amazon did not expose a star-distribution table on the inspected page.",
+  },
+];
+
+const amazonSnapshots = amazonRatings.map(row => {
+  const product = products.get(row.productId);
+  return {
+    product_id: row.productId,
+    product: row.productLabel || product.name,
+    brand: product.brand,
+    source: "Amazon",
+    provider: "Amazon",
+    page_url: `https://www.amazon.com/dp/${row.asin}`,
+    item_id: row.asin,
+    average_rating: row.averageRating,
+    rating_count: row.ratingCount,
+    written_review_count: null,
+    distribution: row.percentages ? apportionedDistribution(row.ratingCount, row.percentages) : {},
+    distribution_percent: row.percentages || {},
+    distribution_basis: row.percentages ? "source_rounded_percentages_apportioned_to_rating_total" : "not_available",
+    captured_written_reviews: 0,
+    capture_status: row.metricEligible ? "amazon_aggregate_exact_sku_no_dated_text" : "amazon_aggregate_related_variant_excluded",
+    snapshot_scope: row.scope,
+    metric_eligible: row.metricEligible,
+    quality_note: row.qualityNote || "Exact-SKU Amazon aggregate. Star counts are apportioned to the published rating total from Amazon's rounded percentage distribution; dated written-review text is not included.",
+    as_of: "2026-07-22",
+  };
+});
+
 const reviews = [...firstPartyReviews, ...walmartReviews].sort((a, b) => b.date.localeCompare(a.date) || a.product_id.localeCompare(b.product_id));
-const snapshots = [...firstPartySnapshots, ...walmartSnapshots, ...krogerSnapshots];
+const snapshots = [...firstPartySnapshots, ...walmartSnapshots, ...krogerSnapshots, ...amazonSnapshots];
 
 const relatedVariants = new Map([
   ["soules_beef_fajitas_14|Target", {
@@ -113,6 +200,11 @@ const relatedVariants = new Map([
   ["del_real_barbacoa_15|Target", {
     url: "https://www.target.com/p/-/A-84724173",
     note: "Related 12 oz pack (434 ratings), excluded from the supplied 15 oz benchmark.",
+  }],
+  ["del_real_birria_15|Amazon", {
+    url: "https://www.amazon.com/dp/B0BFDG62H2",
+    matchType: "different_product_format",
+    note: "Related beef birria taco kit (564 ratings), excluded from the supplied 15 oz seasoned beef birria benchmark.",
   }],
 ]);
 
@@ -144,13 +236,17 @@ for (const product of registry.products) {
         matchType = "exact_variant_page_shared_review_family";
         note = "The page shares reviews and aggregate ratings with the 14 oz variant; unresolved written text is excluded from product metrics.";
       }
+      if (product.id === "mama_mancinis_meatballs_48" && source === "Amazon") {
+        matchType = "multipack_of_exact_48oz_unit";
+        note = "Amazon lists a pack of three 48 oz units. Its 35-rating aggregate is retained as multipack context and excluded from like-for-like benchmark totals.";
+      }
     } else if (searchUrl) {
       resolvedUrl = searchUrl;
       matchType = "search_only";
       status = "exact_page_not_confirmed";
     } else if (related) {
       resolvedUrl = related.url;
-      matchType = "different_pack_size";
+      matchType = related.matchType || "different_pack_size";
       status = "related_variant_excluded";
       note = related.note;
     }
@@ -173,7 +269,7 @@ for (const product of registry.products) {
 fs.writeFileSync(reviewPath, `${JSON.stringify(reviews, null, 2)}\n`);
 fs.writeFileSync(snapshotPath, `${JSON.stringify({
   as_of: "2026-07-22",
-  method_note: "Hormel review text is a complete public first-party feed within the 2023-present scope. Walmart text is a bounded server-rendered public-page sample; shared Soules 6 oz/14 oz records without review-level size are excluded from product metrics. Kroger contributes exact-SKU point-in-time rating totals only because a reproducible public review-text payload was unavailable. Rating totals never enter dated text metrics.",
+  method_note: "Hormel review text is a complete public first-party feed within the 2023-present scope. Walmart text is a bounded server-rendered public-page sample; shared Soules 6 oz/14 oz records without review-level size are excluded from product metrics. Kroger contributes exact-SKU point-in-time rating totals only. Amazon contributes exact-SKU aggregate ratings for three core products; rounded star percentages are apportioned to the published totals, while a related birria taco kit and a Mama Mancini's multipack remain excluded context. Rating totals never enter dated text metrics.",
   snapshots,
 }, null, 2)}\n`);
 fs.writeFileSync(coveragePath, `${JSON.stringify({
