@@ -28,6 +28,7 @@ Interactive, static dashboard for exploring written consumer reviews across eigh
 - Opt-in competitor overlays on KPIs, monthly trends, rating distribution, and topic prevalence; the default remains Kevin's-only
 - Executive competitor comparison with Trend Written, Full Written, and Total Ratings views; paired average-rating and 1-2-star-share visuals retain sample and source-page context
 - Core versus expanded competitor selection, equal-product and review-weighted benchmark views, product evidence status, and retailer snapshot context
+- Amazon aggregate-rating context for three exact core competitor SKUs, with a birria taco kit and Mama Mancini's multipack retained as clearly excluded variant evidence
 
 ## Collection methodology
 

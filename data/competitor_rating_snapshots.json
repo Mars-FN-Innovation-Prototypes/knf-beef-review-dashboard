@@ -1,6 +1,6 @@
 {
   "as_of": "2026-07-22",
-  "method_note": "Hormel review text is a complete public first-party feed within the 2023-present scope. Walmart text is a bounded server-rendered public-page sample; shared Soules 6 oz/14 oz records without review-level size are excluded from product metrics. Kroger contributes exact-SKU point-in-time rating totals only because a reproducible public review-text payload was unavailable. Rating totals never enter dated text metrics.",
+  "method_note": "Hormel review text is a complete public first-party feed within the 2023-present scope. Walmart text is a bounded server-rendered public-page sample; shared Soules 6 oz/14 oz records without review-level size are excluded from product metrics. Kroger contributes exact-SKU point-in-time rating totals only. Amazon contributes exact-SKU aggregate ratings for three core products; rounded star percentages are apportioned to the published totals, while a related birria taco kit and a Mama Mancini's multipack remain excluded context. Rating totals never enter dated text metrics.",
   "snapshots": [
     {
       "product_id": "hormel_roast_au_jus_15",
@@ -330,6 +330,159 @@
       "capture_status": "rating_total_only_public_text_payload_unavailable",
       "snapshot_scope": "exact_listed_sku",
       "quality_note": "Exact-SKU public rating total; review text was not exposed in a reproducible public payload and is excluded from text metrics.",
+      "as_of": "2026-07-22"
+    },
+    {
+      "product_id": "hormel_roast_au_jus_15",
+      "product": "Slow Simmered Beef Roast Au Jus",
+      "brand": "Hormel",
+      "source": "Amazon",
+      "provider": "Amazon",
+      "page_url": "https://www.amazon.com/dp/B0012S1M6A",
+      "item_id": "B0012S1M6A",
+      "average_rating": 4.5,
+      "rating_count": 3069,
+      "written_review_count": null,
+      "distribution": {
+        "1": 62,
+        "2": 31,
+        "3": 276,
+        "4": 460,
+        "5": 2240
+      },
+      "distribution_percent": {
+        "1": 2,
+        "2": 1,
+        "3": 9,
+        "4": 15,
+        "5": 73
+      },
+      "distribution_basis": "source_rounded_percentages_apportioned_to_rating_total",
+      "captured_written_reviews": 0,
+      "capture_status": "amazon_aggregate_exact_sku_no_dated_text",
+      "snapshot_scope": "exact_listed_sku",
+      "metric_eligible": true,
+      "quality_note": "Exact-SKU Amazon aggregate. Star counts are apportioned to the published rating total from Amazon's rounded percentage distribution; dated written-review text is not included.",
+      "as_of": "2026-07-22"
+    },
+    {
+      "product_id": "hormel_beef_tips_gravy_15",
+      "product": "Slow Simmered Beef Tips & Gravy",
+      "brand": "Hormel",
+      "source": "Amazon",
+      "provider": "Amazon",
+      "page_url": "https://www.amazon.com/dp/B01ITAXT3M",
+      "item_id": "B01ITAXT3M",
+      "average_rating": 4.4,
+      "rating_count": 3361,
+      "written_review_count": null,
+      "distribution": {
+        "1": 134,
+        "2": 101,
+        "3": 269,
+        "4": 370,
+        "5": 2487
+      },
+      "distribution_percent": {
+        "1": 4,
+        "2": 3,
+        "3": 8,
+        "4": 11,
+        "5": 74
+      },
+      "distribution_basis": "source_rounded_percentages_apportioned_to_rating_total",
+      "captured_written_reviews": 0,
+      "capture_status": "amazon_aggregate_exact_sku_no_dated_text",
+      "snapshot_scope": "exact_listed_sku",
+      "metric_eligible": true,
+      "quality_note": "Exact-SKU Amazon aggregate. Star counts are apportioned to the published rating total from Amazon's rounded percentage distribution; dated written-review text is not included.",
+      "as_of": "2026-07-22"
+    },
+    {
+      "product_id": "del_real_barbacoa_15",
+      "product": "Slow Cooked Beef Barbacoa",
+      "brand": "Del Real Foods",
+      "source": "Amazon",
+      "provider": "Amazon",
+      "page_url": "https://www.amazon.com/dp/B00AFYPGCS",
+      "item_id": "B00AFYPGCS",
+      "average_rating": 4.3,
+      "rating_count": 1026,
+      "written_review_count": null,
+      "distribution": {
+        "1": 72,
+        "2": 41,
+        "3": 103,
+        "4": 123,
+        "5": 687
+      },
+      "distribution_percent": {
+        "1": 7,
+        "2": 4,
+        "3": 10,
+        "4": 12,
+        "5": 67
+      },
+      "distribution_basis": "source_rounded_percentages_apportioned_to_rating_total",
+      "captured_written_reviews": 0,
+      "capture_status": "amazon_aggregate_exact_sku_no_dated_text",
+      "snapshot_scope": "exact_listed_sku",
+      "metric_eligible": true,
+      "quality_note": "Exact-SKU Amazon aggregate. Star counts are apportioned to the published rating total from Amazon's rounded percentage distribution; dated written-review text is not included.",
+      "as_of": "2026-07-22"
+    },
+    {
+      "product_id": "del_real_birria_15",
+      "product": "Beef Birria Taco Kit (related variant)",
+      "brand": "Del Real Foods",
+      "source": "Amazon",
+      "provider": "Amazon",
+      "page_url": "https://www.amazon.com/dp/B0BFDG62H2",
+      "item_id": "B0BFDG62H2",
+      "average_rating": 4,
+      "rating_count": 564,
+      "written_review_count": null,
+      "distribution": {
+        "1": 62,
+        "2": 45,
+        "3": 51,
+        "4": 62,
+        "5": 344
+      },
+      "distribution_percent": {
+        "1": 11,
+        "2": 8,
+        "3": 9,
+        "4": 11,
+        "5": 61
+      },
+      "distribution_basis": "source_rounded_percentages_apportioned_to_rating_total",
+      "captured_written_reviews": 0,
+      "capture_status": "amazon_aggregate_related_variant_excluded",
+      "snapshot_scope": "related_birria_taco_kit",
+      "metric_eligible": false,
+      "quality_note": "This Amazon page is a prepared taco kit with beef, consomme, and tortillas, not the supplied 15 oz seasoned beef birria entree. Its aggregate is shown as related channel context and excluded from benchmark metrics.",
+      "as_of": "2026-07-22"
+    },
+    {
+      "product_id": "mama_mancinis_meatballs_48",
+      "product": "Italian Style Jumbo Beef Meatballs",
+      "brand": "Mama Mancini's",
+      "source": "Amazon",
+      "provider": "Amazon",
+      "page_url": "https://www.amazon.com/dp/B0CVSJM9CF",
+      "item_id": "B0CVSJM9CF",
+      "average_rating": 4.6,
+      "rating_count": 35,
+      "written_review_count": null,
+      "distribution": {},
+      "distribution_percent": {},
+      "distribution_basis": "not_available",
+      "captured_written_reviews": 0,
+      "capture_status": "amazon_aggregate_related_variant_excluded",
+      "snapshot_scope": "multipack_of_exact_48oz_unit",
+      "metric_eligible": false,
+      "quality_note": "The listing is a pack of three 48 oz units. The aggregate is retained as multipack context; Amazon did not expose a star-distribution table on the inspected page.",
       "as_of": "2026-07-22"
     }
   ]

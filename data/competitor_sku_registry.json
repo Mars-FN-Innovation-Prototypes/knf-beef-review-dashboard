@@ -23,6 +23,7 @@
       "upcs": ["00037600473712", "037600473712"],
       "retailer_pages": {
         "brand": "https://www.hormel.com/brands/hormel-square-table-entrees/product/beef-roast-au-jus/",
+        "amazon": "https://www.amazon.com/dp/B0012S1M6A",
         "walmart": "https://www.walmart.com/ip/10291008",
         "kroger": "https://www.kroger.com/p/hormel-square-table-slow-simmered-beef-roast-au-jus/0003760047371"
       }
@@ -39,6 +40,7 @@
       "upcs": ["00037600154918", "037600154918"],
       "retailer_pages": {
         "brand": "https://www.hormel.com/brands/hormel-square-table-entrees/product/beef-tips-and-gravy/",
+        "amazon": "https://www.amazon.com/dp/B01ITAXT3M",
         "walmart": "https://www.walmart.com/ip/10290929",
         "kroger": "https://www.kroger.com/p/hormel-slow-simmered-beef-tips-gravy-fully-cooked-entree-15-oz-/0003760015491"
       }
@@ -149,6 +151,7 @@
       "upcs": ["0082979302003"],
       "retailer_pages": {
         "brand": "https://delrealfoods.com/products/barbacoa",
+        "amazon": "https://www.amazon.com/dp/B00AFYPGCS",
         "walmart": "https://www.walmart.com/ip/169151306",
         "kroger": "https://www.kroger.com/p/del-real-foods-barbacoa-seasoned-beef-and-sauce/0082979302003",
         "costco": "https://sameday.costco.com/store/costco/products/19431977-del-real-foods-homestyle-recipe-seasoned-beef-and-sauce-barbacoa-36-oz"
@@ -180,6 +183,7 @@
       "family": "meatballs",
       "benchmark_tier": "adjacent",
       "identity_status": "verified",
+      "pack_size_note": "Amazon ASIN B0CVSJM9CF is a commercial pack of three 48 oz units. Its aggregate rating is retained as multipack context and is not treated as a single-unit exact listing.",
       "upcs": [],
       "retailer_pages": {
         "costco": "https://www.costco.com/p/-/mama-mancinis-jumbo-beef-meatballs-48-oz/100587787",
