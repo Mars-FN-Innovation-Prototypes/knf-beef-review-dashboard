@@ -10,13 +10,18 @@ const competitors = read("data/competitor_reviews_normalized.json").filter(row =
 const registry = read("data/competitor_sku_registry.json");
 const snapshots = read("data/competitor_rating_snapshots.json").snapshots;
 const coverage = read("data/competitor_coverage_audit.json").rows;
+const kevinRegistry = read("data/sku_registry.json");
+const kevinCoverage = read("data/kevin_retailer_match_audit.json").rows;
 
-if (reviews.length !== 588) fail(`Kevin's baseline changed: expected 588, found ${reviews.length}`);
+if (reviews.length !== 638) fail(`Kevin's baseline changed: expected 638, found ${reviews.length}`);
 if (competitors.length !== 212) fail(`Expected 212 competitor text reviews, found ${competitors.length}`);
 if (registry.products.length !== 13) fail(`Expected 13 normalized competitor products, found ${registry.products.length}`);
 if (registry.products.filter(product => product.benchmark_tier === "core").length !== 8) fail("Expected 8 core products");
 if (snapshots.length !== 11) fail(`Expected 11 competitor rating snapshots, found ${snapshots.length}`);
 if (coverage.length !== 78) fail(`Expected 78 product/source audit rows, found ${coverage.length}`);
+if (kevinRegistry.products.length !== 8) fail(`Expected 8 Kevin's products, found ${kevinRegistry.products.length}`);
+if (kevinCoverage.length !== 48) fail(`Expected 48 Kevin's product/source audit rows, found ${kevinCoverage.length}`);
+if (kevinRegistry.products.some(product => !product.shopify_product_id || !product.find_a_store_url || !product.upcs.length)) fail("Kevin's owned-site product identity is incomplete");
 
 const ids = new Set(registry.products.map(product => product.id));
 const providerKeys = new Set();
@@ -37,5 +42,6 @@ console.log(JSON.stringify({
   core_products: 8,
   competitor_snapshots: snapshots.length,
   coverage_rows: coverage.length,
+  kevin_product_source_rows: kevinCoverage.length,
   competitor_date_range: [competitors.map(row => row.date).sort()[0], competitors.map(row => row.date).sort().at(-1)],
 }, null, 2));

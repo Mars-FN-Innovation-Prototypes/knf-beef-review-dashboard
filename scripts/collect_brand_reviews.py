@@ -12,8 +12,8 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT = ROOT / "analysis" / "brand_reviews_2026-07-15.json"
-AS_OF = date(2026, 7, 15)
+OUTPUT = ROOT / "data" / "brand_reviews_2026-07-22.json"
+AS_OF = date(2026, 7, 22)
 BACKFILL_START = date(2023, 1, 1)
 SHOP_DOMAIN = "kevins-natural-foods.myshopify.com"
 PLATFORM = "shopify"

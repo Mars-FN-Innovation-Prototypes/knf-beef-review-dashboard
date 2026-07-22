@@ -40,6 +40,8 @@ def walk(obj, path=""):
             if re.search(r"review|rating|productid|usitemid|upc", key, re.I):
                 preview = str(value)
                 print(next_path, preview[:400].replace("\n", " "))
+            if key == "most_recent" and isinstance(value, list) and value:
+                print(next_path + ".sample", json.dumps(value[0], ensure_ascii=False)[:4000])
             walk(value, next_path)
     elif isinstance(obj, list):
         for index, value in enumerate(obj[:20]):
