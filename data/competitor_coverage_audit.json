@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-07-21",
+  "as_of": "2026-07-22",
   "sources_audited": [
     "Brand",
     "Target",
@@ -7,6 +7,12 @@
     "Kroger",
     "Walmart",
     "Costco"
+  ],
+  "quality_rules": [
+    "Exact supplied SKU or explicitly labeled pack/form-factor variant only.",
+    "Rating totals are separated from dated written-review metrics.",
+    "Shared retailer review families are excluded unless a review-level variant identifier resolves the record.",
+    "Search results and related pack sizes are coverage context, not review evidence."
   ],
   "rows": [
     {
@@ -51,7 +57,7 @@
       "product": "Slow Simmered Beef Roast Au Jus",
       "benchmark_tier": "core",
       "source": "Kroger",
-      "status": "listing_only",
+      "status": "rating_evidence",
       "match_type": "exact_listed_sku",
       "pack_oz": 15,
       "page_url": "https://www.kroger.com/p/hormel-square-table-slow-simmered-beef-roast-au-jus/0003760047371",
@@ -123,7 +129,7 @@
       "product": "Slow Simmered Beef Tips & Gravy",
       "benchmark_tier": "core",
       "source": "Kroger",
-      "status": "listing_only",
+      "status": "rating_evidence",
       "match_type": "exact_listed_sku",
       "pack_oz": 15,
       "page_url": "https://www.kroger.com/p/hormel-slow-simmered-beef-tips-gravy-fully-cooked-entree-15-oz-/0003760015491",
@@ -195,7 +201,7 @@
       "product": "Fully Cooked Beef Steak Fajitas",
       "benchmark_tier": "core",
       "source": "Kroger",
-      "status": "listing_only",
+      "status": "rating_evidence",
       "match_type": "exact_listed_sku",
       "pack_oz": 14,
       "page_url": "https://www.kroger.com/p/soules-kitchen-family-size-fully-cooked-beef-fajita-steak/0003469512460",
@@ -207,7 +213,7 @@
       "product": "Fully Cooked Beef Steak Fajitas",
       "benchmark_tier": "core",
       "source": "Walmart",
-      "status": "review_evidence",
+      "status": "rating_evidence",
       "match_type": "exact_listed_sku",
       "pack_oz": 14,
       "page_url": "https://www.walmart.com/ip/38227608",
@@ -279,11 +285,11 @@
       "product": "Fully Cooked Fajita Steak",
       "benchmark_tier": "adjacent",
       "source": "Walmart",
-      "status": "review_evidence",
-      "match_type": "exact_listed_sku",
+      "status": "shared_variant_rating_context",
+      "match_type": "exact_variant_page_shared_review_family",
       "pack_oz": 6,
       "page_url": "https://www.walmart.com/ip/39496073",
-      "note": null
+      "note": "The page shares reviews and aggregate ratings with the 14 oz variant; unresolved written text is excluded from product metrics."
     },
     {
       "product_id": "soules_fajita_steak_6",
@@ -555,7 +561,7 @@
       "product": "Smoked Sliced Beef Brisket",
       "benchmark_tier": "core",
       "source": "Kroger",
-      "status": "listing_only",
+      "status": "rating_evidence",
       "match_type": "exact_listed_sku",
       "pack_oz": 16,
       "page_url": "https://www.kroger.com/p/brookwood-farms-sliced-brisket/0007228711006",
@@ -603,11 +609,11 @@
       "product": "Slow Cooked Beef Barbacoa",
       "benchmark_tier": "core",
       "source": "Target",
-      "status": "not_located",
-      "match_type": "not_located",
+      "status": "related_variant_excluded",
+      "match_type": "different_pack_size",
       "pack_oz": 15,
-      "page_url": null,
-      "note": null
+      "page_url": "https://www.target.com/p/-/A-84724173",
+      "note": "Related 12 oz pack (434 ratings), excluded from the supplied 15 oz benchmark."
     },
     {
       "product_id": "del_real_barbacoa_15",
@@ -627,7 +633,7 @@
       "product": "Slow Cooked Beef Barbacoa",
       "benchmark_tier": "core",
       "source": "Kroger",
-      "status": "listing_only",
+      "status": "rating_evidence",
       "match_type": "exact_listed_sku",
       "pack_oz": 15,
       "page_url": "https://www.kroger.com/p/del-real-foods-barbacoa-seasoned-beef-and-sauce/0082979302003",
@@ -699,7 +705,7 @@
       "product": "Seasoned Beef Birria",
       "benchmark_tier": "core",
       "source": "Kroger",
-      "status": "listing_only",
+      "status": "rating_evidence",
       "match_type": "exact_listed_sku",
       "pack_oz": 15,
       "page_url": "https://www.kroger.com/p/del-real-foods-seasoned-and-sauced-beef-birra/0082979302603",

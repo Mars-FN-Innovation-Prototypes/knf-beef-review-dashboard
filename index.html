@@ -163,6 +163,22 @@
         <div class="section-heading">
           <div><span class="kicker">Optional comparison layer</span><h2>Competitor benchmark detail</h2><p>Compare like-for-like written-review signals while keeping rating snapshots and incomplete retailer samples clearly separated.</p></div>
         </div>
+        <article id="vpComparison" class="vp-comparison" aria-labelledby="vpComparisonTitle">
+          <div class="vp-comparison-heading">
+            <div><span class="kicker">Executive comparison</span><h3 id="vpComparisonTitle">Do competitors have better reviews?</h3><p>Switch evidence views without changing the broader dashboard filters.</p></div>
+            <div class="vp-comparison-actions">
+              <div id="vpComparisonViews" class="comparison-switch" role="group" aria-label="Executive comparison evidence view">
+                <button type="button" data-comparison-view="trend" aria-pressed="true">Trend written</button>
+                <button type="button" data-comparison-view="full" aria-pressed="false">Full written</button>
+                <button type="button" data-comparison-view="ratings" aria-pressed="false">Total ratings</button>
+              </div>
+              <a class="button button-secondary" href="downloads/KNF_Competitor_Review_Comparison_Executive_One_Pager.pdf" target="_blank" rel="noopener">Download one-pager</a>
+            </div>
+          </div>
+          <p id="vpComparisonHeadline" class="vp-comparison-headline"></p>
+          <div id="vpComparisonMetrics" class="vp-comparison-metrics"></div>
+          <p id="vpComparisonScope" class="vp-comparison-scope"></p>
+        </article>
         <div id="benchmarkSummary" class="benchmark-summary" aria-label="Competitor benchmark summary"></div>
         <div class="table-shell">
           <table id="benchmarkTable">
@@ -170,7 +186,7 @@
             <tbody></tbody>
           </table>
         </div>
-        <p class="table-note">Hormel histories are complete public first-party feeds within the date scope. Walmart text is the public server-rendered sample (up to 10 records per page); full point-in-time rating distributions are shown separately and are not treated as dated written reviews.</p>
+        <p class="table-note">Hormel histories are complete public first-party feeds within the date scope. Walmart text is a bounded server-rendered public-page sample; shared Soules 6 oz/14 oz records without a review-level size are excluded. Exact-SKU rating totals are shown separately and never enter dated text metrics.</p>
         <div class="section-heading snapshot-heading"><div><span class="kicker">Market-scale context</span><h2>Competitor rating snapshots</h2><p>Point-in-time distributions show scale and rating context; they do not enter trend, topic, or volume calculations.</p></div></div>
         <div id="benchmarkSnapshots" class="snapshot-grid"></div>
         <div class="section-heading snapshot-heading"><div><span class="kicker">Retailer audit</span><h2>Competitor availability by source</h2><p>Exact product pages, listings, search-only findings, and unresolved gaps are shown separately across the same retailer set.</p></div></div>
@@ -242,7 +258,7 @@
             <article><strong>Evidence layers</strong><p>Full-text public reviews drive trends. Two rating-only entries are retained as context but excluded from KPIs; Costco 32 oz listings remain separate.</p></article>
             <article><strong>Retailer refresh</strong><p>The complete public set of 48 written Walmart Honey Garlic reviews is included. Target now contributes 122 written reviews; current rating totals are retained separately from review text.</p></article>
             <article><strong>Competitor overlay</strong><p>Thirteen supplied competitor products were normalized after merging duplicate or variant descriptions. Eight are core 14-20 oz comparators; five are adjacent products shown only in the expanded view.</p></article>
-            <article><strong>Competitor review evidence</strong><p>212 dated public written reviews are available in scope: complete Hormel first-party histories plus labeled Walmart page samples. Eleven complete point-in-time rating distributions remain a separate context layer.</p></article>
+            <article><strong>Competitor review evidence</strong><p>202 dated written reviews meet the product-level quality standard: 132 complete Hormel first-party records and 70 bounded Walmart page records. Ten unresolved shared Soules variant records are retained for auditability but excluded from metrics. Six exact-SKU Kroger rating totals remain context only.</p></article>
             <article><strong>Benchmark guardrail</strong><p>Competitor volume is sample-dependent and must not be read as market share. Rating and topic comparisons use only captured full text; products without defensible review text remain visible as coverage gaps.</p></article>
             <article><strong>Interpretation</strong><p>Review language identifies where to investigate. It does not establish manufacturing, ingredient, supplier, or formulation causality.</p></article>
           </div>

@@ -1,6 +1,6 @@
 {
-  "as_of": "2026-07-21",
-  "method_note": "Rating distributions are point-in-time context. Walmart dated text is the public server-rendered sample, not the full written-review archive; Hormel PowerReviews histories are complete public first-party feeds.",
+  "as_of": "2026-07-22",
+  "method_note": "Hormel review text is a complete public first-party feed within the 2023-present scope. Walmart text is a bounded server-rendered public-page sample; shared Soules 6 oz/14 oz records without review-level size are excluded from product metrics. Kroger contributes exact-SKU point-in-time rating totals only because a reproducible public review-text payload was unavailable. Rating totals never enter dated text metrics.",
   "snapshots": [
     {
       "product_id": "hormel_roast_au_jus_15",
@@ -60,8 +60,10 @@
         "5": 5650
       },
       "captured_written_reviews": 10,
-      "capture_status": "public_ssr_sample_plus_complete_rating_distribution",
-      "as_of": "2026-07-21"
+      "capture_status": "bounded_public_text_sample_plus_complete_rating_distribution",
+      "as_of": "2026-07-21",
+      "snapshot_scope": "listed_sku_page",
+      "quality_note": "Written reviews are a bounded public-page sample; the point-in-time rating distribution is complete for the listed page."
     },
     {
       "product_id": "hormel_beef_tips_gravy_15",
@@ -81,8 +83,10 @@
         "5": 4180
       },
       "captured_written_reviews": 10,
-      "capture_status": "public_ssr_sample_plus_complete_rating_distribution",
-      "as_of": "2026-07-21"
+      "capture_status": "bounded_public_text_sample_plus_complete_rating_distribution",
+      "as_of": "2026-07-21",
+      "snapshot_scope": "listed_sku_page",
+      "quality_note": "Written reviews are a bounded public-page sample; the point-in-time rating distribution is complete for the listed page."
     },
     {
       "product_id": "soules_beef_fajitas_14",
@@ -101,30 +105,15 @@
         "4": 1220,
         "5": 6232
       },
-      "captured_written_reviews": 10,
-      "capture_status": "public_ssr_sample_plus_complete_rating_distribution",
-      "as_of": "2026-07-21"
-    },
-    {
-      "product_id": "soules_fajita_steak_6",
-      "product": "Fully Cooked Fajita Steak",
-      "brand": "Soules Kitchen",
-      "source": "Walmart",
-      "provider": "Walmart",
-      "page_url": "https://www.walmart.com/ip/39496073",
-      "average_rating": 4.2,
-      "rating_count": 9446,
-      "written_review_count": 2240,
-      "distribution": {
-        "1": 827,
-        "2": 398,
-        "3": 769,
-        "4": 1220,
-        "5": 6232
-      },
-      "captured_written_reviews": 10,
-      "capture_status": "public_ssr_sample_plus_complete_rating_distribution",
-      "as_of": "2026-07-21"
+      "captured_written_reviews": 0,
+      "capture_status": "complete_rating_distribution_shared_variant_text_excluded",
+      "as_of": "2026-07-21",
+      "snapshot_scope": "shared_variant_family",
+      "related_product_ids": [
+        "soules_beef_fajitas_14",
+        "soules_fajita_steak_6"
+      ],
+      "quality_note": "The rating distribution is shared across the Walmart Soules Fajita Steak variant family. Unresolved written text is excluded from product-level metrics."
     },
     {
       "product_id": "soules_angus_fajitas_24",
@@ -144,8 +133,10 @@
         "5": 1585
       },
       "captured_written_reviews": 10,
-      "capture_status": "public_ssr_sample_plus_complete_rating_distribution",
-      "as_of": "2026-07-21"
+      "capture_status": "bounded_public_text_sample_plus_complete_rating_distribution",
+      "as_of": "2026-07-21",
+      "snapshot_scope": "listed_sku_page",
+      "quality_note": "Written reviews are a bounded public-page sample; the point-in-time rating distribution is complete for the listed page."
     },
     {
       "product_id": "jack_daniels_brisket",
@@ -165,8 +156,10 @@
         "5": 2436
       },
       "captured_written_reviews": 10,
-      "capture_status": "public_ssr_sample_plus_complete_rating_distribution",
-      "as_of": "2026-07-21"
+      "capture_status": "bounded_public_text_sample_plus_complete_rating_distribution",
+      "as_of": "2026-07-21",
+      "snapshot_scope": "listed_sku_page",
+      "quality_note": "Written reviews are a bounded public-page sample; the point-in-time rating distribution is complete for the listed page."
     },
     {
       "product_id": "brookwood_brisket_16",
@@ -186,8 +179,10 @@
         "5": 1406
       },
       "captured_written_reviews": 10,
-      "capture_status": "public_ssr_sample_plus_complete_rating_distribution",
-      "as_of": "2026-07-21"
+      "capture_status": "bounded_public_text_sample_plus_complete_rating_distribution",
+      "as_of": "2026-07-21",
+      "snapshot_scope": "listed_sku_page",
+      "quality_note": "Written reviews are a bounded public-page sample; the point-in-time rating distribution is complete for the listed page."
     },
     {
       "product_id": "del_real_barbacoa_15",
@@ -207,8 +202,10 @@
         "5": 526
       },
       "captured_written_reviews": 10,
-      "capture_status": "public_ssr_sample_plus_complete_rating_distribution",
-      "as_of": "2026-07-21"
+      "capture_status": "bounded_public_text_sample_plus_complete_rating_distribution",
+      "as_of": "2026-07-21",
+      "snapshot_scope": "listed_sku_page",
+      "quality_note": "Written reviews are a bounded public-page sample; the point-in-time rating distribution is complete for the listed page."
     },
     {
       "product_id": "del_real_birria_15",
@@ -228,8 +225,112 @@
         "5": 276
       },
       "captured_written_reviews": 10,
-      "capture_status": "public_ssr_sample_plus_complete_rating_distribution",
-      "as_of": "2026-07-21"
+      "capture_status": "bounded_public_text_sample_plus_complete_rating_distribution",
+      "as_of": "2026-07-21",
+      "snapshot_scope": "listed_sku_page",
+      "quality_note": "Written reviews are a bounded public-page sample; the point-in-time rating distribution is complete for the listed page."
+    },
+    {
+      "product_id": "hormel_roast_au_jus_15",
+      "product": "Slow Simmered Beef Roast Au Jus",
+      "brand": "Hormel",
+      "source": "Kroger",
+      "provider": "Kroger",
+      "page_url": "https://www.kroger.com/p/hormel-square-table-slow-simmered-beef-roast-au-jus/0003760047371",
+      "average_rating": 3.66,
+      "rating_count": 35,
+      "written_review_count": null,
+      "distribution": {},
+      "captured_written_reviews": 0,
+      "capture_status": "rating_total_only_public_text_payload_unavailable",
+      "snapshot_scope": "exact_listed_sku",
+      "quality_note": "Exact-SKU public rating total; review text was not exposed in a reproducible public payload and is excluded from text metrics.",
+      "as_of": "2026-07-22"
+    },
+    {
+      "product_id": "hormel_beef_tips_gravy_15",
+      "product": "Slow Simmered Beef Tips & Gravy",
+      "brand": "Hormel",
+      "source": "Kroger",
+      "provider": "Kroger",
+      "page_url": "https://www.kroger.com/p/hormel-slow-simmered-beef-tips-gravy-fully-cooked-entree-15-oz-/0003760015491",
+      "average_rating": 2.95,
+      "rating_count": 22,
+      "written_review_count": null,
+      "distribution": {},
+      "captured_written_reviews": 0,
+      "capture_status": "rating_total_only_public_text_payload_unavailable",
+      "snapshot_scope": "exact_listed_sku",
+      "quality_note": "Exact-SKU public rating total; review text was not exposed in a reproducible public payload and is excluded from text metrics.",
+      "as_of": "2026-07-22"
+    },
+    {
+      "product_id": "soules_beef_fajitas_14",
+      "product": "Fully Cooked Beef Steak Fajitas",
+      "brand": "Soules Kitchen",
+      "source": "Kroger",
+      "provider": "Kroger",
+      "page_url": "https://www.kroger.com/p/soules-kitchen-family-size-fully-cooked-beef-fajita-steak/0003469512460",
+      "average_rating": 4.5,
+      "rating_count": 1199,
+      "written_review_count": null,
+      "distribution": {},
+      "captured_written_reviews": 0,
+      "capture_status": "rating_total_only_public_text_payload_unavailable",
+      "snapshot_scope": "exact_listed_sku",
+      "quality_note": "Exact-SKU public rating total; review text was not exposed in a reproducible public payload and is excluded from text metrics.",
+      "as_of": "2026-07-22"
+    },
+    {
+      "product_id": "brookwood_brisket_16",
+      "product": "Smoked Sliced Beef Brisket",
+      "brand": "Brookwood Farms",
+      "source": "Kroger",
+      "provider": "Kroger",
+      "page_url": "https://www.kroger.com/p/brookwood-farms-sliced-brisket/0007228711006",
+      "average_rating": 3,
+      "rating_count": 6,
+      "written_review_count": null,
+      "distribution": {},
+      "captured_written_reviews": 0,
+      "capture_status": "rating_total_only_public_text_payload_unavailable",
+      "snapshot_scope": "exact_listed_sku",
+      "quality_note": "Exact-SKU public rating total; review text was not exposed in a reproducible public payload and is excluded from text metrics.",
+      "as_of": "2026-07-22"
+    },
+    {
+      "product_id": "del_real_barbacoa_15",
+      "product": "Slow Cooked Beef Barbacoa",
+      "brand": "Del Real Foods",
+      "source": "Kroger",
+      "provider": "Kroger",
+      "page_url": "https://www.kroger.com/p/del-real-foods-barbacoa-seasoned-beef-and-sauce/0082979302003",
+      "average_rating": 4.26,
+      "rating_count": 138,
+      "written_review_count": null,
+      "distribution": {},
+      "captured_written_reviews": 0,
+      "capture_status": "rating_total_only_public_text_payload_unavailable",
+      "snapshot_scope": "exact_listed_sku",
+      "quality_note": "Exact-SKU public rating total; review text was not exposed in a reproducible public payload and is excluded from text metrics.",
+      "as_of": "2026-07-22"
+    },
+    {
+      "product_id": "del_real_birria_15",
+      "product": "Seasoned Beef Birria",
+      "brand": "Del Real Foods",
+      "source": "Kroger",
+      "provider": "Kroger",
+      "page_url": "https://www.kroger.com/p/del-real-foods-seasoned-and-sauced-beef-birra/0082979302603",
+      "average_rating": 4.13,
+      "rating_count": 54,
+      "written_review_count": null,
+      "distribution": {},
+      "captured_written_reviews": 0,
+      "capture_status": "rating_total_only_public_text_payload_unavailable",
+      "snapshot_scope": "exact_listed_sku",
+      "quality_note": "Exact-SKU public rating total; review text was not exposed in a reproducible public payload and is excluded from text metrics.",
+      "as_of": "2026-07-22"
     }
   ]
 }

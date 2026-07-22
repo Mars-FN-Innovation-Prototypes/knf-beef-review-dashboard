@@ -9,7 +9,7 @@ const DATA_FILES = {
   competitorSnapshots: "data/competitor_rating_snapshots.json",
   competitorCoverage: "data/competitor_coverage_audit.json",
 };
-const RELEASE_VERSION = "2026-07-22-expanded-review-collection";
+const RELEASE_VERSION = "2026-07-22-vp-competitor-comparison";
 
 const ANALYSIS_START = "2024-11-01";
 const ANALYSIS_END = "2026-07-22";
@@ -35,6 +35,7 @@ const state = {
   reviewLimit: 12,
   productSort: { key: "n", direction: "desc" },
   benchmarkMode: "off",
+  comparisonView: "trend",
 };
 
 let data = { reviews: [], analysis: null, registry: null, retailers: null, retailerMatchAudit: null, competitorReviews: [], competitorRegistry: null, competitorSnapshots: null, competitorCoverage: null };
@@ -100,6 +101,12 @@ function buildFilters() {
 
 function bindEvents() {
   $("#benchmarkMode").addEventListener("change", event => { state.benchmarkMode = event.target.value; render(); });
+  $("#vpComparisonViews").addEventListener("click", event => {
+    const button = event.target.closest("button[data-comparison-view]");
+    if (!button) return;
+    state.comparisonView = button.dataset.comparisonView;
+    renderExecutiveComparison();
+  });
   $$('input[name="dateMode"]').forEach(input => input.addEventListener("change", () => { state.dateMode = input.value; state.reviewLimit = 12; render(); }));
   $("#productFilters").addEventListener("change", event => { if (event.target.matches('input[name="product"]')) { syncSet("product", state.products); state.reviewLimit = 12; render(); } });
   $("#sourceFilters").addEventListener("change", event => { if (event.target.matches('input[name="source"]')) { syncSet("source", state.sources); state.reviewLimit = 12; render(); } });
@@ -141,6 +148,7 @@ function selectAll(group) {
 function resetFilters() {
   state.dateMode = "analysis";
   state.benchmarkMode = "off";
+  state.comparisonView = "trend";
   state.topic = "all";
   state.search = "";
   state.reviewLimit = 12;
@@ -194,6 +202,70 @@ function reviewMetrics(reviews) {
     texture: percent(reviews.filter(review => review.topics.texture).length, reviews.length),
     taste: percent(reviews.filter(review => review.topics.taste).length, reviews.length),
   };
+}
+
+function snapshotMetrics(snapshots) {
+  const distribution = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
+  snapshots.forEach(snapshot => {
+    Object.keys(distribution).forEach(star => { distribution[star] += Number(snapshot.distribution?.[star] || 0); });
+  });
+  const n = Object.values(distribution).reduce((sum, count) => sum + count, 0);
+  return {
+    n,
+    pages: snapshots.length,
+    products: new Set(snapshots.map(snapshot => snapshot.product_id)).size,
+    rating: n ? Object.entries(distribution).reduce((sum, [star, count]) => sum + Number(star) * count, 0) / n : null,
+    low: n ? percent(distribution[1] + distribution[2], n) : null,
+  };
+}
+
+function executiveComparisonData() {
+  const coreIds = new Set(data.competitorRegistry.products.filter(product => product.benchmark_tier === "core").map(product => product.id));
+  if (state.comparisonView === "ratings") {
+    const kevinSnapshots = data.analysis.rating_snapshots.filter(snapshot => Object.values(snapshot.distribution || {}).reduce((sum, count) => sum + Number(count), 0) > 0);
+    const competitorSnapshots = data.competitorSnapshots.snapshots.filter(snapshot => coreIds.has(snapshot.product_id) && Object.values(snapshot.distribution || {}).reduce((sum, count) => sum + Number(count), 0) > 0);
+    const kevin = snapshotMetrics(kevinSnapshots);
+    const competitor = snapshotMetrics(competitorSnapshots);
+    return {
+      kevin,
+      competitor,
+      headline: `Observed channel rating totals slightly favor competitors: ${fmtRating(competitor.rating)} versus ${fmtRating(kevin.rating)}, with ${fmtPct(competitor.low)} versus ${fmtPct(kevin.low)} in 1-2 stars. Treat this as source-page context, not a unique or time-aligned population.`,
+      scope: `Point-in-time source-page totals · Kevin's ${kevin.n.toLocaleString()} ratings across ${kevin.pages} pages / ${kevin.products} products · Competitors ${competitor.n.toLocaleString()} ratings across ${competitor.pages} pages / ${competitor.products} core products · Totals may include syndicated or repeated populations.`,
+      evidenceLabel: "Observed ratings",
+    };
+  }
+
+  const start = state.comparisonView === "trend" ? ANALYSIS_START : "2023-01-01";
+  const kevinRows = data.reviews.filter(review => review.date >= start && review.date <= ANALYSIS_END);
+  const competitorRows = data.competitorReviews.filter(review => coreIds.has(review.product_id) && review.date >= start && review.date <= ANALYSIS_END);
+  const kevin = { ...reviewMetrics(kevinRows), products: new Set(kevinRows.map(review => review.product_id)).size };
+  const competitor = { ...reviewMetrics(competitorRows), products: new Set(competitorRows.map(review => review.product_id)).size };
+  const recent = state.comparisonView === "trend";
+  return {
+    kevin,
+    competitor,
+    headline: recent
+      ? `Competitors lead recent dated written feedback. Kevin's 1-2-star share is ${fmtPct(kevin.low)}, ${Math.abs(kevin.low - competitor.low).toFixed(1)} points above competitors, and its average rating trails by ${(competitor.rating - kevin.rating).toFixed(2)} stars.`
+      : `The full archive reverses the recent result. Kevin's averages ${fmtRating(kevin.rating)} versus ${fmtRating(competitor.rating)}, with ${fmtPct(kevin.low)} in 1-2 stars versus ${fmtPct(competitor.low)} for competitors.`,
+    scope: `Dated written reviews · ${recent ? "Nov 1, 2024-Jul 22, 2026" : "Jan 1, 2023-Jul 22, 2026"} · Kevin's n=${kevin.n.toLocaleString()} / ${kevin.products} products · Competitors n=${competitor.n.toLocaleString()} / ${competitor.products} core products.`,
+    evidenceLabel: recent ? "Trend written" : "Full written",
+  };
+}
+
+function comparisonBars(label, kevinValue, competitorValue, max, formatter, note) {
+  const width = value => Math.max(0, Math.min(100, Number(value) / max * 100));
+  return `<article class="vp-metric-card"><header><span>${escapeHTML(label)}</span><small>${escapeHTML(note)}</small></header><div class="vp-pair"><div><span>Kevin's</span><div class="vp-track"><i style="width:${width(kevinValue)}%"></i></div><strong>${escapeHTML(formatter(kevinValue))}</strong></div><div class="competitor"><span>Competitors</span><div class="vp-track"><i style="width:${width(competitorValue)}%"></i></div><strong>${escapeHTML(formatter(competitorValue))}</strong></div></div></article>`;
+}
+
+function renderExecutiveComparison() {
+  const comparison = executiveComparisonData();
+  $$("#vpComparisonViews button").forEach(button => button.setAttribute("aria-pressed", String(button.dataset.comparisonView === state.comparisonView)));
+  $("#vpComparisonHeadline").textContent = comparison.headline;
+  $("#vpComparisonMetrics").innerHTML = [
+    comparisonBars("Average rating", comparison.kevin.rating, comparison.competitor.rating, 5, fmtRating, "Higher is better"),
+    comparisonBars("1-2 star share", comparison.kevin.low, comparison.competitor.low, 100, fmtPct, "Lower is better"),
+  ].join("");
+  $("#vpComparisonScope").textContent = comparison.scope;
 }
 
 function formatDelta(value, suffix = "") {
@@ -393,6 +465,8 @@ function renderBenchmark(kevinReviews, competitorReviews) {
   $("#benchmarkNav").hidden = !active;
   if (!active) return;
 
+  renderExecutiveComparison();
+
   const products = benchmarkProducts();
   const metrics = reviewMetrics(competitorReviews);
   const kevin = reviewMetrics(kevinReviews);
@@ -413,7 +487,7 @@ function renderBenchmark(kevinReviews, competitorReviews) {
     const rows = competitorReviews.filter(review => review.product_id === product.id);
     const row = reviewMetrics(rows);
     const sources = [...new Set(rows.map(review => review.source))];
-    const evidence = !rows.length ? "Coverage only" : sources.includes("Hormel") ? "Complete first-party + retailer sample" : "Retailer page sample";
+    const evidence = !rows.length ? "Coverage / rating context" : sources.includes("Hormel") ? "Complete first-party + bounded retailer sample" : "Bounded retailer sample";
     return `<tr class="benchmark-row"><td class="product-name"><small>${escapeHTML(product.brand)}</small>${escapeHTML(product.name)}</td><td>${product.pack_oz} oz</td><td><span class="status-pill ${product.benchmark_tier === "adjacent" ? "variant" : ""}">${product.benchmark_tier}</span></td><td>${row.n}</td><td>${fmtRating(row.rating)}</td><td>${fmtPct(row.low)}</td><td>${fmtPct(row.texture)}</td><td>${fmtPct(row.taste)}</td><td><span class="status-pill ${rows.length ? "" : "gap"}">${evidence}</span></td></tr>`;
   }).join("");
 
@@ -421,23 +495,29 @@ function renderBenchmark(kevinReviews, competitorReviews) {
   const snapshots = (data.competitorSnapshots.snapshots || []).filter(snapshot => productIds.has(snapshot.product_id));
   $("#benchmarkSnapshots").innerHTML = snapshots.map(snapshot => {
     const total = Number(snapshot.rating_count) || Object.values(snapshot.distribution || {}).reduce((sum, value) => sum + Number(value), 0);
-    const bars = [5, 4, 3, 2, 1].map(star => {
+    const hasDistribution = Object.keys(snapshot.distribution || {}).length > 0;
+    const bars = hasDistribution ? [5, 4, 3, 2, 1].map(star => {
       const count = Number(snapshot.distribution?.[String(star)] || 0);
       return `<div><span>${star}</span><i><b style="width:${percent(count, total) || 0}%"></b></i><span>${count.toLocaleString()}</span></div>`;
-    }).join("");
-    const status = snapshot.capture_status === "complete_public_first_party_feed" ? "Complete public first-party feed" : `${snapshot.captured_written_reviews || 0} text sample; complete rating distribution`;
+    }).join("") : `<p class="snapshot-distribution-note">Star distribution not publicly available.</p>`;
+    const status = {
+      complete_public_first_party_feed: "Complete public first-party feed",
+      bounded_public_text_sample_plus_complete_rating_distribution: `${snapshot.captured_written_reviews || 0} dated reviews in bounded public-page sample; complete point-in-time distribution`,
+      complete_rating_distribution_shared_variant_text_excluded: "Shared variant-family rating distribution; unresolved written text excluded",
+      rating_total_only_public_text_payload_unavailable: "Exact-SKU rating total only; reproducible public review text unavailable",
+    }[snapshot.capture_status] || "Public rating context; see methodology";
     return `<article class="snapshot-card competitor-snapshot"><header><span>${escapeHTML(snapshot.brand)} · ${escapeHTML(snapshot.source)}</span><strong>${escapeHTML(snapshot.product)}</strong></header><div class="snapshot-score"><strong>${fmtRating(Number(snapshot.average_rating))}</strong><span>${total.toLocaleString()} ratings</span></div><div class="snapshot-stars">${bars}</div><p>${escapeHTML(status)}<br><a href="${escapeHTML(snapshot.page_url)}" target="_blank" rel="noopener noreferrer">Open source page ↗</a></p></article>`;
   }).join("");
 
   const auditRows = data.competitorCoverage.rows || [];
   const auditSources = ["Brand", "Target", "Amazon", "Kroger", "Walmart", "Costco"];
-  const statusLabel = { review_evidence: "Review evidence", listing_only: "Exact listing", exact_page_not_confirmed: "Search only", not_located: "Not located" };
+  const statusLabel = { review_evidence: "Review evidence", rating_evidence: "Rating context", shared_variant_rating_context: "Shared rating context", related_variant_excluded: "Related size excluded", listing_only: "Exact listing", exact_page_not_confirmed: "Search only", not_located: "Not located" };
   $("#benchmarkCoverageTable tbody").innerHTML = products.map(product => {
     const cells = auditSources.map(source => {
       const audit = auditRows.find(row => row.product_id === product.id && row.source === source);
       if (!audit) return `<td><span class="coverage-pill gap">Not audited</span></td>`;
       const label = statusLabel[audit.status] || audit.status;
-      const classes = audit.status === "not_located" ? "gap" : audit.match_type === "club_pack_variant" || audit.status === "exact_page_not_confirmed" ? "variant" : "";
+      const classes = audit.status === "not_located" ? "gap" : audit.match_type === "club_pack_variant" || audit.status === "exact_page_not_confirmed" || audit.status === "related_variant_excluded" || audit.status === "shared_variant_rating_context" ? "variant" : "";
       const pill = audit.page_url ? `<a class="coverage-pill ${classes}" href="${escapeHTML(audit.page_url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(label)} ↗</a>` : `<span class="coverage-pill ${classes}">${escapeHTML(label)}</span>`;
       return `<td>${pill}<small>${escapeHTML(audit.match_type.replaceAll("_", " "))}${audit.note ? `<br>${escapeHTML(audit.note)}` : ""}</small></td>`;
     }).join("");
