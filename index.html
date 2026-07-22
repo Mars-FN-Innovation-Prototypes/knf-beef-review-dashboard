@@ -163,6 +163,22 @@
         <div class="section-heading">
           <div><span class="kicker">Optional comparison layer</span><h2>Competitor benchmark detail</h2><p>Compare like-for-like written-review signals while keeping rating snapshots and incomplete retailer samples clearly separated.</p></div>
         </div>
+        <article id="vpComparison" class="vp-comparison" aria-labelledby="vpComparisonTitle">
+          <div class="vp-comparison-heading">
+            <div><span class="kicker">Executive comparison</span><h3 id="vpComparisonTitle">Do competitors have better reviews?</h3><p>Switch evidence views without changing the broader dashboard filters.</p></div>
+            <div class="vp-comparison-actions">
+              <div id="vpComparisonViews" class="comparison-switch" role="group" aria-label="Executive comparison evidence view">
+                <button type="button" data-comparison-view="trend" aria-pressed="true">Trend written</button>
+                <button type="button" data-comparison-view="full" aria-pressed="false">Full written</button>
+                <button type="button" data-comparison-view="ratings" aria-pressed="false">Total ratings</button>
+              </div>
+              <a class="button button-secondary" href="downloads/KNF_Competitor_Review_Comparison_Executive_One_Pager.pdf" target="_blank" rel="noopener">Download one-pager</a>
+            </div>
+          </div>
+          <p id="vpComparisonHeadline" class="vp-comparison-headline"></p>
+          <div id="vpComparisonMetrics" class="vp-comparison-metrics"></div>
+          <p id="vpComparisonScope" class="vp-comparison-scope"></p>
+        </article>
         <div id="benchmarkSummary" class="benchmark-summary" aria-label="Competitor benchmark summary"></div>
         <div class="table-shell">
           <table id="benchmarkTable">

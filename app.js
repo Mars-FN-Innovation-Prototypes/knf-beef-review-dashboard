@@ -9,7 +9,7 @@ const DATA_FILES = {
   competitorSnapshots: "data/competitor_rating_snapshots.json",
   competitorCoverage: "data/competitor_coverage_audit.json",
 };
-const RELEASE_VERSION = "2026-07-22-competitor-quality-audit";
+const RELEASE_VERSION = "2026-07-22-vp-competitor-comparison";
 
 const ANALYSIS_START = "2024-11-01";
 const ANALYSIS_END = "2026-07-22";
@@ -35,6 +35,7 @@ const state = {
   reviewLimit: 12,
   productSort: { key: "n", direction: "desc" },
   benchmarkMode: "off",
+  comparisonView: "trend",
 };
 
 let data = { reviews: [], analysis: null, registry: null, retailers: null, retailerMatchAudit: null, competitorReviews: [], competitorRegistry: null, competitorSnapshots: null, competitorCoverage: null };
@@ -100,6 +101,12 @@ function buildFilters() {
 
 function bindEvents() {
   $("#benchmarkMode").addEventListener("change", event => { state.benchmarkMode = event.target.value; render(); });
+  $("#vpComparisonViews").addEventListener("click", event => {
+    const button = event.target.closest("button[data-comparison-view]");
+    if (!button) return;
+    state.comparisonView = button.dataset.comparisonView;
+    renderExecutiveComparison();
+  });
   $$('input[name="dateMode"]').forEach(input => input.addEventListener("change", () => { state.dateMode = input.value; state.reviewLimit = 12; render(); }));
   $("#productFilters").addEventListener("change", event => { if (event.target.matches('input[name="product"]')) { syncSet("product", state.products); state.reviewLimit = 12; render(); } });
   $("#sourceFilters").addEventListener("change", event => { if (event.target.matches('input[name="source"]')) { syncSet("source", state.sources); state.reviewLimit = 12; render(); } });
@@ -141,6 +148,7 @@ function selectAll(group) {
 function resetFilters() {
   state.dateMode = "analysis";
   state.benchmarkMode = "off";
+  state.comparisonView = "trend";
   state.topic = "all";
   state.search = "";
   state.reviewLimit = 12;
@@ -194,6 +202,70 @@ function reviewMetrics(reviews) {
     texture: percent(reviews.filter(review => review.topics.texture).length, reviews.length),
     taste: percent(reviews.filter(review => review.topics.taste).length, reviews.length),
   };
+}
+
+function snapshotMetrics(snapshots) {
+  const distribution = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
+  snapshots.forEach(snapshot => {
+    Object.keys(distribution).forEach(star => { distribution[star] += Number(snapshot.distribution?.[star] || 0); });
+  });
+  const n = Object.values(distribution).reduce((sum, count) => sum + count, 0);
+  return {
+    n,
+    pages: snapshots.length,
+    products: new Set(snapshots.map(snapshot => snapshot.product_id)).size,
+    rating: n ? Object.entries(distribution).reduce((sum, [star, count]) => sum + Number(star) * count, 0) / n : null,
+    low: n ? percent(distribution[1] + distribution[2], n) : null,
+  };
+}
+
+function executiveComparisonData() {
+  const coreIds = new Set(data.competitorRegistry.products.filter(product => product.benchmark_tier === "core").map(product => product.id));
+  if (state.comparisonView === "ratings") {
+    const kevinSnapshots = data.analysis.rating_snapshots.filter(snapshot => Object.values(snapshot.distribution || {}).reduce((sum, count) => sum + Number(count), 0) > 0);
+    const competitorSnapshots = data.competitorSnapshots.snapshots.filter(snapshot => coreIds.has(snapshot.product_id) && Object.values(snapshot.distribution || {}).reduce((sum, count) => sum + Number(count), 0) > 0);
+    const kevin = snapshotMetrics(kevinSnapshots);
+    const competitor = snapshotMetrics(competitorSnapshots);
+    return {
+      kevin,
+      competitor,
+      headline: `Observed channel rating totals slightly favor competitors: ${fmtRating(competitor.rating)} versus ${fmtRating(kevin.rating)}, with ${fmtPct(competitor.low)} versus ${fmtPct(kevin.low)} in 1-2 stars. Treat this as source-page context, not a unique or time-aligned population.`,
+      scope: `Point-in-time source-page totals · Kevin's ${kevin.n.toLocaleString()} ratings across ${kevin.pages} pages / ${kevin.products} products · Competitors ${competitor.n.toLocaleString()} ratings across ${competitor.pages} pages / ${competitor.products} core products · Totals may include syndicated or repeated populations.`,
+      evidenceLabel: "Observed ratings",
+    };
+  }
+
+  const start = state.comparisonView === "trend" ? ANALYSIS_START : "2023-01-01";
+  const kevinRows = data.reviews.filter(review => review.date >= start && review.date <= ANALYSIS_END);
+  const competitorRows = data.competitorReviews.filter(review => coreIds.has(review.product_id) && review.date >= start && review.date <= ANALYSIS_END);
+  const kevin = { ...reviewMetrics(kevinRows), products: new Set(kevinRows.map(review => review.product_id)).size };
+  const competitor = { ...reviewMetrics(competitorRows), products: new Set(competitorRows.map(review => review.product_id)).size };
+  const recent = state.comparisonView === "trend";
+  return {
+    kevin,
+    competitor,
+    headline: recent
+      ? `Competitors lead recent dated written feedback. Kevin's 1-2-star share is ${fmtPct(kevin.low)}, ${Math.abs(kevin.low - competitor.low).toFixed(1)} points above competitors, and its average rating trails by ${(competitor.rating - kevin.rating).toFixed(2)} stars.`
+      : `The full archive reverses the recent result. Kevin's averages ${fmtRating(kevin.rating)} versus ${fmtRating(competitor.rating)}, with ${fmtPct(kevin.low)} in 1-2 stars versus ${fmtPct(competitor.low)} for competitors.`,
+    scope: `Dated written reviews · ${recent ? "Nov 1, 2024-Jul 22, 2026" : "Jan 1, 2023-Jul 22, 2026"} · Kevin's n=${kevin.n.toLocaleString()} / ${kevin.products} products · Competitors n=${competitor.n.toLocaleString()} / ${competitor.products} core products.`,
+    evidenceLabel: recent ? "Trend written" : "Full written",
+  };
+}
+
+function comparisonBars(label, kevinValue, competitorValue, max, formatter, note) {
+  const width = value => Math.max(0, Math.min(100, Number(value) / max * 100));
+  return `<article class="vp-metric-card"><header><span>${escapeHTML(label)}</span><small>${escapeHTML(note)}</small></header><div class="vp-pair"><div><span>Kevin's</span><div class="vp-track"><i style="width:${width(kevinValue)}%"></i></div><strong>${escapeHTML(formatter(kevinValue))}</strong></div><div class="competitor"><span>Competitors</span><div class="vp-track"><i style="width:${width(competitorValue)}%"></i></div><strong>${escapeHTML(formatter(competitorValue))}</strong></div></div></article>`;
+}
+
+function renderExecutiveComparison() {
+  const comparison = executiveComparisonData();
+  $$("#vpComparisonViews button").forEach(button => button.setAttribute("aria-pressed", String(button.dataset.comparisonView === state.comparisonView)));
+  $("#vpComparisonHeadline").textContent = comparison.headline;
+  $("#vpComparisonMetrics").innerHTML = [
+    comparisonBars("Average rating", comparison.kevin.rating, comparison.competitor.rating, 5, fmtRating, "Higher is better"),
+    comparisonBars("1-2 star share", comparison.kevin.low, comparison.competitor.low, 100, fmtPct, "Lower is better"),
+  ].join("");
+  $("#vpComparisonScope").textContent = comparison.scope;
 }
 
 function formatDelta(value, suffix = "") {
@@ -392,6 +464,8 @@ function renderBenchmark(kevinReviews, competitorReviews) {
   banner.hidden = !active;
   $("#benchmarkNav").hidden = !active;
   if (!active) return;
+
+  renderExecutiveComparison();
 
   const products = benchmarkProducts();
   const metrics = reviewMetrics(competitorReviews);

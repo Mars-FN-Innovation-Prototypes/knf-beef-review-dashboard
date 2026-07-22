@@ -26,6 +26,7 @@ Interactive, static dashboard for exploring written consumer reviews across eigh
 - Searchable review explorer and filtered CSV export
 - Transparent methodology, exclusions, and limitations
 - Opt-in competitor overlays on KPIs, monthly trends, rating distribution, and topic prevalence; the default remains Kevin's-only
+- Executive competitor comparison with Trend Written, Full Written, and Total Ratings views; paired average-rating and 1-2-star-share visuals retain sample and source-page context
 - Core versus expanded competitor selection, equal-product and review-weighted benchmark views, product evidence status, and retailer snapshot context
 
 ## Collection methodology

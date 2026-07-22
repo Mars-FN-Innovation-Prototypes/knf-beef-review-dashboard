@@ -199,6 +199,30 @@ td.product-name { min-width: 240px; font-weight: 750; font-variant-numeric: norm
 .status-pill.variant { background: #fff0e5; color: #9d4510; }
 
 .benchmark-section { padding: 28px; border: 1px solid #f0d2bb; border-top: 5px solid var(--orange); border-radius: 12px; background: rgba(255,255,255,.45); }
+.vp-comparison { margin-bottom: 18px; padding: 22px; border: 1px solid #bfd3d9; border-top: 5px solid var(--color-water); border-radius: 10px; background: white; box-shadow: var(--shadow); }
+.vp-comparison-heading { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; }
+.vp-comparison-heading h3 { margin: 5px 0 4px; color: var(--navy); font-size: 22px; letter-spacing: -.025em; }
+.vp-comparison-heading p { margin: 0; color: var(--muted); font-size: 10px; }
+.vp-comparison-actions { display: flex; align-items: center; flex-wrap: wrap; justify-content: flex-end; gap: 9px; }
+.comparison-switch { display: inline-flex; padding: 3px; border: 1px solid var(--line); border-radius: 7px; background: #f2f5f6; }
+.comparison-switch button { min-height: 31px; padding: 6px 10px; border: 0; border-radius: 5px; background: transparent; color: #5d6b73; cursor: pointer; font-size: 10px; font-weight: 800; }
+.comparison-switch button[aria-pressed="true"] { background: var(--navy); color: white; box-shadow: 0 2px 8px rgba(0,0,160,.18); }
+.comparison-switch button:focus-visible { outline: 3px solid var(--color-corn); outline-offset: 2px; }
+.vp-comparison-headline { margin: 17px 0 13px; padding: 13px 15px; border-left: 4px solid var(--orange); border-radius: 0 6px 6px 0; background: var(--color-rice); color: var(--navy); font-size: 13px; font-weight: 750; line-height: 1.5; }
+.vp-comparison-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.vp-metric-card { padding: 16px; border: 1px solid var(--line); border-radius: 8px; background: #fbfcfc; }
+.vp-metric-card header { display: flex; justify-content: space-between; gap: 12px; margin-bottom: 13px; }
+.vp-metric-card header span { color: var(--color-water); font-size: 11px; font-weight: 850; text-transform: uppercase; letter-spacing: .07em; }
+.vp-metric-card header small { color: var(--muted); font-size: 9px; }
+.vp-pair { display: grid; gap: 9px; }
+.vp-pair > div { display: grid; grid-template-columns: 78px 1fr 48px; gap: 9px; align-items: center; }
+.vp-pair span { color: var(--muted); font-size: 10px; font-weight: 750; }
+.vp-pair strong { color: var(--navy); text-align: right; font-size: 13px; font-variant-numeric: tabular-nums; }
+.vp-track { height: 10px; overflow: hidden; border-radius: 6px; background: #e6ecef; }
+.vp-track i { display: block; height: 100%; border-radius: inherit; background: var(--navy); transition: width .25s ease; }
+.vp-pair .competitor .vp-track i { background: var(--orange); }
+.vp-pair .competitor strong { color: #a84811; }
+.vp-comparison-scope { margin: 12px 1px 0; color: var(--muted); font-size: 9px; line-height: 1.45; }
 .benchmark-summary { display: grid; grid-template-columns: repeat(4, 1fr); gap: 11px; margin-bottom: 13px; }
 .benchmark-summary article { padding: 16px 18px; border: 1px solid var(--line); border-radius: 8px; background: white; box-shadow: var(--shadow); }
 .benchmark-summary span { color: var(--color-water); font-size: 9px; font-weight: 850; letter-spacing: .09em; text-transform: uppercase; }
@@ -298,6 +322,8 @@ footer a { color: white; }
   .snapshot-grid { grid-template-columns: repeat(3, 1fr); }
   .coverage-summary { grid-template-columns: repeat(3, 1fr); }
   .benchmark-summary { grid-template-columns: repeat(2, 1fr); }
+  .vp-comparison-heading { flex-direction: column; }
+  .vp-comparison-actions { justify-content: flex-start; }
   .brand-signoff { grid-template-columns: 1fr; }
   .portfolio-grid { display: none; }
 }
@@ -314,6 +340,7 @@ footer a { color: white; }
   .snapshot-grid { grid-template-columns: repeat(2, 1fr); }
   .coverage-summary { grid-template-columns: 1fr; }
   .benchmark-banner { align-items: flex-start; flex-direction: column; }
+  .vp-comparison-metrics { grid-template-columns: 1fr; }
   .method-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 620px) {
@@ -321,6 +348,8 @@ footer a { color: white; }
   .identity img { width: 150px; height: 44px; }
   .identity-divider, .identity div { display: none; }
   .identity small { display: none; }
+  .top-actions { gap: 6px; }
+  .top-actions #exportCsv { display: none; }
   .top-actions .button { padding: 8px 10px; font-size: 10px; }
   .workspace { padding: 26px 14px 54px; }
   .filter-rail { grid-template-columns: 1fr; padding: 14px; }
@@ -336,6 +365,11 @@ footer a { color: white; }
   .control-row select { flex: 1; min-width: 0; }
   .chart-wrap { height: 250px; }
   .theme-grid, .snapshot-grid, .action-grid, .method-grid, .coverage-summary, .benchmark-summary { grid-template-columns: 1fr; }
+  .vp-comparison { padding: 17px; }
+  .vp-comparison-actions, .comparison-switch { width: 100%; }
+  .comparison-switch button { flex: 1; padding-inline: 6px; }
+  .vp-comparison-actions .button { width: 100%; }
+  .vp-pair > div { grid-template-columns: 70px 1fr 45px; }
   .brand-signoff, .signoff-copy { grid-template-columns: 1fr; padding: 22px; text-align: center; }
   .signoff-copy img { width: min(250px, 100%); margin: auto; }
   .section-heading { align-items: flex-start; flex-direction: column; }
