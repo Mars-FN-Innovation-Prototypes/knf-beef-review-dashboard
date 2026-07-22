@@ -9,7 +9,7 @@ const DATA_FILES = {
   competitorSnapshots: "data/competitor_rating_snapshots.json",
   competitorCoverage: "data/competitor_coverage_audit.json",
 };
-const RELEASE_VERSION = "2026-07-22-expanded-review-collection";
+const RELEASE_VERSION = "2026-07-22-competitor-quality-audit";
 
 const ANALYSIS_START = "2024-11-01";
 const ANALYSIS_END = "2026-07-22";
@@ -413,7 +413,7 @@ function renderBenchmark(kevinReviews, competitorReviews) {
     const rows = competitorReviews.filter(review => review.product_id === product.id);
     const row = reviewMetrics(rows);
     const sources = [...new Set(rows.map(review => review.source))];
-    const evidence = !rows.length ? "Coverage only" : sources.includes("Hormel") ? "Complete first-party + retailer sample" : "Retailer page sample";
+    const evidence = !rows.length ? "Coverage / rating context" : sources.includes("Hormel") ? "Complete first-party + bounded retailer sample" : "Bounded retailer sample";
     return `<tr class="benchmark-row"><td class="product-name"><small>${escapeHTML(product.brand)}</small>${escapeHTML(product.name)}</td><td>${product.pack_oz} oz</td><td><span class="status-pill ${product.benchmark_tier === "adjacent" ? "variant" : ""}">${product.benchmark_tier}</span></td><td>${row.n}</td><td>${fmtRating(row.rating)}</td><td>${fmtPct(row.low)}</td><td>${fmtPct(row.texture)}</td><td>${fmtPct(row.taste)}</td><td><span class="status-pill ${rows.length ? "" : "gap"}">${evidence}</span></td></tr>`;
   }).join("");
 
@@ -421,23 +421,29 @@ function renderBenchmark(kevinReviews, competitorReviews) {
   const snapshots = (data.competitorSnapshots.snapshots || []).filter(snapshot => productIds.has(snapshot.product_id));
   $("#benchmarkSnapshots").innerHTML = snapshots.map(snapshot => {
     const total = Number(snapshot.rating_count) || Object.values(snapshot.distribution || {}).reduce((sum, value) => sum + Number(value), 0);
-    const bars = [5, 4, 3, 2, 1].map(star => {
+    const hasDistribution = Object.keys(snapshot.distribution || {}).length > 0;
+    const bars = hasDistribution ? [5, 4, 3, 2, 1].map(star => {
       const count = Number(snapshot.distribution?.[String(star)] || 0);
       return `<div><span>${star}</span><i><b style="width:${percent(count, total) || 0}%"></b></i><span>${count.toLocaleString()}</span></div>`;
-    }).join("");
-    const status = snapshot.capture_status === "complete_public_first_party_feed" ? "Complete public first-party feed" : `${snapshot.captured_written_reviews || 0} text sample; complete rating distribution`;
+    }).join("") : `<p class="snapshot-distribution-note">Star distribution not publicly available.</p>`;
+    const status = {
+      complete_public_first_party_feed: "Complete public first-party feed",
+      bounded_public_text_sample_plus_complete_rating_distribution: `${snapshot.captured_written_reviews || 0} dated reviews in bounded public-page sample; complete point-in-time distribution`,
+      complete_rating_distribution_shared_variant_text_excluded: "Shared variant-family rating distribution; unresolved written text excluded",
+      rating_total_only_public_text_payload_unavailable: "Exact-SKU rating total only; reproducible public review text unavailable",
+    }[snapshot.capture_status] || "Public rating context; see methodology";
     return `<article class="snapshot-card competitor-snapshot"><header><span>${escapeHTML(snapshot.brand)} · ${escapeHTML(snapshot.source)}</span><strong>${escapeHTML(snapshot.product)}</strong></header><div class="snapshot-score"><strong>${fmtRating(Number(snapshot.average_rating))}</strong><span>${total.toLocaleString()} ratings</span></div><div class="snapshot-stars">${bars}</div><p>${escapeHTML(status)}<br><a href="${escapeHTML(snapshot.page_url)}" target="_blank" rel="noopener noreferrer">Open source page ↗</a></p></article>`;
   }).join("");
 
   const auditRows = data.competitorCoverage.rows || [];
   const auditSources = ["Brand", "Target", "Amazon", "Kroger", "Walmart", "Costco"];
-  const statusLabel = { review_evidence: "Review evidence", listing_only: "Exact listing", exact_page_not_confirmed: "Search only", not_located: "Not located" };
+  const statusLabel = { review_evidence: "Review evidence", rating_evidence: "Rating context", shared_variant_rating_context: "Shared rating context", related_variant_excluded: "Related size excluded", listing_only: "Exact listing", exact_page_not_confirmed: "Search only", not_located: "Not located" };
   $("#benchmarkCoverageTable tbody").innerHTML = products.map(product => {
     const cells = auditSources.map(source => {
       const audit = auditRows.find(row => row.product_id === product.id && row.source === source);
       if (!audit) return `<td><span class="coverage-pill gap">Not audited</span></td>`;
       const label = statusLabel[audit.status] || audit.status;
-      const classes = audit.status === "not_located" ? "gap" : audit.match_type === "club_pack_variant" || audit.status === "exact_page_not_confirmed" ? "variant" : "";
+      const classes = audit.status === "not_located" ? "gap" : audit.match_type === "club_pack_variant" || audit.status === "exact_page_not_confirmed" || audit.status === "related_variant_excluded" || audit.status === "shared_variant_rating_context" ? "variant" : "";
       const pill = audit.page_url ? `<a class="coverage-pill ${classes}" href="${escapeHTML(audit.page_url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(label)} ↗</a>` : `<span class="coverage-pill ${classes}">${escapeHTML(label)}</span>`;
       return `<td>${pill}<small>${escapeHTML(audit.match_type.replaceAll("_", " "))}${audit.note ? `<br>${escapeHTML(audit.note)}` : ""}</small></td>`;
     }).join("");

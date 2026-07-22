@@ -12,12 +12,13 @@
     "rating": 5,
     "title": "Guilty pleasure",
     "text": "Barbacoa is my guilty pleasure. If i could have it every day, I would. This brand, in my opinion, is the best, comparable to a homemade one. I sometimes add onions, mushrooms, and carrots... a perfect dinner with a salad, tortillas , or rice. But you dont need to add anything, its delicious.",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "432488786",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/169151306",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "hormel_beef_tips_gravy_15",
@@ -32,12 +33,13 @@
     "rating": 4,
     "title": "",
     "text": "EVERYTHING SEEMED WELL PUT TOGETHER BUT I HAS ALOT ON MEAT THAT WASN'T MEAT. IT WAS CHOPPED UP FAT. NOT WHAT I WAS LOOKING FOR IN THIS MEAL. IT SORTA OUT WEIGHED THE MEAT. MORE FAT AND LESS MEAT. YUCK. BUT THE MEAT WE DID FIND WAS VERY TENDER AND THE GRAVY WAS VERY GOOD. MAYBE A PINCH OR TWO TOO MUCH SALT FOR MY TASTES.",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "430911920",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/10290929",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "del_real_barbacoa_15",
@@ -52,12 +54,13 @@
     "rating": 5,
     "title": "",
     "text": "This is a traditional tasty beef barbacoa that is perfect for lunch or dinner, served with pinto and jalapeño beans, warmed corn or flour tortillas and garnished with chopped white onions, scallions, cilantro and slices of radishes.",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "429662080",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/169151306",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "hormel_beef_tips_gravy_15",
@@ -72,12 +75,13 @@
     "rating": 5,
     "title": "",
     "text": "I love beef tips and rice so I bought this to cut down on time preparing and bought some boiling bag rice and just poured the beef onto the rice after it was heated quick meal just add a salad or slaw or green beans whatever you choose as a side and you have a meal in minutes",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "428817574",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/10290929",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "del_real_barbacoa_15",
@@ -92,12 +96,13 @@
     "rating": 4,
     "title": "",
     "text": "It was very decent. I really like the flavor, thou the texture was a bit much for this austitic palete. Overall, I think their better beef products that are easier to cook and have better texture, but I believe if you already like shredded beef, it a winner. But I still say it 4 stars, I don't regret buying it, it was a great experince. I just have better ones with different styles of precooked beef.",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "428419792",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/169151306",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "hormel_roast_au_jus_15",
@@ -172,12 +177,13 @@
     "rating": 5,
     "title": "",
     "text": "Del Real Foods Slow-Cooked Beef Birria is a quick, easy and convenient way to please a crowd who are looking to have a fiesta night Its really delicious in tacos, burritos, quesadillas also you can lay some on a bed of nacho chips with cheese and veggies Yum Yum if your creative sure there are many other ways to use this beef Not to spicy and the price will s reasonable for the convenience of it Always buy when I am strapped with time when having lil get togethers and taco night!!!",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "426791574",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/3859154746",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "del_real_birria_15",
@@ -192,12 +198,13 @@
     "rating": 1,
     "title": "1 small chunk of gross meat!",
     "text": "Received one small chunk of gross meat and a bag of liquid. I am very disappointed with the portion size of meat in this bag. The small piece had a big tendon in it and it was hard! I was grossed out and threw it away. will not order this ever again! total rip off for 11 dollars!",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "426770598",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/3859154746",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "hormel_beef_tips_gravy_15",
@@ -212,12 +219,13 @@
     "rating": 5,
     "title": "Yummy!",
     "text": "Very good! Kind-of taste like the roast my Mom used to make. I just wish it hadn't gone up so much in price. My husband likes this over very fine vermicelli noodles or mashed potatoes. I keep this on hand every few weeks for quick meals vs. heating a frozen meal.",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "426688814",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/10290929",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "del_real_barbacoa_15",
@@ -232,12 +240,34 @@
     "rating": 2,
     "title": "Thin Sauce, Barely Any Meat — Very Disappointing",
     "text": "This was my first time ever trying barbacoa and I was really disappointed. The tub says 15 oz, but there's maybe 5 ounces of actual beef in it — the rest is a thin, watery red sauce. The meat was bland, not spicy at all, and the liquid was so runny you couldn't even make a sandwich without the bread turning soggy. For $10.98, I expected a lot more meat and a lot better flavor. Definitely not worth the price.",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "426631018",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/169151306",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
+  },
+  {
+    "product_id": "brookwood_brisket_16",
+    "product": "Smoked Sliced Beef Brisket",
+    "brand": "Brookwood Farms",
+    "portfolio": "competitor",
+    "benchmark_tier": "core",
+    "family": "brisket",
+    "pack_oz": 16,
+    "source": "Walmart",
+    "date": "2026-05-12",
+    "rating": 1,
+    "title": "",
+    "text": "Out of \"one pound\" of brisket, over 75% was just pure fat. We got *maybe* 3 ounces of usable meat, the rest went to the dog. Very disappointing for a fairly pricey product. Pre-packaged deli meat would have been a better choice than this. Will NEVER buy again.",
+    "capture": "bounded public review-page sample",
+    "provider": "Walmart",
+    "provider_review_id": "425299161",
+    "verified_buyer": true,
+    "source_url": "https://www.walmart.com/reviews/product/1020754218",
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "hormel_beef_tips_gravy_15",
@@ -260,26 +290,6 @@
     "metric_eligible": true
   },
   {
-    "product_id": "brookwood_brisket_16",
-    "product": "Smoked Sliced Beef Brisket",
-    "brand": "Brookwood Farms",
-    "portfolio": "competitor",
-    "benchmark_tier": "core",
-    "family": "brisket",
-    "pack_oz": 16,
-    "source": "Walmart",
-    "date": "2026-05-12",
-    "rating": 1,
-    "title": "",
-    "text": "Out of \"one pound\" of brisket, over 75% was just pure fat. We got *maybe* 3 ounces of usable meat, the rest went to the dog. Very disappointing for a fairly pricey product. Pre-packaged deli meat would have been a better choice than this. Will NEVER buy again.",
-    "capture": "public review page sample",
-    "provider": "Walmart",
-    "provider_review_id": "425299161",
-    "verified_buyer": true,
-    "source_url": "https://www.walmart.com/reviews/product/1020754218",
-    "metric_eligible": true
-  },
-  {
     "product_id": "soules_angus_fajitas_24",
     "product": "Family Size Beef Steak Fajitas",
     "brand": "Soules Kitchen",
@@ -292,12 +302,13 @@
     "rating": 1,
     "title": "",
     "text": "Might be the worst meat we've ever eaten. Way too salty, with stringy fatty pieces of gristle along with the “meat”. I'm no expert, but I think this occupies the space below canning grade. I wish I could rate this zero stars, because one star is too generous.",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "424390597",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/10312195",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "del_real_barbacoa_15",
@@ -312,12 +323,13 @@
     "rating": 4,
     "title": "",
     "text": "Excellent flavor, $10.00 for 2 servings. .Barbacoa is soupy by design. By measurement there was 1 cup of liquid and a scant cup of meat including the fat covering which adds flavor but which we dont eat. Youll need to add starch to stretch this for two, like chochoyotes (what ever your family calls masa dumplings) or rice or beans, even potatos in a pinch. Have used this as a base for max 4 people in rice bowls if your very generous with rice and beans and corn and everything else plus condiments but 3 would be the preferred no. Of rice bowls",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "424074080",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/169151306",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "hormel_beef_tips_gravy_15",
@@ -360,26 +372,6 @@
     "metric_eligible": true
   },
   {
-    "product_id": "soules_angus_fajitas_24",
-    "product": "Family Size Beef Steak Fajitas",
-    "brand": "Soules Kitchen",
-    "portfolio": "competitor",
-    "benchmark_tier": "adjacent",
-    "family": "fajita_beef",
-    "pack_oz": 24,
-    "source": "Walmart",
-    "date": "2026-04-18",
-    "rating": 5,
-    "title": "Yummy %26 Great Source of Protein",
-    "text": "It's just a little pricey, but it tastes great and really helps me out on my diet since im trying to eat as much protein as possible. It helps me stick to my diet, cook less, and is super yummy. Only thing that would make it better is it to be a few dollars cheaper. Also, its really tender.",
-    "capture": "public review page sample",
-    "provider": "Walmart",
-    "provider_review_id": "423056160",
-    "verified_buyer": true,
-    "source_url": "https://www.walmart.com/reviews/product/10312195",
-    "metric_eligible": true
-  },
-  {
     "product_id": "hormel_roast_au_jus_15",
     "product": "Slow Simmered Beef Roast Au Jus",
     "brand": "Hormel",
@@ -408,16 +400,38 @@
     "family": "fajita_beef",
     "pack_oz": 24,
     "source": "Walmart",
+    "date": "2026-04-18",
+    "rating": 5,
+    "title": "Yummy %26 Great Source of Protein",
+    "text": "It's just a little pricey, but it tastes great and really helps me out on my diet since im trying to eat as much protein as possible. It helps me stick to my diet, cook less, and is super yummy. Only thing that would make it better is it to be a few dollars cheaper. Also, its really tender.",
+    "capture": "bounded public review-page sample",
+    "provider": "Walmart",
+    "provider_review_id": "423056160",
+    "verified_buyer": true,
+    "source_url": "https://www.walmart.com/reviews/product/10312195",
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
+  },
+  {
+    "product_id": "soules_angus_fajitas_24",
+    "product": "Family Size Beef Steak Fajitas",
+    "brand": "Soules Kitchen",
+    "portfolio": "competitor",
+    "benchmark_tier": "adjacent",
+    "family": "fajita_beef",
+    "pack_oz": 24,
+    "source": "Walmart",
     "date": "2026-04-16",
     "rating": 2,
     "title": "Just not good anymore",
     "text": "While it has more flavor than their thinly sliced steak (I gave that one star), the quality is just not good. It doesn't come in slices; it is just misshapen chunks. And also, kind of tough to chew. I used to buy this brand years ago and it was good. Not anymore.",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "422876476",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/10312195",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "hormel_beef_tips_gravy_15",
@@ -437,26 +451,6 @@
     "provider_review_id": "578117102",
     "verified_buyer": false,
     "source_url": "https://www.hormel.com/brands/hormel-square-table-entrees/product/beef-tips-and-gravy/",
-    "metric_eligible": true
-  },
-  {
-    "product_id": "soules_angus_fajitas_24",
-    "product": "Family Size Beef Steak Fajitas",
-    "brand": "Soules Kitchen",
-    "portfolio": "competitor",
-    "benchmark_tier": "adjacent",
-    "family": "fajita_beef",
-    "pack_oz": 24,
-    "source": "Walmart",
-    "date": "2026-04-06",
-    "rating": 2,
-    "title": "",
-    "text": "I have purchased this product several times before. It is, or was one of my favorite meats to use in salads. The last 3 times I purchased it, it has not been the product I previously loved. The meat is very tough to chew, and there are a lot of gristle pieces that has to be discarded because it's hard to chew and swallow. If my dog is eating 3/4 of this meat and I'm barely eating 1/3 of it; it's not worth buying.",
-    "capture": "public review page sample",
-    "provider": "Walmart",
-    "provider_review_id": "421798578",
-    "verified_buyer": true,
-    "source_url": "https://www.walmart.com/reviews/product/10312195",
     "metric_eligible": true
   },
   {
@@ -488,16 +482,38 @@
     "family": "fajita_beef",
     "pack_oz": 24,
     "source": "Walmart",
+    "date": "2026-04-06",
+    "rating": 2,
+    "title": "",
+    "text": "I have purchased this product several times before. It is, or was one of my favorite meats to use in salads. The last 3 times I purchased it, it has not been the product I previously loved. The meat is very tough to chew, and there are a lot of gristle pieces that has to be discarded because it's hard to chew and swallow. If my dog is eating 3/4 of this meat and I'm barely eating 1/3 of it; it's not worth buying.",
+    "capture": "bounded public review-page sample",
+    "provider": "Walmart",
+    "provider_review_id": "421798578",
+    "verified_buyer": true,
+    "source_url": "https://www.walmart.com/reviews/product/10312195",
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
+  },
+  {
+    "product_id": "soules_angus_fajitas_24",
+    "product": "Family Size Beef Steak Fajitas",
+    "brand": "Soules Kitchen",
+    "portfolio": "competitor",
+    "benchmark_tier": "adjacent",
+    "family": "fajita_beef",
+    "pack_oz": 24,
+    "source": "Walmart",
     "date": "2026-03-30",
     "rating": 4,
     "title": "Worth the buy",
     "text": "Great taste! Nicely seasoned. The consistency of the seasoning was great. The meat fried well and was not too tough. A few pieces were not cut evenly into strips, but that was not a problem. The strips were long, wide enough, and not too short. I ended up cutting some of the strips in half because some family members preferred shorter pieces of meat in their fajita. Goes great in a fajita or even in a salad.",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "421189488",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/10312195",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "del_real_barbacoa_15",
@@ -512,32 +528,13 @@
     "rating": 3,
     "title": "",
     "text": "My palate did not connect w/this item plus, too little amount f/the price. Tasted nothing like any babacoa I've ever eaten anywhere. I'd @the samex recommend it as this is my personal review %26 other's will have opposite opinions thus, my review shouldn't sway any1's desire to try this or any other item I may not agree with.",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "421069384",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/169151306",
-    "metric_eligible": true
-  },
-  {
-    "product_id": "del_real_barbacoa_15",
-    "product": "Slow Cooked Beef Barbacoa",
-    "brand": "Del Real Foods",
-    "portfolio": "competitor",
-    "benchmark_tier": "core",
-    "family": "mexican_beef",
-    "pack_oz": 15,
-    "source": "Walmart",
-    "date": "2026-03-24",
-    "rating": 3,
-    "title": "NOT typical barbacoa at all but it is tasty",
-    "text": "This is not like regular barbacoa, it's not oily and full of fat flavor, it's in a tomatoey Mexican spiced sauce, the texture is more like shredded roast or shredded beef, not soft like true barbacoa, very disappointed in that, when You're expecting barbacoa it's not..... however it did taste good in tacos and I also made a shredded beef enchilada casserole with it as a test in the flavors are good it's just not your typical barbacoa so don't expect that.",
-    "capture": "public review page sample",
-    "provider": "Walmart",
-    "provider_review_id": "420547968",
-    "verified_buyer": true,
-    "source_url": "https://www.walmart.com/reviews/product/169151306",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "brookwood_brisket_16",
@@ -552,12 +549,34 @@
     "rating": 5,
     "title": "",
     "text": "I have purchased this many times and it has always been delicious. I had served it to guests and they purchased it after eating it at my house. It is best to pick out your own package. Some packages have more fat than others. I prefer less fat and like to pick out which package best suits me. My last order was a pickup order and I got a package with a lot of fat. It tasted good but just too much for me. This is a quick easy meal. We typically heat it and put it on buns with bbq sauce. It makes several sandwiches.",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "420583346",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/1020754218",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
+  },
+  {
+    "product_id": "del_real_barbacoa_15",
+    "product": "Slow Cooked Beef Barbacoa",
+    "brand": "Del Real Foods",
+    "portfolio": "competitor",
+    "benchmark_tier": "core",
+    "family": "mexican_beef",
+    "pack_oz": 15,
+    "source": "Walmart",
+    "date": "2026-03-24",
+    "rating": 3,
+    "title": "NOT typical barbacoa at all but it is tasty",
+    "text": "This is not like regular barbacoa, it's not oily and full of fat flavor, it's in a tomatoey Mexican spiced sauce, the texture is more like shredded roast or shredded beef, not soft like true barbacoa, very disappointed in that, when You're expecting barbacoa it's not..... however it did taste good in tacos and I also made a shredded beef enchilada casserole with it as a test in the flavors are good it's just not your typical barbacoa so don't expect that.",
+    "capture": "bounded public review-page sample",
+    "provider": "Walmart",
+    "provider_review_id": "420547968",
+    "verified_buyer": true,
+    "source_url": "https://www.walmart.com/reviews/product/169151306",
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "hormel_beef_tips_gravy_15",
@@ -632,12 +651,13 @@
     "rating": 5,
     "title": "Great!",
     "text": "Tasty, tender, and very lean meat. I served it with baked beans, potato salad, and sauteed yellow squash. The strip of meat in the bottom of the photo is Jack Daniel's brand brisket. The short piece above it to the left of the squash is a piece of another brand. I bought two brands to see which one we liked best, and Jack Daniel's brand won the test. I didn't have to cut off any fat from it.",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "418766958",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/46575488",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "hormel_roast_au_jus_15",
@@ -652,32 +672,13 @@
     "rating": 5,
     "title": "",
     "text": "I won't normally even try things like this but for some reason, I read reviews. Everyone loved it. I decided to take a chance. I was not disappointed. The roast was melt in your mouth good with great flavor and natural texture. You could do your own roast at home and it wouldn't be any better. 10/10",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "418404348",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/10291008",
-    "metric_eligible": true
-  },
-  {
-    "product_id": "hormel_roast_au_jus_15",
-    "product": "Slow Simmered Beef Roast Au Jus",
-    "brand": "Hormel",
-    "portfolio": "competitor",
-    "benchmark_tier": "core",
-    "family": "pot_roast_gravy",
-    "pack_oz": 15,
-    "source": "Walmart",
-    "date": "2026-03-02",
-    "rating": 5,
-    "title": "",
-    "text": "The taste is very good. I use it as I would a pot roast that I would cook. I bake carrots, potatoes,red onion, a little celery and it makes a delicious meal. Add brown and serve rolls with spreadable butter and a nice dessert. Take a walk with the family after dinner. Give the kids a bath and put them to bed. Spend the rest of the evening sipping a glass of fine wine with your honey bunny.",
-    "capture": "public review page sample",
-    "provider": "Walmart",
-    "provider_review_id": "418140845",
-    "verified_buyer": true,
-    "source_url": "https://www.walmart.com/reviews/product/10291008",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "del_real_birria_15",
@@ -692,12 +693,55 @@
     "rating": 3,
     "title": "",
     "text": "very good. Expensive for the amount you get, then again in today's world not surprising. These are great just to quickly heat up and pop them in a tortilla shell. Sauce taste good. Again, for the price you need a little bit more beef in that package.",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "418117772",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/3859154746",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
+  },
+  {
+    "product_id": "hormel_roast_au_jus_15",
+    "product": "Slow Simmered Beef Roast Au Jus",
+    "brand": "Hormel",
+    "portfolio": "competitor",
+    "benchmark_tier": "core",
+    "family": "pot_roast_gravy",
+    "pack_oz": 15,
+    "source": "Walmart",
+    "date": "2026-03-02",
+    "rating": 5,
+    "title": "",
+    "text": "The taste is very good. I use it as I would a pot roast that I would cook. I bake carrots, potatoes,red onion, a little celery and it makes a delicious meal. Add brown and serve rolls with spreadable butter and a nice dessert. Take a walk with the family after dinner. Give the kids a bath and put them to bed. Spend the rest of the evening sipping a glass of fine wine with your honey bunny.",
+    "capture": "bounded public review-page sample",
+    "provider": "Walmart",
+    "provider_review_id": "418140845",
+    "verified_buyer": true,
+    "source_url": "https://www.walmart.com/reviews/product/10291008",
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
+  },
+  {
+    "product_id": "brookwood_brisket_16",
+    "product": "Smoked Sliced Beef Brisket",
+    "brand": "Brookwood Farms",
+    "portfolio": "competitor",
+    "benchmark_tier": "core",
+    "family": "brisket",
+    "pack_oz": 16,
+    "source": "Walmart",
+    "date": "2026-02-26",
+    "rating": 5,
+    "title": "good product easy to prep",
+    "text": "Easy to eat for olders. Easy prep. tasted really good. picked 1 up. later ordered 2 pickup. one looked great other looked pale. so would advise going into store for this so you see what your getting. i like the pink cooked ones not the the pale looking one.",
+    "capture": "bounded public review-page sample",
+    "provider": "Walmart",
+    "provider_review_id": "417721459",
+    "verified_buyer": true,
+    "source_url": "https://www.walmart.com/reviews/product/1020754218",
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "hormel_beef_tips_gravy_15",
@@ -720,24 +764,25 @@
     "metric_eligible": true
   },
   {
-    "product_id": "brookwood_brisket_16",
-    "product": "Smoked Sliced Beef Brisket",
-    "brand": "Brookwood Farms",
+    "product_id": "del_real_birria_15",
+    "product": "Seasoned Beef Birria",
+    "brand": "Del Real Foods",
     "portfolio": "competitor",
     "benchmark_tier": "core",
-    "family": "brisket",
-    "pack_oz": 16,
+    "family": "mexican_beef",
+    "pack_oz": 15,
     "source": "Walmart",
-    "date": "2026-02-26",
-    "rating": 5,
-    "title": "good product easy to prep",
-    "text": "Easy to eat for olders. Easy prep. tasted really good. picked 1 up. later ordered 2 pickup. one looked great other looked pale. so would advise going into store for this so you see what your getting. i like the pink cooked ones not the the pale looking one.",
-    "capture": "public review page sample",
+    "date": "2026-02-22",
+    "rating": 4,
+    "title": "Tastes great! Okay price.",
+    "text": "Tastes great! I only wish there was more meat in the package, but no complaints on flavor. It's a shame the local walmarts don't carry more Del Real products. I've liked most that I've tried, especially the Mexican Rice. Kroger has stopped carrying their products altogether. As long as my nearby Walmarts keep carrying the Del Real Beef Birria, I'll keep buying it.",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
-    "provider_review_id": "417721459",
+    "provider_review_id": "417313335",
     "verified_buyer": true,
-    "source_url": "https://www.walmart.com/reviews/product/1020754218",
-    "metric_eligible": true
+    "source_url": "https://www.walmart.com/reviews/product/3859154746",
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "hormel_beef_tips_gravy_15",
@@ -760,26 +805,6 @@
     "metric_eligible": true
   },
   {
-    "product_id": "del_real_birria_15",
-    "product": "Seasoned Beef Birria",
-    "brand": "Del Real Foods",
-    "portfolio": "competitor",
-    "benchmark_tier": "core",
-    "family": "mexican_beef",
-    "pack_oz": 15,
-    "source": "Walmart",
-    "date": "2026-02-22",
-    "rating": 4,
-    "title": "Tastes great! Okay price.",
-    "text": "Tastes great! I only wish there was more meat in the package, but no complaints on flavor. It's a shame the local walmarts don't carry more Del Real products. I've liked most that I've tried, especially the Mexican Rice. Kroger has stopped carrying their products altogether. As long as my nearby Walmarts keep carrying the Del Real Beef Birria, I'll keep buying it.",
-    "capture": "public review page sample",
-    "provider": "Walmart",
-    "provider_review_id": "417313335",
-    "verified_buyer": true,
-    "source_url": "https://www.walmart.com/reviews/product/3859154746",
-    "metric_eligible": true
-  },
-  {
     "product_id": "hormel_beef_tips_gravy_15",
     "product": "Slow Simmered Beef Tips & Gravy",
     "brand": "Hormel",
@@ -792,12 +817,13 @@
     "rating": 5,
     "title": "Delicious beef tips and gravy for dinner or lunch",
     "text": "These beef tips and gravy are absolutely delicious. I serve them over microwavable white rice. But you can put them over mashed potatoes as well. I can not pull the plastic back to open them once they are done. So I take a pair of scissors and cut the clear plastic that covers the top. These are perfect for the elderly and or disabled or a single person trying to eat healthier well balanced meals. Open a can of green beans or make a salad to go on the side and you have a balanced meal. You can make 3 to 4 meals off of one container. More like 3 meals if you are a big eater. The gravy is delicious as well. And the meat just melts in your mouth, it is so tender.",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "417227705",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/10290929",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "soules_angus_fajitas_24",
@@ -812,12 +838,13 @@
     "rating": 5,
     "title": "I didn't believe it either",
     "text": "I was pleaseasantly surprised by the taste and quality. this is my second bag. coating is consistent and tasty. the meat itself holds its own against \"premium\" products. I have found slices are well made with only a very small percentage NOT being with the grain so the strips are consistent in chewability. no gristle, no fat chunks, and the lack of a consistent size shows it is cut from normal material and not formed, textured meat. bottom line... quick meal. tasty. quality. reliable.",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "416735102",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/10312195",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "brookwood_brisket_16",
@@ -832,12 +859,13 @@
     "rating": 5,
     "title": "Best brisket meat I have ever had",
     "text": "Good quality meat that goes good by itself, in a salad, or on a sandwich. Unlike other microwaveable meats, this cooks with fresh savory, restaurant quality meat in only 2-3 minutes. It's no wonder that Wal-mart sells out of it all the time. The price is a little high but for 15 ounces of meat that is not too bad and cheaper than most other briskets",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "416478131",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/1020754218",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "del_real_birria_15",
@@ -852,12 +880,13 @@
     "rating": 5,
     "title": "",
     "text": "Great flavor! We have stopped getting street food/food truck meals as prices are just getting crazy, especially on meat. My daughter loves Birria and she has been missing it, so wanted to try it as an occasional treat. It's definitely really good and the best store bought we have tried. The price is very reasonable based on market prices and the quality is good.",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "415827289",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/3859154746",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "jack_daniels_brisket",
@@ -872,12 +901,34 @@
     "rating": 1,
     "title": "The dog wouldn’t touch it either.",
     "text": "The whole meal tasted like plastic. Followed directions exactly. It’s a shame, I loved the shredded pork. This tasted like we’d expect a Temu brisket to. For a premium price point and brand name, I expect a lot more. This was inedible. We couldn’t even get the dog to eat it.",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "415521246",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/46575488",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
+  },
+  {
+    "product_id": "brookwood_brisket_16",
+    "product": "Smoked Sliced Beef Brisket",
+    "brand": "Brookwood Farms",
+    "portfolio": "competitor",
+    "benchmark_tier": "core",
+    "family": "brisket",
+    "pack_oz": 16,
+    "source": "Walmart",
+    "date": "2026-01-29",
+    "rating": 5,
+    "title": "",
+    "text": "It's not my backyard brisket but being from Texas it's pretty good for store bought . it's thinly sliced and will easily get you at least seven meat loaded sandwiches . I recommend trying it for a quick brisket sandwich fix or whatever your pallet desires . I've bought this numerous times . I will buy again .",
+    "capture": "bounded public review-page sample",
+    "provider": "Walmart",
+    "provider_review_id": "414717482",
+    "verified_buyer": true,
+    "source_url": "https://www.walmart.com/reviews/product/1020754218",
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "hormel_roast_au_jus_15",
@@ -908,16 +959,17 @@
     "family": "brisket",
     "pack_oz": 16,
     "source": "Walmart",
-    "date": "2026-01-29",
+    "date": "2026-01-27",
     "rating": 5,
-    "title": "",
-    "text": "It's not my backyard brisket but being from Texas it's pretty good for store bought . it's thinly sliced and will easily get you at least seven meat loaded sandwiches . I recommend trying it for a quick brisket sandwich fix or whatever your pallet desires . I've bought this numerous times . I will buy again .",
-    "capture": "public review page sample",
+    "title": "For any occasion...",
+    "text": "It was a nice and delicious supplement to our Xmas table. Tastes great, and fits as a main or side dish. And as leftovers are a great item for making a sandwich for the family, children, or if you travel. I definitely will buy it again, and highly recommend it to everyone who likes that kind of food. Enjoy!",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
-    "provider_review_id": "414717482",
+    "provider_review_id": "414519314",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/1020754218",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "hormel_beef_tips_gravy_15",
@@ -937,26 +989,6 @@
     "provider_review_id": "573390417",
     "verified_buyer": false,
     "source_url": "https://www.hormel.com/brands/hormel-square-table-entrees/product/beef-tips-and-gravy/",
-    "metric_eligible": true
-  },
-  {
-    "product_id": "brookwood_brisket_16",
-    "product": "Smoked Sliced Beef Brisket",
-    "brand": "Brookwood Farms",
-    "portfolio": "competitor",
-    "benchmark_tier": "core",
-    "family": "brisket",
-    "pack_oz": 16,
-    "source": "Walmart",
-    "date": "2026-01-27",
-    "rating": 5,
-    "title": "For any occasion...",
-    "text": "It was a nice and delicious supplement to our Xmas table. Tastes great, and fits as a main or side dish. And as leftovers are a great item for making a sandwich for the family, children, or if you travel. I definitely will buy it again, and highly recommend it to everyone who likes that kind of food. Enjoy!",
-    "capture": "public review page sample",
-    "provider": "Walmart",
-    "provider_review_id": "414519314",
-    "verified_buyer": true,
-    "source_url": "https://www.walmart.com/reviews/product/1020754218",
     "metric_eligible": true
   },
   {
@@ -992,12 +1024,13 @@
     "rating": 4,
     "title": "Small but delicious",
     "text": "The flavor is fine… not as good as the fresh birria from the taco truck, but it's great to have it ready for a quick meal. It was easy to prepare.. just microwave and drain the broth into a separate dish for dipping tacos. The serving sizes are small - not a value purchase but it was fine for just the two of us. My protein bowl included a chopped salad mix, Fritos, avocado, olives, crème and tomatoes and black beans. Deliciousness!",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "414266076",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/3859154746",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "del_real_birria_15",
@@ -1012,12 +1045,13 @@
     "rating": 2,
     "title": "",
     "text": "It's almost cheaper and easier to make it yourself. I could bet you the one you made would have more flavor too. There was barely any meat in there and it was so thin and kind of bland. I would pass on this next time. Just make it yourself and you'll get more.",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "414234982",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/3859154746",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "soules_fajita_steak_6",
@@ -1032,12 +1066,14 @@
     "rating": 3,
     "title": "Not that great seasoned meat",
     "text": "The bag says family size, well sure if you're a family of two only or only have a couple of chunks of meat per person only...There were only two semi long pieces of meat, the rest are just some various sized pieces.....I just wanted a quick snack so I didn't make fajita sides. The meat is salty, chewy and definitely needed to floss afterward... There's no char flavor at all, fajitas normally have a char- grilled flavor and no brown on the meat either until I put in the hot skillet for a bit....... I don't think I'll try it again, not worth the $14.95, I think I could've gotten a fajita plate at a restaurant with more meat for the same price plus sides..... here I was trying to save money by not eating out.",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample; excluded from product metrics",
     "provider": "Walmart",
     "provider_review_id": "412932942",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/39496073",
-    "metric_eligible": true
+    "metric_eligible": false,
+    "quality_status": "excluded_shared_variant_without_review_level_size",
+    "exclusion_reason": "Walmart syndicates this review family across 6 oz and 14 oz pages; the retained record lacks a review-level size field."
   },
   {
     "product_id": "hormel_roast_au_jus_15",
@@ -1052,12 +1088,13 @@
     "rating": 4,
     "title": "No longer affordable. Great product, but too high",
     "text": "Several months ago, I'd have suggested that you try this. It tastes great and it's easy to prepare. However, the price has doubled and it is not worth it at that price. I'm extremely disappointed in Walmart for the huge price markup. I'd have understood some increase, but to have all of these products go up to nearly $12 overnight reduces the value of the product to nearly nothing.",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "412831897",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/10291008",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "hormel_beef_tips_gravy_15",
@@ -1072,12 +1109,13 @@
     "rating": 5,
     "title": "Quick and easy meal",
     "text": "I got this for a quick and easy meal. It did not disappoint. The meat was tender and no fatty pieces. . The gravy was perfectly thickened. It was definitely easy, quick, and delicious. Dinner was served with Sister Shubert's rolls within minutes. . I will definitely buy it again. I highly recommend this entree.",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "412034589",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/10290929",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "del_real_birria_15",
@@ -1092,32 +1130,13 @@
     "rating": 1,
     "title": "Do not waste your time!",
     "text": "$10.98 for the smallest piece of meat I have ever seen! This is a rip off! Please do not waste your time nor your money on this product. It's not enough in the package to fill one taco/tortilla shell. The meat is barley seasoned. You're paying for a bag full of the liquid the meat was cooked in. This is horrible!",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "411959671",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/3859154746",
-    "metric_eligible": true
-  },
-  {
-    "product_id": "hormel_beef_tips_gravy_15",
-    "product": "Slow Simmered Beef Tips & Gravy",
-    "brand": "Hormel",
-    "portfolio": "competitor",
-    "benchmark_tier": "core",
-    "family": "steak_tips_gravy",
-    "pack_oz": 15,
-    "source": "Walmart",
-    "date": "2026-01-05",
-    "rating": 5,
-    "title": "",
-    "text": "Since I no longer cook from scratch. i found these beef tips to be very tender and tasty. Perfect for two servings over rice or noodles. i like to add a touch of soy sauce for added flavor, but i don't advice it if you are watching your salt intake. definitely worth buying.",
-    "capture": "public review page sample",
-    "provider": "Walmart",
-    "provider_review_id": "411736274",
-    "verified_buyer": true,
-    "source_url": "https://www.walmart.com/reviews/product/10290929",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "hormel_beef_tips_gravy_15",
@@ -1140,6 +1159,27 @@
     "metric_eligible": true
   },
   {
+    "product_id": "hormel_beef_tips_gravy_15",
+    "product": "Slow Simmered Beef Tips & Gravy",
+    "brand": "Hormel",
+    "portfolio": "competitor",
+    "benchmark_tier": "core",
+    "family": "steak_tips_gravy",
+    "pack_oz": 15,
+    "source": "Walmart",
+    "date": "2026-01-05",
+    "rating": 5,
+    "title": "",
+    "text": "Since I no longer cook from scratch. i found these beef tips to be very tender and tasty. Perfect for two servings over rice or noodles. i like to add a touch of soy sauce for added flavor, but i don't advice it if you are watching your salt intake. definitely worth buying.",
+    "capture": "bounded public review-page sample",
+    "provider": "Walmart",
+    "provider_review_id": "411736274",
+    "verified_buyer": true,
+    "source_url": "https://www.walmart.com/reviews/product/10290929",
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
+  },
+  {
     "product_id": "del_real_birria_15",
     "product": "Seasoned Beef Birria",
     "brand": "Del Real Foods",
@@ -1152,12 +1192,13 @@
     "rating": 4,
     "title": "",
     "text": "While it's not homemade or restaurant quality, it is still pretty flavorful. I saw no fat or gristle, nothing off-putting or objectionable about the texture. It could have been a little spicier. The portion was small, but certainly enough for one person. It made enough for four small corn tortillas. Lots of juice/gravy for dipping. As an alternative to the tortillas, you could serve it over rice, pasta, ramen, potatoes/tater tots, or even chips for nachos. It has many uses.",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "411374369",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/3859154746",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "hormel_beef_tips_gravy_15",
@@ -1172,12 +1213,13 @@
     "rating": 1,
     "title": "THE PRICES WILL COME DOWN IS WE STOP BUYING THEM!!",
     "text": "It Wasnt But A Few Months Ago And Te Price For This Item was $8.47 Now It Almost $12 The Value Just Isn't There Any Longer ITS TOO FRESH IN. MY MIND The. I Could Go Out And Eat A Steak and Salad For $14 Or Grab And ENTIRE ROAST for $14. These Prices Have GOT TO CME DOWN andI Its NEVER GOING TO HAPPEN UNLESS WE ABSOLUTELY REFUSE TO PAY IT!!! If They Cant Sell Them? THE PRICE WILL GO DOWN!!!",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "410981595",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/10290929",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "soules_fajita_steak_6",
@@ -1192,12 +1234,14 @@
     "rating": 1,
     "title": "Hard pass",
     "text": "For starters, calling 14oz of meat a “family pack” is WILD. But more importantly, this meat quite literally tastes like dog food. I took one bite and immediately spit it out. I don’t typically do reviews but I had to warn other potential buyers not to make the same mistake I did. 0/10",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample; excluded from product metrics",
     "provider": "Walmart",
     "provider_review_id": "410814484",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/39496073",
-    "metric_eligible": true
+    "metric_eligible": false,
+    "quality_status": "excluded_shared_variant_without_review_level_size",
+    "exclusion_reason": "Walmart syndicates this review family across 6 oz and 14 oz pages; the retained record lacks a review-level size field."
   },
   {
     "product_id": "del_real_birria_15",
@@ -1212,12 +1256,13 @@
     "rating": 5,
     "title": "Convenient Restaurant style at home",
     "text": "The Del Real Birria that is available in the prepared foods section is such an easy dinner when you're up for a savory and spicy meal that is quick and convenient! The meat has a lot of stock with it so it won't dry out and makes for an amazing taco night! The whole meal is microwaveable making it so easy to prepare.",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "c36da27a-4d92-d05e-222c-0feac211b5aa",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/3859154746",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "hormel_beef_tips_gravy_15",
@@ -1252,12 +1297,13 @@
     "rating": 4,
     "title": "",
     "text": "Portions of the entire package would only feed two adults. So, for every additional adult eating, expect to buy more than one, which would be an expensive meal. And going back for seconds, you can forget that unless you buy more. It was too expensive. Overall, it has great taste and is very tender just costly.",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "408478080",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/10291008",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "hormel_beef_tips_gravy_15",
@@ -1272,12 +1318,13 @@
     "rating": 5,
     "title": "",
     "text": "Love these Hormel meals! They're great to keep on hand for a quick dinner. I've served this over rice, egg noodles or mashed potatoes. Add a vegetable or a salad and you have a great meal ready to serve in no time. I had unexpected visitors who were impressed with my effortless dinner.",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "408270181",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/10290929",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "hormel_roast_au_jus_15",
@@ -1292,32 +1339,13 @@
     "rating": 5,
     "title": "Quick and Easy Dinner",
     "text": "As other reviews indicate, preparing the beef over mashed potatoes makes a quick, stress free dinner. This serves two adults, therefore a little costly if needing to buy two packages for a family of 4. Overall, for my busy days, I would recommend for its convenience and good taste.",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "408168091",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/10291008",
-    "metric_eligible": true
-  },
-  {
-    "product_id": "hormel_beef_tips_gravy_15",
-    "product": "Slow Simmered Beef Tips & Gravy",
-    "brand": "Hormel",
-    "portfolio": "competitor",
-    "benchmark_tier": "core",
-    "family": "steak_tips_gravy",
-    "pack_oz": 15,
-    "source": "Walmart",
-    "date": "2025-12-10",
-    "rating": 5,
-    "title": "",
-    "text": "I love roast beef and gravy but there is not always time to make that. This is my go to and I am so happy I found this. It is very tender roasted beef in beef gravy and so close to homemade that it is hard to tell the difference. I am not a big fan of processed food but this is really good.",
-    "capture": "public review page sample",
-    "provider": "Walmart",
-    "provider_review_id": "407946318",
-    "verified_buyer": true,
-    "source_url": "https://www.walmart.com/reviews/product/10290929",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "brookwood_brisket_16",
@@ -1332,12 +1360,34 @@
     "rating": 5,
     "title": "Simply irresistible",
     "text": "Bought this on a chance and I was not disappointed, I did add some olive oil and more seasoning, wrapped it in foil and put it in the oven until I smelled the aroma of smoke, and my family devoured it all. I may have gotten a few bites 🤣. Told my coworker about it and she has been hooked ever since. I have to keep at least 2 packs in my freezer.",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "407992212",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/1020754218",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
+  },
+  {
+    "product_id": "hormel_beef_tips_gravy_15",
+    "product": "Slow Simmered Beef Tips & Gravy",
+    "brand": "Hormel",
+    "portfolio": "competitor",
+    "benchmark_tier": "core",
+    "family": "steak_tips_gravy",
+    "pack_oz": 15,
+    "source": "Walmart",
+    "date": "2025-12-10",
+    "rating": 5,
+    "title": "",
+    "text": "I love roast beef and gravy but there is not always time to make that. This is my go to and I am so happy I found this. It is very tender roasted beef in beef gravy and so close to homemade that it is hard to tell the difference. I am not a big fan of processed food but this is really good.",
+    "capture": "bounded public review-page sample",
+    "provider": "Walmart",
+    "provider_review_id": "407946318",
+    "verified_buyer": true,
+    "source_url": "https://www.walmart.com/reviews/product/10290929",
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "hormel_roast_au_jus_15",
@@ -1352,12 +1402,13 @@
     "rating": 5,
     "title": "Must try. Soooo goood!",
     "text": "I did not exactly follow their preparation guidelines. instead I fried up some mushrooms in butter and then added the meat and juices to the saucepan along with the mushrooms and cooked until hot (just a few minutes). it is the best combination in the world and it makes the meal so good. I only wish that there was a larger size.",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "407834423",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/10291008",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "hormel_roast_au_jus_15",
@@ -1372,32 +1423,13 @@
     "rating": 5,
     "title": "Baby Yasss Hormel Roast Beef",
     "text": "My go-to meal in under 5 minutes. The meat is very juicy and tender. Following the cooking instructions ensures you can't go wrong or make a mistake. You can add any sides for a satisfying meal. Don't just take my word for it—try it and see for yourself. I absolutely love the price, flavor, and appearance.",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "406552052",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/10291008",
-    "metric_eligible": true
-  },
-  {
-    "product_id": "hormel_roast_au_jus_15",
-    "product": "Slow Simmered Beef Roast Au Jus",
-    "brand": "Hormel",
-    "portfolio": "competitor",
-    "benchmark_tier": "core",
-    "family": "pot_roast_gravy",
-    "pack_oz": 15,
-    "source": "Walmart",
-    "date": "2025-11-24",
-    "rating": 5,
-    "title": "Tasty, easy dinner or lunch",
-    "text": "I like these easy microwave dinners. Cook fast. Senior can get 3or 4 lunches/dinners. Usually bake potato and do veggies in microwave to complete dinner. For lunch just hear up the meat and use au jus sandwich on a toasted English muffin. Filling and delicious. If a family is just 1-2 people, one is all you need. You may need 2 packages if family is larger.",
-    "capture": "public review page sample",
-    "provider": "Walmart",
-    "provider_review_id": "405893408",
-    "verified_buyer": true,
-    "source_url": "https://www.walmart.com/reviews/product/10291008",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "del_real_barbacoa_15",
@@ -1412,12 +1444,34 @@
     "rating": 5,
     "title": "Great for tacos",
     "text": "This Barbacoa is so yummy for lunch or dinner. It's actually really great if you like Barbacoa I would say it makes about eight or nine tacos in this one pack so if you plan to make more definitely by multiple. my family really enjoyed this. You can also add some cilantro and onion to the tacos to make it even better",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "405867035",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/169151306",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
+  },
+  {
+    "product_id": "hormel_roast_au_jus_15",
+    "product": "Slow Simmered Beef Roast Au Jus",
+    "brand": "Hormel",
+    "portfolio": "competitor",
+    "benchmark_tier": "core",
+    "family": "pot_roast_gravy",
+    "pack_oz": 15,
+    "source": "Walmart",
+    "date": "2025-11-24",
+    "rating": 5,
+    "title": "Tasty, easy dinner or lunch",
+    "text": "I like these easy microwave dinners. Cook fast. Senior can get 3or 4 lunches/dinners. Usually bake potato and do veggies in microwave to complete dinner. For lunch just hear up the meat and use au jus sandwich on a toasted English muffin. Filling and delicious. If a family is just 1-2 people, one is all you need. You may need 2 packages if family is larger.",
+    "capture": "bounded public review-page sample",
+    "provider": "Walmart",
+    "provider_review_id": "405893408",
+    "verified_buyer": true,
+    "source_url": "https://www.walmart.com/reviews/product/10291008",
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "jack_daniels_brisket",
@@ -1432,12 +1486,13 @@
     "rating": 4,
     "title": "Lazy Man's Brisket",
     "text": "For what it is, it tastes great. Obviously it's not going to be as good as a smokehouse brisket or if you know how to make it yourself it will never match it. But for those who need a quick meal this is good enough. Make a sandwich or use it to top a baked potato with some cheese and you have yourself a nice meal. It is a little sweet but i'm not mad about it, just know if you don't like sweet BBQ this might not fit your tastes.",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "405150678",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/46575488",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "soules_fajita_steak_6",
@@ -1452,12 +1507,14 @@
     "rating": 5,
     "title": "Highly recommend",
     "text": "Excellent quality beef. Very little fat. And I mean very little. Taste is well balanced with seasoning.i use it for so many things. Snack, fajitas and this time I used it in my chili. I just cut it up into small pieces so much better than using ground beef. More protein and little fat content and that means a lot to me. The convenience is also wonderful.",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample; excluded from product metrics",
     "provider": "Walmart",
     "provider_review_id": "403668062",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/39496073",
-    "metric_eligible": true
+    "metric_eligible": false,
+    "quality_status": "excluded_shared_variant_without_review_level_size",
+    "exclusion_reason": "Walmart syndicates this review family across 6 oz and 14 oz pages; the retained record lacks a review-level size field."
   },
   {
     "product_id": "jack_daniels_brisket",
@@ -1472,12 +1529,13 @@
     "rating": 1,
     "title": "",
     "text": "My husband got really really sick after eating this. Like food poisoning symptoms. It has been a good while since we purchased it but will never buy it again.",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "403606451",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/46575488",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "hormel_roast_au_jus_15",
@@ -1492,12 +1550,13 @@
     "rating": 5,
     "title": "ROAST BEEF IS NOT ONLY FOR SUNDAYS",
     "text": "As we age, it is harder to prepare big meals. This product helps when it is just my husband and I having a meal. Although not as pretty as my roasts, it is tasty and is just enough for two. I serve it with mashed potatoes for my husband and baked potato for me with a vegetable of our choosing.",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "403260719",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/10291008",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "del_real_barbacoa_15",
@@ -1512,12 +1571,13 @@
     "rating": 5,
     "title": "DELICIOUS - HIGHLY RECOMMEND",
     "text": "This barbacoa beef comes fully cooked in a sealed bag within a heat up container for the microwave. It is literally as delicious as the barbacoa beef used by \"Burrito Bowel\" restaurants to make the burritoes and burrito bowels. Very happy to have found this product. We also use it to make tacoes. HIGHLY HIGHLY RECOMMEND",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "403074246",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/169151306",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "soules_fajita_steak_6",
@@ -1532,12 +1592,14 @@
     "rating": 5,
     "title": "Tasty once heated",
     "text": "While the steak fajitas are fully cooked and can be eaten straight from the bag, I found the water content is really high and you definitely notice the moisture when biting into it cold. On the upside, when you heat it in the oven, it doesn't dry out. I heated 4 oz in a steam oven using the Bake Steam setting at 250°F for 10 minutes, and the result was excellent. It came out hot, juicy, and with a nice fire-grilled flavor. I also like that it does not have a lot of fat.",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample; excluded from product metrics",
     "provider": "Walmart",
     "provider_review_id": "402449010",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/39496073",
-    "metric_eligible": true
+    "metric_eligible": false,
+    "quality_status": "excluded_shared_variant_without_review_level_size",
+    "exclusion_reason": "Walmart syndicates this review family across 6 oz and 14 oz pages; the retained record lacks a review-level size field."
   },
   {
     "product_id": "hormel_roast_au_jus_15",
@@ -1552,12 +1614,13 @@
     "rating": 5,
     "title": "So convenient",
     "text": "Absolutely the convenient way to make pot roast. The au jus keeps it from drying out. I add a little onion powder, and voila! Seriously, 3 minute prep and cook time for a reasonable pot roast? I wish it was less expensive though, but i guess i wish that about a lot of groceries.",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "402384381",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/10291008",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "jack_daniels_brisket",
@@ -1572,12 +1635,13 @@
     "rating": 1,
     "title": "Don't Buy It",
     "text": "We like the Jack Daniels pulled pork and chicken so I decided to try this. It was a mistake. The meat was so tough that it was as stiff as bacon. It was like trying to chew a leather belt. I spit it out after chewing for about 90 seconds and it literally looked the same as it did on the fork. The rest went in the trash. It was not up to Jack Daniel's usual standard.",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "401910394",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/46575488",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "hormel_beef_tips_gravy_15",
@@ -1592,12 +1656,13 @@
     "rating": 5,
     "title": "Great for lazy night",
     "text": "The HORMEL SQUARE TABLE Slow Simmered Beef Tips and Gravy, made with beef shoulder cuts and packaged in a 15 oz plastic microwaveable tray, offers a practical solution for those seeking a quick and easy meal. Its refrigerated, not frozen, storage allows it to be kept on hand for an extended period, making it ideal for moments when preparing a full meal feels like too much effort. This product is particularly appealing to carnivores who enjoy meat every now and then. The beef tips are flavorful and filling, making it a reliable choice for satisfying meat cravings without the need for extensive preparation. When the “I don’t wanna cook” feeling strikes, this meal can be quickly prepared by microwaving the beef tips and gravy. Pairing it with a can of warm vegetables and instant mashed potatoes results in a homestyle dinner that is both comforting and convenient. This combination can easily feed two to three people, making it suitable for small households or sharing with a friend.",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "401852189",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/10290929",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "hormel_beef_tips_gravy_15",
@@ -1640,26 +1705,6 @@
     "metric_eligible": true
   },
   {
-    "product_id": "hormel_roast_au_jus_15",
-    "product": "Slow Simmered Beef Roast Au Jus",
-    "brand": "Hormel",
-    "portfolio": "competitor",
-    "benchmark_tier": "core",
-    "family": "pot_roast_gravy",
-    "pack_oz": 15,
-    "source": "Hormel",
-    "date": "2025-10-12",
-    "rating": 1,
-    "title": "Small portion and dry meat",
-    "text": "Easy to prepare, adequate au jus, however the meat was VERY VERY dry.",
-    "capture": "first-party public review",
-    "provider": "PowerReviews",
-    "provider_review_id": "565776085",
-    "verified_buyer": false,
-    "source_url": "https://www.hormel.com/brands/hormel-square-table-entrees/product/beef-roast-au-jus/",
-    "metric_eligible": true
-  },
-  {
     "product_id": "hormel_beef_tips_gravy_15",
     "product": "Slow Simmered Beef Tips & Gravy",
     "brand": "Hormel",
@@ -1680,6 +1725,26 @@
     "metric_eligible": true
   },
   {
+    "product_id": "hormel_roast_au_jus_15",
+    "product": "Slow Simmered Beef Roast Au Jus",
+    "brand": "Hormel",
+    "portfolio": "competitor",
+    "benchmark_tier": "core",
+    "family": "pot_roast_gravy",
+    "pack_oz": 15,
+    "source": "Hormel",
+    "date": "2025-10-12",
+    "rating": 1,
+    "title": "Small portion and dry meat",
+    "text": "Easy to prepare, adequate au jus, however the meat was VERY VERY dry.",
+    "capture": "first-party public review",
+    "provider": "PowerReviews",
+    "provider_review_id": "565776085",
+    "verified_buyer": false,
+    "source_url": "https://www.hormel.com/brands/hormel-square-table-entrees/product/beef-roast-au-jus/",
+    "metric_eligible": true
+  },
+  {
     "product_id": "soules_angus_fajitas_24",
     "product": "Family Size Beef Steak Fajitas",
     "brand": "Soules Kitchen",
@@ -1692,12 +1757,13 @@
     "rating": 1,
     "title": "Made of waste cuts",
     "text": "In the past this was a good product. Last few times its been nasty. every piece is covered in ice and when it does thaw it doesn't even look like steak. Its mostly pieces of fat and unchewable stuff. unfortunately it has went down hill",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "400938172",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/10312195",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "hormel_beef_tips_gravy_15",
@@ -1732,12 +1798,13 @@
     "rating": 5,
     "title": "Some of the best brisket I've ever eaten",
     "text": "I have never purchased pre-cooked, prepared Sliced. Brisket before. It just makes me nervous that it would be very dry. I decided to take a chance and purchase this for something a little different. I was beyond pleasantly surprised. This brisket was seasoned to perfection and was so juicy. Honestly, probably some of the best brisket I have ever eaten. My husband loved it, too. I've already added some more to my cart for my next food order. I highly recommend this product. You won't regret it.",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "400300902",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/1020754218",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "hormel_roast_au_jus_15",
@@ -1772,12 +1839,13 @@
     "rating": 5,
     "title": "Continuous buyer",
     "text": "Convenience is great! Pop it in the air fryer for just a few minutes and it's done. It has excellent flavor however some pieces has a bit of fat on it and I don't care too much for that. The price is a little much at $20 a bag but it's good for my nachos and I keep buying it so it must be worth it. Very flavorful!",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "398384623",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/10312195",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "jack_daniels_brisket",
@@ -1792,12 +1860,13 @@
     "rating": 4,
     "title": "Great taste",
     "text": "Taste great. Just microwaved and served on a bun along with a pickle and sliced onion. Only thing is, it did raise my sugar level a little more than home cooked brisket but ok if you dont have issue watching your glucose. For me it was a splurge meal, you know ok for a treat but not every day meal",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "398071697",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/46575488",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "hormel_roast_au_jus_15",
@@ -1815,26 +1884,6 @@
     "capture": "first-party public review",
     "provider": "PowerReviews",
     "provider_review_id": "562890980",
-    "verified_buyer": false,
-    "source_url": "https://www.hormel.com/brands/hormel-square-table-entrees/product/beef-roast-au-jus/",
-    "metric_eligible": true
-  },
-  {
-    "product_id": "hormel_roast_au_jus_15",
-    "product": "Slow Simmered Beef Roast Au Jus",
-    "brand": "Hormel",
-    "portfolio": "competitor",
-    "benchmark_tier": "core",
-    "family": "pot_roast_gravy",
-    "pack_oz": 15,
-    "source": "Hormel",
-    "date": "2025-09-05",
-    "rating": 1,
-    "title": "Never",
-    "text": "Amount, taste, texture and tough.",
-    "capture": "first-party public review",
-    "provider": "PowerReviews",
-    "provider_review_id": "562757402",
     "verified_buyer": false,
     "source_url": "https://www.hormel.com/brands/hormel-square-table-entrees/product/beef-roast-au-jus/",
     "metric_eligible": true
@@ -1868,13 +1917,13 @@
     "family": "pot_roast_gravy",
     "pack_oz": 15,
     "source": "Hormel",
-    "date": "2025-09-01",
-    "rating": 2,
-    "title": "this product was so hot the steam gave me 2nd degree burns",
-    "text": "just watch out for the bubble of steam",
+    "date": "2025-09-05",
+    "rating": 1,
+    "title": "Never",
+    "text": "Amount, taste, texture and tough.",
     "capture": "first-party public review",
     "provider": "PowerReviews",
-    "provider_review_id": "561489512",
+    "provider_review_id": "562757402",
     "verified_buyer": false,
     "source_url": "https://www.hormel.com/brands/hormel-square-table-entrees/product/beef-roast-au-jus/",
     "metric_eligible": true
@@ -1900,6 +1949,26 @@
     "metric_eligible": true
   },
   {
+    "product_id": "hormel_roast_au_jus_15",
+    "product": "Slow Simmered Beef Roast Au Jus",
+    "brand": "Hormel",
+    "portfolio": "competitor",
+    "benchmark_tier": "core",
+    "family": "pot_roast_gravy",
+    "pack_oz": 15,
+    "source": "Hormel",
+    "date": "2025-09-01",
+    "rating": 2,
+    "title": "this product was so hot the steam gave me 2nd degree burns",
+    "text": "just watch out for the bubble of steam",
+    "capture": "first-party public review",
+    "provider": "PowerReviews",
+    "provider_review_id": "561489512",
+    "verified_buyer": false,
+    "source_url": "https://www.hormel.com/brands/hormel-square-table-entrees/product/beef-roast-au-jus/",
+    "metric_eligible": true
+  },
+  {
     "product_id": "soules_angus_fajitas_24",
     "product": "Family Size Beef Steak Fajitas",
     "brand": "Soules Kitchen",
@@ -1912,12 +1981,13 @@
     "rating": 5,
     "title": "",
     "text": "I love to heat it up in my air fryer with seasoned fries that i have shortened the cooking time by putting the in microwaved about 2 minutes and 30 seconds. Just enough to give them a cooking start so that when i put them into a air fryer there is no under cooked taste and they are crisp. I make little fajitas with red onions and chicken. Easy as pie!!!! 1111",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "396340806",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/10312195",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "soules_fajita_steak_6",
@@ -1932,12 +2002,14 @@
     "rating": 1,
     "title": "stear clear",
     "text": "please dont order this yes. it was easy to cook it was an OK amount for the money it was slimy when cooked. it didnt have the consistency of meet. almost like tofu or something lab grown just buy the meat yourself and a 99 seasoning pack. i thought this would save me some time. it probability took the same amount of time as the option listed above",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample; excluded from product metrics",
     "provider": "Walmart",
     "provider_review_id": "395890293",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/39496073",
-    "metric_eligible": true
+    "metric_eligible": false,
+    "quality_status": "excluded_shared_variant_without_review_level_size",
+    "exclusion_reason": "Walmart syndicates this review family across 6 oz and 14 oz pages; the retained record lacks a review-level size field."
   },
   {
     "product_id": "brookwood_brisket_16",
@@ -1952,12 +2024,13 @@
     "rating": 5,
     "title": "My go-to brisket, better than restaurants",
     "text": "Sooo good. Very tender. And, get this...you don't need BBQ sauce. That's how you know it's good. I bought this and a big brand name to compare and I didn't even finish the other brand. With this, you can actually taste the smokiness. Some slices have a lot of fat, but I just trim it off. Still worth the money to me. My only complaint is the vacuum-sealed packaging, which doesn't always appear to be completely sealed. They should use a different sealing method to cut down on refunds. Be sure to check your package before cooking bc if it's not sealed, you could be eating meat that's been open for about a month (vacuum-sealed meat has a longer expiration date bc of the seal).",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "395849078",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/1020754218",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "hormel_beef_tips_gravy_15",
@@ -1992,12 +2065,14 @@
     "rating": 1,
     "title": "",
     "text": "The flavor of this product was non-descriptive and bland, almost like cardboard with some gristle. Fajita seasoning is MIA. The packaging touts \"NEW LOOK.\" Well, John Soules Foods, I highly recommend you focus on the flavor instead. After not finishing my \"fajita steak\" quesadilla, I threw the rest of the package away.",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample; excluded from product metrics",
     "provider": "Walmart",
     "provider_review_id": "394318958",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/39496073",
-    "metric_eligible": true
+    "metric_eligible": false,
+    "quality_status": "excluded_shared_variant_without_review_level_size",
+    "exclusion_reason": "Walmart syndicates this review family across 6 oz and 14 oz pages; the retained record lacks a review-level size field."
   },
   {
     "product_id": "jack_daniels_brisket",
@@ -2012,12 +2087,13 @@
     "rating": 5,
     "title": "",
     "text": "This is the very best ready-to-eat beef on the market. Says the Texas beefeater for many years. Taste is pure honemade quality. Whether you add potatoes (or rice) and a salad, or you use good quality bread or buns, you can serve this with pride and enjoy the free time you have saved.",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "394160915",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/46575488",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "del_real_barbacoa_15",
@@ -2032,12 +2108,13 @@
     "rating": 5,
     "title": "",
     "text": "My only question is why is it expensive 🫰 like everything else? Stop gouging guys, minimum wage is still cheap and probably always will be. Lower the cost to $6 at the most. Otherwise, it tastes great, I made 4 sandwiches with this small amount of product but I guess that's still cheaper than going out to eat. 😞",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "393271487",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/169151306",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "soules_fajita_steak_6",
@@ -2052,12 +2129,14 @@
     "rating": 4,
     "title": "",
     "text": "I always cook in a pan on the stove at about medium heat from the refrigerator, and add some of my own seasonings on them and let it brown on all sides. Taking those extra steps makes it taste really good. Only thing I don’t like is the small portion sizes. A 6oz would only feed one person depending on age and appetite.",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample; excluded from product metrics",
     "provider": "Walmart",
     "provider_review_id": "392105816",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/39496073",
-    "metric_eligible": true
+    "metric_eligible": false,
+    "quality_status": "excluded_shared_variant_without_review_level_size",
+    "exclusion_reason": "Walmart syndicates this review family across 6 oz and 14 oz pages; the retained record lacks a review-level size field."
   },
   {
     "product_id": "soules_fajita_steak_6",
@@ -2072,32 +2151,14 @@
     "rating": 3,
     "title": "Not a good value for the money",
     "text": "I thought purchasing the frozen precut strips would be better... but there were several strips that were hard, couldn't be chewed because it was rubbery, and just the day. This meat cost too much money to have inedible strips. The taste is good. Just disappointed that several strips I couldn't eat, 1 or 2 maybe although it should be none, but this pack had several.",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample; excluded from product metrics",
     "provider": "Walmart",
     "provider_review_id": "391626258",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/39496073",
-    "metric_eligible": true
-  },
-  {
-    "product_id": "soules_angus_fajitas_24",
-    "product": "Family Size Beef Steak Fajitas",
-    "brand": "Soules Kitchen",
-    "portfolio": "competitor",
-    "benchmark_tier": "adjacent",
-    "family": "fajita_beef",
-    "pack_oz": 24,
-    "source": "Walmart",
-    "date": "2025-07-09",
-    "rating": 1,
-    "title": "Don't recommend.",
-    "text": "I don't recommend this product. It is very small pieces. Not much meat. More gristle than meat. Taste isn't good either. Not worth spending money on.",
-    "capture": "public review page sample",
-    "provider": "Walmart",
-    "provider_review_id": "391287280",
-    "verified_buyer": true,
-    "source_url": "https://www.walmart.com/reviews/product/10312195",
-    "metric_eligible": true
+    "metric_eligible": false,
+    "quality_status": "excluded_shared_variant_without_review_level_size",
+    "exclusion_reason": "Walmart syndicates this review family across 6 oz and 14 oz pages; the retained record lacks a review-level size field."
   },
   {
     "product_id": "hormel_beef_tips_gravy_15",
@@ -2120,6 +2181,27 @@
     "metric_eligible": true
   },
   {
+    "product_id": "soules_angus_fajitas_24",
+    "product": "Family Size Beef Steak Fajitas",
+    "brand": "Soules Kitchen",
+    "portfolio": "competitor",
+    "benchmark_tier": "adjacent",
+    "family": "fajita_beef",
+    "pack_oz": 24,
+    "source": "Walmart",
+    "date": "2025-07-09",
+    "rating": 1,
+    "title": "Don't recommend.",
+    "text": "I don't recommend this product. It is very small pieces. Not much meat. More gristle than meat. Taste isn't good either. Not worth spending money on.",
+    "capture": "bounded public review-page sample",
+    "provider": "Walmart",
+    "provider_review_id": "391287280",
+    "verified_buyer": true,
+    "source_url": "https://www.walmart.com/reviews/product/10312195",
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
+  },
+  {
     "product_id": "jack_daniels_brisket",
     "product": "Seasoned Beef Brisket",
     "brand": "Jack Daniel's",
@@ -2132,12 +2214,13 @@
     "rating": 5,
     "title": "I shouldn't taste this good but it is fantastic!",
     "text": "Ready in 5 minutes, tastes great! I usually don't pick these kind of foods but I was running short on time and I'm sick of fast food drive ups. I spent less than half the money for this and some buns and it tasted 10 time better than fast food. This was quick and easy.",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "390794027",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/46575488",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "soules_fajita_steak_6",
@@ -2152,12 +2235,14 @@
     "rating": 4,
     "title": "",
     "text": "The meat was tough on a burritos and fajitas. Some gristle too. I had to fix the problem. I decided to put the meat in my Hot Pot make a boil with water and seasoning. Package came already seasoned well but adding more water thinned out the seasoning it already had on it and now it is delicious and tender. Ready for burritos, fajitas or topped on rice with macaroni, spinach, sweet potatoes mixed with brown sugar.",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample; excluded from product metrics",
     "provider": "Walmart",
     "provider_review_id": "390682928",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/39496073",
-    "metric_eligible": true
+    "metric_eligible": false,
+    "quality_status": "excluded_shared_variant_without_review_level_size",
+    "exclusion_reason": "Walmart syndicates this review family across 6 oz and 14 oz pages; the retained record lacks a review-level size field."
   },
   {
     "product_id": "soules_fajita_steak_6",
@@ -2172,12 +2257,14 @@
     "rating": 5,
     "title": "Great for Salads",
     "text": "I buy these steak strips to use in my salads and they are great! They smell good, they taste good and all you have to do is put some on a plate, pop it in the microwave and put it in the salad, or whatever else you want to use it for. No seasoning necessary. it tastes really good right out of the bag!",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample; excluded from product metrics",
     "provider": "Walmart",
     "provider_review_id": "390062012",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/39496073",
-    "metric_eligible": true
+    "metric_eligible": false,
+    "quality_status": "excluded_shared_variant_without_review_level_size",
+    "exclusion_reason": "Walmart syndicates this review family across 6 oz and 14 oz pages; the retained record lacks a review-level size field."
   },
   {
     "product_id": "jack_daniels_brisket",
@@ -2192,12 +2279,13 @@
     "rating": 4,
     "title": "",
     "text": "what I disnt like was the bbq sauce, I took mine out ofbit and put sweet baby rays on it. i did give it a overall rating of a 4 due to the bbq sauce and nothing is like fresh smoked brisket :) bit for sfore bought, precooked its a good choice for precooked brisket. so definitely give it a try .",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "389911668",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/46575488",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "jack_daniels_brisket",
@@ -2212,12 +2300,13 @@
     "rating": 3,
     "title": "",
     "text": "This product is like opening a shoe box and not knowing what's in it. Sometimes the meat is juicy and tender and sometimes you get the hard dry stale end portions. Sometimes you get good amounts, (but for me never for the amount charged), and sometimes not so, and lastly the flavor is the same way, sometimes flavorful and sometimes not so much. This is why I would recommend this product; the fact I love smoked brisket. I wish Walmart would have better selections for us.",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "389662531",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/46575488",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "hormel_beef_tips_gravy_15",
@@ -2400,26 +2489,6 @@
     "metric_eligible": true
   },
   {
-    "product_id": "hormel_roast_au_jus_15",
-    "product": "Slow Simmered Beef Roast Au Jus",
-    "brand": "Hormel",
-    "portfolio": "competitor",
-    "benchmark_tier": "core",
-    "family": "pot_roast_gravy",
-    "pack_oz": 15,
-    "source": "Hormel",
-    "date": "2025-04-11",
-    "rating": 5,
-    "title": "Found NO Issue With The Roast Beef Nor Turkey",
-    "text": "A friend gave me two frozen boxes from his freezer (roast and turkery) he buys and didn't want. I had a sick cat who would not eat cat food. I prepared the Roast Beef and he loved it, and I ate some too. Was totally amazed how well cooked, how tasty, and I'm thrilled to add to my grocery list now. Easy to prepare and delicious. Plus, I prefer NO preservatives or artificial additives. I thank Hormel for making my life easier.",
-    "capture": "first-party public review",
-    "provider": "PowerReviews",
-    "provider_review_id": "551547649",
-    "verified_buyer": false,
-    "source_url": "https://www.hormel.com/brands/hormel-square-table-entrees/product/beef-roast-au-jus/",
-    "metric_eligible": true
-  },
-  {
     "product_id": "hormel_beef_tips_gravy_15",
     "product": "Slow Simmered Beef Tips & Gravy",
     "brand": "Hormel",
@@ -2437,6 +2506,26 @@
     "provider_review_id": "551389539",
     "verified_buyer": false,
     "source_url": "https://www.hormel.com/brands/hormel-square-table-entrees/product/beef-tips-and-gravy/",
+    "metric_eligible": true
+  },
+  {
+    "product_id": "hormel_roast_au_jus_15",
+    "product": "Slow Simmered Beef Roast Au Jus",
+    "brand": "Hormel",
+    "portfolio": "competitor",
+    "benchmark_tier": "core",
+    "family": "pot_roast_gravy",
+    "pack_oz": 15,
+    "source": "Hormel",
+    "date": "2025-04-11",
+    "rating": 5,
+    "title": "Found NO Issue With The Roast Beef Nor Turkey",
+    "text": "A friend gave me two frozen boxes from his freezer (roast and turkery) he buys and didn't want. I had a sick cat who would not eat cat food. I prepared the Roast Beef and he loved it, and I ate some too. Was totally amazed how well cooked, how tasty, and I'm thrilled to add to my grocery list now. Easy to prepare and delicious. Plus, I prefer NO preservatives or artificial additives. I thank Hormel for making my life easier.",
+    "capture": "first-party public review",
+    "provider": "PowerReviews",
+    "provider_review_id": "551547649",
+    "verified_buyer": false,
+    "source_url": "https://www.hormel.com/brands/hormel-square-table-entrees/product/beef-roast-au-jus/",
     "metric_eligible": true
   },
   {
@@ -2860,26 +2949,6 @@
     "metric_eligible": true
   },
   {
-    "product_id": "hormel_roast_au_jus_15",
-    "product": "Slow Simmered Beef Roast Au Jus",
-    "brand": "Hormel",
-    "portfolio": "competitor",
-    "benchmark_tier": "core",
-    "family": "pot_roast_gravy",
-    "pack_oz": 15,
-    "source": "Hormel",
-    "date": "2024-09-22",
-    "rating": 3,
-    "title": "Love the product but often has chunks of fat",
-    "text": "We use this Beef Roast over egg noodles and in a burrito recipe. Several times recently we had big chunks of fat. This past time we had ~2.4 oz of fat chunks. Could have been separated out, IMHO.",
-    "capture": "first-party public review",
-    "provider": "PowerReviews",
-    "provider_review_id": "533934916",
-    "verified_buyer": false,
-    "source_url": "https://www.hormel.com/brands/hormel-square-table-entrees/product/beef-roast-au-jus/",
-    "metric_eligible": true
-  },
-  {
     "product_id": "hormel_beef_tips_gravy_15",
     "product": "Slow Simmered Beef Tips & Gravy",
     "brand": "Hormel",
@@ -2897,6 +2966,26 @@
     "provider_review_id": "533899194",
     "verified_buyer": false,
     "source_url": "https://www.hormel.com/brands/hormel-square-table-entrees/product/beef-tips-and-gravy/",
+    "metric_eligible": true
+  },
+  {
+    "product_id": "hormel_roast_au_jus_15",
+    "product": "Slow Simmered Beef Roast Au Jus",
+    "brand": "Hormel",
+    "portfolio": "competitor",
+    "benchmark_tier": "core",
+    "family": "pot_roast_gravy",
+    "pack_oz": 15,
+    "source": "Hormel",
+    "date": "2024-09-22",
+    "rating": 3,
+    "title": "Love the product but often has chunks of fat",
+    "text": "We use this Beef Roast over egg noodles and in a burrito recipe. Several times recently we had big chunks of fat. This past time we had ~2.4 oz of fat chunks. Could have been separated out, IMHO.",
+    "capture": "first-party public review",
+    "provider": "PowerReviews",
+    "provider_review_id": "533934916",
+    "verified_buyer": false,
+    "source_url": "https://www.hormel.com/brands/hormel-square-table-entrees/product/beef-roast-au-jus/",
     "metric_eligible": true
   },
   {
@@ -2972,12 +3061,13 @@
     "rating": 1,
     "title": "Nasty..",
     "text": "I've bought this about 6 or 8 times. The first 4 times it was DELICIOUS! Quick and easy too. The last few times I've bought it, it's been nasty. Always tons of fat and gristle and I'm seeing lots of pieces with arteries/veins! This used to be good cuts of meat and now it looks line they're picking up the leftovers from the slaughterhouse floor. Will NOT be purchasing this anymore. Very disappointed.",
-    "capture": "public review page sample",
+    "capture": "bounded public review-page sample",
     "provider": "Walmart",
     "provider_review_id": "353434601",
     "verified_buyer": true,
     "source_url": "https://www.walmart.com/reviews/product/1020754218",
-    "metric_eligible": true
+    "metric_eligible": true,
+    "quality_status": "accepted_exact_listed_sku_sample"
   },
   {
     "product_id": "hormel_roast_au_jus_15",
@@ -3220,26 +3310,6 @@
     "metric_eligible": true
   },
   {
-    "product_id": "hormel_roast_au_jus_15",
-    "product": "Slow Simmered Beef Roast Au Jus",
-    "brand": "Hormel",
-    "portfolio": "competitor",
-    "benchmark_tier": "core",
-    "family": "pot_roast_gravy",
-    "pack_oz": 15,
-    "source": "Hormel",
-    "date": "2024-03-20",
-    "rating": 1,
-    "title": "I would not buy this product again!",
-    "text": "I made this Beef Roast for my son and I with a vegi & side for an easy & fast dinner. We each tasted it and the rest thrown away. Waste of money! I would not feed this to a dog. Very tough and odd tasting. They need to do more quality control on their products. Tried calling several times, office is always closed. Put in a statement to get my money back. The turkey and gravy, although salty was not bad.",
-    "capture": "first-party public review",
-    "provider": "PowerReviews",
-    "provider_review_id": "509152379",
-    "verified_buyer": false,
-    "source_url": "https://www.hormel.com/brands/hormel-square-table-entrees/product/beef-roast-au-jus/",
-    "metric_eligible": true
-  },
-  {
     "product_id": "hormel_beef_tips_gravy_15",
     "product": "Slow Simmered Beef Tips & Gravy",
     "brand": "Hormel",
@@ -3257,6 +3327,26 @@
     "provider_review_id": "509152901",
     "verified_buyer": false,
     "source_url": "https://www.hormel.com/brands/hormel-square-table-entrees/product/beef-tips-and-gravy/",
+    "metric_eligible": true
+  },
+  {
+    "product_id": "hormel_roast_au_jus_15",
+    "product": "Slow Simmered Beef Roast Au Jus",
+    "brand": "Hormel",
+    "portfolio": "competitor",
+    "benchmark_tier": "core",
+    "family": "pot_roast_gravy",
+    "pack_oz": 15,
+    "source": "Hormel",
+    "date": "2024-03-20",
+    "rating": 1,
+    "title": "I would not buy this product again!",
+    "text": "I made this Beef Roast for my son and I with a vegi & side for an easy & fast dinner. We each tasted it and the rest thrown away. Waste of money! I would not feed this to a dog. Very tough and odd tasting. They need to do more quality control on their products. Tried calling several times, office is always closed. Put in a statement to get my money back. The turkey and gravy, although salty was not bad.",
+    "capture": "first-party public review",
+    "provider": "PowerReviews",
+    "provider_review_id": "509152379",
+    "verified_buyer": false,
+    "source_url": "https://www.hormel.com/brands/hormel-square-table-entrees/product/beef-roast-au-jus/",
     "metric_eligible": true
   },
   {
@@ -3740,26 +3830,6 @@
     "metric_eligible": true
   },
   {
-    "product_id": "hormel_roast_au_jus_15",
-    "product": "Slow Simmered Beef Roast Au Jus",
-    "brand": "Hormel",
-    "portfolio": "competitor",
-    "benchmark_tier": "core",
-    "family": "pot_roast_gravy",
-    "pack_oz": 15,
-    "source": "Hormel",
-    "date": "2023-08-31",
-    "rating": 5,
-    "title": "Best roast beef",
-    "text": "It says to cook in microwave or stove top. I put in the oven with their au gratin potatoes. So good! Perfect texture and taste.",
-    "capture": "first-party public review",
-    "provider": "PowerReviews",
-    "provider_review_id": "470732465",
-    "verified_buyer": false,
-    "source_url": "https://www.hormel.com/brands/hormel-square-table-entrees/product/beef-roast-au-jus/",
-    "metric_eligible": true
-  },
-  {
     "product_id": "hormel_beef_tips_gravy_15",
     "product": "Slow Simmered Beef Tips & Gravy",
     "brand": "Hormel",
@@ -3777,6 +3847,26 @@
     "provider_review_id": "470778214",
     "verified_buyer": false,
     "source_url": "https://www.hormel.com/brands/hormel-square-table-entrees/product/beef-tips-and-gravy/",
+    "metric_eligible": true
+  },
+  {
+    "product_id": "hormel_roast_au_jus_15",
+    "product": "Slow Simmered Beef Roast Au Jus",
+    "brand": "Hormel",
+    "portfolio": "competitor",
+    "benchmark_tier": "core",
+    "family": "pot_roast_gravy",
+    "pack_oz": 15,
+    "source": "Hormel",
+    "date": "2023-08-31",
+    "rating": 5,
+    "title": "Best roast beef",
+    "text": "It says to cook in microwave or stove top. I put in the oven with their au gratin potatoes. So good! Perfect texture and taste.",
+    "capture": "first-party public review",
+    "provider": "PowerReviews",
+    "provider_review_id": "470732465",
+    "verified_buyer": false,
+    "source_url": "https://www.hormel.com/brands/hormel-square-table-entrees/product/beef-roast-au-jus/",
     "metric_eligible": true
   },
   {
@@ -3860,26 +3950,6 @@
     "metric_eligible": true
   },
   {
-    "product_id": "hormel_roast_au_jus_15",
-    "product": "Slow Simmered Beef Roast Au Jus",
-    "brand": "Hormel",
-    "portfolio": "competitor",
-    "benchmark_tier": "core",
-    "family": "pot_roast_gravy",
-    "pack_oz": 15,
-    "source": "Hormel",
-    "date": "2023-06-23",
-    "rating": 5,
-    "title": "I will definitely buy this again.",
-    "text": "It's lean and tastes homemade.",
-    "capture": "first-party public review",
-    "provider": "PowerReviews",
-    "provider_review_id": "462423825",
-    "verified_buyer": false,
-    "source_url": "https://www.hormel.com/brands/hormel-square-table-entrees/product/beef-roast-au-jus/",
-    "metric_eligible": true
-  },
-  {
     "product_id": "hormel_beef_tips_gravy_15",
     "product": "Slow Simmered Beef Tips & Gravy",
     "brand": "Hormel",
@@ -3908,13 +3978,13 @@
     "family": "pot_roast_gravy",
     "pack_oz": 15,
     "source": "Hormel",
-    "date": "2023-06-15",
+    "date": "2023-06-23",
     "rating": 5,
-    "title": "I will continue buying this product",
-    "text": "This product has great flavor, and more than enough for 3 people to enjoy.",
+    "title": "I will definitely buy this again.",
+    "text": "It's lean and tastes homemade.",
     "capture": "first-party public review",
     "provider": "PowerReviews",
-    "provider_review_id": "461710905",
+    "provider_review_id": "462423825",
     "verified_buyer": false,
     "source_url": "https://www.hormel.com/brands/hormel-square-table-entrees/product/beef-roast-au-jus/",
     "metric_eligible": true
@@ -3928,13 +3998,13 @@
     "family": "pot_roast_gravy",
     "pack_oz": 15,
     "source": "Hormel",
-    "date": "2023-05-31",
+    "date": "2023-06-15",
     "rating": 5,
-    "title": "This Beef roast is to die for!",
-    "text": "This beef roast tastes just like my mothers. I was so surprised it tasted this good. I will continue to buy it and tell everyone I know how fantastic it tastes.",
+    "title": "I will continue buying this product",
+    "text": "This product has great flavor, and more than enough for 3 people to enjoy.",
     "capture": "first-party public review",
     "provider": "PowerReviews",
-    "provider_review_id": "459663605",
+    "provider_review_id": "461710905",
     "verified_buyer": false,
     "source_url": "https://www.hormel.com/brands/hormel-square-table-entrees/product/beef-roast-au-jus/",
     "metric_eligible": true
@@ -3957,6 +4027,26 @@
     "provider_review_id": "459706591",
     "verified_buyer": false,
     "source_url": "https://www.hormel.com/brands/hormel-square-table-entrees/product/beef-tips-and-gravy/",
+    "metric_eligible": true
+  },
+  {
+    "product_id": "hormel_roast_au_jus_15",
+    "product": "Slow Simmered Beef Roast Au Jus",
+    "brand": "Hormel",
+    "portfolio": "competitor",
+    "benchmark_tier": "core",
+    "family": "pot_roast_gravy",
+    "pack_oz": 15,
+    "source": "Hormel",
+    "date": "2023-05-31",
+    "rating": 5,
+    "title": "This Beef roast is to die for!",
+    "text": "This beef roast tastes just like my mothers. I was so surprised it tasted this good. I will continue to buy it and tell everyone I know how fantastic it tastes.",
+    "capture": "first-party public review",
+    "provider": "PowerReviews",
+    "provider_review_id": "459663605",
+    "verified_buyer": false,
+    "source_url": "https://www.hormel.com/brands/hormel-square-table-entrees/product/beef-roast-au-jus/",
     "metric_eligible": true
   },
   {

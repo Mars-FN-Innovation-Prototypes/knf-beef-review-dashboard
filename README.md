@@ -12,8 +12,9 @@ Interactive, static dashboard for exploring written consumer reviews across eigh
 - Exact scope limited to the eight products specified for the analysis
 - Two rating-only records retained as context but excluded from written-review KPIs
 - An optional 13-product competitor registry derived from the supplied benchmark list: eight core 14-20 oz products and five adjacent pack/form-factor comparators
-- 212 dated competitor written reviews in scope, comprising complete Hormel first-party histories and clearly labeled Walmart public page samples
-- Eleven complete point-in-time competitor rating distributions kept separate from the written-review trend layer
+- 202 quality-eligible dated competitor written reviews: 132 complete Hormel first-party records and 70 bounded Walmart public-page records
+- Ten unresolved Walmart Soules 6 oz/14 oz shared-variant records retained for auditability but excluded from product metrics
+- Ten complete point-in-time rating distributions plus six exact-SKU Kroger rating totals, all kept separate from the written-review trend layer
 
 ## Dashboard capabilities
 
@@ -40,9 +41,10 @@ Interactive, static dashboard for exploring written consumer reviews across eigh
 ### Competitor benchmark
 
 - The supplied product names were normalized into canonical products using brand, product name, pack size, UPC/item identifiers, and exact public product pages. Duplicate Hormel Beef Tips descriptions and the Jack Daniel's pack-title variants were merged to avoid double counting.
-- The public Hormel PowerReviews feeds provide the complete first-party histories displayed within the 2023-2026 scope. Walmart product pages provide a public server-rendered text sample (up to 10 reviews per page) plus complete point-in-time rating distributions.
+- The public Hormel PowerReviews feeds provide the complete first-party histories displayed within the 2023-2026 scope. Walmart product pages provide a bounded public server-rendered text sample plus complete point-in-time rating distributions for the listed pages.
+- Walmart shares the Soules 6 oz and 14 oz review family. Records without a review-level size are excluded from product metrics rather than assigned by page title. Kroger contributes exact-SKU rating totals only because its written review payload was not reproducibly public.
 - Target, Amazon, Kroger, Walmart, Costco, and brand sites were audited across all 13 products. Listings without defensible dated text remain coverage context and are not manufactured into review metrics.
 - Competitor volume is sample-dependent and is not a market-share measure. Rating snapshots never enter the dated review trend, topic coding, or text-review KPIs.
-- `scripts/collect_competitor_reviews.py` rebuilds the public benchmark evidence from the normalized SKU registry; reviewer names are not retained.
+- `scripts/collect_competitor_reviews.py` refreshes public benchmark evidence and safely falls back to the last verified Walmart sample when the retailer blocks automated access. `scripts/build_competitor_verified_evidence.mjs` applies the deterministic quality rules; reviewer names are not retained.
 
 The site has no runtime dependencies and can be hosted directly with GitHub Pages.

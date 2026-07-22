@@ -3,7 +3,7 @@
   "scope_note": "Competitor benchmark seed set supplied by the business. Kevin's Teriyaki Style Beef and Mongolian Style Beef remain anchors in the existing eight-product registry and are not duplicated here.",
   "benchmark_rules": {
     "archive_start": "2023-01-01",
-    "archive_end": "2026-07-15",
+    "archive_end": "2026-07-22",
     "trend_start": "2024-11-01",
     "core_pack_range_oz": [14, 20],
     "core_definition": "Ready-to-heat beef entrees in approximately the same 14-20 oz use occasion as Kevin's 16 oz items.",

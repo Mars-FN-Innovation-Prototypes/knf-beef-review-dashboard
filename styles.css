@@ -266,6 +266,7 @@ td.product-name { min-width: 240px; font-weight: 750; font-variant-numeric: norm
 .action-grid p { margin: 6px 0 0; color: #b9c7cf; font-size: 11px; line-height: 1.55; }
 
 .method-section { margin-top: 18px; }
+.snapshot-distribution-note { margin: 14px 0; padding: 12px; background: var(--sand); border-radius: 6px; color: var(--muted); font-size: 10px; text-align: center; }
 .method-section details { background: white; border: 1px solid var(--line); border-radius: 8px; }
 .method-section summary { display: flex; justify-content: space-between; align-items: center; padding: 17px 20px; cursor: pointer; list-style: none; }
 .method-section summary::-webkit-details-marker { display: none; }
