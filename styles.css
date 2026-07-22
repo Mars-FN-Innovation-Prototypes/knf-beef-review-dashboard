@@ -54,7 +54,7 @@ a { color: inherit; }
 .data-date { color: #aebfca; font-size: 11px; white-space: nowrap; }
 .data-date strong { color: white; font-weight: 650; }
 
-.button { min-height: 38px; padding: 9px 14px; border: 1px solid transparent; border-radius: 6px; cursor: pointer; font-weight: 700; font-size: 12px; transition: transform .15s ease, background .15s ease, border-color .15s ease; }
+.button { min-height: 38px; padding: 9px 14px; border: 1px solid transparent; border-radius: 6px; cursor: pointer; font-weight: 700; font-size: 12px; transition: transform .15s ease, background .15s ease, border-color .15s ease; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; }
 .button:hover { transform: translateY(-1px); }
 .button:focus-visible, select:focus-visible, input:focus-visible, summary:focus-visible, .product-row:focus-visible { outline: 3px solid var(--color-corn); outline-offset: 2px; }
 .button-primary { background: var(--color-pea); color: #082b00; }

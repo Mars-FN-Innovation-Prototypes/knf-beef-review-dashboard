@@ -1,62 +1,169 @@
 {
-  "as_of": "2026-07-15",
-  "scope_note": "Primary analysis is restricted to the eight beef HMR items named in the original request.",
+  "as_of": "2026-07-22",
+  "scope_note": "Primary analysis is restricted to the eight beef HMR items named in the original request. Kevin's owned brand site is the product-identity authority; retailer pages are matched by official barcodes, retailer identifiers, product name, and pack size.",
+  "identity_authority": {
+    "source": "Kevin's Natural Foods",
+    "collection_url": "https://www.kevinsnaturalfoods.com/collections/heat-eat-entrees#beef-entrees",
+    "verification_status": "eight_scoped_products_verified",
+    "verified_as_of": "2026-07-22"
+  },
+  "scope_exclusions": [
+    {
+      "name": "Thai-Style Basil Beef",
+      "product_url": "https://www.kevinsnaturalfoods.com/products/thai-style-basil-beef",
+      "reason": "Current owned-site beef entree, but not one of the eight products named in the original stakeholder request."
+    }
+  ],
   "products": [
     {
       "id": "korean_bbq_beef",
-      "name": "Korean BBQ Style Beef",
+      "name": "Korean BBQ-Style Beef",
       "aliases": ["Korean BBQ Style Beef", "Korean BBQ-Style Beef", "Korean BBQ-Style Beef 16oz"],
-      "upcs": ["0081026402498"],
-      "retailer_pages": {"kroger": "https://www.kroger.com/p/kevin-s-natural-foods-korean-bbq-style-beef-16-oz/0081026402498", "brand": "https://www.kevinsnaturalfoods.com/products/korean-bbq-style-steak-tips"}
+      "pack_oz": 16,
+      "shopify_product_id": 6145044840601,
+      "handle": "korean-bbq-style-steak-tips",
+      "upcs": ["810264024984", "810264025004", "810264026261"],
+      "official_variants": [
+        {"variant_id": 38048389988505, "sku": "FKPZ0040", "variant": "Boxed Entrée", "barcodes": ["810264024984", "810264025004"]},
+        {"variant_id": 42758416924886, "sku": "FKE00008-EA", "variant": "Entrée Pouch", "barcodes": ["810264026261"]}
+      ],
+      "retailer_pages": {
+        "brand": "https://www.kevinsnaturalfoods.com/products/korean-bbq-style-steak-tips",
+        "kroger": "https://www.kroger.com/p/kevin-s-natural-foods-korean-bbq-style-beef-16-oz/0081026402498",
+        "costco": "https://sameday.costco.com/store/costco/products/22740793"
+      },
+      "find_a_store_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264024984,810264025004"
     },
     {
       "id": "honey_garlic_beef",
       "name": "Honey Garlic Beef",
       "aliases": ["Honey Garlic Beef", "Honey Garlic Beef 16oz"],
-      "upcs": [],
-      "retailer_pages": {"walmart": "https://www.walmart.com/ip/2455684608", "brand": "https://www.kevinsnaturalfoods.com/products/honey-garlic-beef"}
+      "pack_oz": 16,
+      "shopify_product_id": 7964307128534,
+      "handle": "honey-garlic-beef",
+      "upcs": ["810264026773", "810264026841"],
+      "official_variants": [
+        {"variant_id": 44047342829782, "sku": "FKPZ0136", "variant": "Boxed Entrée", "barcodes": ["810264026773"]},
+        {"variant_id": 44047342862550, "sku": "FKE00011-EA", "variant": "Entrée Pouch", "barcodes": ["810264026841"]}
+      ],
+      "retailer_pages": {
+        "brand": "https://www.kevinsnaturalfoods.com/products/honey-garlic-beef",
+        "walmart": "https://www.walmart.com/ip/Kevin-s-Natural-Foods-Honey-Garlic-Beef-Regular-Meal-Kit-Fully-Cooked-16-oz-Frozen/2455684608",
+        "costco": "https://sameday.costco.com/store/costco/products/29823413-kevin-s-natural-foods-paleo-honey-garlic-beef-32-oz"
+      },
+      "find_a_store_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264026773"
     },
     {
       "id": "sirloin_gravy",
       "name": "Sirloin Steak Tips with Gravy",
       "aliases": ["Sirloin Steak Tips with Gravy", "Sirloin Steak Tips with Gravy 16oz"],
-      "upcs": ["0081026402811"],
-      "retailer_pages": {"kroger": "https://www.kroger.com/p/kevin-s-natural-foods-sirloin-steak-tips-with-gravy-meal/0081026402811", "brand": "https://www.kevinsnaturalfoods.com/products/sirloin-steak-tips-with-gravy"}
+      "pack_oz": 16,
+      "shopify_product_id": 7933268918486,
+      "handle": "sirloin-steak-tips-with-gravy",
+      "upcs": ["810264026612", "810264026933", "810264026902"],
+      "official_variants": [
+        {"variant_id": 43999481069782, "sku": "FKP00131", "variant": "Boxed Entrée", "barcodes": ["810264026612", "810264026933"]},
+        {"variant_id": 43999481102550, "sku": "FKE00013-EA", "variant": "Entrée Pouch", "barcodes": ["810264026902"]}
+      ],
+      "retailer_pages": {
+        "brand": "https://www.kevinsnaturalfoods.com/products/sirloin-steak-tips-with-gravy",
+        "target": "https://www.target.com/p/kevin-39-s-natural-foods-gluten-free-sirloin-steak-tips-with-gravy-16oz/-/A-88883892",
+        "kroger": "https://www.kroger.com/p/kevin-s-natural-foods-sirloin-steak-tips-with-gravy-meal/0081026402811",
+        "costco": "https://sameday.costco.com/store/costco/products/33216969-kevin-s-natural-foods-sirloin-steak-tips-with-gravy-32-oz"
+      },
+      "find_a_store_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264026612,810264026933"
     },
     {
       "id": "teriyaki_beef",
-      "name": "Teriyaki Style Beef",
+      "name": "Teriyaki-Style Beef",
       "aliases": ["Teriyaki Style Beef", "Teriyaki-Style Beef", "Teriyaki-Style Beef 16oz"],
-      "upcs": ["0081026402585"],
-      "retailer_pages": {"kroger": "https://www.kroger.com/p/kevin-s-natural-foods-teriyaki-style-beef/0081026402585", "brand": "https://www.kevinsnaturalfoods.com/products/teriyaki-style-beef"}
+      "pack_oz": 16,
+      "shopify_product_id": 7159139303577,
+      "handle": "teriyaki-style-beef",
+      "upcs": ["810264025851"],
+      "official_variants": [
+        {"variant_id": 41385630695577, "sku": "FKP00090", "variant": "Default Title", "barcodes": ["810264025851"]}
+      ],
+      "retailer_pages": {
+        "brand": "https://www.kevinsnaturalfoods.com/products/teriyaki-style-beef",
+        "target": "https://www.target.com/p/kevin-39-s-gluten-free-teriyaki-style-beef-16oz/-/A-87790111",
+        "kroger": "https://www.kroger.com/p/kevin-s-natural-foods-teriyaki-style-beef/0081026402585"
+      },
+      "find_a_store_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264025851"
     },
     {
       "id": "mongolian_beef",
-      "name": "Mongolian Style Beef",
+      "name": "Mongolian-Style Beef",
       "aliases": ["Mongolian Style Beef", "Mongolian-Style Beef", "Mongolian Beef 16oz", "Beef Sous Vide Mongolian Style 16oz", "Mongolian Beef 16oz (Amazon)", "Beef Sous Vide Mongolian Style 16oz (Amazon)"],
-      "upcs": ["0081026402550"],
-      "retailer_pages": {"kroger": "https://www.kroger.com/p/kevin-s-natural-foods-mongolian-style-beef/0081026402550", "brand": "https://www.kevinsnaturalfoods.com/products/mongolian-style-beef"}
+      "pack_oz": 16,
+      "shopify_product_id": 6677730689177,
+      "handle": "mongolian-style-beef",
+      "upcs": ["810264025509", "810264025172", "810264026797", "810264026278"],
+      "official_variants": [
+        {"variant_id": 39741323346073, "sku": "FKPZ0058", "variant": "Boxed Entrée", "barcodes": ["810264025509", "810264025172", "810264026797"]},
+        {"variant_id": 42758428295382, "sku": "FKE00009-EA", "variant": "Entrée Pouch", "barcodes": ["810264026278"]}
+      ],
+      "retailer_pages": {
+        "brand": "https://www.kevinsnaturalfoods.com/products/mongolian-style-beef",
+        "amazon": "https://www.amazon.com/dp/B0B7R4HLX5",
+        "kroger": "https://www.kroger.com/p/kevin-s-natural-foods-mongolian-style-beef/0081026402550",
+        "costco": "https://sameday.costco.com/store/costco/products/24881251"
+      },
+      "additional_catalog_records": [
+        {"source": "Amazon", "item_id": "B0C2ZZLZV6", "page_url": "https://www.amazon.com/dp/B0C2ZZLZV6", "status": "same_brand_flavor_and_pack_candidate_not_linked_by_official_locator"}
+      ],
+      "find_a_store_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264025509,810264025172,810264026797"
     },
     {
       "id": "peppercorn_steak_tips",
       "name": "Peppercorn Steak Tips",
       "aliases": ["Peppercorn Steak Tips", "Peppercorn Steak Tips 16oz"],
-      "upcs": [],
-      "retailer_pages": {"brand": "https://www.kevinsnaturalfoods.com/products/peppercorn-steak-tips"}
+      "pack_oz": 16,
+      "shopify_product_id": 7526689210582,
+      "handle": "peppercorn-steak-tips",
+      "upcs": ["810264026018", "810264025295", "810264026285"],
+      "official_variants": [
+        {"variant_id": 42336295944406, "sku": "FKP00073", "variant": "Boxed Entrée", "barcodes": ["810264026018", "810264025295"]},
+        {"variant_id": 42758436978902, "sku": "FKE00010-EA", "variant": "Entrée Pouch", "barcodes": ["810264026285"]}
+      ],
+      "retailer_pages": {
+        "brand": "https://www.kevinsnaturalfoods.com/products/peppercorn-steak-tips",
+        "costco": "https://sameday.costco.com/store/costco/products/24730843"
+      },
+      "find_a_store_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264026018,810264025295"
     },
     {
       "id": "chimichurri_beef",
       "name": "Chimichurri Beef",
       "aliases": ["Chimichurri Beef", "Chimichurri Beef 16oz"],
-      "upcs": [],
-      "retailer_pages": {"brand": "https://www.kevinsnaturalfoods.com/products/chimichurri-beef"}
+      "pack_oz": 16,
+      "shopify_product_id": 7984443818198,
+      "handle": "chimichurri-beef",
+      "upcs": ["810264026834", "810264026780"],
+      "official_variants": [
+        {"variant_id": 43972526932182, "sku": "FKP00144", "variant": "Default Title", "barcodes": ["810264026834", "810264026780"]}
+      ],
+      "retailer_pages": {
+        "brand": "https://www.kevinsnaturalfoods.com/products/chimichurri-beef",
+        "costco": "https://sameday.costco.com/store/costco/products/30856680-kevin-s-natural-foods-paleo-chimichurri-beef-32-oz"
+      },
+      "find_a_store_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264026834,810264026780"
     },
     {
       "id": "sirloin_mushroom",
-      "name": "Sirloin Beef Tips with Mushroom",
-      "aliases": ["Sirloin Beef Tips with Mushroom", "Sirloin Beef Tips with Mushrooms", "Sirloin Beef Tips with Mushroom 16oz"],
-      "upcs": [],
-      "retailer_pages": {"brand": "https://www.kevinsnaturalfoods.com/products/top-sirloin-beef-with-creamy-mushroom-sauce"}
+      "name": "Sirloin Beef Tips with a Savory Mushroom Sauce",
+      "aliases": ["Sirloin Beef Tips with a Savory Mushroom Sauce", "Sirloin Beef Tips with Mushroom", "Sirloin Beef Tips with Mushrooms", "Sirloin Beef Tips with Mushroom 16oz"],
+      "pack_oz": 16,
+      "shopify_product_id": 8010290987222,
+      "handle": "top-sirloin-beef-with-creamy-mushroom-sauce",
+      "upcs": ["810264026575"],
+      "official_variants": [
+        {"variant_id": 44047910174934, "sku": null, "variant": "Default Title", "barcodes": ["810264026575"]}
+      ],
+      "retailer_pages": {
+        "brand": "https://www.kevinsnaturalfoods.com/products/top-sirloin-beef-with-creamy-mushroom-sauce"
+      },
+      "find_a_store_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264026575"
     }
   ]
 }

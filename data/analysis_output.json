@@ -1,33 +1,34 @@
 {
-  "as_of": "2026-07-15",
+  "as_of": "2026-07-22",
   "scope": [
-    "Korean BBQ Style Beef",
+    "Korean BBQ-Style Beef",
     "Honey Garlic Beef",
     "Sirloin Steak Tips with Gravy",
-    "Teriyaki Style Beef",
-    "Mongolian Style Beef",
+    "Teriyaki-Style Beef",
+    "Mongolian-Style Beef",
     "Peppercorn Steak Tips",
     "Chimichurri Beef",
-    "Sirloin Beef Tips with Mushroom"
+    "Sirloin Beef Tips with a Savory Mushroom Sauce"
   ],
   "methodology": {
-    "analysis_window": "2024-11-01 through 2026-07-15",
+    "analysis_window": "2024-11-01 through 2026-07-22",
     "archive_floor": "2023-01-01",
     "trend_cutoff": "2025-11-01",
     "pre_definition": "Reviews dated 2024-11-01 through 2025-10-31",
-    "post_definition": "Reviews dated 2025-11-01 through the data-as-of date",
+    "post_definition": "Reviews dated 2025-11-01 through 2026-07-22",
     "deduplication": "Exact source-level and same-day cross-source product/date/rating/title/text duplicates removed",
     "metric_eligibility": "Full-text public reviews drive metrics; indexed summaries, analyst summaries, and rating-only entries are retained as context but excluded",
-    "rating_snapshots": "Retailer rating distributions are shown separately and excluded from dated written-review trends"
+    "rating_snapshots": "Retailer rating distributions are shown separately and excluded from dated written-review trends",
+    "retailer_collection": "Complete public Walmart written set; current Target rating distributions and incremental recent reviews; Amazon remains a labeled first-page sample."
   },
   "data_quality": {
     "dashboard_rows_in_scope_before_dedup": 320,
-    "captured_records_after_dedup": 593,
-    "metric_eligible_written_reviews": 588,
-    "written_reviews_in_analysis_window": 203,
-    "excluded_lower_fidelity_records": 5,
+    "captured_records_after_dedup": 640,
+    "metric_eligible_written_reviews": 638,
+    "written_reviews_in_analysis_window": 247,
+    "excluded_lower_fidelity_records": 2,
     "brand_reviews_since_2023": 422,
-    "within_source_duplicates_removed": 180,
+    "within_source_duplicates_removed": 48,
     "cross_source_duplicates_removed": 0,
     "amazon_raw_rows": 600,
     "amazon_unique_rows_all_products": 60,
@@ -36,74 +37,82 @@
       "Amazon": 20,
       "Kevin's Natural Foods": 422,
       "Kroger": 26,
-      "Target": 120
-    }
+      "Target": 122,
+      "Walmart": 48
+    },
+    "retailer_records_appended": 48,
+    "retailer_records_replaced_with_fuller_text": 0,
+    "walmart_complete_written_reviews": 48,
+    "amazon_collection_status": "20 unique public first-page reviews across two Mongolian ASINs; deeper pages require sign-in",
+    "retailer_records_added_in_refresh": 50,
+    "target_records_added_in_refresh": 2,
+    "target_recent_records_matched_to_archive": 14
   },
   "overall": {
     "pre": {
-      "n": 77,
-      "avg_rating": 3.09,
-      "negative_pct": 46.8,
-      "texture_pct": 37.7,
-      "taste_pct": 61.0
+      "n": 93,
+      "avg_rating": 3.16,
+      "negative_pct": 45.2,
+      "texture_pct": 34.4,
+      "taste_pct": 67.7
     },
     "post": {
-      "n": 126,
-      "avg_rating": 2.29,
-      "negative_pct": 65.9,
-      "texture_pct": 39.7,
-      "taste_pct": 55.6
+      "n": 154,
+      "avg_rating": 2.47,
+      "negative_pct": 61.0,
+      "texture_pct": 37.0,
+      "taste_pct": 53.2
     },
-    "delta_rating": -0.8,
-    "delta_texture_pp": 2.0
+    "delta_rating": -0.69,
+    "delta_texture_pp": 2.6
   },
   "products": [
     {
       "product_id": "korean_bbq_beef",
-      "product": "Korean BBQ Style Beef",
+      "product": "Korean BBQ-Style Beef",
       "total_n": 54,
       "pre": {
         "n": 18,
         "avg_rating": 2.89,
         "negative_pct": 55.6,
-        "texture_pct": 33.3,
-        "taste_pct": 61.1
+        "texture_pct": 38.9,
+        "taste_pct": 55.6
       },
       "post": {
         "n": 36,
         "avg_rating": 2.61,
         "negative_pct": 61.1,
         "texture_pct": 38.9,
-        "taste_pct": 55.6
+        "taste_pct": 47.2
       },
       "rating_delta": -0.28,
-      "texture_delta_pp": 5.6
+      "texture_delta_pp": 0.0
     },
     {
       "product_id": "honey_garlic_beef",
       "product": "Honey Garlic Beef",
-      "total_n": 4,
+      "total_n": 46,
       "pre": {
-        "n": 1,
-        "avg_rating": 5,
-        "negative_pct": 0.0,
-        "texture_pct": 0.0,
-        "taste_pct": 100.0
+        "n": 17,
+        "avg_rating": 3.59,
+        "negative_pct": 35.3,
+        "texture_pct": 11.8,
+        "taste_pct": 82.4
       },
       "post": {
-        "n": 3,
-        "avg_rating": 2.33,
-        "negative_pct": 66.7,
-        "texture_pct": 33.3,
-        "taste_pct": 66.7
+        "n": 29,
+        "avg_rating": 3.31,
+        "negative_pct": 37.9,
+        "texture_pct": 20.7,
+        "taste_pct": 51.7
       },
-      "rating_delta": -2.67,
-      "texture_delta_pp": 33.3
+      "rating_delta": -0.28,
+      "texture_delta_pp": 8.9
     },
     {
       "product_id": "sirloin_gravy",
       "product": "Sirloin Steak Tips with Gravy",
-      "total_n": 69,
+      "total_n": 70,
       "pre": {
         "n": 21,
         "avg_rating": 2.29,
@@ -112,56 +121,56 @@
         "taste_pct": 61.9
       },
       "post": {
-        "n": 48,
-        "avg_rating": 1.77,
-        "negative_pct": 79.2,
-        "texture_pct": 41.7,
-        "taste_pct": 60.4
+        "n": 49,
+        "avg_rating": 1.78,
+        "negative_pct": 79.6,
+        "texture_pct": 42.9,
+        "taste_pct": 63.3
       },
-      "rating_delta": -0.52,
-      "texture_delta_pp": 8.4
+      "rating_delta": -0.51,
+      "texture_delta_pp": 9.6
     },
     {
       "product_id": "teriyaki_beef",
-      "product": "Teriyaki Style Beef",
-      "total_n": 40,
+      "product": "Teriyaki-Style Beef",
+      "total_n": 41,
       "pre": {
         "n": 20,
         "avg_rating": 3.05,
         "negative_pct": 45.0,
         "texture_pct": 50.0,
-        "taste_pct": 70.0
+        "taste_pct": 75.0
       },
       "post": {
-        "n": 20,
-        "avg_rating": 2.55,
-        "negative_pct": 60.0,
-        "texture_pct": 40.0,
-        "taste_pct": 40.0
+        "n": 21,
+        "avg_rating": 2.48,
+        "negative_pct": 61.9,
+        "texture_pct": 38.1,
+        "taste_pct": 47.6
       },
-      "rating_delta": -0.5,
-      "texture_delta_pp": -10.0
+      "rating_delta": -0.57,
+      "texture_delta_pp": -11.9
     },
     {
       "product_id": "mongolian_beef",
-      "product": "Mongolian Style Beef",
+      "product": "Mongolian-Style Beef",
       "total_n": 30,
       "pre": {
         "n": 13,
         "avg_rating": 4,
         "negative_pct": 23.1,
         "texture_pct": 38.5,
-        "taste_pct": 38.5
+        "taste_pct": 53.8
       },
       "post": {
         "n": 17,
         "avg_rating": 2.59,
         "negative_pct": 47.1,
-        "texture_pct": 41.2,
-        "taste_pct": 52.9
+        "texture_pct": 47.1,
+        "taste_pct": 41.2
       },
       "rating_delta": -1.41,
-      "texture_delta_pp": 2.7
+      "texture_delta_pp": 8.6
     },
     {
       "product_id": "peppercorn_steak_tips",
@@ -193,7 +202,7 @@
         "avg_rating": 5,
         "negative_pct": 0.0,
         "texture_pct": 0.0,
-        "taste_pct": 66.7
+        "taste_pct": 100.0
       },
       "post": {
         "n": 2,
@@ -207,7 +216,7 @@
     },
     {
       "product_id": "sirloin_mushroom",
-      "product": "Sirloin Beef Tips with Mushroom",
+      "product": "Sirloin Beef Tips with a Savory Mushroom Sauce",
       "total_n": 1,
       "pre": {
         "n": 1,
@@ -238,27 +247,27 @@
     },
     {
       "month": "2024-12",
-      "n": 5,
-      "avg_rating": 3.8,
-      "negative_pct": 20.0,
-      "texture_pct": 60.0,
-      "taste_pct": 60.0
+      "n": 7,
+      "avg_rating": 3,
+      "negative_pct": 42.9,
+      "texture_pct": 42.9,
+      "taste_pct": 42.9
     },
     {
       "month": "2025-01",
       "n": 12,
       "avg_rating": 3.58,
       "negative_pct": 33.3,
-      "texture_pct": 16.7,
-      "taste_pct": 66.7
+      "texture_pct": 25.0,
+      "taste_pct": 75.0
     },
     {
       "month": "2025-02",
-      "n": 7,
-      "avg_rating": 4,
-      "negative_pct": 28.6,
-      "texture_pct": 28.6,
-      "taste_pct": 42.9
+      "n": 8,
+      "avg_rating": 3.62,
+      "negative_pct": 37.5,
+      "texture_pct": 37.5,
+      "taste_pct": 50.0
     },
     {
       "month": "2025-03",
@@ -270,131 +279,131 @@
     },
     {
       "month": "2025-04",
-      "n": 7,
-      "avg_rating": 4,
-      "negative_pct": 28.6,
-      "texture_pct": 57.1,
-      "taste_pct": 57.1
+      "n": 8,
+      "avg_rating": 3.62,
+      "negative_pct": 37.5,
+      "texture_pct": 50.0,
+      "taste_pct": 100.0
     },
     {
       "month": "2025-05",
-      "n": 4,
-      "avg_rating": 3,
-      "negative_pct": 50.0,
-      "texture_pct": 25.0,
-      "taste_pct": 50.0
+      "n": 5,
+      "avg_rating": 3.4,
+      "negative_pct": 40.0,
+      "texture_pct": 20.0,
+      "taste_pct": 40.0
     },
     {
       "month": "2025-06",
-      "n": 3,
-      "avg_rating": 1.33,
-      "negative_pct": 100.0,
-      "texture_pct": 66.7,
-      "taste_pct": 66.7
+      "n": 5,
+      "avg_rating": 2.8,
+      "negative_pct": 60.0,
+      "texture_pct": 40.0,
+      "taste_pct": 60.0
     },
     {
       "month": "2025-07",
-      "n": 6,
-      "avg_rating": 2.5,
-      "negative_pct": 66.7,
-      "texture_pct": 33.3,
-      "taste_pct": 50.0
+      "n": 9,
+      "avg_rating": 2.89,
+      "negative_pct": 55.6,
+      "texture_pct": 22.2,
+      "taste_pct": 44.4
     },
     {
       "month": "2025-08",
-      "n": 10,
-      "avg_rating": 2.7,
-      "negative_pct": 50.0,
-      "texture_pct": 30.0,
-      "taste_pct": 60.0
+      "n": 11,
+      "avg_rating": 2.91,
+      "negative_pct": 45.5,
+      "texture_pct": 27.3,
+      "taste_pct": 63.6
     },
     {
       "month": "2025-09",
-      "n": 8,
-      "avg_rating": 3.25,
-      "negative_pct": 37.5,
-      "texture_pct": 37.5,
-      "taste_pct": 62.5
+      "n": 11,
+      "avg_rating": 3.36,
+      "negative_pct": 36.4,
+      "texture_pct": 27.3,
+      "taste_pct": 90.9
     },
     {
       "month": "2025-10",
-      "n": 6,
-      "avg_rating": 2.17,
-      "negative_pct": 66.7,
+      "n": 8,
+      "avg_rating": 2.88,
+      "negative_pct": 50.0,
       "texture_pct": 50.0,
-      "taste_pct": 66.7
+      "taste_pct": 75.0
     },
     {
       "month": "2025-11",
-      "n": 13,
-      "avg_rating": 2.31,
-      "negative_pct": 61.5,
-      "texture_pct": 46.2,
-      "taste_pct": 61.5
+      "n": 16,
+      "avg_rating": 2.81,
+      "negative_pct": 50.0,
+      "texture_pct": 37.5,
+      "taste_pct": 68.8
     },
     {
       "month": "2025-12",
-      "n": 9,
-      "avg_rating": 2.44,
-      "negative_pct": 55.6,
-      "texture_pct": 44.4,
-      "taste_pct": 55.6
+      "n": 13,
+      "avg_rating": 2.92,
+      "negative_pct": 46.2,
+      "texture_pct": 30.8,
+      "taste_pct": 61.5
     },
     {
       "month": "2026-01",
-      "n": 20,
-      "avg_rating": 1.6,
-      "negative_pct": 85.0,
-      "texture_pct": 30.0,
-      "taste_pct": 65.0
+      "n": 21,
+      "avg_rating": 1.76,
+      "negative_pct": 81.0,
+      "texture_pct": 38.1,
+      "taste_pct": 52.4
     },
     {
       "month": "2026-02",
-      "n": 18,
-      "avg_rating": 2.67,
+      "n": 20,
+      "avg_rating": 2.6,
       "negative_pct": 50.0,
-      "texture_pct": 33.3,
-      "taste_pct": 38.9
+      "texture_pct": 35.0,
+      "taste_pct": 45.0
     },
     {
       "month": "2026-03",
-      "n": 19,
-      "avg_rating": 1.79,
-      "negative_pct": 84.2,
-      "texture_pct": 52.6,
-      "taste_pct": 52.6
+      "n": 23,
+      "avg_rating": 1.87,
+      "negative_pct": 82.6,
+      "texture_pct": 43.5,
+      "taste_pct": 60.9
     },
     {
       "month": "2026-04",
-      "n": 15,
-      "avg_rating": 2.4,
-      "negative_pct": 66.7,
-      "texture_pct": 53.3,
-      "taste_pct": 46.7
+      "n": 18,
+      "avg_rating": 2.44,
+      "negative_pct": 61.1,
+      "texture_pct": 55.6,
+      "taste_pct": 38.9
     },
     {
       "month": "2026-05",
-      "n": 11,
-      "avg_rating": 2.82,
-      "negative_pct": 54.5,
-      "texture_pct": 36.4,
-      "taste_pct": 72.7
+      "n": 15,
+      "avg_rating": 3.2,
+      "negative_pct": 46.7,
+      "texture_pct": 26.7,
+      "taste_pct": 60.0
     },
     {
       "month": "2026-06",
-      "n": 11,
-      "avg_rating": 2.45,
-      "negative_pct": 54.5,
-      "texture_pct": 45.5,
-      "taste_pct": 54.5
+      "n": 14,
+      "avg_rating": 2.57,
+      "negative_pct": 50.0,
+      "texture_pct": 42.9,
+      "taste_pct": 28.6
     },
     {
       "month": "2026-07",
-      "n": 10,
-      "avg_rating": 2.8,
-      "negative_pct": 60.0,
-      "texture_pct": 10.0,
-      "taste_pct": 60.0
+      "n": 14,
+      "avg_rating": 2.64,
+      "negative_pct": 64.3,
+      "texture_pct": 14.3,
+      "taste_pct": 64.3
     }
   ],
   "rating_snapshots": [
@@ -451,20 +460,6 @@
       "page_status": "Product page found; no rating history visible."
     },
     {
-      "product_id": "honey_garlic_beef",
-      "source": "Walmart",
-      "rating_count": 179,
-      "written_review_count": 39,
-      "distribution": {
-        "5": 111,
-        "4": 16,
-        "3": 23,
-        "2": 7,
-        "1": 22
-      },
-      "page_status": "Indexed product/review snapshot found; current product availability is location-dependent."
-    },
-    {
       "product_id": "korean_bbq_beef",
       "source": "Kevin's Natural Foods",
       "page_url": "https://www.kevinsnaturalfoods.com/products/korean-bbq-style-steak-tips",
@@ -477,8 +472,8 @@
         "2": 6,
         "1": 13
       },
-      "captured_at": "2026-07-15",
-      "page_status": "First-party public page; 113 full-text reviews captured from Jan 1, 2023."
+      "captured_at": "2026-07-22",
+      "page_status": "Complete public feed; 113 full-text reviews dated from Jan 1, 2023."
     },
     {
       "product_id": "honey_garlic_beef",
@@ -493,8 +488,8 @@
         "2": 0,
         "1": 2
       },
-      "captured_at": "2026-07-15",
-      "page_status": "First-party public page; 59 full-text reviews captured from Jan 1, 2023."
+      "captured_at": "2026-07-22",
+      "page_status": "Complete public feed; 59 full-text reviews dated from Jan 1, 2023."
     },
     {
       "product_id": "sirloin_gravy",
@@ -509,8 +504,8 @@
         "2": 2,
         "1": 8
       },
-      "captured_at": "2026-07-15",
-      "page_status": "First-party public page; 82 full-text reviews captured from Jan 1, 2023."
+      "captured_at": "2026-07-22",
+      "page_status": "Complete public feed; 82 full-text reviews dated from Jan 1, 2023."
     },
     {
       "product_id": "teriyaki_beef",
@@ -525,8 +520,8 @@
         "2": 1,
         "1": 0
       },
-      "captured_at": "2026-07-15",
-      "page_status": "First-party public page; 12 full-text reviews captured from Jan 1, 2023."
+      "captured_at": "2026-07-22",
+      "page_status": "Complete public feed; 12 full-text reviews dated from Jan 1, 2023."
     },
     {
       "product_id": "mongolian_beef",
@@ -541,8 +536,8 @@
         "2": 2,
         "1": 4
       },
-      "captured_at": "2026-07-15",
-      "page_status": "First-party public page; 86 full-text reviews captured from Jan 1, 2023."
+      "captured_at": "2026-07-22",
+      "page_status": "Complete public feed; 86 full-text reviews dated from Jan 1, 2023."
     },
     {
       "product_id": "peppercorn_steak_tips",
@@ -557,8 +552,8 @@
         "2": 0,
         "1": 0
       },
-      "captured_at": "2026-07-15",
-      "page_status": "First-party public page; 56 full-text reviews captured from Jan 1, 2023."
+      "captured_at": "2026-07-22",
+      "page_status": "Complete public feed; 56 full-text reviews dated from Jan 1, 2023."
     },
     {
       "product_id": "chimichurri_beef",
@@ -573,8 +568,8 @@
         "2": 1,
         "1": 0
       },
-      "captured_at": "2026-07-15",
-      "page_status": "First-party public page; 12 full-text reviews captured from Jan 1, 2023."
+      "captured_at": "2026-07-22",
+      "page_status": "Complete public feed; 12 full-text reviews dated from Jan 1, 2023."
     },
     {
       "product_id": "sirloin_mushroom",
@@ -589,12 +584,60 @@
         "2": 0,
         "1": 0
       },
-      "captured_at": "2026-07-15",
-      "page_status": "First-party public page; 2 full-text reviews captured from Jan 1, 2023."
+      "captured_at": "2026-07-22",
+      "page_status": "Complete public feed; 2 full-text reviews dated from Jan 1, 2023."
+    },
+    {
+      "product_id": "sirloin_gravy",
+      "source": "Target",
+      "page_url": "https://www.target.com/p/kevin-39-s-natural-foods-gluten-free-sirloin-steak-tips-with-gravy-16oz/-/A-88883892",
+      "rating_count": 174,
+      "written_review_count": 64,
+      "distribution": {
+        "1": 49,
+        "2": 16,
+        "3": 14,
+        "4": 14,
+        "5": 81
+      },
+      "captured_at": "2026-07-22",
+      "page_status": "Complete rating distribution; 64 written reviews in the retained Target archive."
+    },
+    {
+      "product_id": "teriyaki_beef",
+      "source": "Target",
+      "page_url": "https://www.target.com/p/kevin-39-s-gluten-free-teriyaki-style-beef-16oz/-/A-87790111",
+      "rating_count": 236,
+      "written_review_count": 58,
+      "distribution": {
+        "1": 48,
+        "2": 10,
+        "3": 20,
+        "4": 28,
+        "5": 130
+      },
+      "captured_at": "2026-07-22",
+      "page_status": "Complete rating distribution; 58 written reviews in the retained Target archive."
+    },
+    {
+      "product_id": "honey_garlic_beef",
+      "source": "Walmart",
+      "page_url": "https://www.walmart.com/ip/2455684608",
+      "rating_count": 203,
+      "written_review_count": 48,
+      "distribution": {
+        "1": 25,
+        "2": 9,
+        "3": 25,
+        "4": 19,
+        "5": 125
+      },
+      "captured_at": "2026-07-22",
+      "page_status": "Complete public written set captured: 48 reviews."
     }
   ],
   "brand_review_capture": {
-    "as_of": "2026-07-15",
+    "as_of": "2026-07-22",
     "backfill_start": "2023-01-01",
     "collection_method": "Public first-party product pages and their storefront review feed; full text retained, HTML removed, reviewer names omitted.",
     "snapshots": [
@@ -616,7 +659,7 @@
         "written_reviews_since_2023": 113,
         "earliest_included_date": "2023-01-07",
         "latest_included_date": "2026-07-06",
-        "captured_at": "2026-07-15"
+        "captured_at": "2026-07-22"
       },
       {
         "product_id": "honey_garlic_beef",
@@ -636,7 +679,7 @@
         "written_reviews_since_2023": 59,
         "earliest_included_date": "2023-04-25",
         "latest_included_date": "2026-05-06",
-        "captured_at": "2026-07-15"
+        "captured_at": "2026-07-22"
       },
       {
         "product_id": "sirloin_gravy",
@@ -656,7 +699,7 @@
         "written_reviews_since_2023": 82,
         "earliest_included_date": "2023-03-21",
         "latest_included_date": "2026-07-08",
-        "captured_at": "2026-07-15"
+        "captured_at": "2026-07-22"
       },
       {
         "product_id": "teriyaki_beef",
@@ -676,7 +719,7 @@
         "written_reviews_since_2023": 12,
         "earliest_included_date": "2023-04-27",
         "latest_included_date": "2026-07-05",
-        "captured_at": "2026-07-15"
+        "captured_at": "2026-07-22"
       },
       {
         "product_id": "mongolian_beef",
@@ -696,7 +739,7 @@
         "written_reviews_since_2023": 86,
         "earliest_included_date": "2023-01-07",
         "latest_included_date": "2026-06-19",
-        "captured_at": "2026-07-15"
+        "captured_at": "2026-07-22"
       },
       {
         "product_id": "peppercorn_steak_tips",
@@ -716,7 +759,7 @@
         "written_reviews_since_2023": 56,
         "earliest_included_date": "2023-01-17",
         "latest_included_date": "2024-01-31",
-        "captured_at": "2026-07-15"
+        "captured_at": "2026-07-22"
       },
       {
         "product_id": "chimichurri_beef",
@@ -736,7 +779,7 @@
         "written_reviews_since_2023": 12,
         "earliest_included_date": "2023-03-30",
         "latest_included_date": "2026-07-12",
-        "captured_at": "2026-07-15"
+        "captured_at": "2026-07-22"
       },
       {
         "product_id": "sirloin_mushroom",
@@ -756,7 +799,7 @@
         "written_reviews_since_2023": 2,
         "earliest_included_date": "2023-12-21",
         "latest_included_date": "2025-09-17",
-        "captured_at": "2026-07-15"
+        "captured_at": "2026-07-22"
       }
     ]
   },
@@ -917,5 +960,75 @@
       "product_id": "sirloin_mushroom",
       "note": "No reliable Kroger or Walmart product/review page was indexed in this pass."
     }
-  ]
+  ],
+  "retailer_refresh": {
+    "as_of": "2026-07-22",
+    "method_note": "Public retailer pages only. Walmart pages were paginated until the public written-review count was reached. Target public pages expose complete rating distributions and the most recent written records; the existing Target archive is retained and incrementally updated.",
+    "amazon_note": "Amazon review pages require sign-in beyond the public first page. The two verified Mongolian ASIN samples remain capped at 10 unique written reviews each; no access control was bypassed.",
+    "snapshots": [
+      {
+        "product_id": "sirloin_gravy",
+        "product": "Sirloin Steak Tips with Gravy",
+        "source": "Target",
+        "provider": "Target",
+        "page_url": "https://www.target.com/p/kevin-39-s-natural-foods-gluten-free-sirloin-steak-tips-with-gravy-16oz/-/A-88883892",
+        "item_id": "88883892",
+        "average_rating": 3.36,
+        "rating_count": 174,
+        "written_review_count": 64,
+        "distribution": {
+          "1": 49,
+          "2": 16,
+          "3": 14,
+          "4": 14,
+          "5": 81
+        },
+        "captured_recent_reviews": 8,
+        "capture_status": "complete_rating_distribution_plus_recent_public_reviews",
+        "as_of": "2026-07-22"
+      },
+      {
+        "product_id": "teriyaki_beef",
+        "product": "Teriyaki-Style Beef",
+        "source": "Target",
+        "provider": "Target",
+        "page_url": "https://www.target.com/p/kevin-39-s-gluten-free-teriyaki-style-beef-16oz/-/A-87790111",
+        "item_id": "87790111",
+        "average_rating": 3.78,
+        "rating_count": 236,
+        "written_review_count": 58,
+        "distribution": {
+          "1": 48,
+          "2": 10,
+          "3": 20,
+          "4": 28,
+          "5": 130
+        },
+        "captured_recent_reviews": 8,
+        "capture_status": "complete_rating_distribution_plus_recent_public_reviews",
+        "as_of": "2026-07-22"
+      },
+      {
+        "product_id": "honey_garlic_beef",
+        "product": "Honey Garlic Beef",
+        "source": "Walmart",
+        "provider": "Walmart",
+        "page_url": "https://www.walmart.com/ip/2455684608",
+        "item_id": "2455684608",
+        "average_rating": 4.0,
+        "rating_count": 203,
+        "written_review_count": 48,
+        "distribution": {
+          "1": 25,
+          "2": 9,
+          "3": 25,
+          "4": 19,
+          "5": 125
+        },
+        "captured_written_reviews": 48,
+        "capture_status": "complete_public_written_set",
+        "as_of": "2026-07-22"
+      }
+    ]
+  }
 }

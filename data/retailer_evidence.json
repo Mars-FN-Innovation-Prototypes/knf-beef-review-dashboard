@@ -6,7 +6,7 @@
     {"product_id": "teriyaki_beef", "source": "Kroger", "rating_count": 1, "distribution": {"5": 1, "4": 0, "3": 0, "2": 0, "1": 0}, "page_status": "Product page found; 1 written review visible."},
     {"product_id": "mongolian_beef", "source": "Kroger", "rating_count": 1, "distribution": {"5": 0, "4": 0, "3": 0, "2": 1, "1": 0}, "page_status": "Product page found; 1 written review visible."},
     {"product_id": "sirloin_gravy", "source": "Kroger", "rating_count": 0, "distribution": {"5": 0, "4": 0, "3": 0, "2": 0, "1": 0}, "page_status": "Product page found; no rating history visible."},
-    {"product_id": "honey_garlic_beef", "source": "Walmart", "rating_count": 179, "written_review_count": 39, "distribution": {"5": 111, "4": 16, "3": 23, "2": 7, "1": 22}, "page_status": "Indexed product/review snapshot found; current product availability is location-dependent."}
+    {"product_id": "honey_garlic_beef", "source": "Walmart", "rating_count": 203, "written_review_count": 48, "distribution": {"5": 125, "4": 19, "3": 25, "2": 9, "1": 25}, "page_status": "Complete public written set captured on July 22, 2026; current product availability is location-dependent."}
   ],
   "written_reviews": [
     {"product_id": "korean_bbq_beef", "source": "Kroger", "date": "2025-09-27", "rating": 5, "title": "Love it", "text": "Love this brand. Tasty. Convenient.", "capture": "verbatim visible review"},
@@ -19,9 +19,7 @@
     {"product_id": "korean_bbq_beef", "source": "Kroger", "date": "2025-02-05", "rating": 5, "title": "Positive review", "text": "Positive product feedback; criticism concerned Kroger pricing rather than product quality.", "capture": "analyst summary"},
     {"product_id": "teriyaki_beef", "source": "Kroger", "date": "2024-04-24", "rating": 5, "title": "Very tasty", "text": "Very tasty and the meat is tender.", "capture": "verbatim visible review"},
     {"product_id": "mongolian_beef", "source": "Kroger", "date": "2026-05-11", "rating": 2, "title": "Below average flavor, but good quality meat", "text": "Sauce flavor was rated poorly, while the beef was described as tender and juicy.", "capture": "analyst summary"},
-    {"product_id": "honey_garlic_beef", "source": "Walmart", "date": "2025-11-16", "rating": 5, "title": "Positive review", "text": "Positive overall experience.", "capture": "indexed review summary"},
-    {"product_id": "honey_garlic_beef", "source": "Walmart", "date": "2025-09-10", "rating": 5, "title": "Positive review", "text": "Positive overall experience.", "capture": "indexed review summary"},
-    {"product_id": "honey_garlic_beef", "source": "Walmart", "date": "2026-01-31", "rating": 5, "title": "Mixed texture note", "text": "Positive overall rating, but some pieces were described as tough and not chewable.", "capture": "indexed review summary"}
+    {"product_id": "honey_garlic_beef", "source": "Walmart", "date": "2026-07-11", "rating": 5, "title": "Delicious", "text": "See complete provider record in core_retailer_collection_2026-07-22.json.", "capture": "complete public written set reference"}
   ],
   "coverage_notes": [
     {"product_id": "peppercorn_steak_tips", "note": "No reliable Kroger or Walmart product/review page was indexed in this pass."},

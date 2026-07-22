@@ -3,15 +3,16 @@ const DATA_FILES = {
   analysis: "data/analysis_output.json",
   registry: "data/sku_registry.json",
   retailers: "data/retailer_evidence.json",
+  retailerMatchAudit: "data/kevin_retailer_match_audit.json",
   competitorReviews: "data/competitor_reviews_normalized.json",
   competitorRegistry: "data/competitor_sku_registry.json",
   competitorSnapshots: "data/competitor_rating_snapshots.json",
   competitorCoverage: "data/competitor_coverage_audit.json",
 };
-const RELEASE_VERSION = "2026-07-21-benchmark";
+const RELEASE_VERSION = "2026-07-22-expanded-review-collection";
 
 const ANALYSIS_START = "2024-11-01";
-const ANALYSIS_END = "2026-07-15";
+const ANALYSIS_END = "2026-07-22";
 const COLORS = ["#0000A0", "#19738D", "#62BB46", "#EB6916", "#FFD131", "#3C3C3C"];
 const TOPICS = {
   texture: { label: "Texture", rx: /\b(texture|tough|chew\w*|rubber\w*|grist\w*|grisly|fatty|mushy|slimy|spongy|soggy|mealy|stringy|tender|sinew\w*|powdery|blob|meat quality|fake meat|dry)\b/i },
@@ -36,7 +37,7 @@ const state = {
   benchmarkMode: "off",
 };
 
-let data = { reviews: [], analysis: null, registry: null, retailers: null, competitorReviews: [], competitorRegistry: null, competitorSnapshots: null, competitorCoverage: null };
+let data = { reviews: [], analysis: null, registry: null, retailers: null, retailerMatchAudit: null, competitorReviews: [], competitorRegistry: null, competitorSnapshots: null, competitorCoverage: null };
 let chartPoints = [];
 let toastTimer;
 
@@ -59,7 +60,7 @@ function classifyTopics(review) {
 
 async function loadData() {
   try {
-    const [reviews, analysis, registry, retailers, competitorReviews, competitorRegistry, competitorSnapshots, competitorCoverage] = await Promise.all(Object.values(DATA_FILES).map(path => fetch(`${path}?v=${RELEASE_VERSION}`).then(response => {
+    const [reviews, analysis, registry, retailers, retailerMatchAudit, competitorReviews, competitorRegistry, competitorSnapshots, competitorCoverage] = await Promise.all(Object.values(DATA_FILES).map(path => fetch(`${path}?v=${RELEASE_VERSION}`).then(response => {
       if (!response.ok) throw new Error(`Unable to load ${path}`);
       return response.json();
     })));
@@ -69,6 +70,7 @@ async function loadData() {
       analysis,
       registry,
       retailers,
+      retailerMatchAudit,
       competitorReviews: competitorReviews.filter(review => review.metric_eligible !== false).map((review, index) => ({ ...review, uid: `competitor-${index}`, topics: classifyTopics(review) })),
       competitorRegistry,
       competitorSnapshots,
@@ -519,25 +521,33 @@ function renderSnapshots() {
 }
 
 function renderCoverage() {
-  const retailers = ["Kroger", "Walmart", "Costco"];
-  const snapshots = data.analysis.assortment_snapshots || [];
-  const labels = { exact_16oz: "Exact 16 oz", club_pack_variant: "32 oz club pack" };
+  const retailers = ["Brand", "Target", "Amazon", "Kroger", "Walmart", "Costco"];
+  const matches = data.retailerMatchAudit?.rows || [];
+  const labels = { exact_owned_site: "Owned-site SKU", exact_16oz: "Exact 16 oz", club_pack_variant: "32 oz club pack" };
+
   $("#coverageSummary").innerHTML = retailers.map(source => {
-    const matches = snapshots.filter(item => item.source === source);
-    const exact = matches.filter(item => item.match_type === "exact_16oz").length;
-    const club = matches.filter(item => item.match_type === "club_pack_variant").length;
-    const ratings = matches.reduce((sum, item) => sum + (item.rating_count || 0), 0);
-    const detail = source === "Costco" ? `${club} club-pack flavor variants` : `${exact} exact 16 oz product pages`;
-    return `<article><span>${escapeHTML(source)}</span><strong>${matches.length}/8</strong><p>${detail}${ratings ? ` · ${ratings.toLocaleString()} rating records` : ""}</p></article>`;
+    const found = matches.filter(item => item.source === source && item.match_type !== "not_located");
+    const exact = found.filter(item => item.match_type === "exact_16oz" || item.match_type === "exact_owned_site").length;
+    const club = found.filter(item => item.match_type === "club_pack_variant").length;
+    const detail = source === "Brand" ? `${exact} official product identities` : source === "Costco" ? `${club} club-pack flavor variants` : `${exact} exact 16 oz listings`;
+    return `<article><span>${escapeHTML(source)}</span><strong>${found.length}/8</strong><p>${detail}</p></article>`;
   }).join("");
 
   $("#coverageTable tbody").innerHTML = data.registry.products.map(product => {
     const cells = retailers.map(source => {
-      const match = snapshots.find(item => item.product_id === product.id && item.source === source);
-      if (!match) return `<td><span class="coverage-pill gap">Not located</span><small>No reliable public listing found</small></td>`;
-      const counts = match.rating_count == null ? "No review module exposed" : `${match.rating_count.toLocaleString()} ratings · ${(match.written_review_count || 0).toLocaleString()} written`;
-      const status = match.status === "page_retired" ? "Historical page; now retired" : match.status === "page_live" ? "Public page live" : "Listed; availability varies by location";
-      return `<td><a class="coverage-pill ${match.match_type === "club_pack_variant" ? "variant" : ""}" href="${escapeHTML(match.page_url)}" target="_blank" rel="noopener noreferrer">${labels[match.match_type]} ↗</a><small>${escapeHTML(match.pack_size)} · ${escapeHTML(counts)}<br>${escapeHTML(status)}</small></td>`;
+      const match = matches.find(item => item.product_id === product.id && item.source === source);
+      if (!match || match.match_type === "not_located") return `<td><span class="coverage-pill gap">Not returned</span><small>Not returned for the reference market; not confirmed absent.</small></td>`;
+      const statusLabels = {
+        owned_site_verified: "Official Kevin's product page",
+        official_locator_in_stock: "Official locator: in stock at audit",
+        official_locator_out_of_stock: "Official locator: listed, out of stock at audit",
+        official_locator_in_store: "Official locator: found in stores",
+        direct_page_verified_prior: "Direct retailer page; local availability varies",
+      };
+      const item = match.item_id ? `Item ${match.item_id}` : "Verified product identity";
+      const pack = match.pack_oz ? `${match.pack_oz} oz` : "Pack varies";
+      const variantClass = match.match_type === "club_pack_variant" ? "variant" : "";
+      return `<td><a class="coverage-pill ${variantClass}" href="${escapeHTML(match.page_url)}" target="_blank" rel="noopener noreferrer">${labels[match.match_type]} &#8599;</a><small>${escapeHTML(pack)} &middot; ${escapeHTML(item)}<br>${escapeHTML(statusLabels[match.status] || match.status)}</small></td>`;
     }).join("");
     return `<tr><th scope="row">${escapeHTML(product.name)}</th>${cells}</tr>`;
   }).join("");
