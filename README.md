@@ -26,6 +26,7 @@ Interactive, static dashboard with separately managed Beef HMR and Stir-Fry anal
 - 278 channel rating observations across Kevin's, Target, and Kroger, shown separately because syndication can overlap
 - Exact-listing audit across Costco, Target, Kroger, Publix, Albertsons, Food Lion, and Amazon; searched-but-unconfirmed pages remain coverage gaps rather than zero-review records
 - Separate tracking for 16 future-purchase incentive badges and one review that explicitly self-identifies as sponsored
+- Branded one-page executive brief available from the Stir-Fry module in both PDF and Word formats
 
 ## Dashboard capabilities
 
