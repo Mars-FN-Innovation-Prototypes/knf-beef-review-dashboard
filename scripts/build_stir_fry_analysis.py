@@ -68,7 +68,7 @@ def normalized(value: str | None) -> str:
 
 def review_signature(row: dict) -> str:
     parts = [
-        row["product_id"], row["date"], str(row["rating"]),
+        row["product_id"], str(row["rating"]),
         normalized(row.get("text")),
     ]
     return hashlib.sha256("|".join(parts).encode("utf-8")).hexdigest()
@@ -117,9 +117,25 @@ def main() -> None:
     products = {row["product_id"]: row for row in registry["products"]}
 
     raw_rows = []
+    brand_date_index = {
+        (row["product_id"], int(row["rating"]), normalized(row.get("text"))): row["date"]
+        for row in brand["reviews"]
+    }
+    undated_retail_rows = 0
+    retailer_dates_resolved = 0
     for priority, source_rows in enumerate([brand["reviews"], retail["reviews"]]):
         for source_row in source_rows:
             row = dict(source_row)
+            if not row.get("date"):
+                undated_retail_rows += 1
+                matched_date = brand_date_index.get(
+                    (row["product_id"], int(row["rating"]), normalized(row.get("text")))
+                )
+                if matched_date:
+                    row["date"] = matched_date
+                    row["date_resolution"] = "matched_first_party_text"
+                    row["metric_eligible"] = True
+                    retailer_dates_resolved += 1
             row["portfolio"] = "stir_fry"
             row["cohort"] = products[row["product_id"]]["cohort"]
             row["_priority"] = priority
@@ -128,7 +144,7 @@ def main() -> None:
     deduplicated = []
     by_signature = {}
     duplicate_rows = 0
-    for row in sorted(raw_rows, key=lambda item: (item["_priority"], item["date"], item["product_id"])):
+    for row in sorted(raw_rows, key=lambda item: (item["_priority"], item.get("date") or "", item["product_id"])):
         signature = review_signature(row)
         if signature in by_signature:
             duplicate_rows += 1
@@ -146,8 +162,8 @@ def main() -> None:
         by_signature[signature] = row
         deduplicated.append(row)
 
-    deduplicated.sort(key=lambda row: (row["date"], row["product_id"]), reverse=True)
-    metric_rows = [row for row in deduplicated if row.get("metric_eligible") is not False]
+    deduplicated.sort(key=lambda row: (row.get("date") or "", row["product_id"]), reverse=True)
+    metric_rows = [row for row in deduplicated if row.get("metric_eligible") is not False and row.get("date")]
 
     product_metrics = []
     for product_id, product in products.items():
@@ -219,6 +235,19 @@ def main() -> None:
             ),
         })
 
+    assessment_summary = []
+    for source_name in ["Costco", "Target", "Kroger", "Publix", "Albertsons", "Food Lion", "Amazon"]:
+        rows = [row for row in retail["coverage"] if row["source"] == source_name]
+        assessment_summary.append({
+            "source": source_name,
+            "exact_pages": sum(row["match_type"] == "exact_sku" for row in rows),
+            "review_histories_complete": sum(row["status"] == "review_history_complete" for row in rows),
+            "listing_no_public_reviews": sum(row["status"] == "listing_no_public_reviews" for row in rows),
+            "official_assignment_page_unindexed": sum(row["status"] == "official_costco_sku_page_not_indexed" for row in rows),
+            "searched_no_exact_page": sum(row["status"] == "searched_no_exact_page" for row in rows),
+            "not_applicable": sum(row["status"] == "not_applicable" for row in rows),
+        })
+
     low_rows = [row for row in metric_rows if row["rating"] <= 2]
     complaint_topics = Counter(topic for row in low_rows for topic in row["topics"])
     total_metrics = metrics(metric_rows)
@@ -286,17 +315,21 @@ def main() -> None:
             "costco_only_product_count": sum(row["cohort"] == "costco_only" for row in products.values()),
             "grocery_launch_date": GROCERY_LAUNCH.isoformat(),
             "costco_launch_note": "Formal launch date not confirmed; earliest captured written review is used as the observed-start marker.",
-            "retailers": ["Costco", "Target", "Kroger", "Publix", "Albertsons", "Food Lion"],
+            "retailers": ["Costco", "Target", "Kroger", "Publix", "Albertsons", "Food Lion", "Amazon"],
         },
         "data_quality": {
             "raw_written_rows": len(raw_rows),
             "deduplicated_written_rows": len(metric_rows),
             "cross_source_duplicates_removed": duplicate_rows,
             "first_party_feed_rows": len(brand["reviews"]),
-            "target_recent_rows": len(retail["reviews"]),
-            "target_written_window_note": "Target exposes complete current rating distributions but only a recent written-review window in the public page payload.",
-            "kroger_note": "Kroger aggregate ratings are retained as point-in-time context; reproducible written-review text was unavailable.",
-            "listing_note": "A listing without a public review surface is shown as listing coverage, not as zero reviews.",
+            "target_complete_written_rows": sum(row["source"] == "Target" for row in retail["reviews"]),
+            "kroger_complete_visible_cards": sum(row["source"] == "Kroger" for row in retail["reviews"]),
+            "undated_retail_cards": undated_retail_rows,
+            "undated_dates_resolved_from_first_party": retailer_dates_resolved,
+            "target_written_window_note": "All written reviews exposed by the three exact Target product pages were loaded and captured.",
+            "kroger_note": "All visible public cards were captured from four exact Kroger pages; undated cards are excluded unless they exactly match a dated first-party record.",
+            "amazon_note": "Amazon was assessed for all six grocery kits; no exact scoped product page was confirmed. Adjacent sauces and Heat & Eat items were excluded.",
+            "listing_note": "An exact listing without a public review surface is shown as listing coverage, not as zero reviews. A searched-no-exact-page result is also not a zero-review claim.",
         },
         "overall": total_metrics,
         "comparable_history": metrics(comparable_rows),
@@ -312,6 +345,7 @@ def main() -> None:
         "monthly": monthly,
         "rating_snapshots": all_snapshots,
         "snapshot_summary": snapshot_summary,
+        "assessment_summary": assessment_summary,
         "coverage": retail["coverage"],
         "complaint_topics": dict(complaint_topics.most_common()),
         "provocations": provocations,

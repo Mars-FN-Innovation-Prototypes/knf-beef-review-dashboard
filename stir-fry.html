@@ -168,9 +168,9 @@
       <section id="retailers" class="section-block panel-anchor">
         <div class="section-heading"><div><span class="kicker">Channel evidence</span><h2>Rating scale and exact listing coverage</h2><p>Aggregate ratings are point-in-time observations by channel. Because syndication can overlap, they are not summed into a unique-consumer total.</p></div></div>
         <div id="channelSnapshots" class="snapshot-grid stir-snapshot-grid"></div>
-        <div class="section-heading snapshot-heading"><div><span class="kicker">Retailer audit</span><h2>Where each exact SKU was confirmed</h2><p>Stakeholder-prioritized retailers only: Costco, Target, Kroger, Publix, Albertsons, and Food Lion.</p></div></div>
-        <div class="table-shell coverage-shell"><table id="stirCoverageTable"><thead><tr><th scope="col">Product</th><th scope="col">Owned site</th><th scope="col">Costco</th><th scope="col">Target</th><th scope="col">Kroger</th><th scope="col">Publix</th><th scope="col">Albertsons</th><th scope="col">Food Lion</th></tr></thead><tbody></tbody></table></div>
-        <p class="table-note">“Page not confirmed” does not mean nationwide absence; assortments vary by banner, location, and date. “Costco-only” reflects stakeholder guidance plus official pack metadata.</p>
+        <div class="section-heading snapshot-heading"><div><span class="kicker">Retailer audit</span><h2>Where each exact SKU was confirmed</h2><p>Stakeholder-prioritized retailers only: Costco, Target, Kroger, Publix, Albertsons, Food Lion, and Amazon.</p></div></div>
+        <div class="table-shell coverage-shell"><table id="stirCoverageTable"><thead><tr><th scope="col">Product</th><th scope="col">Owned site</th><th scope="col">Costco</th><th scope="col">Target</th><th scope="col">Kroger</th><th scope="col">Publix</th><th scope="col">Albertsons</th><th scope="col">Food Lion</th><th scope="col">Amazon</th></tr></thead><tbody></tbody></table></div>
+        <p class="table-note">“Searched · no exact SKU” means the exact scoped item was not confirmed in the public retailer assessment; it is not a zero-review claim. “Costco-only” reflects stakeholder guidance plus official pack metadata.</p>
       </section>
 
       <section id="reviews" class="section-block panel-anchor">
@@ -195,11 +195,11 @@
           <div class="method-grid">
             <article><strong>Official scope</strong><p>Thirteen products were taken from the Kevin's Stir-Fry Entrées collection and verified to official product handles and catalog identifiers.</p></article>
             <article><strong>Cohorts</strong><p>Six 2.5-serving grocery kits launched nationally on Feb 27, 2025. Seven four-serving items are treated as Costco-only.</p></article>
-            <article><strong>Written evidence</strong><p>100 deduplicated dated comments: 81 from the complete public owned-site feed and 19 additional recent Target records.</p></article>
-            <article><strong>Comparable trend</strong><p>Monthly and launch-window trends use the complete 81-review first-party history. Target's public payload exposes only a recent written window.</p></article>
-            <article><strong>Rating context</strong><p>Kevin's, Target, and Kroger channel totals are shown separately. They may overlap through syndication and are not a unique-consumer count.</p></article>
+            <article><strong>Written evidence</strong><p>166 deduplicated dated comments: 81 owned-site records, 56 incremental Target records, and 29 incremental Kroger records after exact-text syndication checks.</p></article>
+            <article><strong>Comparable trend</strong><p>Monthly and launch-window trends use the complete 81-review first-party history. The complete visible Target and Kroger histories add cross-channel issue discovery without changing that comparison base.</p></article>
+            <article><strong>Rating context</strong><p>Kevin's, Target, and Kroger channel totals are shown separately. They may overlap through syndication and are not a unique-consumer count. Amazon produced no confirmed exact scoped page.</p></article>
             <article><strong>Disclosure</strong><p>Sixteen early first-party reviews carry a future-purchase incentive badge; all were five-star. One additional review self-identifies as sponsored. The two disclosure types remain separate and filterable.</p></article>
-            <article><strong>Retailer matching</strong><p>Products were matched with official names, pack architecture, barcodes where available, retailer identifiers, ingredients, and product imagery.</p></article>
+            <article><strong>Retailer matching</strong><p>Products were matched with official names, pack architecture, barcodes where available, retailer identifiers, ingredients, and product imagery. Adjacent Amazon sauces and Heat &amp; Eat products were excluded.</p></article>
             <article><strong>Topic coding</strong><p>Transparent keyword rules tag taste, portion/value, protein quantity, vegetables, texture, convenience, dietary fit, and packaging.</p></article>
             <article><strong>Interpretation</strong><p>Review signals identify where to investigate. They do not prove formulation, supplier, production, or channel causality.</p></article>
           </div>
@@ -215,6 +215,6 @@
 
   <footer><span>Mars Food &amp; Nutrition · Stir-Fry Review Intelligence</span><span>Public consumer-review data · Point-in-time capture Aug 25, 2026</span><a href="#method">Methodology</a></footer>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script src="stir-fry.js?v=2026-08-25-launch-analysis" defer></script>
+  <script src="stir-fry.js?v=2026-08-25-retailer-completion" defer></script>
 </body>
 </html>
