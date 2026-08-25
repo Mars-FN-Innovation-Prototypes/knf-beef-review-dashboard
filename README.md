@@ -21,10 +21,10 @@ Interactive, static dashboard with separately managed Beef HMR and Stir-Fry anal
 ### Stir Fry
 
 - Exact 13-product official catalog: six grocery kits and seven Costco-only larger-format items
-- 100 deduplicated dated written reviews: the complete 81-review first-party history plus 19 incremental recent Target comments
+- 166 deduplicated dated written reviews: the complete 81-review first-party history plus 56 incremental Target and 29 incremental Kroger comments
 - Grocery-kit launch comparison anchored to February 27, 2025; Costco uses earliest observed review timing because the formal launch date was not confirmed
-- 262 channel rating observations across Kevin's, Target, and Kroger, shown separately because syndication can overlap
-- Exact-listing audit across Costco, Target, Kroger, Publix, Albertsons, and Food Lion; unconfirmed pages remain coverage gaps rather than zero-review records
+- 272 channel rating observations across Kevin's, Target, and Kroger, shown separately because syndication can overlap
+- Exact-listing audit across Costco, Target, Kroger, Publix, Albertsons, Food Lion, and Amazon; searched-but-unconfirmed pages remain coverage gaps rather than zero-review records
 - Separate tracking for 16 future-purchase incentive badges and one review that explicitly self-identifies as sponsored
 
 ## Dashboard capabilities
@@ -55,8 +55,8 @@ Interactive, static dashboard with separately managed Beef HMR and Stir-Fry anal
 ### Stir-fry portfolio
 
 - Official Kevin's product handles and storefront catalog endpoints establish product identity, cohort, pack architecture, and barcodes where available.
-- Public first-party review feeds provide the complete observed history. Exact Target and Kroger pages contribute retailer rating context; Target also contributes a bounded recent written-review window.
-- Written comments are deduplicated by product, date, rating, and normalized text. Reviewer names are omitted.
+- Public first-party review feeds provide the complete observed history. The three exact Target pages and four exact Kroger pages contribute all written-review cards visible in their public interfaces as of the snapshot date; exact-text syndicated records are deduplicated.
+- Written comments are deduplicated by product, rating, and exact normalized text so syndicated copies with channel-specific dates are not double-counted. Reviewer names are omitted.
 - Monthly trends and fixed launch-versus-current windows use only the consistent first-party feed. Retailer aggregate ratings never enter dated trend or text-topic calculations.
 - Transparent keyword rules tag taste, portion/value, protein quantity, vegetables, texture, convenience, dietary fit, and packaging. These signals are investigation prompts, not causal findings.
 - `scripts/collect_stir_fry_catalog.py`, `scripts/collect_stir_fry_reviews.py`, `scripts/collect_stir_fry_retailer_reviews.py`, and `scripts/build_stir_fry_analysis.py` reproduce the module's governed data layers.

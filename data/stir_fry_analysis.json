@@ -12,43 +12,48 @@
       "Kroger",
       "Publix",
       "Albertsons",
-      "Food Lion"
+      "Food Lion",
+      "Amazon"
     ]
   },
   "data_quality": {
-    "raw_written_rows": 105,
-    "deduplicated_written_rows": 100,
-    "cross_source_duplicates_removed": 5,
+    "raw_written_rows": 202,
+    "deduplicated_written_rows": 166,
+    "cross_source_duplicates_removed": 36,
     "first_party_feed_rows": 81,
-    "target_recent_rows": 24,
-    "target_written_window_note": "Target exposes complete current rating distributions but only a recent written-review window in the public page payload.",
-    "kroger_note": "Kroger aggregate ratings are retained as point-in-time context; reproducible written-review text was unavailable.",
-    "listing_note": "A listing without a public review surface is shown as listing coverage, not as zero reviews."
+    "target_complete_written_rows": 72,
+    "kroger_complete_visible_cards": 49,
+    "undated_retail_cards": 6,
+    "undated_dates_resolved_from_first_party": 6,
+    "target_written_window_note": "All written reviews exposed by the three exact Target product pages were loaded and captured.",
+    "kroger_note": "All visible public cards were captured from four exact Kroger pages; undated cards are excluded unless they exactly match a dated first-party record.",
+    "amazon_note": "Amazon was assessed for all six grocery kits; no exact scoped product page was confirmed. Adjacent sauces and Heat & Eat items were excluded.",
+    "listing_note": "An exact listing without a public review surface is shown as listing coverage, not as zero reviews. A searched-no-exact-page result is also not a zero-review claim."
   },
   "overall": {
-    "n": 100,
-    "average_rating": 3.68,
-    "low_star_share": 0.29,
-    "high_star_share": 0.64,
+    "n": 166,
+    "average_rating": 3.41,
+    "low_star_share": 0.3494,
+    "high_star_share": 0.5602,
     "topic_counts": {
-      "taste": 68,
-      "portion_value": 31,
-      "protein_quantity": 8,
-      "vegetables": 35,
-      "texture": 7,
-      "convenience": 44,
-      "dietary_fit": 18,
-      "packaging": 5
+      "taste": 113,
+      "portion_value": 54,
+      "protein_quantity": 16,
+      "vegetables": 55,
+      "texture": 15,
+      "convenience": 69,
+      "dietary_fit": 23,
+      "packaging": 14
     },
     "topic_shares": {
-      "taste": 0.68,
-      "portion_value": 0.31,
-      "protein_quantity": 0.08,
-      "vegetables": 0.35,
-      "texture": 0.07,
-      "convenience": 0.44,
-      "dietary_fit": 0.18,
-      "packaging": 0.05
+      "taste": 0.6807,
+      "portion_value": 0.3253,
+      "protein_quantity": 0.0964,
+      "vegetables": 0.3313,
+      "texture": 0.0904,
+      "convenience": 0.4157,
+      "dietary_fit": 0.1386,
+      "packaging": 0.0843
     }
   },
   "comparable_history": {
@@ -161,29 +166,29 @@
   "cohorts": {
     "grocery": {
       "all_written": {
-        "n": 46,
-        "average_rating": 3.09,
-        "low_star_share": 0.4348,
-        "high_star_share": 0.4783,
+        "n": 112,
+        "average_rating": 3.04,
+        "low_star_share": 0.4375,
+        "high_star_share": 0.4554,
         "topic_counts": {
-          "taste": 31,
-          "portion_value": 18,
-          "protein_quantity": 8,
-          "vegetables": 17,
-          "texture": 2,
-          "convenience": 17,
-          "dietary_fit": 6,
-          "packaging": 3
+          "taste": 76,
+          "portion_value": 41,
+          "protein_quantity": 16,
+          "vegetables": 37,
+          "texture": 10,
+          "convenience": 42,
+          "dietary_fit": 11,
+          "packaging": 12
         },
         "topic_shares": {
-          "taste": 0.6739,
-          "portion_value": 0.3913,
-          "protein_quantity": 0.1739,
-          "vegetables": 0.3696,
-          "texture": 0.0435,
-          "convenience": 0.3696,
-          "dietary_fit": 0.1304,
-          "packaging": 0.0652
+          "taste": 0.6786,
+          "portion_value": 0.3661,
+          "protein_quantity": 0.1429,
+          "vegetables": 0.3304,
+          "texture": 0.0893,
+          "convenience": 0.375,
+          "dietary_fit": 0.0982,
+          "packaging": 0.1071
         }
       },
       "comparable_history": {
@@ -403,30 +408,56 @@
         "packaging": 0.0617
       }
     },
-    "Target": {
-      "n": 19,
-      "average_rating": 2.42,
-      "low_star_share": 0.6316,
-      "high_star_share": 0.3158,
+    "Kroger": {
+      "n": 29,
+      "average_rating": 2.93,
+      "low_star_share": 0.5172,
+      "high_star_share": 0.4483,
       "topic_counts": {
-        "taste": 12,
-        "portion_value": 7,
-        "protein_quantity": 7,
-        "vegetables": 6,
-        "texture": 0,
-        "convenience": 7,
-        "dietary_fit": 1,
-        "packaging": 0
+        "taste": 21,
+        "portion_value": 10,
+        "protein_quantity": 3,
+        "vegetables": 9,
+        "texture": 4,
+        "convenience": 6,
+        "dietary_fit": 3,
+        "packaging": 5
       },
       "topic_shares": {
-        "taste": 0.6316,
-        "portion_value": 0.3684,
-        "protein_quantity": 0.3684,
-        "vegetables": 0.3158,
-        "texture": 0.0,
-        "convenience": 0.3684,
-        "dietary_fit": 0.0526,
-        "packaging": 0.0
+        "taste": 0.7241,
+        "portion_value": 0.3448,
+        "protein_quantity": 0.1034,
+        "vegetables": 0.3103,
+        "texture": 0.1379,
+        "convenience": 0.2069,
+        "dietary_fit": 0.1034,
+        "packaging": 0.1724
+      }
+    },
+    "Target": {
+      "n": 56,
+      "average_rating": 2.84,
+      "low_star_share": 0.4643,
+      "high_star_share": 0.3929,
+      "topic_counts": {
+        "taste": 36,
+        "portion_value": 20,
+        "protein_quantity": 12,
+        "vegetables": 17,
+        "texture": 4,
+        "convenience": 26,
+        "dietary_fit": 3,
+        "packaging": 4
+      },
+      "topic_shares": {
+        "taste": 0.6429,
+        "portion_value": 0.3571,
+        "protein_quantity": 0.2143,
+        "vegetables": 0.3036,
+        "texture": 0.0714,
+        "convenience": 0.4643,
+        "dietary_fit": 0.0536,
+        "packaging": 0.0714
       }
     }
   },
@@ -617,54 +648,54 @@
       "cohort": "grocery",
       "official_url": "https://www.kevinsnaturalfoods.com/products/chicken-fajitas-skillet-meal-kit",
       "all": {
-        "n": 18,
-        "average_rating": 3.17,
-        "low_star_share": 0.4444,
-        "high_star_share": 0.5,
+        "n": 30,
+        "average_rating": 3.2,
+        "low_star_share": 0.4333,
+        "high_star_share": 0.5333,
         "topic_counts": {
-          "taste": 12,
-          "portion_value": 8,
-          "protein_quantity": 2,
-          "vegetables": 7,
+          "taste": 21,
+          "portion_value": 13,
+          "protein_quantity": 4,
+          "vegetables": 12,
           "texture": 0,
-          "convenience": 4,
+          "convenience": 9,
           "dietary_fit": 3,
-          "packaging": 1
+          "packaging": 2
         },
         "topic_shares": {
-          "taste": 0.6667,
-          "portion_value": 0.4444,
-          "protein_quantity": 0.1111,
-          "vegetables": 0.3889,
+          "taste": 0.7,
+          "portion_value": 0.4333,
+          "protein_quantity": 0.1333,
+          "vegetables": 0.4,
           "texture": 0.0,
-          "convenience": 0.2222,
-          "dietary_fit": 0.1667,
-          "packaging": 0.0556
+          "convenience": 0.3,
+          "dietary_fit": 0.1,
+          "packaging": 0.0667
         }
       },
       "recent_6m": {
-        "n": 12,
-        "average_rating": 2.75,
-        "low_star_share": 0.5,
-        "high_star_share": 0.4167,
+        "n": 15,
+        "average_rating": 2.6,
+        "low_star_share": 0.5333,
+        "high_star_share": 0.4,
         "topic_counts": {
-          "taste": 9,
-          "portion_value": 5,
+          "taste": 12,
+          "portion_value": 7,
           "protein_quantity": 2,
-          "vegetables": 4,
+          "vegetables": 6,
           "texture": 0,
-          "convenience": 3,
+          "convenience": 4,
           "dietary_fit": 2,
           "packaging": 0
         },
         "topic_shares": {
-          "taste": 0.75,
-          "portion_value": 0.4167,
-          "protein_quantity": 0.1667,
-          "vegetables": 0.3333,
+          "taste": 0.8,
+          "portion_value": 0.4667,
+          "protein_quantity": 0.1333,
+          "vegetables": 0.4,
           "texture": 0.0,
-          "convenience": 0.25,
-          "dietary_fit": 0.1667,
+          "convenience": 0.2667,
+          "dietary_fit": 0.1333,
           "packaging": 0.0
         }
       },
@@ -677,58 +708,58 @@
       "cohort": "grocery",
       "official_url": "https://www.kevinsnaturalfoods.com/products/general-tso-s-chicken-with-green-beans",
       "all": {
-        "n": 8,
-        "average_rating": 2.5,
-        "low_star_share": 0.625,
-        "high_star_share": 0.375,
+        "n": 24,
+        "average_rating": 2.54,
+        "low_star_share": 0.5833,
+        "high_star_share": 0.3333,
         "topic_counts": {
-          "taste": 7,
-          "portion_value": 1,
-          "protein_quantity": 2,
-          "vegetables": 3,
-          "texture": 0,
-          "convenience": 3,
-          "dietary_fit": 0,
-          "packaging": 0
+          "taste": 19,
+          "portion_value": 7,
+          "protein_quantity": 4,
+          "vegetables": 10,
+          "texture": 4,
+          "convenience": 8,
+          "dietary_fit": 2,
+          "packaging": 4
         },
         "topic_shares": {
-          "taste": 0.875,
-          "portion_value": 0.125,
-          "protein_quantity": 0.25,
-          "vegetables": 0.375,
-          "texture": 0.0,
-          "convenience": 0.375,
-          "dietary_fit": 0.0,
-          "packaging": 0.0
+          "taste": 0.7917,
+          "portion_value": 0.2917,
+          "protein_quantity": 0.1667,
+          "vegetables": 0.4167,
+          "texture": 0.1667,
+          "convenience": 0.3333,
+          "dietary_fit": 0.0833,
+          "packaging": 0.1667
         }
       },
       "recent_6m": {
-        "n": 6,
-        "average_rating": 2.83,
-        "low_star_share": 0.5,
-        "high_star_share": 0.5,
+        "n": 5,
+        "average_rating": 3.2,
+        "low_star_share": 0.4,
+        "high_star_share": 0.6,
         "topic_counts": {
-          "taste": 5,
+          "taste": 4,
           "portion_value": 1,
-          "protein_quantity": 2,
-          "vegetables": 3,
+          "protein_quantity": 1,
+          "vegetables": 2,
           "texture": 0,
           "convenience": 3,
           "dietary_fit": 0,
           "packaging": 0
         },
         "topic_shares": {
-          "taste": 0.8333,
-          "portion_value": 0.1667,
-          "protein_quantity": 0.3333,
-          "vegetables": 0.5,
+          "taste": 0.8,
+          "portion_value": 0.2,
+          "protein_quantity": 0.2,
+          "vegetables": 0.4,
           "texture": 0.0,
-          "convenience": 0.5,
+          "convenience": 0.6,
           "dietary_fit": 0.0,
           "packaging": 0.0
         }
       },
-      "earliest_review": "2025-12-06",
+      "earliest_review": "2025-06-27",
       "latest_review": "2026-08-12"
     },
     {
@@ -797,58 +828,58 @@
       "cohort": "grocery",
       "official_url": "https://www.kevinsnaturalfoods.com/products/honey-garlic-chicken-stir-fry-kit",
       "all": {
-        "n": 16,
-        "average_rating": 3.19,
-        "low_star_share": 0.375,
-        "high_star_share": 0.4375,
+        "n": 54,
+        "average_rating": 3.13,
+        "low_star_share": 0.3889,
+        "high_star_share": 0.4444,
         "topic_counts": {
-          "taste": 9,
-          "portion_value": 8,
-          "protein_quantity": 4,
-          "vegetables": 4,
-          "texture": 2,
-          "convenience": 8,
-          "dietary_fit": 2,
-          "packaging": 2
+          "taste": 33,
+          "portion_value": 20,
+          "protein_quantity": 8,
+          "vegetables": 12,
+          "texture": 6,
+          "convenience": 23,
+          "dietary_fit": 5,
+          "packaging": 6
         },
         "topic_shares": {
-          "taste": 0.5625,
-          "portion_value": 0.5,
-          "protein_quantity": 0.25,
-          "vegetables": 0.25,
-          "texture": 0.125,
-          "convenience": 0.5,
-          "dietary_fit": 0.125,
-          "packaging": 0.125
-        }
-      },
-      "recent_6m": {
-        "n": 9,
-        "average_rating": 2.33,
-        "low_star_share": 0.5556,
-        "high_star_share": 0.2222,
-        "topic_counts": {
-          "taste": 4,
-          "portion_value": 6,
-          "protein_quantity": 3,
-          "vegetables": 3,
-          "texture": 2,
-          "convenience": 3,
-          "dietary_fit": 1,
-          "packaging": 1
-        },
-        "topic_shares": {
-          "taste": 0.4444,
-          "portion_value": 0.6667,
-          "protein_quantity": 0.3333,
-          "vegetables": 0.3333,
-          "texture": 0.2222,
-          "convenience": 0.3333,
-          "dietary_fit": 0.1111,
+          "taste": 0.6111,
+          "portion_value": 0.3704,
+          "protein_quantity": 0.1481,
+          "vegetables": 0.2222,
+          "texture": 0.1111,
+          "convenience": 0.4259,
+          "dietary_fit": 0.0926,
           "packaging": 0.1111
         }
       },
-      "earliest_review": "2025-05-13",
+      "recent_6m": {
+        "n": 15,
+        "average_rating": 2.4,
+        "low_star_share": 0.5333,
+        "high_star_share": 0.2667,
+        "topic_counts": {
+          "taste": 7,
+          "portion_value": 9,
+          "protein_quantity": 4,
+          "vegetables": 5,
+          "texture": 3,
+          "convenience": 6,
+          "dietary_fit": 1,
+          "packaging": 3
+        },
+        "topic_shares": {
+          "taste": 0.4667,
+          "portion_value": 0.6,
+          "protein_quantity": 0.2667,
+          "vegetables": 0.3333,
+          "texture": 0.2,
+          "convenience": 0.4,
+          "dietary_fit": 0.0667,
+          "packaging": 0.2
+        }
+      },
+      "earliest_review": "2025-02-05",
       "latest_review": "2026-08-24"
     },
     {
@@ -1593,7 +1624,7 @@
     },
     {
       "month": "2025-02",
-      "n": 1,
+      "n": 2,
       "average_rating": 5.0,
       "low_star_share": 0.0,
       "high_star_share": 1.0,
@@ -1603,15 +1634,15 @@
         "protein_quantity": 0,
         "vegetables": 1,
         "texture": 0,
-        "convenience": 1,
+        "convenience": 2,
         "dietary_fit": 0,
         "packaging": 0
       },
       "topic_shares": {
-        "taste": 1.0,
-        "portion_value": 1.0,
+        "taste": 0.5,
+        "portion_value": 0.5,
         "protein_quantity": 0.0,
-        "vegetables": 1.0,
+        "vegetables": 0.5,
         "texture": 0.0,
         "convenience": 1.0,
         "dietary_fit": 0.0,
@@ -1620,17 +1651,17 @@
     },
     {
       "month": "2025-03",
-      "n": 1,
-      "average_rating": 5.0,
-      "low_star_share": 0.0,
-      "high_star_share": 1.0,
+      "n": 3,
+      "average_rating": 3.67,
+      "low_star_share": 0.3333,
+      "high_star_share": 0.6667,
       "topic_counts": {
-        "taste": 1,
+        "taste": 3,
         "portion_value": 0,
         "protein_quantity": 0,
         "vegetables": 0,
         "texture": 0,
-        "convenience": 0,
+        "convenience": 1,
         "dietary_fit": 1,
         "packaging": 0
       },
@@ -1640,8 +1671,8 @@
         "protein_quantity": 0.0,
         "vegetables": 0.0,
         "texture": 0.0,
-        "convenience": 0.0,
-        "dietary_fit": 1.0,
+        "convenience": 0.3333,
+        "dietary_fit": 0.3333,
         "packaging": 0.0
       }
     },
@@ -1674,13 +1705,13 @@
     },
     {
       "month": "2025-05",
-      "n": 2,
-      "average_rating": 5.0,
-      "low_star_share": 0.0,
-      "high_star_share": 1.0,
+      "n": 3,
+      "average_rating": 3.67,
+      "low_star_share": 0.3333,
+      "high_star_share": 0.6667,
       "topic_counts": {
-        "taste": 2,
-        "portion_value": 1,
+        "taste": 3,
+        "portion_value": 2,
         "protein_quantity": 0,
         "vegetables": 1,
         "texture": 0,
@@ -1690,40 +1721,40 @@
       },
       "topic_shares": {
         "taste": 1.0,
-        "portion_value": 0.5,
+        "portion_value": 0.6667,
         "protein_quantity": 0.0,
-        "vegetables": 0.5,
+        "vegetables": 0.3333,
         "texture": 0.0,
-        "convenience": 1.0,
-        "dietary_fit": 0.5,
+        "convenience": 0.6667,
+        "dietary_fit": 0.3333,
         "packaging": 0.0
       }
     },
     {
       "month": "2025-06",
-      "n": 3,
-      "average_rating": 5.0,
-      "low_star_share": 0.0,
-      "high_star_share": 1.0,
+      "n": 6,
+      "average_rating": 4.5,
+      "low_star_share": 0.1667,
+      "high_star_share": 0.8333,
       "topic_counts": {
-        "taste": 2,
-        "portion_value": 0,
-        "protein_quantity": 1,
-        "vegetables": 1,
+        "taste": 4,
+        "portion_value": 1,
+        "protein_quantity": 2,
+        "vegetables": 2,
         "texture": 0,
-        "convenience": 1,
-        "dietary_fit": 1,
-        "packaging": 0
+        "convenience": 3,
+        "dietary_fit": 3,
+        "packaging": 2
       },
       "topic_shares": {
         "taste": 0.6667,
-        "portion_value": 0.0,
+        "portion_value": 0.1667,
         "protein_quantity": 0.3333,
         "vegetables": 0.3333,
         "texture": 0.0,
-        "convenience": 0.3333,
-        "dietary_fit": 0.3333,
-        "packaging": 0.0
+        "convenience": 0.5,
+        "dietary_fit": 0.5,
+        "packaging": 0.3333
       }
     },
     {
@@ -1755,90 +1786,36 @@
     },
     {
       "month": "2025-08",
-      "n": 2,
-      "average_rating": 4.0,
-      "low_star_share": 0.0,
-      "high_star_share": 0.5,
+      "n": 12,
+      "average_rating": 3.0,
+      "low_star_share": 0.4167,
+      "high_star_share": 0.4167,
       "topic_counts": {
-        "taste": 1,
-        "portion_value": 1,
-        "protein_quantity": 0,
-        "vegetables": 0,
-        "texture": 0,
-        "convenience": 2,
+        "taste": 9,
+        "portion_value": 6,
+        "protein_quantity": 1,
+        "vegetables": 3,
+        "texture": 1,
+        "convenience": 4,
         "dietary_fit": 0,
-        "packaging": 0
+        "packaging": 2
       },
       "topic_shares": {
-        "taste": 0.5,
+        "taste": 0.75,
         "portion_value": 0.5,
-        "protein_quantity": 0.0,
-        "vegetables": 0.0,
-        "texture": 0.0,
-        "convenience": 1.0,
+        "protein_quantity": 0.0833,
+        "vegetables": 0.25,
+        "texture": 0.0833,
+        "convenience": 0.3333,
         "dietary_fit": 0.0,
-        "packaging": 0.0
+        "packaging": 0.1667
       }
     },
     {
-      "month": "2025-10",
-      "n": 1,
-      "average_rating": 5.0,
-      "low_star_share": 0.0,
-      "high_star_share": 1.0,
-      "topic_counts": {
-        "taste": 0,
-        "portion_value": 0,
-        "protein_quantity": 0,
-        "vegetables": 0,
-        "texture": 0,
-        "convenience": 1,
-        "dietary_fit": 0,
-        "packaging": 0
-      },
-      "topic_shares": {
-        "taste": 0.0,
-        "portion_value": 0.0,
-        "protein_quantity": 0.0,
-        "vegetables": 0.0,
-        "texture": 0.0,
-        "convenience": 1.0,
-        "dietary_fit": 0.0,
-        "packaging": 0.0
-      }
-    },
-    {
-      "month": "2025-11",
-      "n": 1,
-      "average_rating": 4.0,
-      "low_star_share": 0.0,
-      "high_star_share": 1.0,
-      "topic_counts": {
-        "taste": 0,
-        "portion_value": 1,
-        "protein_quantity": 0,
-        "vegetables": 1,
-        "texture": 0,
-        "convenience": 0,
-        "dietary_fit": 0,
-        "packaging": 0
-      },
-      "topic_shares": {
-        "taste": 0.0,
-        "portion_value": 1.0,
-        "protein_quantity": 0.0,
-        "vegetables": 1.0,
-        "texture": 0.0,
-        "convenience": 0.0,
-        "dietary_fit": 0.0,
-        "packaging": 0.0
-      }
-    },
-    {
-      "month": "2025-12",
+      "month": "2025-09",
       "n": 3,
       "average_rating": 3.0,
-      "low_star_share": 0.6667,
+      "low_star_share": 0.3333,
       "high_star_share": 0.3333,
       "topic_counts": {
         "taste": 2,
@@ -1846,9 +1823,9 @@
         "protein_quantity": 0,
         "vegetables": 1,
         "texture": 0,
-        "convenience": 0,
+        "convenience": 2,
         "dietary_fit": 0,
-        "packaging": 1
+        "packaging": 0
       },
       "topic_shares": {
         "taste": 0.6667,
@@ -1856,90 +1833,171 @@
         "protein_quantity": 0.0,
         "vegetables": 0.3333,
         "texture": 0.0,
-        "convenience": 0.0,
+        "convenience": 0.6667,
         "dietary_fit": 0.0,
-        "packaging": 0.3333
+        "packaging": 0.0
+      }
+    },
+    {
+      "month": "2025-10",
+      "n": 10,
+      "average_rating": 3.3,
+      "low_star_share": 0.4,
+      "high_star_share": 0.5,
+      "topic_counts": {
+        "taste": 5,
+        "portion_value": 4,
+        "protein_quantity": 2,
+        "vegetables": 3,
+        "texture": 0,
+        "convenience": 3,
+        "dietary_fit": 0,
+        "packaging": 1
+      },
+      "topic_shares": {
+        "taste": 0.5,
+        "portion_value": 0.4,
+        "protein_quantity": 0.2,
+        "vegetables": 0.3,
+        "texture": 0.0,
+        "convenience": 0.3,
+        "dietary_fit": 0.0,
+        "packaging": 0.1
+      }
+    },
+    {
+      "month": "2025-11",
+      "n": 9,
+      "average_rating": 3.56,
+      "low_star_share": 0.2222,
+      "high_star_share": 0.5556,
+      "topic_counts": {
+        "taste": 6,
+        "portion_value": 2,
+        "protein_quantity": 0,
+        "vegetables": 2,
+        "texture": 1,
+        "convenience": 2,
+        "dietary_fit": 1,
+        "packaging": 0
+      },
+      "topic_shares": {
+        "taste": 0.6667,
+        "portion_value": 0.2222,
+        "protein_quantity": 0.0,
+        "vegetables": 0.2222,
+        "texture": 0.1111,
+        "convenience": 0.2222,
+        "dietary_fit": 0.1111,
+        "packaging": 0.0
+      }
+    },
+    {
+      "month": "2025-12",
+      "n": 11,
+      "average_rating": 2.82,
+      "low_star_share": 0.5455,
+      "high_star_share": 0.3636,
+      "topic_counts": {
+        "taste": 8,
+        "portion_value": 3,
+        "protein_quantity": 1,
+        "vegetables": 3,
+        "texture": 3,
+        "convenience": 4,
+        "dietary_fit": 0,
+        "packaging": 1
+      },
+      "topic_shares": {
+        "taste": 0.7273,
+        "portion_value": 0.2727,
+        "protein_quantity": 0.0909,
+        "vegetables": 0.2727,
+        "texture": 0.2727,
+        "convenience": 0.3636,
+        "dietary_fit": 0.0,
+        "packaging": 0.0909
       }
     },
     {
       "month": "2026-01",
-      "n": 7,
-      "average_rating": 2.14,
-      "low_star_share": 0.7143,
-      "high_star_share": 0.1429,
+      "n": 15,
+      "average_rating": 2.93,
+      "low_star_share": 0.4667,
+      "high_star_share": 0.4,
       "topic_counts": {
-        "taste": 5,
-        "portion_value": 4,
-        "protein_quantity": 0,
-        "vegetables": 6,
-        "texture": 2,
-        "convenience": 1,
-        "dietary_fit": 0,
-        "packaging": 1
+        "taste": 10,
+        "portion_value": 5,
+        "protein_quantity": 1,
+        "vegetables": 9,
+        "texture": 3,
+        "convenience": 5,
+        "dietary_fit": 2,
+        "packaging": 3
       },
       "topic_shares": {
-        "taste": 0.7143,
-        "portion_value": 0.5714,
-        "protein_quantity": 0.0,
-        "vegetables": 0.8571,
-        "texture": 0.2857,
-        "convenience": 0.1429,
-        "dietary_fit": 0.0,
-        "packaging": 0.1429
+        "taste": 0.6667,
+        "portion_value": 0.3333,
+        "protein_quantity": 0.0667,
+        "vegetables": 0.6,
+        "texture": 0.2,
+        "convenience": 0.3333,
+        "dietary_fit": 0.1333,
+        "packaging": 0.2
       }
     },
     {
       "month": "2026-02",
-      "n": 4,
-      "average_rating": 3.25,
-      "low_star_share": 0.5,
-      "high_star_share": 0.5,
+      "n": 10,
+      "average_rating": 2.7,
+      "low_star_share": 0.6,
+      "high_star_share": 0.4,
       "topic_counts": {
-        "taste": 3,
-        "portion_value": 0,
-        "protein_quantity": 1,
-        "vegetables": 1,
-        "texture": 0,
-        "convenience": 0,
+        "taste": 7,
+        "portion_value": 3,
+        "protein_quantity": 3,
+        "vegetables": 3,
+        "texture": 1,
+        "convenience": 2,
         "dietary_fit": 0,
         "packaging": 1
       },
       "topic_shares": {
-        "taste": 0.75,
-        "portion_value": 0.0,
-        "protein_quantity": 0.25,
-        "vegetables": 0.25,
-        "texture": 0.0,
-        "convenience": 0.0,
+        "taste": 0.7,
+        "portion_value": 0.3,
+        "protein_quantity": 0.3,
+        "vegetables": 0.3,
+        "texture": 0.1,
+        "convenience": 0.2,
         "dietary_fit": 0.0,
-        "packaging": 0.25
+        "packaging": 0.1
       }
     },
     {
       "month": "2026-03",
-      "n": 2,
-      "average_rating": 1.5,
-      "low_star_share": 1.0,
-      "high_star_share": 0.0,
+      "n": 5,
+      "average_rating": 2.4,
+      "low_star_share": 0.6,
+      "high_star_share": 0.2,
       "topic_counts": {
-        "taste": 0,
-        "portion_value": 0,
+        "taste": 2,
+        "portion_value": 2,
         "protein_quantity": 0,
         "vegetables": 0,
         "texture": 0,
-        "convenience": 1,
+        "convenience": 3,
         "dietary_fit": 0,
-        "packaging": 0
+        "packaging": 1
       },
       "topic_shares": {
-        "taste": 0.0,
-        "portion_value": 0.0,
+        "taste": 0.4,
+        "portion_value": 0.4,
         "protein_quantity": 0.0,
         "vegetables": 0.0,
         "texture": 0.0,
-        "convenience": 0.5,
+        "convenience": 0.6,
         "dietary_fit": 0.0,
-        "packaging": 0.0
+        "packaging": 0.2
       }
     },
     {
@@ -1971,55 +2029,55 @@
     },
     {
       "month": "2026-05",
-      "n": 9,
-      "average_rating": 1.11,
+      "n": 12,
+      "average_rating": 1.08,
       "low_star_share": 1.0,
       "high_star_share": 0.0,
       "topic_counts": {
-        "taste": 6,
-        "portion_value": 5,
+        "taste": 7,
+        "portion_value": 7,
         "protein_quantity": 2,
-        "vegetables": 5,
-        "texture": 2,
+        "vegetables": 8,
+        "texture": 3,
         "convenience": 2,
         "dietary_fit": 0,
-        "packaging": 0
+        "packaging": 1
       },
       "topic_shares": {
-        "taste": 0.6667,
-        "portion_value": 0.5556,
-        "protein_quantity": 0.2222,
-        "vegetables": 0.5556,
-        "texture": 0.2222,
-        "convenience": 0.2222,
+        "taste": 0.5833,
+        "portion_value": 0.5833,
+        "protein_quantity": 0.1667,
+        "vegetables": 0.6667,
+        "texture": 0.25,
+        "convenience": 0.1667,
         "dietary_fit": 0.0,
-        "packaging": 0.0
+        "packaging": 0.0833
       }
     },
     {
       "month": "2026-06",
-      "n": 12,
-      "average_rating": 2.92,
-      "low_star_share": 0.3333,
-      "high_star_share": 0.4167,
+      "n": 13,
+      "average_rating": 3.0,
+      "low_star_share": 0.3077,
+      "high_star_share": 0.4615,
       "topic_counts": {
-        "taste": 7,
+        "taste": 8,
         "portion_value": 6,
         "protein_quantity": 3,
-        "vegetables": 3,
+        "vegetables": 4,
         "texture": 0,
-        "convenience": 4,
+        "convenience": 5,
         "dietary_fit": 2,
         "packaging": 0
       },
       "topic_shares": {
-        "taste": 0.5833,
-        "portion_value": 0.5,
-        "protein_quantity": 0.25,
-        "vegetables": 0.25,
+        "taste": 0.6154,
+        "portion_value": 0.4615,
+        "protein_quantity": 0.2308,
+        "vegetables": 0.3077,
         "texture": 0.0,
-        "convenience": 0.3333,
-        "dietary_fit": 0.1667,
+        "convenience": 0.3846,
+        "dietary_fit": 0.1538,
         "packaging": 0.0
       }
     },
@@ -2396,8 +2454,8 @@
         "4": 5,
         "5": 12
       },
-      "captured_recent_reviews": 8,
-      "capture_status": "complete_rating_distribution_plus_recent_public_reviews",
+      "captured_written_reviews": 16,
+      "capture_status": "complete_public_written_review_history",
       "as_of": "2026-08-25"
     },
     {
@@ -2418,8 +2476,8 @@
         "4": 2,
         "5": 11
       },
-      "captured_recent_reviews": 8,
-      "capture_status": "complete_rating_distribution_plus_recent_public_reviews",
+      "captured_written_reviews": 12,
+      "capture_status": "complete_public_written_review_history",
       "as_of": "2026-08-25"
     },
     {
@@ -2440,69 +2498,83 @@
         "4": 10,
         "5": 45
       },
-      "captured_recent_reviews": 8,
-      "capture_status": "complete_rating_distribution_plus_recent_public_reviews",
+      "captured_written_reviews": 44,
+      "capture_status": "complete_public_written_review_history",
       "as_of": "2026-08-25"
     },
     {
-      "product_id": "chicken_fajitas_kit",
-      "product": "Chicken Fajitas Skillet Meal Kit",
-      "cohort": "grocery",
-      "source": "Kroger",
-      "provider": "Kroger",
-      "page_url": "https://www.kroger.com/p/kevin-s-natural-foods-chicken-fajitas-skillet-meal-kit/0081026402818",
-      "average_rating": 2.6,
-      "rating_count": 10,
-      "written_review_count": null,
-      "distribution": {},
-      "captured_written_reviews": 0,
-      "capture_status": "public_index_aggregate_rating_only_text_payload_unavailable",
-      "as_of": "2026-08-25"
-    },
-    {
-      "product_id": "general_tso_chicken_kit",
-      "product": "General Tso's Chicken Stir-Fry Kit",
-      "cohort": "grocery",
-      "source": "Kroger",
-      "provider": "Kroger",
-      "page_url": "https://www.kroger.com/p/kevin-s-natural-foods-general-tso-s-chicken-stir-fry/0081026402812",
+      "as_of": "2026-08-25",
       "average_rating": 2.15,
+      "capture_status": "complete_public_written_review_interface",
+      "cohort": "grocery",
+      "distribution": {
+        "1": 7,
+        "2": 2,
+        "3": 1,
+        "4": 1,
+        "5": 2
+      },
+      "page_url": "https://www.kroger.com/p/kevin-s-natural-foods-general-tso-s-chicken-stir-fry/0081026402812",
+      "product": "General Tso's Chicken Stir-Fry Kit",
+      "product_id": "general_tso_chicken_kit",
+      "provider": "Kroger",
       "rating_count": 13,
-      "written_review_count": null,
-      "distribution": {},
-      "captured_written_reviews": 0,
-      "capture_status": "public_index_aggregate_rating_only_text_payload_unavailable",
-      "as_of": "2026-08-25"
+      "source": "Kroger",
+      "written_review_count": 13
     },
     {
-      "product_id": "sichuan_chicken_kit",
-      "product": "Sichuan Chicken Stir-Fry Kit",
+      "as_of": "2026-08-25",
+      "average_rating": 3.16,
+      "capture_status": "complete_public_written_review_interface",
       "cohort": "grocery",
-      "source": "Kroger",
+      "distribution": {
+        "1": 5,
+        "2": 3,
+        "3": 1,
+        "4": 4,
+        "5": 6
+      },
+      "page_url": "https://www.kroger.com/p/kevin-s-natural-foods-chicken-fajitas-skillet-meal-kit/0081026402818",
+      "product": "Chicken Fajitas Skillet Meal Kit",
+      "product_id": "chicken_fajitas_kit",
       "provider": "Kroger",
-      "page_url": "https://www.kroger.com/p/kevin-s-natural-foods-sichuan-chicken-stir-fry/0081026402816",
-      "average_rating": null,
-      "rating_count": 0,
-      "written_review_count": null,
-      "distribution": {},
-      "captured_written_reviews": 0,
-      "capture_status": "exact_listing_no_public_rating_observed",
-      "as_of": "2026-08-25"
+      "rating_count": 19,
+      "source": "Kroger",
+      "written_review_count": 19
     },
     {
-      "product_id": "honey_garlic_chicken_kit",
-      "product": "Honey Garlic Chicken Stir-Fry Kit",
+      "as_of": "2026-08-25",
+      "average_rating": 3.82,
+      "capture_status": "complete_public_written_review_interface",
       "cohort": "grocery",
-      "source": "Kroger",
-      "provider": "Kroger",
+      "distribution": {
+        "1": 3,
+        "2": 2,
+        "3": 1,
+        "4": 0,
+        "5": 11
+      },
       "page_url": "https://www.kroger.com/p/kevin-s-natural-foods-honey-garlic-chicken-stir-fry/0081026402815",
-      "average_rating": 3.9,
-      "rating_count": 10,
-      "written_review_count": null,
+      "product": "Honey Garlic Chicken Stir-Fry Kit",
+      "product_id": "honey_garlic_chicken_kit",
+      "provider": "Kroger",
+      "rating_count": 17,
+      "source": "Kroger",
+      "written_review_count": 17
+    },
+    {
+      "as_of": "2026-08-25",
+      "average_rating": null,
+      "capture_status": "complete_public_written_review_interface",
+      "cohort": "grocery",
       "distribution": {},
-      "captured_written_reviews": 0,
-      "capture_status": "public_index_aggregate_rating_only_text_payload_unavailable",
-      "as_of": "2026-08-25"
+      "page_url": "https://www.kroger.com/p/kevin-s-natural-foods-sichuan-chicken-stir-fry/0081026402816",
+      "product": "Sichuan Chicken Stir-Fry Kit",
+      "product_id": "sichuan_chicken_kit",
+      "provider": "Kroger",
+      "rating_count": 0,
+      "source": "Kroger",
+      "written_review_count": 0
     }
   ],
   "snapshot_summary": [
@@ -2525,9 +2597,15 @@
       "source": "Kroger",
       "products_with_exact_page": 4,
       "products_with_ratings": 3,
-      "rating_observations": 33,
-      "weighted_average_rating": 2.82,
-      "distribution": {},
+      "rating_observations": 49,
+      "weighted_average_rating": 3.12,
+      "distribution": {
+        "1": 15,
+        "2": 7,
+        "3": 3,
+        "4": 5,
+        "5": 19
+      },
       "note": "Channel total; may include syndicated or overlapping ratings and is not a unique-consumer count."
     },
     {
@@ -2546,803 +2624,1180 @@
       "note": "Channel total; may include syndicated or overlapping ratings and is not a unique-consumer count."
     }
   ],
+  "assessment_summary": [
+    {
+      "source": "Costco",
+      "exact_pages": 2,
+      "review_histories_complete": 0,
+      "listing_no_public_reviews": 2,
+      "official_assignment_page_unindexed": 5,
+      "searched_no_exact_page": 0,
+      "not_applicable": 6
+    },
+    {
+      "source": "Target",
+      "exact_pages": 3,
+      "review_histories_complete": 3,
+      "listing_no_public_reviews": 0,
+      "official_assignment_page_unindexed": 0,
+      "searched_no_exact_page": 3,
+      "not_applicable": 7
+    },
+    {
+      "source": "Kroger",
+      "exact_pages": 4,
+      "review_histories_complete": 3,
+      "listing_no_public_reviews": 1,
+      "official_assignment_page_unindexed": 0,
+      "searched_no_exact_page": 2,
+      "not_applicable": 7
+    },
+    {
+      "source": "Publix",
+      "exact_pages": 1,
+      "review_histories_complete": 0,
+      "listing_no_public_reviews": 1,
+      "official_assignment_page_unindexed": 0,
+      "searched_no_exact_page": 5,
+      "not_applicable": 7
+    },
+    {
+      "source": "Albertsons",
+      "exact_pages": 0,
+      "review_histories_complete": 0,
+      "listing_no_public_reviews": 0,
+      "official_assignment_page_unindexed": 0,
+      "searched_no_exact_page": 6,
+      "not_applicable": 7
+    },
+    {
+      "source": "Food Lion",
+      "exact_pages": 1,
+      "review_histories_complete": 0,
+      "listing_no_public_reviews": 1,
+      "official_assignment_page_unindexed": 0,
+      "searched_no_exact_page": 5,
+      "not_applicable": 7
+    },
+    {
+      "source": "Amazon",
+      "exact_pages": 0,
+      "review_histories_complete": 0,
+      "listing_no_public_reviews": 0,
+      "official_assignment_page_unindexed": 0,
+      "searched_no_exact_page": 6,
+      "not_applicable": 7
+    }
+  ],
   "coverage": [
     {
       "product_id": "beef_fajitas",
       "product": "Beef Fajitas",
       "cohort": "costco_only",
       "source": "Costco",
-      "status": "official_costco_only_sku_page_not_indexed",
+      "status": "official_costco_sku_page_not_indexed",
       "match_type": "official_sku_channel_assignment",
       "page_url": "https://www.kevinsnaturalfoods.com/products/beef-fajitas",
-      "note": null
+      "note": null,
+      "search_scope": null,
+      "confidence": "governed_scope"
     },
     {
       "product_id": "beef_fajitas",
       "product": "Beef Fajitas",
       "cohort": "costco_only",
       "source": "Target",
-      "status": "not_applicable_costco_only",
+      "status": "not_applicable",
       "match_type": "not_applicable",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": null,
+      "confidence": "governed_scope"
     },
     {
       "product_id": "beef_fajitas",
       "product": "Beef Fajitas",
       "cohort": "costco_only",
       "source": "Kroger",
-      "status": "not_applicable_costco_only",
+      "status": "not_applicable",
       "match_type": "not_applicable",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": null,
+      "confidence": "governed_scope"
     },
     {
       "product_id": "beef_fajitas",
       "product": "Beef Fajitas",
       "cohort": "costco_only",
       "source": "Publix",
-      "status": "not_applicable_costco_only",
+      "status": "not_applicable",
       "match_type": "not_applicable",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": null,
+      "confidence": "governed_scope"
     },
     {
       "product_id": "beef_fajitas",
       "product": "Beef Fajitas",
       "cohort": "costco_only",
       "source": "Albertsons",
-      "status": "not_applicable_costco_only",
+      "status": "not_applicable",
       "match_type": "not_applicable",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": null,
+      "confidence": "governed_scope"
     },
     {
       "product_id": "beef_fajitas",
       "product": "Beef Fajitas",
       "cohort": "costco_only",
       "source": "Food Lion",
-      "status": "not_applicable_costco_only",
+      "status": "not_applicable",
       "match_type": "not_applicable",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": null,
+      "confidence": "governed_scope"
+    },
+    {
+      "product_id": "beef_fajitas",
+      "product": "Beef Fajitas",
+      "cohort": "costco_only",
+      "source": "Amazon",
+      "status": "not_applicable",
+      "match_type": "not_applicable",
+      "page_url": null,
+      "note": null,
+      "search_scope": null,
+      "confidence": "governed_scope"
     },
     {
       "product_id": "teriyaki_chicken_kit",
       "product": "Teriyaki-Style Chicken Stir-Fry Kit",
       "cohort": "grocery",
       "source": "Costco",
-      "status": "exact_page_not_confirmed",
-      "match_type": "not_located",
+      "status": "not_applicable",
+      "match_type": "not_applicable",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": null,
+      "confidence": "governed_scope"
     },
     {
       "product_id": "teriyaki_chicken_kit",
       "product": "Teriyaki-Style Chicken Stir-Fry Kit",
       "cohort": "grocery",
       "source": "Target",
-      "status": "exact_page_not_confirmed",
-      "match_type": "not_located",
+      "status": "searched_no_exact_page",
+      "match_type": "searched_not_located",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": "Exact scoped names, known UPCs, pack sizes, official product assignments, retailer search, and public web indexing were checked as of 2026-08-25.",
+      "confidence": "governed_scope"
     },
     {
       "product_id": "teriyaki_chicken_kit",
       "product": "Teriyaki-Style Chicken Stir-Fry Kit",
       "cohort": "grocery",
       "source": "Kroger",
-      "status": "exact_page_not_confirmed",
-      "match_type": "not_located",
+      "status": "searched_no_exact_page",
+      "match_type": "searched_not_located",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": "Exact scoped names, known UPCs, pack sizes, official product assignments, retailer search, and public web indexing were checked as of 2026-08-25.",
+      "confidence": "governed_scope"
     },
     {
       "product_id": "teriyaki_chicken_kit",
       "product": "Teriyaki-Style Chicken Stir-Fry Kit",
       "cohort": "grocery",
       "source": "Publix",
-      "status": "listing_only",
+      "status": "listing_no_public_reviews",
       "match_type": "exact_sku",
       "page_url": "https://www.publix.com/pd/kevins-natural-foods-teriyaki-style-chicken-stir-fry-kit/RIO-PCI-634263",
-      "note": null
+      "note": null,
+      "search_scope": null,
+      "confidence": "exact"
     },
     {
       "product_id": "teriyaki_chicken_kit",
       "product": "Teriyaki-Style Chicken Stir-Fry Kit",
       "cohort": "grocery",
       "source": "Albertsons",
-      "status": "exact_page_not_confirmed",
-      "match_type": "not_located",
+      "status": "searched_no_exact_page",
+      "match_type": "searched_not_located",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": "Exact scoped names, known UPCs, pack sizes, official product assignments, retailer search, and public web indexing were checked as of 2026-08-25.",
+      "confidence": "governed_scope"
     },
     {
       "product_id": "teriyaki_chicken_kit",
       "product": "Teriyaki-Style Chicken Stir-Fry Kit",
       "cohort": "grocery",
       "source": "Food Lion",
-      "status": "listing_only",
+      "status": "listing_no_public_reviews",
       "match_type": "exact_sku",
       "page_url": "https://foodlion.com/groceries/meat/prepared-meat/prepared-chicken/kevins-natural-foods-teriyaki-style-chicken-stir-fry-kit-16-oz-pkg.html",
-      "note": null
+      "note": null,
+      "search_scope": null,
+      "confidence": "exact"
+    },
+    {
+      "product_id": "teriyaki_chicken_kit",
+      "product": "Teriyaki-Style Chicken Stir-Fry Kit",
+      "cohort": "grocery",
+      "source": "Amazon",
+      "status": "searched_no_exact_page",
+      "match_type": "searched_not_located",
+      "page_url": null,
+      "note": null,
+      "search_scope": "Exact scoped names, known UPCs, pack sizes, official product assignments, retailer search, and public web indexing were checked as of 2026-08-25.",
+      "confidence": "governed_scope"
     },
     {
       "product_id": "beef_broccoli_kit",
       "product": "Beef & Broccoli Stir-Fry Kit",
       "cohort": "grocery",
       "source": "Costco",
-      "status": "exact_page_not_confirmed",
-      "match_type": "not_located",
+      "status": "not_applicable",
+      "match_type": "not_applicable",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": null,
+      "confidence": "governed_scope"
     },
     {
       "product_id": "beef_broccoli_kit",
       "product": "Beef & Broccoli Stir-Fry Kit",
       "cohort": "grocery",
       "source": "Target",
-      "status": "exact_page_not_confirmed",
-      "match_type": "not_located",
+      "status": "searched_no_exact_page",
+      "match_type": "searched_not_located",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": "Exact scoped names, known UPCs, pack sizes, official product assignments, retailer search, and public web indexing were checked as of 2026-08-25.",
+      "confidence": "governed_scope"
     },
     {
       "product_id": "beef_broccoli_kit",
       "product": "Beef & Broccoli Stir-Fry Kit",
       "cohort": "grocery",
       "source": "Kroger",
-      "status": "exact_page_not_confirmed",
-      "match_type": "not_located",
+      "status": "searched_no_exact_page",
+      "match_type": "searched_not_located",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": "Exact scoped names, known UPCs, pack sizes, official product assignments, retailer search, and public web indexing were checked as of 2026-08-25.",
+      "confidence": "governed_scope"
     },
     {
       "product_id": "beef_broccoli_kit",
       "product": "Beef & Broccoli Stir-Fry Kit",
       "cohort": "grocery",
       "source": "Publix",
-      "status": "exact_page_not_confirmed",
-      "match_type": "not_located",
+      "status": "searched_no_exact_page",
+      "match_type": "searched_not_located",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": "Exact scoped names, known UPCs, pack sizes, official product assignments, retailer search, and public web indexing were checked as of 2026-08-25.",
+      "confidence": "governed_scope"
     },
     {
       "product_id": "beef_broccoli_kit",
       "product": "Beef & Broccoli Stir-Fry Kit",
       "cohort": "grocery",
       "source": "Albertsons",
-      "status": "exact_page_not_confirmed",
-      "match_type": "not_located",
+      "status": "searched_no_exact_page",
+      "match_type": "searched_not_located",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": "Exact scoped names, known UPCs, pack sizes, official product assignments, retailer search, and public web indexing were checked as of 2026-08-25.",
+      "confidence": "governed_scope"
     },
     {
       "product_id": "beef_broccoli_kit",
       "product": "Beef & Broccoli Stir-Fry Kit",
       "cohort": "grocery",
       "source": "Food Lion",
-      "status": "exact_page_not_confirmed",
-      "match_type": "not_located",
+      "status": "searched_no_exact_page",
+      "match_type": "searched_not_located",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": "Exact scoped names, known UPCs, pack sizes, official product assignments, retailer search, and public web indexing were checked as of 2026-08-25.",
+      "confidence": "governed_scope"
+    },
+    {
+      "product_id": "beef_broccoli_kit",
+      "product": "Beef & Broccoli Stir-Fry Kit",
+      "cohort": "grocery",
+      "source": "Amazon",
+      "status": "searched_no_exact_page",
+      "match_type": "searched_not_located",
+      "page_url": null,
+      "note": null,
+      "search_scope": "Exact scoped names, known UPCs, pack sizes, official product assignments, retailer search, and public web indexing were checked as of 2026-08-25.",
+      "confidence": "governed_scope"
     },
     {
       "product_id": "chicken_fajitas_kit",
       "product": "Chicken Fajitas Skillet Meal Kit",
       "cohort": "grocery",
       "source": "Costco",
-      "status": "exact_page_not_confirmed",
-      "match_type": "not_located",
+      "status": "not_applicable",
+      "match_type": "not_applicable",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": null,
+      "confidence": "governed_scope"
     },
     {
       "product_id": "chicken_fajitas_kit",
       "product": "Chicken Fajitas Skillet Meal Kit",
       "cohort": "grocery",
       "source": "Target",
-      "status": "review_evidence",
+      "status": "review_history_complete",
       "match_type": "exact_sku",
       "page_url": "https://www.target.com/p/-/A-94978150",
-      "note": null
+      "note": null,
+      "search_scope": null,
+      "confidence": "exact"
     },
     {
       "product_id": "chicken_fajitas_kit",
       "product": "Chicken Fajitas Skillet Meal Kit",
       "cohort": "grocery",
       "source": "Kroger",
-      "status": "review_evidence",
+      "status": "review_history_complete",
       "match_type": "exact_sku",
       "page_url": "https://www.kroger.com/p/kevin-s-natural-foods-chicken-fajitas-skillet-meal-kit/0081026402818",
-      "note": "Live page blocked automated refresh; verified public index aggregate retained."
+      "note": null,
+      "search_scope": null,
+      "confidence": "exact"
     },
     {
       "product_id": "chicken_fajitas_kit",
       "product": "Chicken Fajitas Skillet Meal Kit",
       "cohort": "grocery",
       "source": "Publix",
-      "status": "exact_page_not_confirmed",
-      "match_type": "not_located",
+      "status": "searched_no_exact_page",
+      "match_type": "searched_not_located",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": "Exact scoped names, known UPCs, pack sizes, official product assignments, retailer search, and public web indexing were checked as of 2026-08-25.",
+      "confidence": "governed_scope"
     },
     {
       "product_id": "chicken_fajitas_kit",
       "product": "Chicken Fajitas Skillet Meal Kit",
       "cohort": "grocery",
       "source": "Albertsons",
-      "status": "exact_page_not_confirmed",
-      "match_type": "not_located",
+      "status": "searched_no_exact_page",
+      "match_type": "searched_not_located",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": "Exact scoped names, known UPCs, pack sizes, official product assignments, retailer search, and public web indexing were checked as of 2026-08-25.",
+      "confidence": "governed_scope"
     },
     {
       "product_id": "chicken_fajitas_kit",
       "product": "Chicken Fajitas Skillet Meal Kit",
       "cohort": "grocery",
       "source": "Food Lion",
-      "status": "exact_page_not_confirmed",
-      "match_type": "not_located",
+      "status": "searched_no_exact_page",
+      "match_type": "searched_not_located",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": "Exact scoped names, known UPCs, pack sizes, official product assignments, retailer search, and public web indexing were checked as of 2026-08-25.",
+      "confidence": "governed_scope"
+    },
+    {
+      "product_id": "chicken_fajitas_kit",
+      "product": "Chicken Fajitas Skillet Meal Kit",
+      "cohort": "grocery",
+      "source": "Amazon",
+      "status": "searched_no_exact_page",
+      "match_type": "searched_not_located",
+      "page_url": null,
+      "note": null,
+      "search_scope": "Exact scoped names, known UPCs, pack sizes, official product assignments, retailer search, and public web indexing were checked as of 2026-08-25.",
+      "confidence": "governed_scope"
     },
     {
       "product_id": "general_tso_chicken_kit",
       "product": "General Tso's Chicken Stir-Fry Kit",
       "cohort": "grocery",
       "source": "Costco",
-      "status": "exact_page_not_confirmed",
-      "match_type": "not_located",
+      "status": "not_applicable",
+      "match_type": "not_applicable",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": null,
+      "confidence": "governed_scope"
     },
     {
       "product_id": "general_tso_chicken_kit",
       "product": "General Tso's Chicken Stir-Fry Kit",
       "cohort": "grocery",
       "source": "Target",
-      "status": "review_evidence",
+      "status": "review_history_complete",
       "match_type": "exact_sku",
       "page_url": "https://www.target.com/p/-/A-94736217",
-      "note": null
+      "note": null,
+      "search_scope": null,
+      "confidence": "exact"
     },
     {
       "product_id": "general_tso_chicken_kit",
       "product": "General Tso's Chicken Stir-Fry Kit",
       "cohort": "grocery",
       "source": "Kroger",
-      "status": "review_evidence",
+      "status": "review_history_complete",
       "match_type": "exact_sku",
       "page_url": "https://www.kroger.com/p/kevin-s-natural-foods-general-tso-s-chicken-stir-fry/0081026402812",
-      "note": "Live page blocked automated refresh; verified public index aggregate retained."
+      "note": null,
+      "search_scope": null,
+      "confidence": "exact"
     },
     {
       "product_id": "general_tso_chicken_kit",
       "product": "General Tso's Chicken Stir-Fry Kit",
       "cohort": "grocery",
       "source": "Publix",
-      "status": "exact_page_not_confirmed",
-      "match_type": "not_located",
+      "status": "searched_no_exact_page",
+      "match_type": "searched_not_located",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": "Exact scoped names, known UPCs, pack sizes, official product assignments, retailer search, and public web indexing were checked as of 2026-08-25.",
+      "confidence": "governed_scope"
     },
     {
       "product_id": "general_tso_chicken_kit",
       "product": "General Tso's Chicken Stir-Fry Kit",
       "cohort": "grocery",
       "source": "Albertsons",
-      "status": "exact_page_not_confirmed",
-      "match_type": "not_located",
+      "status": "searched_no_exact_page",
+      "match_type": "searched_not_located",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": "Exact scoped names, known UPCs, pack sizes, official product assignments, retailer search, and public web indexing were checked as of 2026-08-25.",
+      "confidence": "governed_scope"
     },
     {
       "product_id": "general_tso_chicken_kit",
       "product": "General Tso's Chicken Stir-Fry Kit",
       "cohort": "grocery",
       "source": "Food Lion",
-      "status": "exact_page_not_confirmed",
-      "match_type": "not_located",
+      "status": "searched_no_exact_page",
+      "match_type": "searched_not_located",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": "Exact scoped names, known UPCs, pack sizes, official product assignments, retailer search, and public web indexing were checked as of 2026-08-25.",
+      "confidence": "governed_scope"
+    },
+    {
+      "product_id": "general_tso_chicken_kit",
+      "product": "General Tso's Chicken Stir-Fry Kit",
+      "cohort": "grocery",
+      "source": "Amazon",
+      "status": "searched_no_exact_page",
+      "match_type": "searched_not_located",
+      "page_url": null,
+      "note": null,
+      "search_scope": "Exact scoped names, known UPCs, pack sizes, official product assignments, retailer search, and public web indexing were checked as of 2026-08-25.",
+      "confidence": "governed_scope"
     },
     {
       "product_id": "sichuan_chicken_kit",
       "product": "Sichuan Chicken Stir-Fry Kit",
       "cohort": "grocery",
       "source": "Costco",
-      "status": "exact_page_not_confirmed",
-      "match_type": "not_located",
+      "status": "not_applicable",
+      "match_type": "not_applicable",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": null,
+      "confidence": "governed_scope"
     },
     {
       "product_id": "sichuan_chicken_kit",
       "product": "Sichuan Chicken Stir-Fry Kit",
       "cohort": "grocery",
       "source": "Target",
-      "status": "exact_page_not_confirmed",
-      "match_type": "not_located",
+      "status": "searched_no_exact_page",
+      "match_type": "searched_not_located",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": "Exact scoped names, known UPCs, pack sizes, official product assignments, retailer search, and public web indexing were checked as of 2026-08-25.",
+      "confidence": "governed_scope"
     },
     {
       "product_id": "sichuan_chicken_kit",
       "product": "Sichuan Chicken Stir-Fry Kit",
       "cohort": "grocery",
       "source": "Kroger",
-      "status": "listing_only",
+      "status": "listing_no_public_reviews",
       "match_type": "exact_sku",
       "page_url": "https://www.kroger.com/p/kevin-s-natural-foods-sichuan-chicken-stir-fry/0081026402816",
-      "note": "Live page blocked automated refresh; verified public index aggregate retained."
+      "note": null,
+      "search_scope": null,
+      "confidence": "exact"
     },
     {
       "product_id": "sichuan_chicken_kit",
       "product": "Sichuan Chicken Stir-Fry Kit",
       "cohort": "grocery",
       "source": "Publix",
-      "status": "exact_page_not_confirmed",
-      "match_type": "not_located",
+      "status": "searched_no_exact_page",
+      "match_type": "searched_not_located",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": "Exact scoped names, known UPCs, pack sizes, official product assignments, retailer search, and public web indexing were checked as of 2026-08-25.",
+      "confidence": "governed_scope"
     },
     {
       "product_id": "sichuan_chicken_kit",
       "product": "Sichuan Chicken Stir-Fry Kit",
       "cohort": "grocery",
       "source": "Albertsons",
-      "status": "exact_page_not_confirmed",
-      "match_type": "not_located",
+      "status": "searched_no_exact_page",
+      "match_type": "searched_not_located",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": "Exact scoped names, known UPCs, pack sizes, official product assignments, retailer search, and public web indexing were checked as of 2026-08-25.",
+      "confidence": "governed_scope"
     },
     {
       "product_id": "sichuan_chicken_kit",
       "product": "Sichuan Chicken Stir-Fry Kit",
       "cohort": "grocery",
       "source": "Food Lion",
-      "status": "exact_page_not_confirmed",
-      "match_type": "not_located",
+      "status": "searched_no_exact_page",
+      "match_type": "searched_not_located",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": "Exact scoped names, known UPCs, pack sizes, official product assignments, retailer search, and public web indexing were checked as of 2026-08-25.",
+      "confidence": "governed_scope"
+    },
+    {
+      "product_id": "sichuan_chicken_kit",
+      "product": "Sichuan Chicken Stir-Fry Kit",
+      "cohort": "grocery",
+      "source": "Amazon",
+      "status": "searched_no_exact_page",
+      "match_type": "searched_not_located",
+      "page_url": null,
+      "note": null,
+      "search_scope": "Exact scoped names, known UPCs, pack sizes, official product assignments, retailer search, and public web indexing were checked as of 2026-08-25.",
+      "confidence": "governed_scope"
     },
     {
       "product_id": "honey_garlic_chicken_kit",
       "product": "Honey Garlic Chicken Stir-Fry Kit",
       "cohort": "grocery",
       "source": "Costco",
-      "status": "exact_page_not_confirmed",
-      "match_type": "not_located",
+      "status": "not_applicable",
+      "match_type": "not_applicable",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": null,
+      "confidence": "governed_scope"
     },
     {
       "product_id": "honey_garlic_chicken_kit",
       "product": "Honey Garlic Chicken Stir-Fry Kit",
       "cohort": "grocery",
       "source": "Target",
-      "status": "review_evidence",
+      "status": "review_history_complete",
       "match_type": "exact_sku",
       "page_url": "https://www.target.com/p/-/A-94177635",
-      "note": null
+      "note": null,
+      "search_scope": null,
+      "confidence": "exact"
     },
     {
       "product_id": "honey_garlic_chicken_kit",
       "product": "Honey Garlic Chicken Stir-Fry Kit",
       "cohort": "grocery",
       "source": "Kroger",
-      "status": "review_evidence",
+      "status": "review_history_complete",
       "match_type": "exact_sku",
       "page_url": "https://www.kroger.com/p/kevin-s-natural-foods-honey-garlic-chicken-stir-fry/0081026402815",
-      "note": "Live page blocked automated refresh; verified public index aggregate retained."
+      "note": null,
+      "search_scope": null,
+      "confidence": "exact"
     },
     {
       "product_id": "honey_garlic_chicken_kit",
       "product": "Honey Garlic Chicken Stir-Fry Kit",
       "cohort": "grocery",
       "source": "Publix",
-      "status": "exact_page_not_confirmed",
-      "match_type": "not_located",
+      "status": "searched_no_exact_page",
+      "match_type": "searched_not_located",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": "Exact scoped names, known UPCs, pack sizes, official product assignments, retailer search, and public web indexing were checked as of 2026-08-25.",
+      "confidence": "governed_scope"
     },
     {
       "product_id": "honey_garlic_chicken_kit",
       "product": "Honey Garlic Chicken Stir-Fry Kit",
       "cohort": "grocery",
       "source": "Albertsons",
-      "status": "exact_page_not_confirmed",
-      "match_type": "not_located",
+      "status": "searched_no_exact_page",
+      "match_type": "searched_not_located",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": "Exact scoped names, known UPCs, pack sizes, official product assignments, retailer search, and public web indexing were checked as of 2026-08-25.",
+      "confidence": "governed_scope"
     },
     {
       "product_id": "honey_garlic_chicken_kit",
       "product": "Honey Garlic Chicken Stir-Fry Kit",
       "cohort": "grocery",
       "source": "Food Lion",
-      "status": "exact_page_not_confirmed",
-      "match_type": "not_located",
+      "status": "searched_no_exact_page",
+      "match_type": "searched_not_located",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": "Exact scoped names, known UPCs, pack sizes, official product assignments, retailer search, and public web indexing were checked as of 2026-08-25.",
+      "confidence": "governed_scope"
+    },
+    {
+      "product_id": "honey_garlic_chicken_kit",
+      "product": "Honey Garlic Chicken Stir-Fry Kit",
+      "cohort": "grocery",
+      "source": "Amazon",
+      "status": "searched_no_exact_page",
+      "match_type": "searched_not_located",
+      "page_url": null,
+      "note": null,
+      "search_scope": "Exact scoped names, known UPCs, pack sizes, official product assignments, retailer search, and public web indexing were checked as of 2026-08-25.",
+      "confidence": "governed_scope"
     },
     {
       "product_id": "orange_chicken_costco",
       "product": "Orange Chicken Stir-Fry",
       "cohort": "costco_only",
       "source": "Costco",
-      "status": "official_costco_only_sku_page_not_indexed",
+      "status": "official_costco_sku_page_not_indexed",
       "match_type": "official_sku_channel_assignment",
       "page_url": "https://www.kevinsnaturalfoods.com/products/orange-chicken-stir-fry",
-      "note": null
+      "note": null,
+      "search_scope": null,
+      "confidence": "governed_scope"
     },
     {
       "product_id": "orange_chicken_costco",
       "product": "Orange Chicken Stir-Fry",
       "cohort": "costco_only",
       "source": "Target",
-      "status": "not_applicable_costco_only",
+      "status": "not_applicable",
       "match_type": "not_applicable",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": null,
+      "confidence": "governed_scope"
     },
     {
       "product_id": "orange_chicken_costco",
       "product": "Orange Chicken Stir-Fry",
       "cohort": "costco_only",
       "source": "Kroger",
-      "status": "not_applicable_costco_only",
+      "status": "not_applicable",
       "match_type": "not_applicable",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": null,
+      "confidence": "governed_scope"
     },
     {
       "product_id": "orange_chicken_costco",
       "product": "Orange Chicken Stir-Fry",
       "cohort": "costco_only",
       "source": "Publix",
-      "status": "not_applicable_costco_only",
+      "status": "not_applicable",
       "match_type": "not_applicable",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": null,
+      "confidence": "governed_scope"
     },
     {
       "product_id": "orange_chicken_costco",
       "product": "Orange Chicken Stir-Fry",
       "cohort": "costco_only",
       "source": "Albertsons",
-      "status": "not_applicable_costco_only",
+      "status": "not_applicable",
       "match_type": "not_applicable",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": null,
+      "confidence": "governed_scope"
     },
     {
       "product_id": "orange_chicken_costco",
       "product": "Orange Chicken Stir-Fry",
       "cohort": "costco_only",
       "source": "Food Lion",
-      "status": "not_applicable_costco_only",
+      "status": "not_applicable",
       "match_type": "not_applicable",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": null,
+      "confidence": "governed_scope"
+    },
+    {
+      "product_id": "orange_chicken_costco",
+      "product": "Orange Chicken Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Amazon",
+      "status": "not_applicable",
+      "match_type": "not_applicable",
+      "page_url": null,
+      "note": null,
+      "search_scope": null,
+      "confidence": "governed_scope"
     },
     {
       "product_id": "honey_garlic_chicken_costco",
       "product": "Honey Garlic Chicken Stir-Fry",
       "cohort": "costco_only",
       "source": "Costco",
-      "status": "official_costco_only_sku_page_not_indexed",
+      "status": "official_costco_sku_page_not_indexed",
       "match_type": "official_sku_channel_assignment",
       "page_url": "https://www.kevinsnaturalfoods.com/products/honey-garlic-chicken-green-bean-stir-fry",
-      "note": null
+      "note": null,
+      "search_scope": null,
+      "confidence": "governed_scope"
     },
     {
       "product_id": "honey_garlic_chicken_costco",
       "product": "Honey Garlic Chicken Stir-Fry",
       "cohort": "costco_only",
       "source": "Target",
-      "status": "not_applicable_costco_only",
+      "status": "not_applicable",
       "match_type": "not_applicable",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": null,
+      "confidence": "governed_scope"
     },
     {
       "product_id": "honey_garlic_chicken_costco",
       "product": "Honey Garlic Chicken Stir-Fry",
       "cohort": "costco_only",
       "source": "Kroger",
-      "status": "not_applicable_costco_only",
+      "status": "not_applicable",
       "match_type": "not_applicable",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": null,
+      "confidence": "governed_scope"
     },
     {
       "product_id": "honey_garlic_chicken_costco",
       "product": "Honey Garlic Chicken Stir-Fry",
       "cohort": "costco_only",
       "source": "Publix",
-      "status": "not_applicable_costco_only",
+      "status": "not_applicable",
       "match_type": "not_applicable",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": null,
+      "confidence": "governed_scope"
     },
     {
       "product_id": "honey_garlic_chicken_costco",
       "product": "Honey Garlic Chicken Stir-Fry",
       "cohort": "costco_only",
       "source": "Albertsons",
-      "status": "not_applicable_costco_only",
+      "status": "not_applicable",
       "match_type": "not_applicable",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": null,
+      "confidence": "governed_scope"
     },
     {
       "product_id": "honey_garlic_chicken_costco",
       "product": "Honey Garlic Chicken Stir-Fry",
       "cohort": "costco_only",
       "source": "Food Lion",
-      "status": "not_applicable_costco_only",
+      "status": "not_applicable",
       "match_type": "not_applicable",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": null,
+      "confidence": "governed_scope"
+    },
+    {
+      "product_id": "honey_garlic_chicken_costco",
+      "product": "Honey Garlic Chicken Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Amazon",
+      "status": "not_applicable",
+      "match_type": "not_applicable",
+      "page_url": null,
+      "note": null,
+      "search_scope": null,
+      "confidence": "governed_scope"
     },
     {
       "product_id": "beef_broccoli_costco",
       "product": "Beef & Broccoli Stir-Fry",
       "cohort": "costco_only",
       "source": "Costco",
-      "status": "listing_only",
+      "status": "listing_no_public_reviews",
       "match_type": "exact_sku",
       "page_url": "https://sameday.costco.com/store/costco/products/32881613-kevin-s-natural-foods-beef-broccoli-stir-fry-32-oz",
-      "note": null
+      "note": null,
+      "search_scope": null,
+      "confidence": "exact"
     },
     {
       "product_id": "beef_broccoli_costco",
       "product": "Beef & Broccoli Stir-Fry",
       "cohort": "costco_only",
       "source": "Target",
-      "status": "not_applicable_costco_only",
+      "status": "not_applicable",
       "match_type": "not_applicable",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": null,
+      "confidence": "governed_scope"
     },
     {
       "product_id": "beef_broccoli_costco",
       "product": "Beef & Broccoli Stir-Fry",
       "cohort": "costco_only",
       "source": "Kroger",
-      "status": "not_applicable_costco_only",
+      "status": "not_applicable",
       "match_type": "not_applicable",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": null,
+      "confidence": "governed_scope"
     },
     {
       "product_id": "beef_broccoli_costco",
       "product": "Beef & Broccoli Stir-Fry",
       "cohort": "costco_only",
       "source": "Publix",
-      "status": "not_applicable_costco_only",
+      "status": "not_applicable",
       "match_type": "not_applicable",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": null,
+      "confidence": "governed_scope"
     },
     {
       "product_id": "beef_broccoli_costco",
       "product": "Beef & Broccoli Stir-Fry",
       "cohort": "costco_only",
       "source": "Albertsons",
-      "status": "not_applicable_costco_only",
+      "status": "not_applicable",
       "match_type": "not_applicable",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": null,
+      "confidence": "governed_scope"
     },
     {
       "product_id": "beef_broccoli_costco",
       "product": "Beef & Broccoli Stir-Fry",
       "cohort": "costco_only",
       "source": "Food Lion",
-      "status": "not_applicable_costco_only",
+      "status": "not_applicable",
       "match_type": "not_applicable",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": null,
+      "confidence": "governed_scope"
+    },
+    {
+      "product_id": "beef_broccoli_costco",
+      "product": "Beef & Broccoli Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Amazon",
+      "status": "not_applicable",
+      "match_type": "not_applicable",
+      "page_url": null,
+      "note": null,
+      "search_scope": null,
+      "confidence": "governed_scope"
     },
     {
       "product_id": "sichuan_chicken_costco",
       "product": "Sichuan Chicken Green Bean Stir-Fry",
       "cohort": "costco_only",
       "source": "Costco",
-      "status": "listing_only",
+      "status": "listing_no_public_reviews",
       "match_type": "exact_sku",
       "page_url": "https://sameday.costco.com/store/costco/products/28547551-kevin-s-natural-foods-sichuan-style-chicken-with-green-beans-32-oz",
-      "note": null
+      "note": null,
+      "search_scope": null,
+      "confidence": "exact"
     },
     {
       "product_id": "sichuan_chicken_costco",
       "product": "Sichuan Chicken Green Bean Stir-Fry",
       "cohort": "costco_only",
       "source": "Target",
-      "status": "not_applicable_costco_only",
+      "status": "not_applicable",
       "match_type": "not_applicable",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": null,
+      "confidence": "governed_scope"
     },
     {
       "product_id": "sichuan_chicken_costco",
       "product": "Sichuan Chicken Green Bean Stir-Fry",
       "cohort": "costco_only",
       "source": "Kroger",
-      "status": "not_applicable_costco_only",
+      "status": "not_applicable",
       "match_type": "not_applicable",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": null,
+      "confidence": "governed_scope"
     },
     {
       "product_id": "sichuan_chicken_costco",
       "product": "Sichuan Chicken Green Bean Stir-Fry",
       "cohort": "costco_only",
       "source": "Publix",
-      "status": "not_applicable_costco_only",
+      "status": "not_applicable",
       "match_type": "not_applicable",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": null,
+      "confidence": "governed_scope"
     },
     {
       "product_id": "sichuan_chicken_costco",
       "product": "Sichuan Chicken Green Bean Stir-Fry",
       "cohort": "costco_only",
       "source": "Albertsons",
-      "status": "not_applicable_costco_only",
+      "status": "not_applicable",
       "match_type": "not_applicable",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": null,
+      "confidence": "governed_scope"
     },
     {
       "product_id": "sichuan_chicken_costco",
       "product": "Sichuan Chicken Green Bean Stir-Fry",
       "cohort": "costco_only",
       "source": "Food Lion",
-      "status": "not_applicable_costco_only",
+      "status": "not_applicable",
       "match_type": "not_applicable",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": null,
+      "confidence": "governed_scope"
+    },
+    {
+      "product_id": "sichuan_chicken_costco",
+      "product": "Sichuan Chicken Green Bean Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Amazon",
+      "status": "not_applicable",
+      "match_type": "not_applicable",
+      "page_url": null,
+      "note": null,
+      "search_scope": null,
+      "confidence": "governed_scope"
     },
     {
       "product_id": "hot_honey_garlic_chicken_costco",
       "product": "Hot Honey Garlic Chicken Stir-Fry",
       "cohort": "costco_only",
       "source": "Costco",
-      "status": "official_costco_only_sku_page_not_indexed",
+      "status": "official_costco_sku_page_not_indexed",
       "match_type": "official_sku_channel_assignment",
       "page_url": "https://www.kevinsnaturalfoods.com/products/hot-honey-garlic-chicken-stir-fry",
-      "note": null
+      "note": null,
+      "search_scope": null,
+      "confidence": "governed_scope"
     },
     {
       "product_id": "hot_honey_garlic_chicken_costco",
       "product": "Hot Honey Garlic Chicken Stir-Fry",
       "cohort": "costco_only",
       "source": "Target",
-      "status": "not_applicable_costco_only",
+      "status": "not_applicable",
       "match_type": "not_applicable",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": null,
+      "confidence": "governed_scope"
     },
     {
       "product_id": "hot_honey_garlic_chicken_costco",
       "product": "Hot Honey Garlic Chicken Stir-Fry",
       "cohort": "costco_only",
       "source": "Kroger",
-      "status": "not_applicable_costco_only",
+      "status": "not_applicable",
       "match_type": "not_applicable",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": null,
+      "confidence": "governed_scope"
     },
     {
       "product_id": "hot_honey_garlic_chicken_costco",
       "product": "Hot Honey Garlic Chicken Stir-Fry",
       "cohort": "costco_only",
       "source": "Publix",
-      "status": "not_applicable_costco_only",
+      "status": "not_applicable",
       "match_type": "not_applicable",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": null,
+      "confidence": "governed_scope"
     },
     {
       "product_id": "hot_honey_garlic_chicken_costco",
       "product": "Hot Honey Garlic Chicken Stir-Fry",
       "cohort": "costco_only",
       "source": "Albertsons",
-      "status": "not_applicable_costco_only",
+      "status": "not_applicable",
       "match_type": "not_applicable",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": null,
+      "confidence": "governed_scope"
     },
     {
       "product_id": "hot_honey_garlic_chicken_costco",
       "product": "Hot Honey Garlic Chicken Stir-Fry",
       "cohort": "costco_only",
       "source": "Food Lion",
-      "status": "not_applicable_costco_only",
+      "status": "not_applicable",
       "match_type": "not_applicable",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": null,
+      "confidence": "governed_scope"
+    },
+    {
+      "product_id": "hot_honey_garlic_chicken_costco",
+      "product": "Hot Honey Garlic Chicken Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Amazon",
+      "status": "not_applicable",
+      "match_type": "not_applicable",
+      "page_url": null,
+      "note": null,
+      "search_scope": null,
+      "confidence": "governed_scope"
     },
     {
       "product_id": "teriyaki_chicken_costco",
       "product": "Teriyaki-Style Chicken Stir-Fry",
       "cohort": "costco_only",
       "source": "Costco",
-      "status": "official_costco_only_sku_page_not_indexed",
+      "status": "official_costco_sku_page_not_indexed",
       "match_type": "official_sku_channel_assignment",
       "page_url": "https://www.kevinsnaturalfoods.com/products/teriyaki-style-chicken-stir-fry",
-      "note": null
+      "note": null,
+      "search_scope": null,
+      "confidence": "governed_scope"
     },
     {
       "product_id": "teriyaki_chicken_costco",
       "product": "Teriyaki-Style Chicken Stir-Fry",
       "cohort": "costco_only",
       "source": "Target",
-      "status": "not_applicable_costco_only",
+      "status": "not_applicable",
       "match_type": "not_applicable",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": null,
+      "confidence": "governed_scope"
     },
     {
       "product_id": "teriyaki_chicken_costco",
       "product": "Teriyaki-Style Chicken Stir-Fry",
       "cohort": "costco_only",
       "source": "Kroger",
-      "status": "not_applicable_costco_only",
+      "status": "not_applicable",
       "match_type": "not_applicable",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": null,
+      "confidence": "governed_scope"
     },
     {
       "product_id": "teriyaki_chicken_costco",
       "product": "Teriyaki-Style Chicken Stir-Fry",
       "cohort": "costco_only",
       "source": "Publix",
-      "status": "not_applicable_costco_only",
+      "status": "not_applicable",
       "match_type": "not_applicable",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": null,
+      "confidence": "governed_scope"
     },
     {
       "product_id": "teriyaki_chicken_costco",
       "product": "Teriyaki-Style Chicken Stir-Fry",
       "cohort": "costco_only",
       "source": "Albertsons",
-      "status": "not_applicable_costco_only",
+      "status": "not_applicable",
       "match_type": "not_applicable",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": null,
+      "confidence": "governed_scope"
     },
     {
       "product_id": "teriyaki_chicken_costco",
       "product": "Teriyaki-Style Chicken Stir-Fry",
       "cohort": "costco_only",
       "source": "Food Lion",
-      "status": "not_applicable_costco_only",
+      "status": "not_applicable",
       "match_type": "not_applicable",
       "page_url": null,
-      "note": null
+      "note": null,
+      "search_scope": null,
+      "confidence": "governed_scope"
+    },
+    {
+      "product_id": "teriyaki_chicken_costco",
+      "product": "Teriyaki-Style Chicken Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Amazon",
+      "status": "not_applicable",
+      "match_type": "not_applicable",
+      "page_url": null,
+      "note": null,
+      "search_scope": null,
+      "confidence": "governed_scope"
     }
   ],
   "complaint_topics": {
-    "taste": 15,
-    "vegetables": 14,
-    "portion_value": 13,
-    "protein_quantity": 5,
-    "convenience": 4,
-    "texture": 4,
-    "packaging": 3,
+    "taste": 34,
+    "portion_value": 28,
+    "vegetables": 23,
+    "texture": 11,
+    "packaging": 10,
+    "protein_quantity": 9,
+    "convenience": 5,
     "dietary_fit": 1
   },
   "provocations": [
     {
       "id": "portion_architecture",
       "title": "Is the 2.5-serving promise creating an expectation gap?",
-      "evidence": "18 of 46 grocery-kit written reviews mention portion or value; 8 specifically flag protein quantity.",
+      "evidence": "41 of 112 grocery-kit written reviews mention portion or value; 16 specifically flag protein quantity.",
       "implication": "Test pack communication and protein-to-vegetable balance before treating the issue as flavor reformulation.",
       "confidence": "strongest_directional_signal"
     },
@@ -3363,7 +3818,7 @@
     {
       "id": "convenience_equity",
       "title": "Convenience appears to be an equity worth protecting.",
-      "evidence": "Convenience language appears in 44 of 100 deduplicated written reviews.",
+      "evidence": "Convenience language appears in 69 of 166 deduplicated written reviews.",
       "implication": "Any product or pack change should preserve the under-10-minute, low-mess preparation benefit.",
       "confidence": "directional"
     },

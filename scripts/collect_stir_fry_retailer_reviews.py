@@ -7,6 +7,8 @@ reported as zero consumer sentiment.
 
 from __future__ import annotations
 
+import base64
+import gzip
 import html
 import json
 import re
@@ -23,6 +25,8 @@ from collect_stir_fry_reviews import PRODUCTS
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 OUTPUT = DATA / "stir_fry_retailer_evidence_2026-08-25.json"
+KROGER_ARCHIVE = DATA / "stir_fry_kroger_reviews_2026-08-25.json"
+TARGET_ARCHIVE = DATA / "stir_fry_target_reviews_2026-08-25.json.gz.b64"
 AS_OF = date(2026, 8, 25)
 START = date(2023, 1, 1)
 
@@ -48,13 +52,6 @@ KROGER_PRODUCTS = {
     "honey_garlic_chicken_kit": "https://www.kroger.com/p/kevin-s-natural-foods-honey-garlic-chicken-stir-fry/0081026402815",
 }
 
-KROGER_PUBLIC_CONTEXT = {
-    "chicken_fajitas_kit": {"average_rating": 2.60, "rating_count": 10},
-    "general_tso_chicken_kit": {"average_rating": 2.15, "rating_count": 13},
-    "sichuan_chicken_kit": {"average_rating": None, "rating_count": 0},
-    "honey_garlic_chicken_kit": {"average_rating": 3.90, "rating_count": 10},
-}
-
 # Correct a harmless slug typo before requests are made; Kroger keys identity
 # from the trailing product identifier, while keeping a readable canonical URL.
 EXACT_LISTINGS = {
@@ -64,7 +61,27 @@ EXACT_LISTINGS = {
     ("sichuan_chicken_costco", "Costco"): "https://sameday.costco.com/store/costco/products/28547551-kevin-s-natural-foods-sichuan-style-chicken-with-green-beans-32-oz",
 }
 
-RETAILERS = ["Costco", "Target", "Kroger", "Publix", "Albertsons", "Food Lion"]
+RETAILERS = ["Costco", "Target", "Kroger", "Publix", "Albertsons", "Food Lion", "Amazon"]
+
+SEARCH_SCOPE_NOTE = (
+    "Exact scoped names, known UPCs, pack sizes, official product assignments, retailer search, "
+    "and public web indexing were checked as of 2026-08-25."
+)
+
+AMAZON_EXCLUDED_CANDIDATES = [
+    {
+        "candidate": "Kevin's Natural Foods Chicken Orange Sous Vide, 16 Ounce",
+        "reason": "Different Heat & Eat product architecture; not the Costco-only Orange Chicken Stir-Fry item.",
+    },
+    {
+        "candidate": "Kevin's Natural Foods simmer sauces and sauce bundles",
+        "reason": "Sauce-only products; none is one of the 13 scoped complete stir-fry items.",
+    },
+    {
+        "candidate": "Taylor Farms and other third-party stir-fry kits",
+        "reason": "Different brand and therefore outside the exact-SKU scope.",
+    },
+]
 
 
 class ScriptParser(HTMLParser):
@@ -148,43 +165,16 @@ def collect_target(product_id: str, config: dict) -> tuple[list[dict], dict]:
     if node is None:
         raise RuntimeError("Target ratings-and-reviews payload was not found")
 
-    reviews = []
-    for item in node.get("most_recent", []):
-        rating = item.get("rating") or {}
-        submitted = rating.get("submitted_at")
-        if not submitted:
-            continue
-        day = date.fromisoformat(submitted[:10])
-        text = clean_text(item.get("text"))
-        if not text or not (START <= day <= AS_OF):
-            continue
-        syndication = clean_text(
-            item.get("syndication_source")
-            or item.get("originally_posted_on")
-            or item.get("source")
-        )
-        reviews.append(
-            {
-                "product_id": product_id,
-                "product": PRODUCTS[product_id]["name"],
-                "cohort": PRODUCTS[product_id]["channel"],
-                "source": "Target",
-                "date": day.isoformat(),
-                "rating": int(rating.get("value")),
-                "title": clean_text(item.get("title")),
-                "text": text,
-                "capture": "public retailer review",
-                "provider": "Target",
-                "provider_review_id": str(item.get("id")),
-                "verified_buyer": bool(item.get("verified_purchase")),
-                "syndication_source": syndication or None,
-                "source_url": final_url,
-                "metric_eligible": True,
-            }
-        )
-
     statistics = node["statistics"]
     rating = statistics["rating"]
+    written_total = int(statistics["review_count"])
+    archive = json.loads(gzip.decompress(base64.b64decode(TARGET_ARCHIVE.read_text(encoding="ascii"))).decode("utf-8"))
+    reviews = [row for row in archive["reviews"] if row["product_id"] == product_id]
+    if len(reviews) != written_total:
+        raise RuntimeError(
+            f"Target archive has {len(reviews)} written reviews but the current page reports {written_total}; refresh required"
+        )
+
     distribution = {
         str(star): int((rating.get("distribution") or {}).get(f"rating{star}") or 0)
         for star in range(1, 6)
@@ -199,64 +189,13 @@ def collect_target(product_id: str, config: dict) -> tuple[list[dict], dict]:
         "item_id": config["item_id"],
         "average_rating": float(rating["average"]),
         "rating_count": int(rating["count"]),
-        "written_review_count": int(statistics["review_count"]),
+        "written_review_count": written_total,
         "distribution": distribution,
-        "captured_recent_reviews": len(reviews),
-        "capture_status": "complete_rating_distribution_plus_recent_public_reviews",
+        "captured_written_reviews": len(reviews),
+        "capture_status": "complete_public_written_review_history",
         "as_of": AS_OF.isoformat(),
     }
     return reviews, snapshot
-
-
-def iter_json_objects(value):
-    if isinstance(value, dict):
-        yield value
-        for child in value.values():
-            yield from iter_json_objects(child)
-    elif isinstance(value, list):
-        for child in value:
-            yield from iter_json_objects(child)
-
-
-def collect_kroger_snapshot(product_id: str, url: str) -> dict:
-    raw, final_url = fetch(url)
-    parser = ScriptParser()
-    parser.feed(raw)
-    candidates = []
-    for attrs, text in parser.scripts:
-        if attrs.get("type") != "application/ld+json" or not text.strip():
-            continue
-        try:
-            payload = json.loads(text)
-        except json.JSONDecodeError:
-            continue
-        for node in iter_json_objects(payload):
-            aggregate = node.get("aggregateRating")
-            if isinstance(aggregate, dict) and aggregate.get("ratingValue") is not None:
-                candidates.append(aggregate)
-
-    aggregate = candidates[0] if candidates else {}
-    average = aggregate.get("ratingValue")
-    count = aggregate.get("reviewCount") or aggregate.get("ratingCount")
-    return {
-        "product_id": product_id,
-        "product": PRODUCTS[product_id]["name"],
-        "cohort": PRODUCTS[product_id]["channel"],
-        "source": "Kroger",
-        "provider": "Kroger",
-        "page_url": final_url,
-        "average_rating": float(average) if average is not None else None,
-        "rating_count": int(count) if count is not None else 0,
-        "written_review_count": None,
-        "distribution": {},
-        "captured_written_reviews": 0,
-        "capture_status": (
-            "public_aggregate_rating_only_text_payload_unavailable"
-            if count
-            else "exact_listing_no_public_rating_observed"
-        ),
-        "as_of": AS_OF.isoformat(),
-    }
 
 
 def coverage_rows(snapshots: list[dict], errors: list[dict]) -> list[dict]:
@@ -269,25 +208,30 @@ def coverage_rows(snapshots: list[dict], errors: list[dict]) -> list[dict]:
             exact_url = EXACT_LISTINGS.get((product_id, retailer))
             intended_channel = product["channel"] == "costco_only"
             if snapshot:
-                status = "review_evidence" if snapshot.get("rating_count") else "listing_only"
+                if snapshot.get("written_review_count"):
+                    status = "review_history_complete"
+                elif snapshot.get("rating_count"):
+                    status = "rating_evidence"
+                else:
+                    status = "listing_no_public_reviews"
                 page_url = snapshot["page_url"]
                 match_type = "exact_sku"
             elif exact_url:
-                status = "listing_only"
+                status = "listing_no_public_reviews"
                 page_url = exact_url
                 match_type = "exact_sku"
             elif intended_channel and retailer == "Costco":
-                status = "official_costco_only_sku_page_not_indexed"
+                status = "official_costco_sku_page_not_indexed"
                 page_url = "https://www.kevinsnaturalfoods.com/products/" + product["handle"]
                 match_type = "official_sku_channel_assignment"
-            elif intended_channel:
-                status = "not_applicable_costco_only"
+            elif intended_channel or retailer == "Costco":
+                status = "not_applicable"
                 page_url = None
                 match_type = "not_applicable"
             else:
-                status = "exact_page_not_confirmed"
+                status = "searched_no_exact_page"
                 page_url = None
-                match_type = "not_located"
+                match_type = "searched_not_located"
             rows.append(
                 {
                     "product_id": product_id,
@@ -298,6 +242,8 @@ def coverage_rows(snapshots: list[dict], errors: list[dict]) -> list[dict]:
                     "match_type": match_type,
                     "page_url": page_url,
                     "note": error_map.get((product_id, retailer)),
+                    "search_scope": SEARCH_SCOPE_NOTE if status == "searched_no_exact_page" else None,
+                    "confidence": "exact" if match_type == "exact_sku" else "governed_scope",
                 }
             )
     return rows
@@ -313,55 +259,39 @@ def main() -> None:
             rows, snapshot = collect_target(product_id, config)
             reviews.extend(rows)
             snapshots.append(snapshot)
-            print(product_id, "Target", len(rows), "recent /", snapshot["rating_count"], "ratings")
+            print(product_id, "Target", len(rows), "written /", snapshot["rating_count"], "ratings")
         except Exception as exc:
             errors.append({"product_id": product_id, "source": "Target", "error": f"{type(exc).__name__}: {exc}"})
             print(product_id, "Target ERROR", exc)
 
-    for product_id, url in KROGER_PRODUCTS.items():
-        try:
-            snapshot = collect_kroger_snapshot(product_id, url)
-            snapshots.append(snapshot)
-            print(product_id, "Kroger", snapshot["average_rating"], snapshot["rating_count"])
-        except Exception as exc:
-            context = KROGER_PUBLIC_CONTEXT[product_id]
-            snapshots.append({
-                "product_id": product_id,
-                "product": PRODUCTS[product_id]["name"],
-                "cohort": PRODUCTS[product_id]["channel"],
-                "source": "Kroger",
-                "provider": "Kroger",
-                "page_url": url,
-                "average_rating": context["average_rating"],
-                "rating_count": context["rating_count"],
-                "written_review_count": None,
-                "distribution": {},
-                "captured_written_reviews": 0,
-                "capture_status": (
-                    "public_index_aggregate_rating_only_text_payload_unavailable"
-                    if context["rating_count"]
-                    else "exact_listing_no_public_rating_observed"
-                ),
-                "as_of": AS_OF.isoformat(),
-            })
-            errors.append({
-                "product_id": product_id,
-                "source": "Kroger",
-                "error": "Live page blocked automated refresh; verified public index aggregate retained.",
-            })
-            print(product_id, "Kroger FALLBACK", context["average_rating"], context["rating_count"], type(exc).__name__)
+    kroger = json.loads(KROGER_ARCHIVE.read_text(encoding="utf-8"))
+    if {row["product_id"] for row in kroger["snapshots"]} != set(KROGER_PRODUCTS):
+        raise RuntimeError("Kroger archive product set does not match the governed exact-page registry")
+    if any(row["page_url"] != KROGER_PRODUCTS[row["product_id"]] for row in kroger["snapshots"]):
+        raise RuntimeError("Kroger archive URL does not match the governed exact-page registry")
+    reviews.extend(kroger["reviews"])
+    snapshots.extend(kroger["snapshots"])
+    print("Kroger", len(kroger["reviews"]), "public review cards /", len(kroger["snapshots"]), "exact pages")
 
     payload = {
         "as_of": AS_OF.isoformat(),
         "analysis_start": START.isoformat(),
         "method_note": (
-            "Public retailer pages only. Target provides complete current rating distributions and a recent written-review window. "
-            "Kroger provides public aggregate rating context but no reproducible written-review payload. Publix, Albertsons, "
-            "Food Lion, and Costco are retained as listing coverage unless a public review surface is confirmed."
+            "Public retailer evidence only. Target and Kroger exact pages provide complete visible written-review histories and "
+            "current rating distributions. Costco, Publix, and Food Lion exact pages are retained as listing evidence when no "
+            "public review surface is present. Albertsons and Amazon were searched for the exact scoped grocery SKUs; no exact "
+            "page was confirmed. Costco-only items are not treated as applicable to the other six retailers."
         ),
-        "deduplication_note": "Cross-posted written records are deduplicated during analysis using product, date, rating, title, and body text.",
+        "deduplication_note": "Cross-posted written records are deduplicated during analysis using exact normalized product, rating, and body text.",
+        "amazon_assessment": {
+            "status": "searched_no_exact_scoped_sku",
+            "scope": "Six grocery stir-fry kits; seven stakeholder-designated Costco-only products are not applicable.",
+            "search_note": SEARCH_SCOPE_NOTE,
+            "excluded_candidates": AMAZON_EXCLUDED_CANDIDATES,
+            "reference": "https://www.amazon.com/s?k=Kevin%27s+Natural+Foods+stir+fry+kit",
+        },
         "snapshots": snapshots,
-        "reviews": sorted(reviews, key=lambda row: (row["date"], row["product_id"]), reverse=True),
+        "reviews": sorted(reviews, key=lambda row: (row.get("date") or "", row["product_id"]), reverse=True),
         "coverage": coverage_rows(snapshots, errors),
         "errors": errors,
     }

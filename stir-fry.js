@@ -1,4 +1,4 @@
-const RELEASE_VERSION = "2026-08-25-launch-analysis";
+const RELEASE_VERSION = "2026-08-25-retailer-completion";
 const DATA_FILES = {
   reviews: "data/stir_fry_reviews_normalized.json",
   analysis: "data/stir_fry_analysis.json",
@@ -19,6 +19,7 @@ const TOPICS = {
 const SOURCE_COLORS = {
   "Kevin's Natural Foods": "#0000A0",
   Target: "#EB6916",
+  Kroger: "#19738D",
 };
 
 const state = {
@@ -229,7 +230,7 @@ function renderSourceMix(reviews) {
   $("#sourceMix").innerHTML = `
     <div class="source-stack">${counts.map(item => `<i style="width:${item.n / total * 100}%;background:${SOURCE_COLORS[item.source] || "#19738D"}"></i>`).join("")}</div>
     <div class="source-legend">${counts.map(item => `<div><i style="background:${SOURCE_COLORS[item.source] || "#19738D"}"></i><span>${escapeHtml(item.source === "Kevin's Natural Foods" ? "Owned site" : item.source)}</span><strong>${item.n}</strong></div>`).join("")}</div>
-    <p class="snapshot-distribution-note">Five cross-posted comments were deduplicated in the full portfolio archive.</p>`;
+    <p class="snapshot-distribution-note">${state.data.analysis.data_quality.cross_source_duplicates_removed} exact cross-posts were deduplicated in the full portfolio archive.</p>`;
 }
 
 function renderThemes(reviews) {
@@ -402,9 +403,19 @@ function renderProducts(reviews) {
 
 function renderChannelSnapshots() {
   const selected = state.data.analysis.rating_snapshots.filter(snapshot => state.products.has(snapshot.product_id) && productInCohort(snapshot.product_id));
-  const sources = ["Kevin's Natural Foods", "Target", "Kroger"];
+  const selectedCoverage = state.data.analysis.coverage.filter(row => state.products.has(row.product_id) && productInCohort(row.product_id));
+  const sources = ["Kevin's Natural Foods", "Target", "Kroger", "Amazon"];
   $("#channelSnapshots").innerHTML = sources.map(source => {
     const rows = selected.filter(snapshot => snapshot.source === source);
+    if (source === "Amazon") {
+      const coverage = selectedCoverage.filter(row => row.source === source);
+      const searched = coverage.filter(row => row.status === "searched_no_exact_page").length;
+      const notApplicable = coverage.filter(row => row.status === "not_applicable").length;
+      const message = searched
+        ? `${searched} applicable product${searched === 1 ? "" : "s"} searched; adjacent sauces and Heat & Eat items were excluded.`
+        : `${notApplicable} Costco-only product${notApplicable === 1 ? "" : "s"} outside Amazon scope.`;
+      return `<article class="snapshot-card stir-snapshot"><header><span>Amazon</span><strong>Exact-SKU assessment</strong></header><div class="snapshot-score"><strong>No exact scoped SKU</strong><span>Not recorded as zero reviews</span></div><p>${message}</p></article>`;
+    }
     const count = rows.reduce((sum, row) => sum + Number(row.rating_count || 0), 0);
     const weighted = count ? rows.reduce((sum, row) => sum + Number(row.average_rating || 0) * Number(row.rating_count || 0), 0) / count : null;
     const distribution = Object.fromEntries([1, 2, 3, 4, 5].map(star => [star, rows.reduce((sum, row) => sum + Number(row.distribution?.[star] || 0), 0)]));
@@ -415,18 +426,20 @@ function renderChannelSnapshots() {
 }
 
 function coverageCell(row) {
-  if (!row) return `<span class="coverage-pill gap">Page not confirmed</span>`;
+  if (!row) return `<span class="coverage-pill gap">Not assessed</span>`;
   const status = row.status;
   const href = row.page_url ? ` href="${escapeHtml(row.page_url)}" target="_blank" rel="noopener"` : "";
-  if (status === "review_evidence") return `<a class="coverage-pill"${href}>Ratings / reviews</a>`;
-  if (status === "listing_only") return `<a class="coverage-pill variant"${href}>Exact listing</a>`;
-  if (status === "official_costco_only_sku_page_not_indexed") return `<a class="coverage-pill variant"${href}>Costco-only · page not indexed</a>`;
-  if (status === "not_applicable_costco_only") return `<span class="coverage-pill gap">Not applicable</span>`;
-  return `<span class="coverage-pill gap">Page not confirmed</span>`;
+  if (status === "review_history_complete") return `<a class="coverage-pill"${href}>Complete written history</a>`;
+  if (status === "rating_evidence") return `<a class="coverage-pill"${href}>Ratings observed</a>`;
+  if (status === "listing_no_public_reviews") return `<a class="coverage-pill variant"${href}>Exact listing · no review surface</a>`;
+  if (status === "official_costco_sku_page_not_indexed") return `<a class="coverage-pill variant"${href}>Costco-only · retailer page not indexed</a>`;
+  if (status === "not_applicable") return `<span class="coverage-pill gap">Not applicable</span>`;
+  if (status === "searched_no_exact_page") return `<span class="coverage-pill gap">Searched · no exact SKU</span>`;
+  return `<span class="coverage-pill gap">Not assessed</span>`;
 }
 
 function renderCoverage() {
-  const sources = ["Costco", "Target", "Kroger", "Publix", "Albertsons", "Food Lion"];
+  const sources = ["Costco", "Target", "Kroger", "Publix", "Albertsons", "Food Lion", "Amazon"];
   const coverage = state.data.analysis.coverage;
   const products = [...state.data.products.values()].filter(product => productInCohort(product.product_id) && state.products.has(product.product_id));
   $("#stirCoverageTable tbody").innerHTML = products.map(product => {
