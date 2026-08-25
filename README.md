@@ -23,7 +23,7 @@ Interactive, static dashboard with separately managed Beef HMR and Stir-Fry anal
 - Exact 13-product official catalog: six grocery kits and seven Costco-only larger-format items
 - 166 deduplicated dated written reviews: the complete 81-review first-party history plus 56 incremental Target and 29 incremental Kroger comments
 - Grocery-kit launch comparison anchored to February 27, 2025; Costco uses earliest observed review timing because the formal launch date was not confirmed
-- 272 channel rating observations across Kevin's, Target, and Kroger, shown separately because syndication can overlap
+- 278 channel rating observations across Kevin's, Target, and Kroger, shown separately because syndication can overlap
 - Exact-listing audit across Costco, Target, Kroger, Publix, Albertsons, Food Lion, and Amazon; searched-but-unconfirmed pages remain coverage gaps rather than zero-review records
 - Separate tracking for 16 future-purchase incentive badges and one review that explicitly self-identifies as sponsored
 
