@@ -1,0 +1,378 @@
+{
+  "as_of": "2026-08-25",
+  "source": "Kevin's Natural Foods official Shopify product catalog",
+  "scope_note": "Exact official identities for the 13 products listed in the Stir-Fry Entrées collection section.",
+  "products": [
+    {
+      "product_id": "beef_fajitas",
+      "product": "Beef Fajitas",
+      "cohort": "costco_only",
+      "servings": 4,
+      "handle": "beef-fajitas",
+      "official_url": "https://www.kevinsnaturalfoods.com/products/beef-fajitas",
+      "shopify_product_id": "9232761356502",
+      "vendor": "Kevin's Natural Foods",
+      "product_type": "Stir-Fry",
+      "tags": [
+        "_color: #e53f14",
+        "_excerpt: 32 OZ",
+        "_hide-price",
+        "_servings: 4",
+        "Beef",
+        "Gluten Free",
+        "Paleo",
+        "Soy Free",
+        "Stir-Frys"
+      ],
+      "variants": [
+        {
+          "variant_id": "47749754093782",
+          "title": "Default Title",
+          "sku": null,
+          "barcode": "810264028302",
+          "available": false,
+          "weight_grams": null
+        }
+      ]
+    },
+    {
+      "product_id": "teriyaki_chicken_kit",
+      "product": "Teriyaki-Style Chicken Stir-Fry Kit",
+      "cohort": "grocery",
+      "servings": 2.5,
+      "handle": "teriyaki-style-chicken-stir-fry-kit",
+      "official_url": "https://www.kevinsnaturalfoods.com/products/teriyaki-style-chicken-stir-fry-kit",
+      "shopify_product_id": "9043039420630",
+      "vendor": "Kevin's Natural Foods",
+      "product_type": "Stir-Fry",
+      "tags": [
+        "Gluten Free",
+        "Paleo",
+        "Soy Free",
+        "Stir-Frys"
+      ],
+      "variants": [
+        {
+          "variant_id": "47057324277974",
+          "title": "Default Title",
+          "sku": "810264028135",
+          "barcode": "810264028135",
+          "available": false,
+          "weight_grams": null
+        }
+      ]
+    },
+    {
+      "product_id": "beef_broccoli_kit",
+      "product": "Beef & Broccoli Stir-Fry Kit",
+      "cohort": "grocery",
+      "servings": 2.5,
+      "handle": "beef-broccoli-stir-fry-kit",
+      "official_url": "https://www.kevinsnaturalfoods.com/products/beef-broccoli-stir-fry-kit",
+      "shopify_product_id": "9042958614742",
+      "vendor": "Kevin's Natural Foods",
+      "product_type": "Stir-Fry",
+      "tags": [
+        "Gluten Free",
+        "Paleo",
+        "Soy Free",
+        "Stir-Frys"
+      ],
+      "variants": [
+        {
+          "variant_id": "47057139368150",
+          "title": "Default Title",
+          "sku": "810264028111",
+          "barcode": "810264028111",
+          "available": false,
+          "weight_grams": null
+        }
+      ]
+    },
+    {
+      "product_id": "chicken_fajitas_kit",
+      "product": "Chicken Fajitas Skillet Meal Kit",
+      "cohort": "grocery",
+      "servings": 2.5,
+      "handle": "chicken-fajitas-skillet-meal-kit",
+      "official_url": "https://www.kevinsnaturalfoods.com/products/chicken-fajitas-skillet-meal-kit",
+      "shopify_product_id": "8904583315670",
+      "vendor": "Kevin's Natural Foods",
+      "product_type": "Stir-Fry",
+      "tags": [
+        "_servings: 2.5",
+        "Gluten Free",
+        "Paleo",
+        "Soy Free",
+        "Stir-Frys"
+      ],
+      "variants": [
+        {
+          "variant_id": "46628775067862",
+          "title": "Default Title",
+          "sku": "810264028180",
+          "barcode": "810264028180",
+          "available": false,
+          "weight_grams": null
+        }
+      ]
+    },
+    {
+      "product_id": "general_tso_chicken_kit",
+      "product": "General Tso's Chicken Stir-Fry Kit",
+      "cohort": "grocery",
+      "servings": 2.5,
+      "handle": "general-tso-s-chicken-with-green-beans",
+      "official_url": "https://www.kevinsnaturalfoods.com/products/general-tso-s-chicken-with-green-beans",
+      "shopify_product_id": "8818225610966",
+      "vendor": "Kevin's Natural Foods",
+      "product_type": "Stir-Fry",
+      "tags": [
+        "_servings: 2.5",
+        "Gluten Free",
+        "Paleo",
+        "Soy Free",
+        "Stir-Frys"
+      ],
+      "variants": [
+        {
+          "variant_id": "46400908099798",
+          "title": "Default Title",
+          "sku": "810264028128",
+          "barcode": "810264028128",
+          "available": false,
+          "weight_grams": null
+        }
+      ]
+    },
+    {
+      "product_id": "sichuan_chicken_kit",
+      "product": "Sichuan Chicken Stir-Fry Kit",
+      "cohort": "grocery",
+      "servings": 2.5,
+      "handle": "sichuan-chicken-stir-fry-kit",
+      "official_url": "https://www.kevinsnaturalfoods.com/products/sichuan-chicken-stir-fry-kit",
+      "shopify_product_id": "8742765166806",
+      "vendor": "Kevin's Natural Foods",
+      "product_type": "Stir-Fry",
+      "tags": [
+        "Gluten Free",
+        "Paleo",
+        "Soy Free",
+        "Stir-Frys"
+      ],
+      "variants": [
+        {
+          "variant_id": "46189397803222",
+          "title": "Default Title",
+          "sku": "810264028166",
+          "barcode": "810264028166",
+          "available": false,
+          "weight_grams": null
+        }
+      ]
+    },
+    {
+      "product_id": "honey_garlic_chicken_kit",
+      "product": "Honey Garlic Chicken Stir-Fry Kit",
+      "cohort": "grocery",
+      "servings": 2.5,
+      "handle": "honey-garlic-chicken-stir-fry-kit",
+      "official_url": "https://www.kevinsnaturalfoods.com/products/honey-garlic-chicken-stir-fry-kit",
+      "shopify_product_id": "8742753140950",
+      "vendor": "Kevin's Natural Foods",
+      "product_type": "Stir-Fry",
+      "tags": [
+        "_servings: 2.5",
+        "Gluten Free",
+        "Paleo",
+        "Soy Free",
+        "Stir-Frys"
+      ],
+      "variants": [
+        {
+          "variant_id": "46189378699478",
+          "title": "Default Title",
+          "sku": "810264028159",
+          "barcode": "810264028159",
+          "available": false,
+          "weight_grams": null
+        }
+      ]
+    },
+    {
+      "product_id": "orange_chicken_costco",
+      "product": "Orange Chicken Stir-Fry",
+      "cohort": "costco_only",
+      "servings": 4,
+      "handle": "orange-chicken-stir-fry",
+      "official_url": "https://www.kevinsnaturalfoods.com/products/orange-chicken-stir-fry",
+      "shopify_product_id": "8359006240982",
+      "vendor": "Kevin's Natural Foods",
+      "product_type": "Stir-Fry",
+      "tags": [
+        "#ff6c00",
+        "_servings: 4",
+        "Gluten Free",
+        "Paleo",
+        "Soy Free",
+        "Stir-Frys"
+      ],
+      "variants": [
+        {
+          "variant_id": "45126154453206",
+          "title": "Default Title",
+          "sku": null,
+          "barcode": null,
+          "available": false,
+          "weight_grams": null
+        }
+      ]
+    },
+    {
+      "product_id": "honey_garlic_chicken_costco",
+      "product": "Honey Garlic Chicken Stir-Fry",
+      "cohort": "costco_only",
+      "servings": 4,
+      "handle": "honey-garlic-chicken-green-bean-stir-fry",
+      "official_url": "https://www.kevinsnaturalfoods.com/products/honey-garlic-chicken-green-bean-stir-fry",
+      "shopify_product_id": "8173746847958",
+      "vendor": "Kevin's Natural Foods",
+      "product_type": "Stir-Fry",
+      "tags": [
+        "_color: #eea200",
+        "_servings: 4",
+        "Gluten Free",
+        "Paleo",
+        "Soy Free",
+        "Stir-Frys"
+      ],
+      "variants": [
+        {
+          "variant_id": "44522183983318",
+          "title": "Default Title",
+          "sku": null,
+          "barcode": "810264026643",
+          "available": false,
+          "weight_grams": null
+        }
+      ]
+    },
+    {
+      "product_id": "beef_broccoli_costco",
+      "product": "Beef & Broccoli Stir-Fry",
+      "cohort": "costco_only",
+      "servings": 4,
+      "handle": "beef-broccoli-stir-fry",
+      "official_url": "https://www.kevinsnaturalfoods.com/products/beef-broccoli-stir-fry",
+      "shopify_product_id": "8129985085654",
+      "vendor": "Kevin's Natural Foods",
+      "product_type": "Stir-Fry",
+      "tags": [
+        "_color: #f13b0b",
+        "_servings: 4",
+        "Gluten Free",
+        "Paleo",
+        "Soy Free",
+        "Stir-Frys"
+      ],
+      "variants": [
+        {
+          "variant_id": "44368216883414",
+          "title": "Default Title",
+          "sku": "",
+          "barcode": "810264026926,810264026551",
+          "available": false,
+          "weight_grams": null
+        }
+      ]
+    },
+    {
+      "product_id": "sichuan_chicken_costco",
+      "product": "Sichuan Chicken Green Bean Stir-Fry",
+      "cohort": "costco_only",
+      "servings": 4,
+      "handle": "sichuan-chicken-green-bean-stir-fry",
+      "official_url": "https://www.kevinsnaturalfoods.com/products/sichuan-chicken-green-bean-stir-fry",
+      "shopify_product_id": "8074410918102",
+      "vendor": "Kevin's Natural Foods",
+      "product_type": "Stir-Fry",
+      "tags": [
+        "_color: #f13b0b",
+        "_servings: 4",
+        "Gluten Free",
+        "Paleo",
+        "Soy Free",
+        "Stir-Frys"
+      ],
+      "variants": [
+        {
+          "variant_id": "44234579411158",
+          "title": "Default Title",
+          "sku": "",
+          "barcode": "810264026810,810264026476",
+          "available": false,
+          "weight_grams": null
+        }
+      ]
+    },
+    {
+      "product_id": "hot_honey_garlic_chicken_costco",
+      "product": "Hot Honey Garlic Chicken Stir-Fry",
+      "cohort": "costco_only",
+      "servings": 4,
+      "handle": "hot-honey-garlic-chicken-stir-fry",
+      "official_url": "https://www.kevinsnaturalfoods.com/products/hot-honey-garlic-chicken-stir-fry",
+      "shopify_product_id": "8068350443734",
+      "vendor": "Kevin's Natural Foods",
+      "product_type": "Stir-Fry",
+      "tags": [
+        "_color: #f13b0b",
+        "_servings: 4",
+        "Gluten Free",
+        "Paleo",
+        "Soy Free",
+        "Stir-Frys"
+      ],
+      "variants": [
+        {
+          "variant_id": "44210425364694",
+          "title": "Default Title",
+          "sku": "",
+          "barcode": "810264026810",
+          "available": false,
+          "weight_grams": null
+        }
+      ]
+    },
+    {
+      "product_id": "teriyaki_chicken_costco",
+      "product": "Teriyaki-Style Chicken Stir-Fry",
+      "cohort": "costco_only",
+      "servings": 4,
+      "handle": "teriyaki-style-chicken-stir-fry",
+      "official_url": "https://www.kevinsnaturalfoods.com/products/teriyaki-style-chicken-stir-fry",
+      "shopify_product_id": "7753403433174",
+      "vendor": "Kevin's Natural Foods",
+      "product_type": "Stir-Fry",
+      "tags": [
+        "_color: #0096aa",
+        "_servings: 4",
+        "Gluten Free",
+        "Paleo",
+        "Soy Free",
+        "Stir-Frys"
+      ],
+      "variants": [
+        {
+          "variant_id": "43207308181718",
+          "title": "Default Title",
+          "sku": "FKP00104",
+          "barcode": "810264026148",
+          "available": false,
+          "weight_grams": null
+        }
+      ]
+    }
+  ]
+}

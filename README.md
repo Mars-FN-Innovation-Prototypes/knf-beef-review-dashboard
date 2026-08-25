@@ -1,8 +1,10 @@
-# Beef HMR Review Intelligence
+# KNF Review Intelligence
 
-Interactive, static dashboard for exploring written consumer reviews across eight Kevin's Natural Foods beef HMR products.
+Interactive, static dashboard with separately managed Beef HMR and Stir-Fry analysis modules.
 
 ## Included data
+
+### Beef HMR
 
 - 638 metric-eligible full-text reviews spanning January 1, 2023 through July 22, 2026
 - 422 first-party product-page reviews across all eight scoped products, plus retailer evidence from Target, Amazon, Kroger, and Walmart
@@ -16,8 +18,18 @@ Interactive, static dashboard for exploring written consumer reviews across eigh
 - Ten unresolved Walmart Soules 6 oz/14 oz shared-variant records retained for auditability but excluded from product metrics
 - Ten complete point-in-time rating distributions plus six exact-SKU Kroger rating totals, all kept separate from the written-review trend layer
 
+### Stir Fry
+
+- Exact 13-product official catalog: six grocery kits and seven Costco-only larger-format items
+- 100 deduplicated dated written reviews: the complete 81-review first-party history plus 19 incremental recent Target comments
+- Grocery-kit launch comparison anchored to February 27, 2025; Costco uses earliest observed review timing because the formal launch date was not confirmed
+- 262 channel rating observations across Kevin's, Target, and Kroger, shown separately because syndication can overlap
+- Exact-listing audit across Costco, Target, Kroger, Publix, Albertsons, and Food Lion; unconfirmed pages remain coverage gaps rather than zero-review records
+- Separate tracking for 16 future-purchase incentive badges and one review that explicitly self-identifies as sponsored
+
 ## Dashboard capabilities
 
+- Use-case switch between the original Beef HMR workspace and the separately governed Stir-Fry launch workspace
 - Coordinated filters for date coverage, product, source, star rating, topic, and review text
 - Responsive monthly trend chart with selectable metrics
 - Rating, source, topic, and product-level comparisons
@@ -39,6 +51,15 @@ Interactive, static dashboard for exploring written consumer reviews across eigh
 - Review HTML was converted to plain text; provider review IDs, verification status, source URLs, and provenance labels were retained. Reviewer names were intentionally omitted.
 - Exact source-level duplicates and same-day cross-source duplicates were removed before analysis.
 - Indexed summaries, analyst summaries, and rating-only entries remain in the archive for traceability but do not contribute to written-review metrics.
+
+### Stir-fry portfolio
+
+- Official Kevin's product handles and storefront catalog endpoints establish product identity, cohort, pack architecture, and barcodes where available.
+- Public first-party review feeds provide the complete observed history. Exact Target and Kroger pages contribute retailer rating context; Target also contributes a bounded recent written-review window.
+- Written comments are deduplicated by product, date, rating, and normalized text. Reviewer names are omitted.
+- Monthly trends and fixed launch-versus-current windows use only the consistent first-party feed. Retailer aggregate ratings never enter dated trend or text-topic calculations.
+- Transparent keyword rules tag taste, portion/value, protein quantity, vegetables, texture, convenience, dietary fit, and packaging. These signals are investigation prompts, not causal findings.
+- `scripts/collect_stir_fry_catalog.py`, `scripts/collect_stir_fry_reviews.py`, `scripts/collect_stir_fry_retailer_reviews.py`, and `scripts/build_stir_fry_analysis.py` reproduce the module's governed data layers.
 
 ### Competitor benchmark
 

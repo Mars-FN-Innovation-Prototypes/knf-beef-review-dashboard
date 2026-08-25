@@ -1,0 +1,1867 @@
+{
+  "as_of": "2026-08-25",
+  "backfill_start": "2023-01-01",
+  "scope_note": "13 products listed in the official Stir-Fry Entrees catalog section on 2026-08-25.",
+  "cohort_note": "Six 2.5-serving grocery kits launched in February 2025; seven four-serving items are treated as Costco-only based on stakeholder guidance and official product metadata.",
+  "collection_method": "Complete public first-party product-page review feed; reviewer names omitted.",
+  "source": "Kevin's Natural Foods",
+  "provider": "Judge.me",
+  "snapshots": [
+    {
+      "product_id": "beef_fajitas",
+      "product": "Beef Fajitas",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "page_url": "https://www.kevinsnaturalfoods.com/products/beef-fajitas",
+      "shopify_product_id": "9232761356502",
+      "product_external_id": "9232761356502",
+      "rating_count": 4,
+      "average_rating": 2.0,
+      "distribution": {
+        "5": 0,
+        "4": 0,
+        "3": 2,
+        "2": 0,
+        "1": 2
+      },
+      "feed_records_retrieved": 4,
+      "written_reviews_since_2023": 4,
+      "earliest_included_date": "2026-04-27",
+      "latest_included_date": "2026-07-08",
+      "captured_at": "2026-08-25"
+    },
+    {
+      "product_id": "teriyaki_chicken_kit",
+      "product": "Teriyaki-Style Chicken Stir-Fry Kit",
+      "cohort": "grocery",
+      "source": "Kevin's Natural Foods",
+      "page_url": "https://www.kevinsnaturalfoods.com/products/teriyaki-style-chicken-stir-fry-kit",
+      "shopify_product_id": "9043039420630",
+      "product_external_id": "9043039420630",
+      "rating_count": 3,
+      "average_rating": 3.0,
+      "distribution": {
+        "5": 0,
+        "4": 2,
+        "3": 0,
+        "2": 0,
+        "1": 1
+      },
+      "feed_records_retrieved": 3,
+      "written_reviews_since_2023": 3,
+      "earliest_included_date": "2025-11-13",
+      "latest_included_date": "2026-06-25",
+      "captured_at": "2026-08-25"
+    },
+    {
+      "product_id": "beef_broccoli_kit",
+      "product": "Beef & Broccoli Stir-Fry Kit",
+      "cohort": "grocery",
+      "source": "Kevin's Natural Foods",
+      "page_url": "https://www.kevinsnaturalfoods.com/products/beef-broccoli-stir-fry-kit",
+      "shopify_product_id": "9042958614742",
+      "product_external_id": "9042958614742",
+      "rating_count": 0,
+      "average_rating": 0.0,
+      "distribution": {
+        "5": 0,
+        "4": 0,
+        "3": 0,
+        "2": 0,
+        "1": 0
+      },
+      "feed_records_retrieved": 0,
+      "written_reviews_since_2023": 0,
+      "earliest_included_date": null,
+      "latest_included_date": null,
+      "captured_at": "2026-08-25"
+    },
+    {
+      "product_id": "chicken_fajitas_kit",
+      "product": "Chicken Fajitas Skillet Meal Kit",
+      "cohort": "grocery",
+      "source": "Kevin's Natural Foods",
+      "page_url": "https://www.kevinsnaturalfoods.com/products/chicken-fajitas-skillet-meal-kit",
+      "shopify_product_id": "8904583315670",
+      "product_external_id": "8904583315670",
+      "rating_count": 13,
+      "average_rating": 3.38,
+      "distribution": {
+        "5": 5,
+        "4": 2,
+        "3": 1,
+        "2": 3,
+        "1": 2
+      },
+      "feed_records_retrieved": 13,
+      "written_reviews_since_2023": 13,
+      "earliest_included_date": "2025-06-28",
+      "latest_included_date": "2026-08-12",
+      "captured_at": "2026-08-25"
+    },
+    {
+      "product_id": "general_tso_chicken_kit",
+      "product": "General Tso's Chicken Stir-Fry Kit",
+      "cohort": "grocery",
+      "source": "Kevin's Natural Foods",
+      "page_url": "https://www.kevinsnaturalfoods.com/products/general-tso-s-chicken-with-green-beans",
+      "shopify_product_id": "8818225610966",
+      "product_external_id": "8818225610966",
+      "rating_count": 1,
+      "average_rating": 4.0,
+      "distribution": {
+        "5": 0,
+        "4": 1,
+        "3": 0,
+        "2": 0,
+        "1": 0
+      },
+      "feed_records_retrieved": 1,
+      "written_reviews_since_2023": 1,
+      "earliest_included_date": "2026-07-01",
+      "latest_included_date": "2026-07-01",
+      "captured_at": "2026-08-25"
+    },
+    {
+      "product_id": "sichuan_chicken_kit",
+      "product": "Sichuan Chicken Stir-Fry Kit",
+      "cohort": "grocery",
+      "source": "Kevin's Natural Foods",
+      "page_url": "https://www.kevinsnaturalfoods.com/products/sichuan-chicken-stir-fry-kit",
+      "shopify_product_id": "8742765166806",
+      "product_external_id": "8742765166806",
+      "rating_count": 1,
+      "average_rating": 5.0,
+      "distribution": {
+        "5": 1,
+        "4": 0,
+        "3": 0,
+        "2": 0,
+        "1": 0
+      },
+      "feed_records_retrieved": 1,
+      "written_reviews_since_2023": 1,
+      "earliest_included_date": "2025-12-15",
+      "latest_included_date": "2025-12-15",
+      "captured_at": "2026-08-25"
+    },
+    {
+      "product_id": "honey_garlic_chicken_kit",
+      "product": "Honey Garlic Chicken Stir-Fry Kit",
+      "cohort": "grocery",
+      "source": "Kevin's Natural Foods",
+      "page_url": "https://www.kevinsnaturalfoods.com/products/honey-garlic-chicken-stir-fry-kit",
+      "shopify_product_id": "8742753140950",
+      "product_external_id": "8742753140950",
+      "rating_count": 9,
+      "average_rating": 3.78,
+      "distribution": {
+        "5": 5,
+        "4": 0,
+        "3": 2,
+        "2": 1,
+        "1": 1
+      },
+      "feed_records_retrieved": 9,
+      "written_reviews_since_2023": 9,
+      "earliest_included_date": "2025-05-13",
+      "latest_included_date": "2026-07-25",
+      "captured_at": "2026-08-25"
+    },
+    {
+      "product_id": "orange_chicken_costco",
+      "product": "Orange Chicken Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "page_url": "https://www.kevinsnaturalfoods.com/products/orange-chicken-stir-fry",
+      "shopify_product_id": "8359006240982",
+      "product_external_id": "8359006240982",
+      "rating_count": 1,
+      "average_rating": 5.0,
+      "distribution": {
+        "5": 1,
+        "4": 0,
+        "3": 0,
+        "2": 0,
+        "1": 0
+      },
+      "feed_records_retrieved": 1,
+      "written_reviews_since_2023": 1,
+      "earliest_included_date": "2025-03-07",
+      "latest_included_date": "2025-03-07",
+      "captured_at": "2026-08-25"
+    },
+    {
+      "product_id": "honey_garlic_chicken_costco",
+      "product": "Honey Garlic Chicken Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "page_url": "https://www.kevinsnaturalfoods.com/products/honey-garlic-chicken-green-bean-stir-fry",
+      "shopify_product_id": "8173746847958",
+      "product_external_id": "8173746847958",
+      "rating_count": 3,
+      "average_rating": 5.0,
+      "distribution": {
+        "5": 3,
+        "4": 0,
+        "3": 0,
+        "2": 0,
+        "1": 0
+      },
+      "feed_records_retrieved": 3,
+      "written_reviews_since_2023": 3,
+      "earliest_included_date": "2023-12-21",
+      "latest_included_date": "2024-07-11",
+      "captured_at": "2026-08-25"
+    },
+    {
+      "product_id": "beef_broccoli_costco",
+      "product": "Beef & Broccoli Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "page_url": "https://www.kevinsnaturalfoods.com/products/beef-broccoli-stir-fry",
+      "shopify_product_id": "8129985085654",
+      "product_external_id": "8129985085654",
+      "rating_count": 23,
+      "average_rating": 3.96,
+      "distribution": {
+        "5": 16,
+        "4": 0,
+        "3": 1,
+        "2": 2,
+        "1": 4
+      },
+      "feed_records_retrieved": 23,
+      "written_reviews_since_2023": 23,
+      "earliest_included_date": "2023-11-21",
+      "latest_included_date": "2026-07-17",
+      "captured_at": "2026-08-25"
+    },
+    {
+      "product_id": "sichuan_chicken_costco",
+      "product": "Sichuan Chicken Green Bean Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "page_url": "https://www.kevinsnaturalfoods.com/products/sichuan-chicken-green-bean-stir-fry",
+      "shopify_product_id": "8074410918102",
+      "product_external_id": "8074410918102",
+      "rating_count": 11,
+      "average_rating": 4.36,
+      "distribution": {
+        "5": 7,
+        "4": 3,
+        "3": 0,
+        "2": 0,
+        "1": 1
+      },
+      "feed_records_retrieved": 11,
+      "written_reviews_since_2023": 11,
+      "earliest_included_date": "2023-09-03",
+      "latest_included_date": "2026-08-10",
+      "captured_at": "2026-08-25"
+    },
+    {
+      "product_id": "hot_honey_garlic_chicken_costco",
+      "product": "Hot Honey Garlic Chicken Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "page_url": "https://www.kevinsnaturalfoods.com/products/hot-honey-garlic-chicken-stir-fry",
+      "shopify_product_id": "8068350443734",
+      "product_external_id": "8068350443734",
+      "rating_count": 7,
+      "average_rating": 5.0,
+      "distribution": {
+        "5": 7,
+        "4": 0,
+        "3": 0,
+        "2": 0,
+        "1": 0
+      },
+      "feed_records_retrieved": 7,
+      "written_reviews_since_2023": 7,
+      "earliest_included_date": "2023-06-06",
+      "latest_included_date": "2025-04-29",
+      "captured_at": "2026-08-25"
+    },
+    {
+      "product_id": "teriyaki_chicken_costco",
+      "product": "Teriyaki-Style Chicken Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "page_url": "https://www.kevinsnaturalfoods.com/products/teriyaki-style-chicken-stir-fry",
+      "shopify_product_id": "7753403433174",
+      "product_external_id": "7753403433174",
+      "rating_count": 11,
+      "average_rating": 4.91,
+      "distribution": {
+        "5": 10,
+        "4": 1,
+        "3": 0,
+        "2": 0,
+        "1": 0
+      },
+      "feed_records_retrieved": 11,
+      "written_reviews_since_2023": 5,
+      "earliest_included_date": "2023-04-27",
+      "latest_included_date": "2025-04-07",
+      "captured_at": "2026-08-25"
+    }
+  ],
+  "reviews": [
+    {
+      "product_id": "chicken_fajitas_kit",
+      "product": "Chicken Fajitas Skillet Meal Kit",
+      "cohort": "grocery",
+      "source": "Kevin's Natural Foods",
+      "date": "2026-08-12",
+      "rating": 5,
+      "title": "Absolutely the best fajitas in under 15 minutes!",
+      "text": "Absolutely the best fajitas in under 15 minutes! I couldn't believe it only took 7 total minutes to cook...on the stove, NOT microwave! We absolutely love these fajitas! The only problem now is availability and being able to get them. It seems that a lot of local stores have taken them off the shelves and forget about Amazon because they're worse.",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "330d6352-e376-4fa4-9d33-53e0ec9e45e9",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/chicken-fajitas-skillet-meal-kit",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "sichuan_chicken_costco",
+      "product": "Sichuan Chicken Green Bean Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "date": "2026-08-10",
+      "rating": 5,
+      "title": "Yum!",
+      "text": "This Chicken Green bean stir-fry from Kevin’s at Costco was really good! It was super simple to prep as well. We made ours over noodles but you could eat it plain or over rice. We were super impressed with it for a simple/easy lunch. We found these in the refrigerated section at Costco. 🙂",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "1a849efd-7081-43c3-a4b9-2306d0bb9104",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/sichuan-chicken-green-bean-stir-fry",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "sichuan_chicken_costco",
+      "product": "Sichuan Chicken Green Bean Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "date": "2026-08-10",
+      "rating": 4,
+      "title": "Another Kevin’s Hit!",
+      "text": "I’m a big fan of Kevin’s products because they are so easy and convenient, but still feel fresh and healthy. The flavor of the sauce was excellent (but a little spicy!) and it was a very tasty dish. My only issue was the sous vide chicken - while it was tender and tasted good, the look of it coming out of the package really gave me some hesitation. But it didn’t end up tasting really good.",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "d5f106eb-283a-48c6-a317-a0f93f7e1809",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/sichuan-chicken-green-bean-stir-fry",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "sichuan_chicken_costco",
+      "product": "Sichuan Chicken Green Bean Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "date": "2026-08-09",
+      "rating": 4,
+      "title": "Has a little heat but it’s good!",
+      "text": "We really liked the Sichuan Chicken & Green Bean Stir Fry! It had a good amount of heat and tasted a lot like Chinese takeout. It was a little too spicy for my toddler, but my husband and I really enjoyed it. It was also quick and easy to make!",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "39711d9a-1a49-408f-9f27-804ee11dbb03",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/sichuan-chicken-green-bean-stir-fry",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "sichuan_chicken_costco",
+      "product": "Sichuan Chicken Green Bean Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "date": "2026-08-02",
+      "rating": 4,
+      "title": "We love Kevin's!",
+      "text": "We love Kevin's Natural Foods products! We have had them in the past, but this one was a new one (Sichuan Chicken Green Bean Stir-Fry). I love them because they are so easy to make and they have such good ingredients. It took 10 minutes to cook and we served it over rice. The chicken and beans were great. We were not a fan of the sauce on it as it was too sweet for us. #sponsored",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "576e157b-d1fd-48eb-a5f9-63069e1242b8",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/sichuan-chicken-green-bean-stir-fry",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "chicken_fajitas_kit",
+      "product": "Chicken Fajitas Skillet Meal Kit",
+      "cohort": "grocery",
+      "source": "Kevin's Natural Foods",
+      "date": "2026-07-30",
+      "rating": 2,
+      "title": "Sauce didn't taste 'fajita-like' to me",
+      "text": "Think I may have tried a Kevin's product before, but regardless, was disappointed in the \"Chicken Fajitas Skillet Meal Kit\". Positives, the ingredients did seem fresh. Negatives, the vegetables were not substantial at all, and the biggest disappointment was the lack of a 'fajita taste'. The sauce was sort of tomato-like. Full kit made three flour taco-size tortillas. Gave it a shot, but will not purchase this one again.",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "6df36b22-afa6-4bcd-808d-b5d2f73074bc",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/chicken-fajitas-skillet-meal-kit",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "honey_garlic_chicken_kit",
+      "product": "Honey Garlic Chicken Stir-Fry Kit",
+      "cohort": "grocery",
+      "source": "Kevin's Natural Foods",
+      "date": "2026-07-25",
+      "rating": 3,
+      "title": "I agree with the review too much orange",
+      "text": "I love that the product has quality ingredients and fits into clean eating. The variety of options are great and I've tried a few items that I enjoyed. For this particular product, I agree with the review about the orange flavor being overwhelming. I was expecting more of the soy flavor based on the title of the package. I \"saved\" the overly sweet sauce by adding umami seasoning powder and red pepper flakes. The chicken portion is smaller than what I would use if I made the dish from scratch but was sufficient. They're were a good amount of green beans but the texture and color of them wasn't my preferred for stir-fry. To give you an idea of serving size adequacy, I made two packages and had a serving and my husband wiped out the rest for his dinner. So based on a price of $11 per package, size and flavor this just wasn't a win for me and not an item I'd try again.",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "9e5e36ac-d03f-452c-9d43-c5e56f3712c8",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/honey-garlic-chicken-stir-fry-kit",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "chicken_fajitas_kit",
+      "product": "Chicken Fajitas Skillet Meal Kit",
+      "cohort": "grocery",
+      "source": "Kevin's Natural Foods",
+      "date": "2026-07-22",
+      "rating": 1,
+      "title": "We randomly try you food",
+      "text": "We randomly try you food. The meal was very lacking in a fajita flavor.",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "4f87e9e0-623b-43d6-ab26-53b6944b76fd",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/chicken-fajitas-skillet-meal-kit",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "beef_broccoli_costco",
+      "product": "Beef & Broccoli Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "date": "2026-07-17",
+      "rating": 5,
+      "title": "Love!!",
+      "text": "I love this meal! It's so easy and delicious. I'm endlessly sad that my Costco locations discontinued it ☹️☹️",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "087cddcc-1e74-4732-a5fc-15a8ec4766ea",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/beef-broccoli-stir-fry",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "beef_fajitas",
+      "product": "Beef Fajitas",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "date": "2026-07-08",
+      "rating": 1,
+      "title": "Not good at all",
+      "text": "Not good at all. Returning!",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "79549c17-4120-4800-94aa-37e00de0a9f8",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/beef-fajitas",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "general_tso_chicken_kit",
+      "product": "General Tso's Chicken Stir-Fry Kit",
+      "cohort": "grocery",
+      "source": "Kevin's Natural Foods",
+      "date": "2026-07-01",
+      "rating": 4,
+      "title": "General Tso Stir-fry",
+      "text": "Flavor and beans amazing, far better than anticipated. Quality of chicken far better than I thought it would be. Only reason for the 4 stars is the amount of chicken in the picture is very deceiving.",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "431a5e92-1c08-418b-bc5f-633c34031225",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/general-tso-s-chicken-with-green-beans",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "teriyaki_chicken_kit",
+      "product": "Teriyaki-Style Chicken Stir-Fry Kit",
+      "cohort": "grocery",
+      "source": "Kevin's Natural Foods",
+      "date": "2026-06-25",
+      "rating": 4,
+      "title": "Yummy",
+      "text": "I tried this flavor for the first time, followed directions as instructed and i think it takes longer than 7 minutes, maybe 10 not bad at all. A lot of Kevins products are delicious, we all have different taste buds so I dont believe some of the bad reviews. It is a meal for two and my box had a lot of carrots, few broccoli and cauliflower but I dont mind adding few extra veggies myself. I really liked this flavor I thought it was delicious. The only thing I think that it doesn't need is a lot of the Sauce, I thought it was a bit much but its not a deal breaker will definitely buy it again and use less sauce. I love that all of his products are healthy and clean ingredients so THANK YOU!",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "bf3bdb63-336f-4410-b732-184afa9732f1",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/teriyaki-style-chicken-stir-fry-kit",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "beef_broccoli_costco",
+      "product": "Beef & Broccoli Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "date": "2026-06-22",
+      "rating": 5,
+      "title": "Loved",
+      "text": "Loved it!!!!",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "48dc36ad-0302-4625-ab22-419385c787d6",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/beef-broccoli-stir-fry",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "chicken_fajitas_kit",
+      "product": "Chicken Fajitas Skillet Meal Kit",
+      "cohort": "grocery",
+      "source": "Kevin's Natural Foods",
+      "date": "2026-06-17",
+      "rating": 3,
+      "title": "Flavor is great - veggies were very lacking",
+      "text": "Flavor is great - veggies were very lacking as was the chicken portion. Could definately be on top if it was actually considered a meal for two",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "b9a3f76f-e26c-41f1-a96f-7dbcab52b4bd",
+      "verified_buyer": true,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/chicken-fajitas-skillet-meal-kit",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "beef_fajitas",
+      "product": "Beef Fajitas",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "date": "2026-06-11",
+      "rating": 3,
+      "title": "agree with comment below, meat appears gray and",
+      "text": "agree with comment below, meat appears gray and not in strips. Small amount for price. Easy instructions",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "4a2a6d12-b2a7-478e-9e65-a1e3c0e5eae3",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/beef-fajitas",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "chicken_fajitas_kit",
+      "product": "Chicken Fajitas Skillet Meal Kit",
+      "cohort": "grocery",
+      "source": "Kevin's Natural Foods",
+      "date": "2026-06-10",
+      "rating": 4,
+      "title": "Our favorite",
+      "text": "This is definitely our favorite kevin's meal but agree with others the portions are super small. Wish we could buy the sauce like other sauces!",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "10103520-6f0f-4299-b0aa-e893eb9d42a0",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/chicken-fajitas-skillet-meal-kit",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "beef_broccoli_costco",
+      "product": "Beef & Broccoli Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "date": "2026-06-01",
+      "rating": 1,
+      "title": "This was AWFUL basically dog food",
+      "text": "This was AWFUL. I threw the entire meal away, the meat looks like actual dog food and smelt awful, I was trying not to gag while cooking it, the sauce was absolutely horrific along with more terrible smells. This was literally like eating dog food with disgusting gravy. I actually searched this meal just so I could leave a review it’s that bad and I spent $20 on it",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "ae670843-f9fc-49de-8241-a67e633a02ce",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/beef-broccoli-stir-fry",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "honey_garlic_chicken_kit",
+      "product": "Honey Garlic Chicken Stir-Fry Kit",
+      "cohort": "grocery",
+      "source": "Kevin's Natural Foods",
+      "date": "2026-05-30",
+      "rating": 1,
+      "title": "This dish should be called lots of soggy green",
+      "text": "This dish should be called lots of soggy green beans with a little bit of chicken! About 1.5 servings in this prepared! Very disappointed in this product. Won’t be purchasing this again!",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "02c4f5a4-0f27-49c1-85f4-753e7d11842e",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/honey-garlic-chicken-stir-fry-kit",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "beef_fajitas",
+      "product": "Beef Fajitas",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "date": "2026-05-30",
+      "rating": 1,
+      "title": "Bought this for dinner tonight and was surprised",
+      "text": "Bought this for dinner tonight and was surprised by the texture and color of the beef. It was definitely not strips, looked grayish, and had the texture of canned dog food. Also, very pricey for small amount.",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "f5623138-249d-42f0-89a4-f898a0e8b8a9",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/beef-fajitas",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "chicken_fajitas_kit",
+      "product": "Chicken Fajitas Skillet Meal Kit",
+      "cohort": "grocery",
+      "source": "Kevin's Natural Foods",
+      "date": "2026-05-26",
+      "rating": 1,
+      "title": "NOPE!!!",
+      "text": "Taste great but I would love to know what standard of measure you use because if there is 2 and a half cups of food in that pkg I will give you your $10 back!",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "2cea7c1e-2775-4360-b83f-df438bef23a1",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/chicken-fajitas-skillet-meal-kit",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "beef_broccoli_costco",
+      "product": "Beef & Broccoli Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "date": "2026-05-14",
+      "rating": 2,
+      "title": "Ehhh",
+      "text": "Didn’t mind the way it tasted, but the contents looked absolutely atrocious.. I had second guessed whether it was beef or something else, and the consistency of the meat did not help. Stay away from this one. I understand the cooking process, but it resembled packaged liver",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "c3b6febb-863c-4ea4-a161-bdcad008705c",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/beef-broccoli-stir-fry",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "beef_broccoli_costco",
+      "product": "Beef & Broccoli Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "date": "2026-05-10",
+      "rating": 1,
+      "title": "This is bad…",
+      "text": "My first Kevin’s meal and my lasts Small portion, not worth the $22. Furthermore the sauce is bad, not traditional broccoli beef flavor at all. The meat has canned dog food consistency and the broccoli was precooked to mush. Do not try. I doubt I’ll try another Kevin’s meal.",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "2074d8fb-58f5-4541-bd1b-f4aa377a4b3c",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/beef-broccoli-stir-fry",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "teriyaki_chicken_kit",
+      "product": "Teriyaki-Style Chicken Stir-Fry Kit",
+      "cohort": "grocery",
+      "source": "Kevin's Natural Foods",
+      "date": "2026-05-02",
+      "rating": 1,
+      "title": "Quick Dinner - NO!",
+      "text": "This was the worst excuse for a dinner for two - 3 pieces of broccoli - maybe 1/2 carrot sliced and 3 pieces of cauliflower - Chicken was clumps and felt likt it had just come out of a can - was disgusting - no flavor - will never purchase again-",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "a351a9ae-b676-4770-aff2-50516bac3dd0",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/teriyaki-style-chicken-stir-fry-kit",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "beef_fajitas",
+      "product": "Beef Fajitas",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "date": "2026-04-27",
+      "rating": 3,
+      "title": "Fajitas taste good, instructions not so much",
+      "text": "Followed the instructions to heat a pan to high for 1 minute then add tbsp of cooking oil. Almost caught my kitchen on fire and ruined my pan. Definitely do not need to heat the pan on high for this otherwise fajitas tasted amazing just ruined a pan and potential apartment complex fire.",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "5b47177e-8a4a-43b5-8f39-f28c30279d3e",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/beef-fajitas",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "chicken_fajitas_kit",
+      "product": "Chicken Fajitas Skillet Meal Kit",
+      "cohort": "grocery",
+      "source": "Kevin's Natural Foods",
+      "date": "2026-04-14",
+      "rating": 4,
+      "title": "Love but small",
+      "text": "We really enjoyed this but won’t buy again as it’s not enough for 2 people. We would love to buy this sauce.",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "f9ec6514-3706-4f6d-8ae9-1738e74e07cd",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/chicken-fajitas-skillet-meal-kit",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "beef_broccoli_costco",
+      "product": "Beef & Broccoli Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "date": "2026-03-02",
+      "rating": 1,
+      "title": "Pretty Bad!",
+      "text": "It’s hard to disappoint me when it comes to food because I pretty much like everything, however, this was not good at all. I always have leftovers because I hate wasting food and it’s an easy meal for the next day, but I had to throw this one out.",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "9ae9099f-9372-4867-adb6-2f45904d543e",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/beef-broccoli-stir-fry",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "sichuan_chicken_costco",
+      "product": "Sichuan Chicken Green Bean Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "date": "2026-02-24",
+      "rating": 5,
+      "title": "ALL THINGS KEVIN!!",
+      "text": "I have yet to find anything made by Kevin’s that I don’t like! Seriously, it’s all so darn good and this one just got added to my list of faves! Seriously try it! I’m not a fan of pre-made foods but when I do make them (lazy cooking nights, sports or whatever) Kevin’s is my go to!",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "02473eeb-f00e-416f-be79-dbc3aa1ac134",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/sichuan-chicken-green-bean-stir-fry",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "honey_garlic_chicken_kit",
+      "product": "Honey Garlic Chicken Stir-Fry Kit",
+      "cohort": "grocery",
+      "source": "Kevin's Natural Foods",
+      "date": "2026-02-21",
+      "rating": 2,
+      "title": "Holy Orange",
+      "text": "I love Kevin’s meals but there should be more of a mention of orange! Nothing on the packaging screams orange at you. A little orange garnish sure. And “a hint of orange” is mentioned in the description. But I couldn’t eat this. I hate orange and it’s all I could taste it’s really disappointing",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "f90b2a8c-62d7-4730-affd-f9f22be6e317",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/honey-garlic-chicken-stir-fry-kit",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "chicken_fajitas_kit",
+      "product": "Chicken Fajitas Skillet Meal Kit",
+      "cohort": "grocery",
+      "source": "Kevin's Natural Foods",
+      "date": "2026-02-12",
+      "rating": 5,
+      "title": "Liked it a lot!",
+      "text": "This was my first Kevin's and it was delicious! If you're eating properly, as on Weight Watcher's, it was enough for two. I put it in 2 whole wheat tortillas and enjoyed them for a whole meal because I did not have breakfast. The sauce was perfect and delicious! Will have to try other Kevin's.........",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "00d13ce6-ca93-4b38-9172-298788270206",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/chicken-fajitas-skillet-meal-kit",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "beef_broccoli_costco",
+      "product": "Beef & Broccoli Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "date": "2026-01-27",
+      "rating": 1,
+      "title": "The portion size is a joke",
+      "text": "This packaging comes in a box that says 2 pounds on it. There is about 0.5 pounds of fluid you have to drain from the beef and the broccoli and what’s left is a 0.5 pound of meat and 1 pound of broccoli. Not even able to feed a family of three with a child. I will not be buys this rather expensive package ever again.",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "6c99fd60-8e70-4519-b904-f8e6b9a4de3d",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/beef-broccoli-stir-fry",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "beef_broccoli_costco",
+      "product": "Beef & Broccoli Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "date": "2026-01-26",
+      "rating": 3,
+      "title": "Recipe needs some tweaking",
+      "text": "The concept is good; sous vide cooked beef and broccoli, which makes it quick and easy to put in a wok to heat up and brown. However, I found the sauce too sweet and it tasted a bit one dimensional. This would be much better with a less sweet and more flavorful sauce.",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "fcb9cca7-1ddd-4812-8ac3-527546cffce6",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/beef-broccoli-stir-fry",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "beef_broccoli_costco",
+      "product": "Beef & Broccoli Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "date": "2026-01-14",
+      "rating": 2,
+      "title": "Soggy and odd taste",
+      "text": "The beef itself is ok, but the sogginess of the broccoli drowning in a strange sauce (does not taste like ginger or garlic) is not appetizing. The comparison of the box image vs. the actual food is pretty disappointing.",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "16d3e5e2-f5c5-4070-9f94-a8f10627464e",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/beef-broccoli-stir-fry",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "sichuan_chicken_costco",
+      "product": "Sichuan Chicken Green Bean Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "date": "2026-01-13",
+      "rating": 1,
+      "title": "Disgusting",
+      "text": "Not worth buying. Sauce overwhelming. Green beans not tasty. Chicken mushy",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "013a95ea-450f-43cf-83fd-25ebdb00cc9c",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/sichuan-chicken-green-bean-stir-fry",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "chicken_fajitas_kit",
+      "product": "Chicken Fajitas Skillet Meal Kit",
+      "cohort": "grocery",
+      "source": "Kevin's Natural Foods",
+      "date": "2026-01-13",
+      "rating": 5,
+      "title": "Love it",
+      "text": "This is the first time trying the fajita and it was delicious. The portion size was good for me since i am the only one eating it and it will last 2 days for me. The vegetables were a bit too big but i cut them up in small portions and enjoyed my meal on flat bread. I will try the other ones.",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "9df7fd18-125f-4fb4-b346-ef612b03c2a7",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/chicken-fajitas-skillet-meal-kit",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "chicken_fajitas_kit",
+      "product": "Chicken Fajitas Skillet Meal Kit",
+      "cohort": "grocery",
+      "source": "Kevin's Natural Foods",
+      "date": "2026-01-10",
+      "rating": 2,
+      "title": "Very Small Portion Size",
+      "text": "As someone has started already, this kit barely feeds one. We added more veggies and chicken from another Kevin’s Chicken with rice and beans to make it a full meal for two. I love Kevin’s Chicken but this was not worth the price.",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "72095e2f-97c0-4d79-92ef-665198be968c",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/chicken-fajitas-skillet-meal-kit",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "sichuan_chicken_kit",
+      "product": "Sichuan Chicken Stir-Fry Kit",
+      "cohort": "grocery",
+      "source": "Kevin's Natural Foods",
+      "date": "2025-12-15",
+      "rating": 5,
+      "title": "delicious",
+      "text": "I got this from target and i should have took a picture. It came out just like the picture and it was soooo good.",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "ef70cd9c-0b73-464a-9e81-987f9e9b70ea",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/sichuan-chicken-stir-fry-kit",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "chicken_fajitas_kit",
+      "product": "Chicken Fajitas Skillet Meal Kit",
+      "cohort": "grocery",
+      "source": "Kevin's Natural Foods",
+      "date": "2025-12-10",
+      "rating": 2,
+      "title": "",
+      "text": "The few veggies we had were cut too big. The package says it feeds 2.5, it barely feeds 1 It's not worth the price and low quality",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "87baa75f-6dd9-4e43-954a-2f35a37c1f29",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/chicken-fajitas-skillet-meal-kit",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "teriyaki_chicken_kit",
+      "product": "Teriyaki-Style Chicken Stir-Fry Kit",
+      "cohort": "grocery",
+      "source": "Kevin's Natural Foods",
+      "date": "2025-11-13",
+      "rating": 4,
+      "title": "Tasty but sparse",
+      "text": "The directions did not match the product- it read separate strips but they were chunks but that aside the meal was tasty but the veggies were sparse. I had add my own veggies. I would suggest to increase the portion of the vegetables as this barely fed 2 persons",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "4a097bfa-089a-460a-b65f-754dda51ed01",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/teriyaki-style-chicken-stir-fry-kit",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "honey_garlic_chicken_kit",
+      "product": "Honey Garlic Chicken Stir-Fry Kit",
+      "cohort": "grocery",
+      "source": "Kevin's Natural Foods",
+      "date": "2025-10-10",
+      "rating": 5,
+      "title": "Dinner for the Chief",
+      "text": "My husband works long hours. He is trying to cut back on meat. This dish he enjoyed so much he thought I bought it at a restaurant! Would recommend as a quick preparation dish. One pot is all you need.",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "4e67135b-2432-439b-9ff7-1a23fae8fd32",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/honey-garlic-chicken-stir-fry-kit",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "honey_garlic_chicken_kit",
+      "product": "Honey Garlic Chicken Stir-Fry Kit",
+      "cohort": "grocery",
+      "source": "Kevin's Natural Foods",
+      "date": "2025-08-24",
+      "rating": 5,
+      "title": "Yum!",
+      "text": "It was really good and quick!",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "ca83300f-4dcb-43cd-8494-0d8daff05294",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/honey-garlic-chicken-stir-fry-kit",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "honey_garlic_chicken_kit",
+      "product": "Honey Garlic Chicken Stir-Fry Kit",
+      "cohort": "grocery",
+      "source": "Kevin's Natural Foods",
+      "date": "2025-08-07",
+      "rating": 3,
+      "title": "Too sweet",
+      "text": "Easy and quick to make. Good portions. Good overall flavor, just too sweet. The sweet seriously over powers everything else. First few bites are okay, but the sweet just keeps building.",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "8d0e97b7-0767-4b71-9819-440c2ef03118",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/honey-garlic-chicken-stir-fry-kit",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "chicken_fajitas_kit",
+      "product": "Chicken Fajitas Skillet Meal Kit",
+      "cohort": "grocery",
+      "source": "Kevin's Natural Foods",
+      "date": "2025-07-08",
+      "rating": 5,
+      "title": "Fantastic, delicious ,so easy to make and you just have to buy some tortillas.",
+      "text": "The best packaged fajita dish I have ever eaten. All the ingredients refresh. It took about 7 to 10 minutes to cook and I ended up eating them. A couple of days after they were fantastic.",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "ebb990fa-f332-4a24-b8f6-96d152c16ddb",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/chicken-fajitas-skillet-meal-kit",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "chicken_fajitas_kit",
+      "product": "Chicken Fajitas Skillet Meal Kit",
+      "cohort": "grocery",
+      "source": "Kevin's Natural Foods",
+      "date": "2025-06-28",
+      "rating": 5,
+      "title": "Favorite",
+      "text": "This is my favorite Kevin’s meal. 10/10!",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "76f49b6a-458a-4d83-b60c-7993a063e57b",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/chicken-fajitas-skillet-meal-kit",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "honey_garlic_chicken_kit",
+      "product": "Honey Garlic Chicken Stir-Fry Kit",
+      "cohort": "grocery",
+      "source": "Kevin's Natural Foods",
+      "date": "2025-06-16",
+      "rating": 5,
+      "title": "Delicious!",
+      "text": "I tried this for the 1st time yesterday, and I'm HOOKED! Absolutely fantastic! I did add some chopped onions because I lovem them. Otherwise perfect as is!",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "40722d6e-df27-4419-972e-479ec5e827b6",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/honey-garlic-chicken-stir-fry-kit",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "honey_garlic_chicken_kit",
+      "product": "Honey Garlic Chicken Stir-Fry Kit",
+      "cohort": "grocery",
+      "source": "Kevin's Natural Foods",
+      "date": "2025-06-01",
+      "rating": 5,
+      "title": "Easy & delicious",
+      "text": "I tried this today for dinner & both my husband & I loved it. Good protein/ carb ratio Side salad & that’s it.",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "5e3d6be4-a95c-43d7-81ae-589743024cdb",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/honey-garlic-chicken-stir-fry-kit",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "honey_garlic_chicken_kit",
+      "product": "Honey Garlic Chicken Stir-Fry Kit",
+      "cohort": "grocery",
+      "source": "Kevin's Natural Foods",
+      "date": "2025-05-13",
+      "rating": 5,
+      "title": "Easy and so tasty!",
+      "text": "I tried your cauliflower mash recently & we loved it. I saw the honey garlic chicken at Market Basket & gave it a try for lunch today. This was so simple to make & so much flavor. I will definitely be checking out more of your products. Plus, one pan for an easy clean up. I might make this & throw away the box & serve it to my husband. He will think I slaved over the stove. (HaHa) Have a great day, Sharon",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "2b108050-3035-4c85-9139-cee02e413bc8",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/honey-garlic-chicken-stir-fry-kit",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "beef_broccoli_costco",
+      "product": "Beef & Broccoli Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "date": "2025-05-11",
+      "rating": 5,
+      "title": "Delicious!!!",
+      "text": "Quality ingredients and super easy preparation make this a fabulous and healthy meal!! Kevin’s Beef and Broccoli is my new favorite!!! Full of flavor and absolutely delicious!! Highly recommend!!",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "b4328867-ee9e-4c70-8a98-918c21abf5a4",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/beef-broccoli-stir-fry",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "hot_honey_garlic_chicken_costco",
+      "product": "Hot Honey Garlic Chicken Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "date": "2025-04-29",
+      "rating": 5,
+      "title": "My favorite Kevin's meal I hope it gets restocked soon",
+      "text": "My favorite Kevin's meal tastes great good ingredients and quick to put together. Hope Costco gets it back soon as I got it a few times and have missed it the last month. Would be a shame if Kevin's decided to discontinue their best meal.",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "d4edfb73-6c9b-41d4-a63f-4ebbab810cc7",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/hot-honey-garlic-chicken-stir-fry",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "beef_broccoli_costco",
+      "product": "Beef & Broccoli Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "date": "2025-04-14",
+      "rating": 5,
+      "title": "Holy Moley this is so yummy!! 😋",
+      "text": "Wow, better than restaurant quality! This was such a refreshing find for me because I'm gluten free and my choices are limited. This quick five minute meal is of superb quality and you won't be disappointed if you try it.",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "7053e0e9-c45a-4cb0-8831-580c29917c7a",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/beef-broccoli-stir-fry",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "beef_broccoli_costco",
+      "product": "Beef & Broccoli Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "date": "2025-04-08",
+      "rating": 5,
+      "title": "Absolutely Delicious – A New Go-To from Costco!",
+      "text": "We picked up Kevin's Beef & Broccoli Stir-Fry from Costco and absolutely loved it! The beef was super tender, and the sauce had the perfect balance of savory and slightly sweet. It tasted just like something you'd get at a good restaurant, but way faster and easier to make at home. We threw it in a pan for a few minutes and dinner was ready — perfect for busy nights. Definitely going to keep this stocked in our fridge. Highly recommend!",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "0c368920-64c6-4ce1-8a0f-7a234633a227",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/beef-broccoli-stir-fry",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "teriyaki_chicken_costco",
+      "product": "Teriyaki-Style Chicken Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "date": "2025-04-07",
+      "rating": 4,
+      "title": "Love Everything…. But Portion sizes",
+      "text": "It is delicious and so convenient for me. I work full time and go to school and I love have quick meals to prepare, rather than get take out. However —- The box indicates that a serving is a cup and that there are 4.5 cups in a box. I was able to get 3 cuts of food from this.",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "411a1e0b-9475-4d28-a9cd-b0b6877b48b1",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/teriyaki-style-chicken-stir-fry",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "teriyaki_chicken_costco",
+      "product": "Teriyaki-Style Chicken Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "date": "2025-04-04",
+      "rating": 5,
+      "title": "Delicious",
+      "text": "This product is one of my families favorites. Purchased it at Costco in Mesa, Arizona and now it's gone!! I am so disappointed.",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "772f6fee-3f89-405e-8eee-77b7abd1c505",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/teriyaki-style-chicken-stir-fry",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "beef_broccoli_costco",
+      "product": "Beef & Broccoli Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "date": "2025-04-04",
+      "rating": 5,
+      "title": "Delicious",
+      "text": "This product is one of my family's favorites along with the chicken stir fry. Purchased it at Costco in Mesa, Arizona and now it's gone!! I am so disappointed.",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "66842853-e2e4-4263-9ad4-e7d6179c9307",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/beef-broccoli-stir-fry",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "orange_chicken_costco",
+      "product": "Orange Chicken Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "date": "2025-03-07",
+      "rating": 5,
+      "title": "Orange Chicken",
+      "text": "Absolutely delicious! I just found your products the other day at my local Albertson's and I am so glad I did. Gluten free, healthy, great flavor and I LOVE that it is low sodium. So many frozen meals have such high sodium content I am not able to eat them. I bought some other flavors and can't wait to try them too! I will definitely come back and write a review for each one. Thanks for this great meal. So glad to have found your products.",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "206bca70-e2e0-4ec2-82e8-e57b03940fe6",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/orange-chicken-stir-fry",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "beef_broccoli_costco",
+      "product": "Beef & Broccoli Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "date": "2025-02-11",
+      "rating": 5,
+      "title": "Kevin's Beef n Broccoli",
+      "text": "Simple to make, literally minutes. Served over rice, and it was a meal that I'll buy again. Delicious!!",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "2bc982c2-a8b7-4fe1-9b31-5419f8a93c5e",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/beef-broccoli-stir-fry",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "beef_broccoli_costco",
+      "product": "Beef & Broccoli Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "date": "2025-01-08",
+      "rating": 5,
+      "title": "Sooooo good!",
+      "text": "This meal far passed my expectations and tasted so good. I love the clean ingredients and how fast it's ready to eat. I love all Kevin's products I have tried.",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "44d6b69c-c732-4e47-b4b5-940f074b77c9",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/beef-broccoli-stir-fry",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "honey_garlic_chicken_costco",
+      "product": "Honey Garlic Chicken Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "date": "2024-07-11",
+      "rating": 5,
+      "title": "Delicious quick meal!",
+      "text": "While I did add extras like onions and more garlic and some red chili powder - I thoroughly enjoyed the dish! My one teen “wasn’t hungry”, but encouraged him to eat a tiny bit… text message came… “Can I have some more pls?!” My littlest (who doesn’t normally eat green beans) - asked JUST FOR GREEN BEANS! Middle child (also teen) ate it for breakfast this morning. Seeing how they devoured it has me searching our local Costco for this meal again! I was pleasantly surprised at the ingredients being clean. Thanks for a good product. I did add over some rice to make it a complete meal for the family.",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "fb54c421-7567-4e8f-ab2d-8a83825401e9",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/honey-garlic-chicken-green-bean-stir-fry",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "beef_broccoli_costco",
+      "product": "Beef & Broccoli Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "date": "2024-06-09",
+      "rating": 5,
+      "title": "So good So easy",
+      "text": "We bought this for a quick serve GF meal. It so far out performed our expectations. The Kevins products are now part of our regular meal plans.",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "acf670a3-a4f1-4b8c-b189-1bb4f07ca88a",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/beef-broccoli-stir-fry",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "hot_honey_garlic_chicken_costco",
+      "product": "Hot Honey Garlic Chicken Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "date": "2024-05-31",
+      "rating": 5,
+      "title": "Truly best meal ever!",
+      "text": "This meal was just outstanding! The flavors, the easy prep; loaded with meat and broccoli - gosh I do hope Costco gets this soon back in stock. Nothing tastes this good!!! Is there any way to buy this online?",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "6b05f769-3e18-4964-bf03-64d90ace5c6b",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/hot-honey-garlic-chicken-stir-fry",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "beef_broccoli_costco",
+      "product": "Beef & Broccoli Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "date": "2024-05-28",
+      "rating": 5,
+      "title": "Excellent Taste and Easy",
+      "text": "Excellent taste that a bad cook like me can’t mess up. Found this product at Costco.",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "ef345e9d-ad69-406a-b636-266ce2df774c",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/beef-broccoli-stir-fry",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "honey_garlic_chicken_costco",
+      "product": "Honey Garlic Chicken Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "date": "2024-03-27",
+      "rating": 5,
+      "title": "So yummy!",
+      "text": "Everything I've had from Kevin's has been delicious and this is no exception. The beans were so fresh and plentiful.",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "7e244cbe-7bfb-489f-b667-8b8ec50de971",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/honey-garlic-chicken-green-bean-stir-fry",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "hot_honey_garlic_chicken_costco",
+      "product": "Hot Honey Garlic Chicken Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "date": "2024-03-17",
+      "rating": 5,
+      "title": "Delicious",
+      "text": "This stir fry pack was delicious. I did expect there to be a bigger serving in the box. If you were to feed a family, you would need two boxes. We had ours over jasmine rice and it was really good. Spice level is great. It is pretty sweet.",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "49674a74-d919-4398-99da-93f1e94d19ef",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/hot-honey-garlic-chicken-stir-fry",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "beef_broccoli_costco",
+      "product": "Beef & Broccoli Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "date": "2024-02-24",
+      "rating": 5,
+      "title": "Worth buying",
+      "text": "You can’t go wrong.",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "65cb76b2-311c-41fc-a229-211345379147",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/beef-broccoli-stir-fry",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "sichuan_chicken_costco",
+      "product": "Sichuan Chicken Green Bean Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "date": "2024-02-10",
+      "rating": 5,
+      "title": "Amazing!!",
+      "text": "It was delicious and loved the quality and quantity of the entire entree. It was a great meal for myself and my two growing boys.",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "0af75ee7-7053-43cc-9914-4336a5d57f3f",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor",
+        "review_earned_for_future_purchase"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/sichuan-chicken-green-bean-stir-fry",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "beef_broccoli_costco",
+      "product": "Beef & Broccoli Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "date": "2024-02-07",
+      "rating": 5,
+      "title": "",
+      "text": "Absolutely delicious!!",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "6c7d6715-33c6-4666-afac-280799925965",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor",
+        "review_earned_for_future_purchase"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/beef-broccoli-stir-fry",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "beef_broccoli_costco",
+      "product": "Beef & Broccoli Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "date": "2024-02-06",
+      "rating": 5,
+      "title": "Loved it!",
+      "text": "Everyone in the family loved it!! It’s so good!",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "7086c768-48b8-466a-9eab-892648c0ba13",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor",
+        "review_earned_for_future_purchase"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/beef-broccoli-stir-fry",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "sichuan_chicken_costco",
+      "product": "Sichuan Chicken Green Bean Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "date": "2024-01-30",
+      "rating": 5,
+      "title": "Fantastic",
+      "text": "Fantastic dish. Just wish it was lower in net carbs.",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "8cb58577-5632-4cbe-bc76-b8942eee2af3",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor",
+        "review_earned_for_future_purchase"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/sichuan-chicken-green-bean-stir-fry",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "sichuan_chicken_costco",
+      "product": "Sichuan Chicken Green Bean Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "date": "2024-01-23",
+      "rating": 5,
+      "title": "Delicious!",
+      "text": "This stuff is so delicious, and the price is great at Costco!",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "d10417b0-673b-4e3f-96d4-8803d08d6d2f",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/sichuan-chicken-green-bean-stir-fry",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "teriyaki_chicken_costco",
+      "product": "Teriyaki-Style Chicken Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "date": "2024-01-12",
+      "rating": 5,
+      "title": "",
+      "text": "I was able to buy the chicken Stir Fry at Costco in Winnipeg,Manitoba.It was very, very good.Went to buy more today, but they are out of stock.Sure hope the bring in more",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "7d0b643a-2193-423e-a675-893fe8e17679",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/teriyaki-style-chicken-stir-fry",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "beef_broccoli_costco",
+      "product": "Beef & Broccoli Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "date": "2024-01-08",
+      "rating": 5,
+      "title": "Beef and Broccoli stir fry",
+      "text": "This is so so good!! Will be buying again at Costco.",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "88e0f0db-bb09-44ac-9d3d-8c2406ceb9e3",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor",
+        "review_earned_for_future_purchase"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/beef-broccoli-stir-fry",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "sichuan_chicken_costco",
+      "product": "Sichuan Chicken Green Bean Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "date": "2023-12-21",
+      "rating": 5,
+      "title": "GREAT COSTO FIND",
+      "text": "Soooo excited to find this stir fry at my Costco!! Delicious!!",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "1d17429e-c0d0-4842-9c05-c20814a685a4",
+      "verified_buyer": true,
+      "transparency_badges": [
+        "review_collected_from_store_visitor",
+        "review_earned_for_future_purchase"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/sichuan-chicken-green-bean-stir-fry",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "honey_garlic_chicken_costco",
+      "product": "Honey Garlic Chicken Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "date": "2023-12-21",
+      "rating": 5,
+      "title": "Perfect Quick Dinner Option!",
+      "text": "Loved making this one for my family. Needed a quick and easy dinner, and this did the trick! And it tastes great, too!",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "6ddb5bd6-db05-4700-9d4f-fa32fc68bf49",
+      "verified_buyer": true,
+      "transparency_badges": [
+        "review_collected_from_store_visitor",
+        "review_earned_for_future_purchase"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/honey-garlic-chicken-green-bean-stir-fry",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "beef_broccoli_costco",
+      "product": "Beef & Broccoli Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "date": "2023-12-08",
+      "rating": 5,
+      "title": "Kevin’s Beef and Broccoli",
+      "text": "Delicious and super easy and quick. I would buy it again for sure.",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "0f0daa9b-e066-470e-88a7-5a1812a5095f",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor",
+        "review_earned_for_future_purchase"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/beef-broccoli-stir-fry",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "beef_broccoli_costco",
+      "product": "Beef & Broccoli Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "date": "2023-11-21",
+      "rating": 5,
+      "title": "Excellent! Will buy again!",
+      "text": "This was sooooo good. No one knew it GF! Definitely restaurant quality!",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "91eb7a29-d0b0-4b73-b379-b7ae432981af",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor",
+        "review_earned_for_future_purchase"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/beef-broccoli-stir-fry",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "hot_honey_garlic_chicken_costco",
+      "product": "Hot Honey Garlic Chicken Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "date": "2023-11-05",
+      "rating": 5,
+      "title": "Hooray, no soy, tastes delicious",
+      "text": "I am allergic to soy and was pleasantly surprised to see that there was no soy. I ate it with garlic Naan. The flavors are brilliant, Taste each ingredient and just spicy enough to leave a reminder. It really was easy to make. I opened all the pouches first. I only used part of the brocolli, just personal preference. Will buy this whenever I can.",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "ab473d30-7215-4644-9518-32434376c97f",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor",
+        "review_earned_for_future_purchase"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/hot-honey-garlic-chicken-stir-fry",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "sichuan_chicken_costco",
+      "product": "Sichuan Chicken Green Bean Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "date": "2023-09-03",
+      "rating": 5,
+      "title": "5 Stars!!",
+      "text": "This meal was fantastic! I could not believe how absolutely delicious this was. The fact that it went from stove to table in about 5 minutes is just icing on the cake. Served this over some rice and can’t wait for leftovers tomorrow.",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "5d4d9d90-0dc4-43a7-bc69-caa0d44cae20",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor",
+        "review_earned_for_future_purchase"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/sichuan-chicken-green-bean-stir-fry",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "teriyaki_chicken_costco",
+      "product": "Teriyaki-Style Chicken Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "date": "2023-08-22",
+      "rating": 5,
+      "title": "Kevin's teriyaki stir fry",
+      "text": "Amazing flavor. It only takes 5min to make.",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "4ac84d5d-a5cb-4996-bc08-af8b079a2d70",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor",
+        "review_earned_for_future_purchase"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/teriyaki-style-chicken-stir-fry",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "hot_honey_garlic_chicken_costco",
+      "product": "Hot Honey Garlic Chicken Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "date": "2023-07-24",
+      "rating": 5,
+      "title": "Yum! Love this stir fry!",
+      "text": "Amazing dish! Hope our Costco gets it back soon or buy online, must be so good it's hard to keep getting it to enjoy! So good!!",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "f178cb7a-37ff-4771-9d39-cacb1b57f7ef",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor",
+        "review_earned_for_future_purchase"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/hot-honey-garlic-chicken-stir-fry",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "hot_honey_garlic_chicken_costco",
+      "product": "Hot Honey Garlic Chicken Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "date": "2023-07-03",
+      "rating": 5,
+      "title": "Quick Delicious Meal",
+      "text": "I found this at Costco. I love all the Kevins products we have found. Quick and Healthy food options are a huge plus for me. This did not disappoint.",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "858c34f6-99a5-4edf-b8e4-28be96221396",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor",
+        "review_earned_for_future_purchase"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/hot-honey-garlic-chicken-stir-fry",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "hot_honey_garlic_chicken_costco",
+      "product": "Hot Honey Garlic Chicken Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "date": "2023-06-06",
+      "rating": 5,
+      "title": "Simple and enjoyable",
+      "text": "My son, who has numerous allergies including soy and wheat, really enjoyed this. He also “cooked” it himself and took the initiative to actually customize it be a can of baby corn which is his favorite stir fry veggie. So much easier than me making a homemade stir fry sauce that he could eat.",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "89c315be-782a-4f89-b578-ffdfa178c65c",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor",
+        "review_earned_for_future_purchase"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/hot-honey-garlic-chicken-stir-fry",
+      "metric_eligible": true
+    },
+    {
+      "product_id": "teriyaki_chicken_costco",
+      "product": "Teriyaki-Style Chicken Stir-Fry",
+      "cohort": "costco_only",
+      "source": "Kevin's Natural Foods",
+      "date": "2023-04-27",
+      "rating": 5,
+      "title": "Costco",
+      "text": "Found this at Costco and definitely worth the price. Very convenient after a long day of work.",
+      "capture": "complete first-party public review feed",
+      "provider": "Judge.me",
+      "provider_review_id": "10048a54-b28c-45ad-8967-05122aa77625",
+      "verified_buyer": false,
+      "transparency_badges": [
+        "review_collected_from_store_visitor",
+        "review_earned_for_future_purchase"
+      ],
+      "source_url": "https://www.kevinsnaturalfoods.com/products/teriyaki-style-chicken-stir-fry",
+      "metric_eligible": true
+    }
+  ]
+}
