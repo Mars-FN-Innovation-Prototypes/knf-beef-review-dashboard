@@ -22,17 +22,18 @@
     <nav aria-label="Dashboard sections">
       <a href="#overview">Overview</a>
       <a href="#trends">Trends</a>
+      <a href="#value">Value</a>
       <a href="#products">Products</a>
       <a href="#retailers">Retailers</a>
       <a href="#reviews">Reviews</a>
-      <a href="#actions">Actions</a>
     </nav>
     <div class="top-actions">
       <div class="use-case-switch" aria-label="Analysis module">
         <a href="index.html">Beef HMR</a>
         <a href="stir-fry.html" aria-current="page">Stir Fry</a>
       </div>
-      <span class="data-date">Data through <strong>Aug 25, 2026</strong></span>
+      <span class="data-date">Data through <strong>Aug 27, 2026</strong></span>
+      <a class="button button-secondary" href="downloads/KNF_Stir_Fry_Executive_One_Pager_2026-08-27.pdf" target="_blank" rel="noopener">Executive brief</a>
       <button id="exportCsv" class="button button-primary" type="button">Export filtered CSV</button>
     </div>
   </header>
@@ -74,6 +75,7 @@
           <label><input type="checkbox" name="rating" value="3" checked><span>3</span></label>
           <label><input type="checkbox" name="rating" value="4" checked><span>4</span></label>
           <label><input type="checkbox" name="rating" value="5" checked><span>5</span></label>
+          <label><input type="checkbox" name="rating" value="0" checked><span>Unrated</span></label>
         </div>
       </fieldset>
 
@@ -90,13 +92,14 @@
           <option value="dietary_fit">Dietary fit</option>
           <option value="packaging">Packaging</option>
         </select>
+        <label class="inline-check filter-value-check"><input id="onlyLowValue" type="checkbox"><span>Only low value-for-money reviews</span></label>
       </fieldset>
 
       <fieldset class="filter-group">
         <legend>Disclosure</legend>
-        <label class="inline-check"><input id="excludeIncentive" type="checkbox"><span>Exclude disclosed future-purchase incentives</span></label>
+        <label class="inline-check"><input id="excludeIncentive" type="checkbox"><span>Exclude disclosed incentives</span></label>
         <label class="inline-check"><input id="excludeSponsored" type="checkbox"><span>Exclude self-disclosed sponsored reviews</span></label>
-        <small class="filter-context">Future-purchase incentives and explicit sponsorship are tracked separately.</small>
+        <small class="filter-context">Future-purchase and Thrive Cash disclosures are tracked; explicit sponsorship remains separate.</small>
       </fieldset>
 
       <div class="filter-group">
@@ -129,7 +132,7 @@
         <article class="kpi-card"><span>Written reviews</span><strong id="kpiReviews">—</strong><small id="kpiCoverage">Deduplicated dated comments</small></article>
         <article class="kpi-card"><span>Average rating</span><strong id="kpiRating">—</strong><small>Computed from written reviews</small></article>
         <article class="kpi-card"><span>1–2 star share</span><strong id="kpiLow">—</strong><small id="kpiLowNote">— reviews</small></article>
-        <article class="kpi-card"><span>Portion / value</span><strong id="kpiPortion">—</strong><small>Keyword-coded mention share</small></article>
+        <article class="kpi-card"><span>Low value for money</span><strong id="kpiValue">—</strong><small id="kpiValueNote">Precise complaint coding</small></article>
         <article class="kpi-card"><span>Convenience</span><strong id="kpiConvenience">—</strong><small>Keyword-coded mention share</small></article>
       </section>
 
@@ -137,7 +140,7 @@
         <article class="panel panel-wide trend-panel">
           <div class="panel-heading">
             <div><span class="kicker">Comparable history</span><h2>Monthly first-party signal</h2><p class="panel-description">Uses the complete owned-site feed so early and recent months have the same capture method.</p></div>
-            <div class="control-row"><label for="trendMetric">Metric</label><select id="trendMetric"><option value="rating">Average rating</option><option value="low">1–2 star share</option><option value="volume">Review volume</option><option value="portion_value">Portion / value mentions</option></select></div>
+            <div class="control-row"><label for="trendMetric">Metric</label><select id="trendMetric"><option value="rating">Average rating</option><option value="low">1–2 star share</option><option value="volume">Review volume</option><option value="low_value">Low-value complaints</option></select></div>
           </div>
           <div class="chart-wrap"><canvas id="trendChart" role="img" aria-label="Monthly first-party review trend"></canvas><div id="chartTooltip" class="chart-tooltip" hidden></div></div>
           <div class="chart-legend"><span><i class="legend-line"></i><b id="trendLegend">Average rating</b></span><span class="legend-cutoff"><i></i>Feb 27, 2025 grocery launch</span></div>
@@ -147,6 +150,17 @@
         <article class="panel distribution-panel"><div class="panel-heading"><div><span class="kicker">Composition</span><h2>Rating distribution</h2></div></div><div id="ratingDistribution" class="bar-list"></div></article>
         <article class="panel source-panel"><div class="panel-heading"><div><span class="kicker">Written evidence</span><h2>Source mix</h2></div></div><div id="sourceMix" class="source-mix"></div></article>
         <article class="panel themes-panel"><div class="panel-heading"><div><span class="kicker">Language signals</span><h2>Topic prevalence</h2></div><span class="panel-note">One review may match multiple topics</span></div><div id="themeBars" class="theme-grid stir-theme-grid"></div></article>
+      </section>
+
+      <section class="section-block panel-anchor" id="value">
+        <div class="section-heading"><div><span class="kicker">Stakeholder lens</span><h2>Low value-for-money diagnostic</h2><p>All-time written reviews are coded only when they explicitly cite insufficient protein, insufficient vegetables, an inadequate serving size, or negative price/value tension. One review may carry multiple categories.</p></div><span class="panel-note">Current filters apply</span></div>
+        <div id="valueSummary" class="value-summary" aria-label="Value-for-money summary"></div>
+        <div class="value-grid">
+          <article class="panel value-category-panel"><div class="panel-heading"><div><span class="kicker">Complaint anatomy</span><h3>What drives the value signal</h3></div></div><div id="valueCategoryBars" class="value-bars"></div></article>
+          <article class="panel value-source-panel"><div class="panel-heading"><div><span class="kicker">Source sensitivity</span><h3>Keep channel context visible</h3><p class="panel-description">Thrive Cash disclosures are preserved row by row; percentages are not treated as controlled channel comparisons.</p></div></div><div class="table-shell compact-table"><table><thead><tr><th scope="col">Source</th><th scope="col">Written n</th><th scope="col">Low-value n</th><th scope="col">Share</th><th scope="col">Disclosed incentive n</th></tr></thead><tbody id="valueSourceRows"></tbody></table></div></article>
+        </div>
+        <div class="table-shell value-product-shell"><table><thead><tr><th scope="col">Product</th><th scope="col">Written n</th><th scope="col">Low-value n</th><th scope="col">Share</th><th scope="col">Leading coded drivers</th></tr></thead><tbody id="valueProductRows"></tbody></table></div>
+        <p class="table-note">This is a transparent language classification, not a causal claim. Review source, incentive disclosure, and written-review base remain visible beside the result.</p>
       </section>
 
       <section class="section-block panel-anchor" id="launchComparison">
@@ -161,15 +175,15 @@
 
       <section id="products" class="section-block panel-anchor">
         <div class="section-heading"><div><span class="kicker">Product comparison</span><h2>Find the items driving the signal</h2><p>Rows retain zero-review products so whitespace is visible rather than silently excluded.</p></div></div>
-        <div class="table-shell"><table id="stirProductTable"><thead><tr><th scope="col">Product</th><th scope="col">Cohort</th><th scope="col">Written n</th><th scope="col">Avg. rating</th><th scope="col">1–2 star</th><th scope="col">Latest 6m n</th><th scope="col">Latest 6m avg.</th><th scope="col">Primary signal</th><th scope="col">Evidence status</th></tr></thead><tbody></tbody></table></div>
+        <div class="table-shell"><table id="stirProductTable"><thead><tr><th scope="col">Product</th><th scope="col">Cohort</th><th scope="col">Written n</th><th scope="col">Avg. rating</th><th scope="col">1–2 star</th><th scope="col">Low value n · share</th><th scope="col">Latest 6m n</th><th scope="col">Latest 6m avg.</th><th scope="col">Primary signal</th><th scope="col">Evidence status</th></tr></thead><tbody></tbody></table></div>
         <p class="table-note">Small bases are labeled. A product with no captured written review is a coverage gap, not evidence of neutral or positive performance.</p>
       </section>
 
       <section id="retailers" class="section-block panel-anchor">
         <div class="section-heading"><div><span class="kicker">Channel evidence</span><h2>Rating scale and exact listing coverage</h2><p>Aggregate ratings are point-in-time observations by channel. Because syndication can overlap, they are not summed into a unique-consumer total.</p></div></div>
         <div id="channelSnapshots" class="snapshot-grid stir-snapshot-grid"></div>
-        <div class="section-heading snapshot-heading"><div><span class="kicker">Retailer audit</span><h2>Where each exact SKU was confirmed</h2><p>Stakeholder-prioritized retailers only: Costco, Target, Kroger, Publix, Albertsons, Food Lion, and Amazon.</p></div></div>
-        <div class="table-shell coverage-shell"><table id="stirCoverageTable"><thead><tr><th scope="col">Product</th><th scope="col">Owned site</th><th scope="col">Costco</th><th scope="col">Target</th><th scope="col">Kroger</th><th scope="col">Publix</th><th scope="col">Albertsons</th><th scope="col">Food Lion</th><th scope="col">Amazon</th></tr></thead><tbody></tbody></table></div>
+        <div class="section-heading snapshot-heading"><div><span class="kicker">Retailer audit</span><h2>Where each exact SKU was confirmed</h2><p>Original prioritized retailers remain in view, with Thrive Market and Meijer added where the deep dive confirmed exact products and written review histories.</p></div></div>
+        <div class="table-shell coverage-shell"><table id="stirCoverageTable"><thead><tr><th scope="col">Product</th><th scope="col">Owned site</th><th scope="col">Costco</th><th scope="col">Target</th><th scope="col">Kroger</th><th scope="col">Publix</th><th scope="col">Albertsons</th><th scope="col">Food Lion</th><th scope="col">Amazon</th><th scope="col">Thrive Market</th><th scope="col">Meijer</th></tr></thead><tbody></tbody></table></div>
         <p class="table-note">“Searched · no exact SKU” means the exact scoped item was not confirmed in the public retailer assessment; it is not a zero-review claim. “Costco-only” reflects stakeholder guidance plus official pack metadata.</p>
       </section>
 
@@ -195,12 +209,14 @@
           <div class="method-grid">
             <article><strong>Official scope</strong><p>Thirteen products were taken from the Kevin's Stir-Fry Entrées collection and verified to official product handles and catalog identifiers.</p></article>
             <article><strong>Cohorts</strong><p>Six 2.5-serving grocery kits launched nationally on Feb 27, 2025. Seven four-serving items are treated as Costco-only.</p></article>
-            <article><strong>Written evidence</strong><p>166 deduplicated dated comments: 81 owned-site records, 56 incremental Target records, and 29 incremental Kroger records after exact-text syndication checks.</p></article>
+            <article><strong>Written evidence</strong><p>331 deduplicated dated comments: 81 owned-site, 56 incremental Target, 29 incremental Kroger, 162 incremental Thrive Market, and 3 native Meijer records.</p></article>
             <article><strong>Comparable trend</strong><p>Monthly and launch-window trends use the complete 81-review first-party history. The complete visible Target and Kroger histories add cross-channel issue discovery without changing that comparison base.</p></article>
-            <article><strong>Rating context</strong><p>Kevin's, Target, and Kroger channel totals are shown separately. They may overlap through syndication and are not a unique-consumer count. Amazon produced no confirmed exact scoped page.</p></article>
-            <article><strong>Disclosure</strong><p>Sixteen early first-party reviews carry a future-purchase incentive badge; all were five-star. One additional review self-identifies as sponsored. The two disclosure types remain separate and filterable.</p></article>
+            <article><strong>Expanded sources</strong><p>Three exact-UPC Thrive pages returned 164 public written rows; two within-source duplicates were removed, leaving 162 incremental records. One exact Meijer listing contributed three retailer-native comments after syndicated owned-site rows were excluded.</p></article>
+            <article><strong>Rating context</strong><p>Channel totals are shown separately and may overlap through syndication. Thrive rating totals include rating-only responses; its displayed 1–2 star mix uses written reviews. Amazon produced no confirmed exact scoped page.</p></article>
+            <article><strong>Disclosure</strong><p>Future-purchase and Thrive Cash disclosures are preserved on individual rows and can be excluded. Explicit sponsorship remains separate; no undisclosed sponsorship is inferred.</p></article>
             <article><strong>Retailer matching</strong><p>Products were matched with official names, pack architecture, barcodes where available, retailer identifiers, ingredients, and product imagery. Adjacent Amazon sauces and Heat &amp; Eat products were excluded.</p></article>
-            <article><strong>Topic coding</strong><p>Transparent keyword rules tag taste, portion/value, protein quantity, vegetables, texture, convenience, dietary fit, and packaging.</p></article>
+            <article><strong>Value-for-money coding</strong><p>Separate complaint rules classify insufficient protein, insufficient vegetables, serving-size inadequacy, and explicit negative price/value tension. Multi-tagging is allowed and all coded reviews remain inspectable.</p></article>
+            <article><strong>Topic coding</strong><p>Broader keyword rules also tag taste, portion/value, protein quantity, vegetables, texture, convenience, dietary fit, and packaging.</p></article>
             <article><strong>Interpretation</strong><p>Review signals identify where to investigate. They do not prove formulation, supplier, production, or channel causality.</p></article>
           </div>
         </details>
@@ -213,8 +229,8 @@
     </main>
   </div>
 
-  <footer><span>Mars Food &amp; Nutrition · Stir-Fry Review Intelligence</span><span>Public consumer-review data · Point-in-time capture Aug 25, 2026</span><a href="#method">Methodology</a></footer>
+  <footer><span>Mars Food &amp; Nutrition · Stir-Fry Review Intelligence</span><span>Public consumer-review data · Point-in-time capture Aug 27, 2026</span><a href="#method">Methodology</a></footer>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script src="stir-fry.js?v=2026-08-25-retailer-completion" defer></script>
+  <script src="stir-fry.js?v=2026-08-27-expanded-value-analysis" defer></script>
 </body>
 </html>

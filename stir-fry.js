@@ -1,4 +1,4 @@
-const RELEASE_VERSION = "2026-08-25-retailer-completion";
+const RELEASE_VERSION = "2026-08-27-expanded-value-analysis";
 const DATA_FILES = {
   reviews: "data/stir_fry_reviews_normalized.json",
   analysis: "data/stir_fry_analysis.json",
@@ -16,10 +16,19 @@ const TOPICS = {
   packaging: "Packaging",
 };
 
+const VALUE_CATEGORIES = {
+  protein_quantity: "Not enough protein",
+  vegetable_quantity: "Not enough vegetables",
+  serving_size: "Serving / portion too small",
+  explicit_price_value: "Explicit price / value tension",
+};
+
 const SOURCE_COLORS = {
   "Kevin's Natural Foods": "#0000A0",
   Target: "#EB6916",
   Kroger: "#19738D",
+  "Thrive Market": "#62BB46",
+  Meijer: "#3C3C3C",
 };
 
 const state = {
@@ -27,10 +36,11 @@ const state = {
   cohort: "all",
   products: new Set(),
   sources: new Set(),
-  ratings: new Set([1, 2, 3, 4, 5]),
+  ratings: new Set([0, 1, 2, 3, 4, 5]),
   topic: "all",
   excludeIncentive: false,
   excludeSponsored: false,
+  onlyLowValue: false,
   search: "",
   sort: "newest",
   trendMetric: "rating",
@@ -48,12 +58,16 @@ const cohortLabel = value => value === "grocery" ? "Grocery kit" : "Costco-only"
 
 function metrics(rows) {
   const n = rows.length;
+  const rated = rows.filter(row => row.rating >= 1 && row.rating <= 5);
   const topicCounts = Object.fromEntries(Object.keys(TOPICS).map(topic => [topic, rows.filter(row => row.topics.includes(topic)).length]));
   return {
     n,
-    average: n ? rows.reduce((sum, row) => sum + row.rating, 0) / n : null,
-    low: n ? rows.filter(row => row.rating <= 2).length / n : null,
-    high: n ? rows.filter(row => row.rating >= 4).length / n : null,
+    ratedN: rated.length,
+    average: rated.length ? rated.reduce((sum, row) => sum + row.rating, 0) / rated.length : null,
+    low: rated.length ? rated.filter(row => row.rating <= 2).length / rated.length : null,
+    high: rated.length ? rated.filter(row => row.rating >= 4).length / rated.length : null,
+    lowValueCount: rows.filter(row => row.low_value_for_money).length,
+    lowValueShare: n ? rows.filter(row => row.low_value_for_money).length / n : null,
     topicCounts,
     topicShares: Object.fromEntries(Object.entries(topicCounts).map(([topic, count]) => [topic, n ? count / n : null])),
   };
@@ -73,6 +87,7 @@ function filteredReviews({ ignoreProduct = false, forceFirstParty = false } = {}
     if (!forceFirstParty && !state.sources.has(row.source)) return false;
     if (!state.ratings.has(row.rating)) return false;
     if (state.topic !== "all" && !row.topics.includes(state.topic)) return false;
+    if (state.onlyLowValue && !row.low_value_for_money) return false;
     if (state.excludeIncentive && row.incentive_disclosed) return false;
     if (state.excludeSponsored && row.sponsorship_disclosed) return false;
     if (query && !`${row.title} ${row.text} ${row.product} ${row.source}`.toLowerCase().includes(query)) return false;
@@ -142,6 +157,7 @@ function bindEvents() {
   $("#topicFilter").addEventListener("change", event => { state.topic = event.target.value; state.visible = 10; render(); });
   $("#excludeIncentive").addEventListener("change", event => { state.excludeIncentive = event.target.checked; state.visible = 10; render(); });
   $("#excludeSponsored").addEventListener("change", event => { state.excludeSponsored = event.target.checked; state.visible = 10; render(); });
+  $("#onlyLowValue").addEventListener("change", event => { state.onlyLowValue = event.target.checked; state.visible = 10; render(); });
   $("#searchReviews").addEventListener("input", event => { state.search = event.target.value; state.visible = 10; render(); });
   $("#reviewSort").addEventListener("change", event => { state.sort = event.target.value; renderReviews(filteredReviews()); });
   $("#trendMetric").addEventListener("change", event => { state.trendMetric = event.target.value; renderTrend(); });
@@ -178,16 +194,18 @@ function resetFilters() {
   state.cohort = "all";
   state.products = new Set(state.data.products.keys());
   state.sources = new Set(state.data.reviews.map(row => row.source));
-  state.ratings = new Set([1, 2, 3, 4, 5]);
+  state.ratings = new Set([0, 1, 2, 3, 4, 5]);
   state.topic = "all";
   state.excludeIncentive = false;
   state.excludeSponsored = false;
+  state.onlyLowValue = false;
   state.search = "";
   state.visible = 10;
   $("#cohortFilter").value = "all";
   $("#topicFilter").value = "all";
   $("#excludeIncentive").checked = false;
   $("#excludeSponsored").checked = false;
+  $("#onlyLowValue").checked = false;
   $("#searchReviews").value = "";
   $$("#productFilters label").forEach(label => { label.hidden = false; $("input", label).checked = true; });
   $$("#sourceFilters input, input[name='rating']").forEach(input => input.checked = true);
@@ -200,14 +218,17 @@ function render() {
   const current = metrics(reviews);
   $("#viewCount").textContent = `${current.n.toLocaleString()} review${current.n === 1 ? "" : "s"}`;
   $("#kpiReviews").textContent = current.n.toLocaleString();
+  $("#kpiCoverage").textContent = `${current.ratedN.toLocaleString()} carry a 1–5 star rating`;
   $("#kpiRating").textContent = score(current.average);
   $("#kpiLow").textContent = pct(current.low, 1);
-  $("#kpiLowNote").textContent = `${reviews.filter(row => row.rating <= 2).length} low-star written reviews`;
-  $("#kpiPortion").textContent = pct(current.topicShares.portion_value, 1);
+  $("#kpiLowNote").textContent = `${reviews.filter(row => row.rating >= 1 && row.rating <= 2).length} low-star written reviews`;
+  $("#kpiValue").textContent = pct(current.lowValueShare, 1);
+  $("#kpiValueNote").textContent = `${current.lowValueCount} precisely coded review${current.lowValueCount === 1 ? "" : "s"}`;
   $("#kpiConvenience").textContent = pct(current.topicShares.convenience, 1);
   renderDistribution(reviews);
   renderSourceMix(reviews);
   renderThemes(reviews);
+  renderValueDiagnostic(reviews);
   renderTrend();
   renderCohortComparison();
   renderProvocations();
@@ -230,7 +251,7 @@ function renderSourceMix(reviews) {
   $("#sourceMix").innerHTML = `
     <div class="source-stack">${counts.map(item => `<i style="width:${item.n / total * 100}%;background:${SOURCE_COLORS[item.source] || "#19738D"}"></i>`).join("")}</div>
     <div class="source-legend">${counts.map(item => `<div><i style="background:${SOURCE_COLORS[item.source] || "#19738D"}"></i><span>${escapeHtml(item.source === "Kevin's Natural Foods" ? "Owned site" : item.source)}</span><strong>${item.n}</strong></div>`).join("")}</div>
-    <p class="snapshot-distribution-note">${state.data.analysis.data_quality.cross_source_duplicates_removed} exact cross-posts were deduplicated in the full portfolio archive.</p>`;
+    <p class="snapshot-distribution-note">${state.data.analysis.data_quality.cross_source_duplicates_removed} exact cross-posts and ${state.data.analysis.data_quality.within_source_duplicates_removed} same-source repeats were removed from the full archive.</p>`;
 }
 
 function renderThemes(reviews) {
@@ -240,6 +261,54 @@ function renderThemes(reviews) {
     const share = n ? count / n : 0;
     return `<article class="theme-card"><header><span>${label}</span><strong>${pct(share)}</strong></header><div class="theme-meter"><i style="width:${share * 100}%"></i></div><small>${count} review${count === 1 ? "" : "s"}</small></article>`;
   }).join("");
+}
+
+function renderValueDiagnostic(reviews) {
+  const flagged = reviews.filter(row => row.low_value_for_money);
+  const recentStart = "2025-08-27";
+  const recent = reviews.filter(row => row.date >= recentStart);
+  const recentFlagged = recent.filter(row => row.low_value_for_money);
+  const owned = reviews.filter(row => row.source === "Kevin's Natural Foods");
+  const ownedFlagged = owned.filter(row => row.low_value_for_money);
+  const nonIncentive = reviews.filter(row => !row.incentive_disclosed);
+  const nonIncentiveFlagged = nonIncentive.filter(row => row.low_value_for_money);
+  const average = flagged.length ? flagged.reduce((sum, row) => sum + row.rating, 0) / flagged.length : null;
+
+  $("#valueSummary").innerHTML = `
+    <article><span>All-time complaint share</span><strong>${pct(reviews.length ? flagged.length / reviews.length : null, 1)}</strong><small>${flagged.length} of ${reviews.length} written reviews · avg. ${score(average)}</small></article>
+    <article><span>Latest 12 months</span><strong>${recentFlagged.length}</strong><small>of ${recent.length} dated written reviews</small></article>
+    <article><span>Owned-site view</span><strong>${pct(owned.length ? ownedFlagged.length / owned.length : null, 1)}</strong><small>${ownedFlagged.length} of ${owned.length}; stable capture method</small></article>
+    <article><span>Excluding disclosed incentives</span><strong>${pct(nonIncentive.length ? nonIncentiveFlagged.length / nonIncentive.length : null, 1)}</strong><small>${nonIncentiveFlagged.length} of ${nonIncentive.length} written reviews</small></article>`;
+
+  const categoryRows = Object.entries(VALUE_CATEGORIES).map(([category, label]) => {
+    const rows = reviews.filter(row => row.value_categories.includes(category));
+    return { category, label, n: rows.length, share: reviews.length ? rows.length / reviews.length : 0 };
+  });
+  const maxCategory = Math.max(1, ...categoryRows.map(row => row.n));
+  $("#valueCategoryBars").innerHTML = categoryRows.map(row => `
+    <div class="value-bar-row"><div><strong>${escapeHtml(row.label)}</strong><span>${row.n} reviews · ${pct(row.share, 1)}</span></div><div class="bar-track"><i style="width:${row.n / maxCategory * 100}%"></i></div></div>`).join("");
+
+  const sourceRows = [...new Set(reviews.map(row => row.source))].map(source => {
+    const rows = reviews.filter(row => row.source === source);
+    const lowValue = rows.filter(row => row.low_value_for_money);
+    const disclosed = rows.filter(row => row.incentive_disclosed).length;
+    return { source, n: rows.length, lowValueN: lowValue.length, share: rows.length ? lowValue.length / rows.length : null, disclosed };
+  });
+  $("#valueSourceRows").innerHTML = sourceRows.map(row => `<tr><th scope="row">${escapeHtml(row.source === "Kevin's Natural Foods" ? "Owned site" : row.source)}</th><td>${row.n}</td><td>${row.lowValueN}</td><td>${pct(row.share, 1)}</td><td>${row.disclosed}</td></tr>`).join("");
+
+  const productRows = [...state.data.products.values()]
+    .filter(product => productInCohort(product.product_id) && state.products.has(product.product_id))
+    .map(product => {
+      const rows = reviews.filter(row => row.product_id === product.product_id);
+      const lowValue = rows.filter(row => row.low_value_for_money);
+      const categories = Object.entries(VALUE_CATEGORIES)
+        .map(([category, label]) => ({ label, n: rows.filter(row => row.value_categories.includes(category)).length }))
+        .filter(item => item.n)
+        .sort((a, b) => b.n - a.n);
+      return { product, n: rows.length, lowValueN: lowValue.length, share: rows.length ? lowValue.length / rows.length : null, categories };
+    })
+    .sort((a, b) => b.lowValueN - a.lowValueN || b.n - a.n);
+  $("#valueProductRows").innerHTML = productRows.map(row => `<tr><th scope="row">${escapeHtml(row.product.product)}</th><td>${row.n}</td><td>${row.lowValueN}</td><td>${pct(row.share, 1)}</td><td>${row.categories.length ? row.categories.slice(0, 2).map(item => `${escapeHtml(item.label)} (${item.n})`).join(" · ") : "—"}</td></tr>`).join("");
 }
 
 function monthRange(rows) {
@@ -260,11 +329,11 @@ function renderTrend() {
     const stat = metrics(current);
     const value = state.trendMetric === "rating" ? stat.average
       : state.trendMetric === "low" ? stat.low
-      : state.trendMetric === "portion_value" ? stat.topicShares.portion_value
+      : state.trendMetric === "low_value" ? stat.lowValueShare
       : stat.n;
     return { month, rows: current, n: current.length, value };
   });
-  const labels = { rating: "Average rating", low: "1–2 star share", volume: "Review volume", portion_value: "Portion / value mention share" };
+  const labels = { rating: "Average rating", low: "1–2 star share", volume: "Review volume", low_value: "Low-value complaint share" };
   $("#trendLegend").textContent = labels[state.trendMetric];
   $("#trendTable").textContent = grouped.filter(item => item.n).map(item => `${item.month}: n=${item.n}, ${labels[state.trendMetric]} ${item.value == null ? "not available" : item.value}`).join("; ");
   drawTrend(grouped);
@@ -352,7 +421,7 @@ function periodMetrics(rows, start, end) {
 function comparisonCard(cohort, label, start, end) {
   const base = filteredReviews({ forceFirstParty: true }).filter(row => row.cohort === cohort);
   const launch = periodMetrics(base, start, end);
-  const recent = periodMetrics(base, "2026-02-24", "2026-08-25");
+  const recent = periodMetrics(base, "2026-02-26", "2026-08-27");
   const delta = launch.average != null && recent.average != null ? recent.average - launch.average : null;
   const incentiveN = base.filter(row => row.date >= start && row.date <= end && row.incentive_disclosed).length;
   const caution = cohort === "costco_only"
@@ -363,7 +432,7 @@ function comparisonCard(cohort, label, start, end) {
     <div class="period-pair">
       <div><small>${prettyDate(start)} – ${prettyDate(end)}</small><strong>${score(launch.average)}</strong><span>n=${launch.n} · ${pct(launch.low)} low-star</span></div>
       <b aria-hidden="true">→</b>
-      <div><small>Feb 24 – Aug 25, 2026</small><strong>${score(recent.average)}</strong><span>n=${recent.n} · ${pct(recent.low)} low-star</span></div>
+      <div><small>Feb 26 – Aug 27, 2026</small><strong>${score(recent.average)}</strong><span>n=${recent.n} · ${pct(recent.low)} low-star</span></div>
     </div>
     <p class="period-delta ${delta != null && delta < 0 ? "delta-negative" : "delta-positive"}">${delta == null ? "Change not available" : `${delta >= 0 ? "+" : ""}${delta.toFixed(2)} rating-point change`}</p>
     <p class="cohort-caution">${caution}</p>
@@ -386,12 +455,12 @@ function renderProducts(reviews) {
   $("#stirProductTable tbody").innerHTML = rows.map(product => {
     const productRows = reviews.filter(row => row.product_id === product.product_id);
     const stat = metrics(productRows);
-    const recent = metrics(productRows.filter(row => row.date >= "2026-02-24"));
+    const recent = metrics(productRows.filter(row => row.date >= "2026-02-26"));
     const primary = Object.entries(stat.topicCounts).sort((a, b) => b[1] - a[1])[0];
     const evidence = stat.n === 0 ? ["No written evidence", "gap"] : stat.n < 5 ? ["Thin base", "variant"] : ["Captured", ""];
     return `<tr tabindex="0" data-product="${product.product_id}">
       <td class="product-name"><a href="${escapeHtml(product.official_url)}" target="_blank" rel="noopener">${escapeHtml(product.product)}</a></td>
-      <td>${cohortLabel(product.cohort)}</td><td>${stat.n}</td><td>${score(stat.average)}</td><td>${pct(stat.low)}</td><td>${recent.n}</td><td>${score(recent.average)}</td>
+      <td>${cohortLabel(product.cohort)}</td><td>${stat.n}</td><td>${score(stat.average)}</td><td>${pct(stat.low)}</td><td>${stat.lowValueCount} · ${pct(stat.lowValueShare)}</td><td>${recent.n}</td><td>${score(recent.average)}</td>
       <td>${primary && primary[1] ? `${escapeHtml(TOPICS[primary[0]])} (${primary[1]})` : "—"}</td><td><span class="status-pill ${evidence[1]}">${evidence[0]}</span></td></tr>`;
   }).join("");
   $$("#stirProductTable tbody tr").forEach(row => {
@@ -404,7 +473,7 @@ function renderProducts(reviews) {
 function renderChannelSnapshots() {
   const selected = state.data.analysis.rating_snapshots.filter(snapshot => state.products.has(snapshot.product_id) && productInCohort(snapshot.product_id));
   const selectedCoverage = state.data.analysis.coverage.filter(row => state.products.has(row.product_id) && productInCohort(row.product_id));
-  const sources = ["Kevin's Natural Foods", "Target", "Kroger", "Amazon"];
+  const sources = ["Kevin's Natural Foods", "Target", "Kroger", "Thrive Market", "Meijer", "Amazon"];
   $("#channelSnapshots").innerHTML = sources.map(source => {
     const rows = selected.filter(snapshot => snapshot.source === source);
     if (source === "Amazon") {
@@ -421,7 +490,13 @@ function renderChannelSnapshots() {
     const distribution = Object.fromEntries([1, 2, 3, 4, 5].map(star => [star, rows.reduce((sum, row) => sum + Number(row.distribution?.[star] || 0), 0)]));
     const distTotal = Object.values(distribution).reduce((sum, n) => sum + n, 0);
     const low = distTotal ? (distribution[1] + distribution[2]) / distTotal : null;
-    return `<article class="snapshot-card stir-snapshot"><header><span>${source === "Kevin's Natural Foods" ? "Owned site" : source}</span><strong>${rows.length} exact product page${rows.length === 1 ? "" : "s"}</strong></header><div class="snapshot-score"><strong>${score(weighted)}</strong><span>${count.toLocaleString()} rating observation${count === 1 ? "" : "s"}</span></div><p>${low == null ? "Star distribution not exposed for this channel." : `${pct(low, 1)} are 1–2 star observations.`}<br>May include syndicated or overlapping ratings.</p></article>`;
+    const writtenDistribution = rows.some(row => row.distribution_scope === "written_reviews");
+    const sourceNote = source === "Meijer"
+      ? "Listing total includes syndicated owned-site reviews; three native Meijer comments are incremental."
+      : writtenDistribution
+        ? "1–2 star share is calculated from written reviews; rating total includes rating-only responses."
+        : "May include syndicated or overlapping ratings.";
+    return `<article class="snapshot-card stir-snapshot"><header><span>${source === "Kevin's Natural Foods" ? "Owned site" : source}</span><strong>${rows.length} exact product page${rows.length === 1 ? "" : "s"}</strong></header><div class="snapshot-score"><strong>${score(weighted)}</strong><span>${count.toLocaleString()} rating observation${count === 1 ? "" : "s"}</span></div><p>${low == null ? "Star distribution not exposed for this channel." : `${pct(low, 1)} are 1–2 star ${writtenDistribution ? "written reviews" : "observations"}.`}<br>${sourceNote}</p></article>`;
   }).join("");
 }
 
@@ -439,7 +514,7 @@ function coverageCell(row) {
 }
 
 function renderCoverage() {
-  const sources = ["Costco", "Target", "Kroger", "Publix", "Albertsons", "Food Lion", "Amazon"];
+  const sources = ["Costco", "Target", "Kroger", "Publix", "Albertsons", "Food Lion", "Amazon", "Thrive Market", "Meijer"];
   const coverage = state.data.analysis.coverage;
   const products = [...state.data.products.values()].filter(product => productInCohort(product.product_id) && state.products.has(product.product_id));
   $("#stirCoverageTable tbody").innerHTML = products.map(product => {
@@ -462,13 +537,14 @@ function renderReviews(rows) {
   $("#reviewResultLabel").textContent = `${sorted.length.toLocaleString()} matching dated written review${sorted.length === 1 ? "" : "s"}`;
   const visible = sorted.slice(0, state.visible);
   $("#reviewList").innerHTML = visible.length ? visible.map(row => {
-    const stars = "★".repeat(row.rating) + "☆".repeat(5 - row.rating);
+    const stars = row.rating ? "★".repeat(row.rating) + "☆".repeat(5 - row.rating) : "Unrated";
     const tags = row.topics.map(topic => `<span class="topic-tag">${escapeHtml(TOPICS[topic])}</span>`).join("");
+    const valueTags = row.value_categories.map(category => `<span class="value-tag">${escapeHtml(VALUE_CATEGORIES[category])}</span>`).join("");
     const disclosure = [
-      row.incentive_disclosed ? `<span class="disclosure-tag">Future-purchase incentive disclosed</span>` : "",
+      row.incentive_disclosed ? `<span class="disclosure-tag">${row.incentive_type === "thrive_cash" ? "Thrive Cash disclosed" : "Future-purchase incentive disclosed"}</span>` : "",
       row.sponsorship_disclosed ? `<span class="disclosure-tag">Sponsored disclosed in review</span>` : "",
     ].join("");
-    return `<article class="review-card"><div class="review-rating">${stars}<small>${prettyDate(row.date)}</small></div><div class="review-copy"><h3>${escapeHtml(row.title || "Untitled review")}</h3><p>${escapeHtml(row.text)}</p>${disclosure}</div><div class="review-meta"><strong>${escapeHtml(row.product)}</strong><span>${escapeHtml(row.source === "Kevin's Natural Foods" ? "Owned site" : row.source)}</span><span>${escapeHtml(cohortLabel(row.cohort))}</span><div class="topic-tags">${tags}</div></div></article>`;
+    return `<article class="review-card"><div class="review-rating">${stars}<small>${prettyDate(row.date)}</small></div><div class="review-copy"><h3>${escapeHtml(row.title || "Untitled review")}</h3><p>${escapeHtml(row.text)}</p>${disclosure}</div><div class="review-meta"><strong>${escapeHtml(row.product)}</strong><span>${escapeHtml(row.source === "Kevin's Natural Foods" ? "Owned site" : row.source)}</span><span>${escapeHtml(cohortLabel(row.cohort))}</span>${valueTags ? `<div class="value-tags">${valueTags}</div>` : ""}<div class="topic-tags">${tags}</div></div></article>`;
   }).join("") : `<div class="empty-results"><strong>No written reviews match this view.</strong><p>Try broadening the product, rating, topic, or source filters.</p></div>`;
   $("#loadMore").hidden = state.visible >= sorted.length;
 }
@@ -476,9 +552,9 @@ function renderReviews(rows) {
 function exportCsv() {
   const rows = filteredReviews();
   if (!rows.length) { toast("No filtered rows to export"); return; }
-  const columns = ["product", "cohort", "source", "date", "rating", "title", "text", "topics", "incentive_disclosed", "sponsorship_disclosed", "verified_buyer", "source_url"];
+  const columns = ["product", "cohort", "source", "date", "rating", "title", "text", "low_value_for_money", "value_categories", "topics", "incentive_disclosed", "incentive_type", "sponsorship_disclosed", "verified_buyer", "source_url"];
   const csv = [columns.join(","), ...rows.map(row => columns.map(column => {
-    const value = column === "topics" ? row.topics.join("|") : row[column] ?? "";
+    const value = ["topics", "value_categories"].includes(column) ? row[column].join("|") : row[column] ?? "";
     return `"${String(value).replaceAll('"', '""')}"`;
   }).join(","))].join("\r\n");
   const blob = new Blob([csv], { type: "text/csv;charset=utf-8" });
