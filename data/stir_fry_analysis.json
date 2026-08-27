@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-08-25",
+  "as_of": "2026-08-27",
   "scope": {
     "product_count": 13,
     "grocery_product_count": 6,
@@ -13,54 +13,68 @@
       "Publix",
       "Albertsons",
       "Food Lion",
-      "Amazon"
+      "Amazon",
+      "Thrive Market",
+      "Meijer"
     ]
   },
   "data_quality": {
-    "raw_written_rows": 202,
-    "deduplicated_written_rows": 166,
-    "cross_source_duplicates_removed": 36,
+    "raw_written_rows": 369,
+    "deduplicated_written_rows": 331,
+    "duplicate_rows_removed": 38,
+    "cross_source_duplicates_removed": 33,
+    "within_source_duplicates_removed": 5,
     "first_party_feed_rows": 81,
     "target_complete_written_rows": 72,
     "kroger_complete_visible_cards": 49,
+    "thrive_complete_written_rows": 164,
+    "meijer_incremental_written_rows": 3,
     "undated_retail_cards": 6,
     "undated_dates_resolved_from_first_party": 6,
     "target_written_window_note": "All written reviews exposed by the three exact Target product pages were loaded and captured.",
     "kroger_note": "All visible public cards were captured from four exact Kroger pages; undated cards are excluded unless they exactly match a dated first-party record.",
     "amazon_note": "Amazon was assessed for all six grocery kits; no exact scoped product page was confirmed. Adjacent sauces and Heat & Eat items were excluded.",
+    "thrive_note": "All written reviews returned by the public review endpoint for three exact-UPC grocery kits were captured. Thrive Cash disclosure is preserved row by row.",
+    "meijer_note": "Three native Meijer-origin reviews were captured from the exact Instacart-hosted listing; syndicated Kevin's rows were deduplicated rather than counted again.",
     "listing_note": "An exact listing without a public review surface is shown as listing coverage, not as zero reviews. A searched-no-exact-page result is also not a zero-review claim."
   },
   "overall": {
-    "n": 166,
-    "average_rating": 3.41,
-    "low_star_share": 0.3494,
-    "high_star_share": 0.5602,
+    "n": 331,
+    "rated_n": 330,
+    "average_rating": 3.88,
+    "low_star_share": 0.2121,
+    "high_star_share": 0.703,
+    "low_value_count": 56,
+    "low_value_share": 0.1692,
     "topic_counts": {
-      "taste": 113,
-      "portion_value": 54,
-      "protein_quantity": 16,
-      "vegetables": 55,
-      "texture": 15,
-      "convenience": 69,
-      "dietary_fit": 23,
-      "packaging": 14
+      "taste": 211,
+      "portion_value": 81,
+      "protein_quantity": 19,
+      "vegetables": 77,
+      "texture": 20,
+      "convenience": 153,
+      "dietary_fit": 36,
+      "packaging": 18
     },
     "topic_shares": {
-      "taste": 0.6807,
-      "portion_value": 0.3253,
-      "protein_quantity": 0.0964,
-      "vegetables": 0.3313,
-      "texture": 0.0904,
-      "convenience": 0.4157,
-      "dietary_fit": 0.1386,
-      "packaging": 0.0843
+      "taste": 0.6375,
+      "portion_value": 0.2447,
+      "protein_quantity": 0.0574,
+      "vegetables": 0.2326,
+      "texture": 0.0604,
+      "convenience": 0.4622,
+      "dietary_fit": 0.1088,
+      "packaging": 0.0544
     }
   },
   "comparable_history": {
     "n": 81,
+    "rated_n": 81,
     "average_rating": 3.98,
     "low_star_share": 0.2099,
     "high_star_share": 0.716,
+    "low_value_count": 10,
+    "low_value_share": 0.1235,
     "topic_counts": {
       "taste": 56,
       "portion_value": 24,
@@ -84,62 +98,71 @@
   },
   "incentive_disclosure": {
     "disclosed_incentive": {
-      "n": 16,
-      "average_rating": 5.0,
-      "low_star_share": 0.0,
-      "high_star_share": 1.0,
+      "n": 165,
+      "rated_n": 164,
+      "average_rating": 4.44,
+      "low_star_share": 0.061,
+      "high_star_share": 0.872,
+      "low_value_count": 11,
+      "low_value_share": 0.0667,
       "topic_counts": {
-        "taste": 10,
-        "portion_value": 2,
-        "protein_quantity": 0,
-        "vegetables": 3,
-        "texture": 0,
-        "convenience": 7,
-        "dietary_fit": 4,
-        "packaging": 0
+        "taste": 98,
+        "portion_value": 25,
+        "protein_quantity": 3,
+        "vegetables": 20,
+        "texture": 5,
+        "convenience": 81,
+        "dietary_fit": 15,
+        "packaging": 3
       },
       "topic_shares": {
-        "taste": 0.625,
-        "portion_value": 0.125,
-        "protein_quantity": 0.0,
-        "vegetables": 0.1875,
-        "texture": 0.0,
-        "convenience": 0.4375,
-        "dietary_fit": 0.25,
-        "packaging": 0.0
+        "taste": 0.5939,
+        "portion_value": 0.1515,
+        "protein_quantity": 0.0182,
+        "vegetables": 0.1212,
+        "texture": 0.0303,
+        "convenience": 0.4909,
+        "dietary_fit": 0.0909,
+        "packaging": 0.0182
       }
     },
     "no_disclosed_incentive": {
-      "n": 65,
-      "average_rating": 3.72,
-      "low_star_share": 0.2615,
-      "high_star_share": 0.6462,
+      "n": 166,
+      "rated_n": 166,
+      "average_rating": 3.33,
+      "low_star_share": 0.3614,
+      "high_star_share": 0.5361,
+      "low_value_count": 45,
+      "low_value_share": 0.2711,
       "topic_counts": {
-        "taste": 46,
-        "portion_value": 22,
-        "protein_quantity": 1,
-        "vegetables": 26,
-        "texture": 7,
-        "convenience": 30,
-        "dietary_fit": 13,
-        "packaging": 5
+        "taste": 113,
+        "portion_value": 56,
+        "protein_quantity": 16,
+        "vegetables": 57,
+        "texture": 15,
+        "convenience": 72,
+        "dietary_fit": 21,
+        "packaging": 15
       },
       "topic_shares": {
-        "taste": 0.7077,
-        "portion_value": 0.3385,
-        "protein_quantity": 0.0154,
-        "vegetables": 0.4,
-        "texture": 0.1077,
-        "convenience": 0.4615,
-        "dietary_fit": 0.2,
-        "packaging": 0.0769
+        "taste": 0.6807,
+        "portion_value": 0.3373,
+        "protein_quantity": 0.0964,
+        "vegetables": 0.3434,
+        "texture": 0.0904,
+        "convenience": 0.4337,
+        "dietary_fit": 0.1265,
+        "packaging": 0.0904
       }
     },
     "self_disclosed_sponsored": {
       "n": 1,
+      "rated_n": 1,
       "average_rating": 4.0,
       "low_star_share": 0.0,
       "high_star_share": 1.0,
+      "low_value_count": 0,
+      "low_value_share": 0.0,
       "topic_counts": {
         "taste": 1,
         "portion_value": 1,
@@ -161,41 +184,322 @@
         "packaging": 0.0
       }
     },
-    "note": "Future-purchase incentive badges and explicit sponsorship disclosures are tracked separately. No sponsorship inference is made where the review does not disclose it."
+    "note": "Future-purchase and Thrive Cash badges are treated as disclosed incentives; explicit sponsorship remains a separate field. No sponsorship inference is made where the review does not disclose it."
+  },
+  "value_for_money": {
+    "definition": "All-time written reviews that explicitly indicate insufficient protein, insufficient vegetables, inadequate serving size, or negative price/value tension. Reviews may carry more than one category.",
+    "overall": {
+      "n": 331,
+      "low_value_n": 56,
+      "low_value_share": 0.1692,
+      "average_rating": 2.21
+    },
+    "recent_12m": {
+      "start": "2025-08-27",
+      "n": 276,
+      "low_value_n": 53
+    },
+    "owned_site": {
+      "n": 81,
+      "low_value_n": 10,
+      "low_value_share": 0.1235
+    },
+    "excluding_disclosed_incentives": {
+      "n": 166,
+      "low_value_n": 45,
+      "low_value_share": 0.2711
+    },
+    "by_category": [
+      {
+        "category": "protein_quantity",
+        "n": 23,
+        "share_of_all_reviews": 0.0695,
+        "share_of_low_value_reviews": 0.4107,
+        "average_rating": 2.0
+      },
+      {
+        "category": "vegetable_quantity",
+        "n": 3,
+        "share_of_all_reviews": 0.0091,
+        "share_of_low_value_reviews": 0.0536,
+        "average_rating": 2.67
+      },
+      {
+        "category": "serving_size",
+        "n": 31,
+        "share_of_all_reviews": 0.0937,
+        "share_of_low_value_reviews": 0.5536,
+        "average_rating": 2.52
+      },
+      {
+        "category": "explicit_price_value",
+        "n": 22,
+        "share_of_all_reviews": 0.0665,
+        "share_of_low_value_reviews": 0.3929,
+        "average_rating": 1.82
+      }
+    ],
+    "by_source": [
+      {
+        "source": "Kevin's Natural Foods",
+        "n": 81,
+        "low_value_n": 10,
+        "low_value_share": 0.1235,
+        "disclosed_incentive_n": 16
+      },
+      {
+        "source": "Kroger",
+        "n": 29,
+        "low_value_n": 10,
+        "low_value_share": 0.3448,
+        "disclosed_incentive_n": 0
+      },
+      {
+        "source": "Meijer",
+        "n": 3,
+        "low_value_n": 3,
+        "low_value_share": 1.0,
+        "disclosed_incentive_n": 0
+      },
+      {
+        "source": "Target",
+        "n": 56,
+        "low_value_n": 22,
+        "low_value_share": 0.3929,
+        "disclosed_incentive_n": 0
+      },
+      {
+        "source": "Thrive Market",
+        "n": 162,
+        "low_value_n": 11,
+        "low_value_share": 0.0679,
+        "disclosed_incentive_n": 149
+      }
+    ],
+    "by_product": [
+      {
+        "product_id": "honey_garlic_chicken_kit",
+        "product": "Honey Garlic Chicken Stir-Fry Kit",
+        "cohort": "grocery",
+        "n": 57,
+        "low_value_n": 19,
+        "low_value_share": 0.3333,
+        "categories": {
+          "protein_quantity": 10,
+          "vegetable_quantity": 0,
+          "serving_size": 6,
+          "explicit_price_value": 11
+        }
+      },
+      {
+        "product_id": "chicken_fajitas_kit",
+        "product": "Chicken Fajitas Skillet Meal Kit",
+        "cohort": "grocery",
+        "n": 91,
+        "low_value_n": 17,
+        "low_value_share": 0.1868,
+        "categories": {
+          "protein_quantity": 6,
+          "vegetable_quantity": 2,
+          "serving_size": 11,
+          "explicit_price_value": 5
+        }
+      },
+      {
+        "product_id": "general_tso_chicken_kit",
+        "product": "General Tso's Chicken Stir-Fry Kit",
+        "cohort": "grocery",
+        "n": 24,
+        "low_value_n": 9,
+        "low_value_share": 0.375,
+        "categories": {
+          "protein_quantity": 6,
+          "vegetable_quantity": 0,
+          "serving_size": 4,
+          "explicit_price_value": 2
+        }
+      },
+      {
+        "product_id": "teriyaki_chicken_kit",
+        "product": "Teriyaki-Style Chicken Stir-Fry Kit",
+        "cohort": "grocery",
+        "n": 55,
+        "low_value_n": 3,
+        "low_value_share": 0.0545,
+        "categories": {
+          "protein_quantity": 0,
+          "vegetable_quantity": 1,
+          "serving_size": 3,
+          "explicit_price_value": 0
+        }
+      },
+      {
+        "product_id": "beef_broccoli_kit",
+        "product": "Beef & Broccoli Stir-Fry Kit",
+        "cohort": "grocery",
+        "n": 49,
+        "low_value_n": 3,
+        "low_value_share": 0.0612,
+        "categories": {
+          "protein_quantity": 1,
+          "vegetable_quantity": 0,
+          "serving_size": 3,
+          "explicit_price_value": 0
+        }
+      },
+      {
+        "product_id": "beef_broccoli_costco",
+        "product": "Beef & Broccoli Stir-Fry",
+        "cohort": "costco_only",
+        "n": 23,
+        "low_value_n": 2,
+        "low_value_share": 0.087,
+        "categories": {
+          "protein_quantity": 0,
+          "vegetable_quantity": 0,
+          "serving_size": 2,
+          "explicit_price_value": 1
+        }
+      },
+      {
+        "product_id": "beef_fajitas",
+        "product": "Beef Fajitas",
+        "cohort": "costco_only",
+        "n": 4,
+        "low_value_n": 2,
+        "low_value_share": 0.5,
+        "categories": {
+          "protein_quantity": 0,
+          "vegetable_quantity": 0,
+          "serving_size": 2,
+          "explicit_price_value": 2
+        }
+      },
+      {
+        "product_id": "sichuan_chicken_costco",
+        "product": "Sichuan Chicken Green Bean Stir-Fry",
+        "cohort": "costco_only",
+        "n": 11,
+        "low_value_n": 1,
+        "low_value_share": 0.0909,
+        "categories": {
+          "protein_quantity": 0,
+          "vegetable_quantity": 0,
+          "serving_size": 0,
+          "explicit_price_value": 1
+        }
+      },
+      {
+        "product_id": "hot_honey_garlic_chicken_costco",
+        "product": "Hot Honey Garlic Chicken Stir-Fry",
+        "cohort": "costco_only",
+        "n": 7,
+        "low_value_n": 0,
+        "low_value_share": 0.0,
+        "categories": {
+          "protein_quantity": 0,
+          "vegetable_quantity": 0,
+          "serving_size": 0,
+          "explicit_price_value": 0
+        }
+      },
+      {
+        "product_id": "teriyaki_chicken_costco",
+        "product": "Teriyaki-Style Chicken Stir-Fry",
+        "cohort": "costco_only",
+        "n": 5,
+        "low_value_n": 0,
+        "low_value_share": 0.0,
+        "categories": {
+          "protein_quantity": 0,
+          "vegetable_quantity": 0,
+          "serving_size": 0,
+          "explicit_price_value": 0
+        }
+      },
+      {
+        "product_id": "honey_garlic_chicken_costco",
+        "product": "Honey Garlic Chicken Stir-Fry",
+        "cohort": "costco_only",
+        "n": 3,
+        "low_value_n": 0,
+        "low_value_share": 0.0,
+        "categories": {
+          "protein_quantity": 0,
+          "vegetable_quantity": 0,
+          "serving_size": 0,
+          "explicit_price_value": 0
+        }
+      },
+      {
+        "product_id": "sichuan_chicken_kit",
+        "product": "Sichuan Chicken Stir-Fry Kit",
+        "cohort": "grocery",
+        "n": 1,
+        "low_value_n": 0,
+        "low_value_share": 0.0,
+        "categories": {
+          "protein_quantity": 0,
+          "vegetable_quantity": 0,
+          "serving_size": 0,
+          "explicit_price_value": 0
+        }
+      },
+      {
+        "product_id": "orange_chicken_costco",
+        "product": "Orange Chicken Stir-Fry",
+        "cohort": "costco_only",
+        "n": 1,
+        "low_value_n": 0,
+        "low_value_share": 0.0,
+        "categories": {
+          "protein_quantity": 0,
+          "vegetable_quantity": 0,
+          "serving_size": 0,
+          "explicit_price_value": 0
+        }
+      }
+    ]
   },
   "cohorts": {
     "grocery": {
       "all_written": {
-        "n": 112,
-        "average_rating": 3.04,
-        "low_star_share": 0.4375,
-        "high_star_share": 0.4554,
+        "n": 277,
+        "rated_n": 276,
+        "average_rating": 3.82,
+        "low_star_share": 0.221,
+        "high_star_share": 0.6884,
+        "low_value_count": 51,
+        "low_value_share": 0.1841,
         "topic_counts": {
-          "taste": 76,
-          "portion_value": 41,
-          "protein_quantity": 16,
-          "vegetables": 37,
-          "texture": 10,
-          "convenience": 42,
-          "dietary_fit": 11,
-          "packaging": 12
+          "taste": 174,
+          "portion_value": 68,
+          "protein_quantity": 19,
+          "vegetables": 59,
+          "texture": 15,
+          "convenience": 126,
+          "dietary_fit": 24,
+          "packaging": 16
         },
         "topic_shares": {
-          "taste": 0.6786,
-          "portion_value": 0.3661,
-          "protein_quantity": 0.1429,
-          "vegetables": 0.3304,
-          "texture": 0.0893,
-          "convenience": 0.375,
-          "dietary_fit": 0.0982,
-          "packaging": 0.1071
+          "taste": 0.6282,
+          "portion_value": 0.2455,
+          "protein_quantity": 0.0686,
+          "vegetables": 0.213,
+          "texture": 0.0542,
+          "convenience": 0.4549,
+          "dietary_fit": 0.0866,
+          "packaging": 0.0578
         }
       },
       "comparable_history": {
         "n": 27,
+        "rated_n": 27,
         "average_rating": 3.56,
         "low_star_share": 0.2963,
         "high_star_share": 0.5926,
+        "low_value_count": 5,
+        "low_value_share": 0.1852,
         "topic_counts": {
           "taste": 19,
           "portion_value": 11,
@@ -219,9 +523,12 @@
       },
       "launch_6m": {
         "n": 7,
+        "rated_n": 7,
         "average_rating": 4.71,
         "low_star_share": 0.0,
         "high_star_share": 0.8571,
+        "low_value_count": 0,
+        "low_value_share": 0.0,
         "topic_counts": {
           "taste": 5,
           "portion_value": 2,
@@ -245,9 +552,12 @@
       },
       "recent_6m": {
         "n": 12,
+        "rated_n": 12,
         "average_rating": 2.75,
         "low_star_share": 0.4167,
         "high_star_share": 0.4167,
+        "low_value_count": 2,
+        "low_value_share": 0.1667,
         "topic_counts": {
           "taste": 10,
           "portion_value": 5,
@@ -275,9 +585,12 @@
     "costco_only": {
       "all_written": {
         "n": 54,
+        "rated_n": 54,
         "average_rating": 4.19,
         "low_star_share": 0.1667,
         "high_star_share": 0.7778,
+        "low_value_count": 5,
+        "low_value_share": 0.0926,
         "topic_counts": {
           "taste": 37,
           "portion_value": 13,
@@ -301,9 +614,12 @@
       },
       "comparable_history": {
         "n": 54,
+        "rated_n": 54,
         "average_rating": 4.19,
         "low_star_share": 0.1667,
         "high_star_share": 0.7778,
+        "low_value_count": 5,
+        "low_value_share": 0.0926,
         "topic_counts": {
           "taste": 37,
           "portion_value": 13,
@@ -327,9 +643,12 @@
       },
       "launch_6m": {
         "n": 6,
+        "rated_n": 6,
         "average_rating": 5.0,
         "low_star_share": 0.0,
         "high_star_share": 1.0,
+        "low_value_count": 0,
+        "low_value_share": 0.0,
         "topic_counts": {
           "taste": 4,
           "portion_value": 2,
@@ -352,10 +671,13 @@
         }
       },
       "recent_6m": {
-        "n": 15,
-        "average_rating": 3.0,
-        "low_star_share": 0.4,
-        "high_star_share": 0.4667,
+        "n": 14,
+        "rated_n": 14,
+        "average_rating": 2.86,
+        "low_star_share": 0.4286,
+        "high_star_share": 0.4286,
+        "low_value_count": 3,
+        "low_value_share": 0.2143,
         "topic_counts": {
           "taste": 8,
           "portion_value": 3,
@@ -367,14 +689,14 @@
           "packaging": 1
         },
         "topic_shares": {
-          "taste": 0.5333,
-          "portion_value": 0.2,
+          "taste": 0.5714,
+          "portion_value": 0.2143,
           "protein_quantity": 0.0,
-          "vegetables": 0.3333,
-          "texture": 0.1333,
-          "convenience": 0.5333,
-          "dietary_fit": 0.1333,
-          "packaging": 0.0667
+          "vegetables": 0.3571,
+          "texture": 0.1429,
+          "convenience": 0.5714,
+          "dietary_fit": 0.1429,
+          "packaging": 0.0714
         }
       },
       "launch_window_start": "2023-04-27",
@@ -384,9 +706,12 @@
   "sources": {
     "Kevin's Natural Foods": {
       "n": 81,
+      "rated_n": 81,
       "average_rating": 3.98,
       "low_star_share": 0.2099,
       "high_star_share": 0.716,
+      "low_value_count": 10,
+      "low_value_share": 0.1235,
       "topic_counts": {
         "taste": 56,
         "portion_value": 24,
@@ -410,9 +735,12 @@
     },
     "Kroger": {
       "n": 29,
+      "rated_n": 29,
       "average_rating": 2.93,
       "low_star_share": 0.5172,
       "high_star_share": 0.4483,
+      "low_value_count": 10,
+      "low_value_share": 0.3448,
       "topic_counts": {
         "taste": 21,
         "portion_value": 10,
@@ -434,11 +762,43 @@
         "packaging": 0.1724
       }
     },
+    "Meijer": {
+      "n": 3,
+      "rated_n": 3,
+      "average_rating": 3.33,
+      "low_star_share": 0.3333,
+      "high_star_share": 0.3333,
+      "low_value_count": 3,
+      "low_value_share": 1.0,
+      "topic_counts": {
+        "taste": 3,
+        "portion_value": 3,
+        "protein_quantity": 0,
+        "vegetables": 3,
+        "texture": 0,
+        "convenience": 2,
+        "dietary_fit": 1,
+        "packaging": 1
+      },
+      "topic_shares": {
+        "taste": 1.0,
+        "portion_value": 1.0,
+        "protein_quantity": 0.0,
+        "vegetables": 1.0,
+        "texture": 0.0,
+        "convenience": 0.6667,
+        "dietary_fit": 0.3333,
+        "packaging": 0.3333
+      }
+    },
     "Target": {
       "n": 56,
+      "rated_n": 56,
       "average_rating": 2.84,
       "low_star_share": 0.4643,
       "high_star_share": 0.3929,
+      "low_value_count": 22,
+      "low_value_share": 0.3929,
       "topic_counts": {
         "taste": 36,
         "portion_value": 20,
@@ -459,6 +819,35 @@
         "dietary_fit": 0.0536,
         "packaging": 0.0714
       }
+    },
+    "Thrive Market": {
+      "n": 162,
+      "rated_n": 161,
+      "average_rating": 4.38,
+      "low_star_share": 0.0683,
+      "high_star_share": 0.8571,
+      "low_value_count": 11,
+      "low_value_share": 0.0679,
+      "topic_counts": {
+        "taste": 95,
+        "portion_value": 24,
+        "protein_quantity": 3,
+        "vegetables": 19,
+        "texture": 5,
+        "convenience": 82,
+        "dietary_fit": 12,
+        "packaging": 3
+      },
+      "topic_shares": {
+        "taste": 0.5864,
+        "portion_value": 0.1481,
+        "protein_quantity": 0.0185,
+        "vegetables": 0.1173,
+        "texture": 0.0309,
+        "convenience": 0.5062,
+        "dietary_fit": 0.0741,
+        "packaging": 0.0185
+      }
     }
   },
   "products": [
@@ -469,9 +858,12 @@
       "official_url": "https://www.kevinsnaturalfoods.com/products/beef-fajitas",
       "all": {
         "n": 4,
+        "rated_n": 4,
         "average_rating": 2.0,
         "low_star_share": 0.5,
         "high_star_share": 0.0,
+        "low_value_count": 2,
+        "low_value_share": 0.5,
         "topic_counts": {
           "taste": 1,
           "portion_value": 1,
@@ -495,9 +887,12 @@
       },
       "recent_6m": {
         "n": 4,
+        "rated_n": 4,
         "average_rating": 2.0,
         "low_star_share": 0.5,
         "high_star_share": 0.0,
+        "low_value_count": 2,
+        "low_value_share": 0.5,
         "topic_counts": {
           "taste": 1,
           "portion_value": 1,
@@ -528,59 +923,65 @@
       "cohort": "grocery",
       "official_url": "https://www.kevinsnaturalfoods.com/products/teriyaki-style-chicken-stir-fry-kit",
       "all": {
-        "n": 3,
-        "average_rating": 3.0,
-        "low_star_share": 0.3333,
-        "high_star_share": 0.6667,
+        "n": 55,
+        "rated_n": 54,
+        "average_rating": 4.57,
+        "low_star_share": 0.0556,
+        "high_star_share": 0.8889,
+        "low_value_count": 3,
+        "low_value_share": 0.0545,
         "topic_counts": {
-          "taste": 2,
-          "portion_value": 1,
-          "protein_quantity": 0,
-          "vegetables": 3,
-          "texture": 0,
-          "convenience": 2,
-          "dietary_fit": 1,
-          "packaging": 0
+          "taste": 30,
+          "portion_value": 6,
+          "protein_quantity": 1,
+          "vegetables": 7,
+          "texture": 1,
+          "convenience": 30,
+          "dietary_fit": 6,
+          "packaging": 1
         },
         "topic_shares": {
-          "taste": 0.6667,
-          "portion_value": 0.3333,
-          "protein_quantity": 0.0,
-          "vegetables": 1.0,
-          "texture": 0.0,
-          "convenience": 0.6667,
-          "dietary_fit": 0.3333,
-          "packaging": 0.0
+          "taste": 0.5455,
+          "portion_value": 0.1091,
+          "protein_quantity": 0.0182,
+          "vegetables": 0.1273,
+          "texture": 0.0182,
+          "convenience": 0.5455,
+          "dietary_fit": 0.1091,
+          "packaging": 0.0182
         }
       },
       "recent_6m": {
-        "n": 2,
-        "average_rating": 2.5,
-        "low_star_share": 0.5,
-        "high_star_share": 0.5,
+        "n": 54,
+        "rated_n": 53,
+        "average_rating": 4.58,
+        "low_star_share": 0.0566,
+        "high_star_share": 0.8868,
+        "low_value_count": 2,
+        "low_value_share": 0.037,
         "topic_counts": {
-          "taste": 2,
-          "portion_value": 0,
-          "protein_quantity": 0,
-          "vegetables": 2,
-          "texture": 0,
-          "convenience": 2,
-          "dietary_fit": 1,
-          "packaging": 0
+          "taste": 30,
+          "portion_value": 5,
+          "protein_quantity": 1,
+          "vegetables": 6,
+          "texture": 1,
+          "convenience": 30,
+          "dietary_fit": 6,
+          "packaging": 1
         },
         "topic_shares": {
-          "taste": 1.0,
-          "portion_value": 0.0,
-          "protein_quantity": 0.0,
-          "vegetables": 1.0,
-          "texture": 0.0,
-          "convenience": 1.0,
-          "dietary_fit": 0.5,
-          "packaging": 0.0
+          "taste": 0.5556,
+          "portion_value": 0.0926,
+          "protein_quantity": 0.0185,
+          "vegetables": 0.1111,
+          "texture": 0.0185,
+          "convenience": 0.5556,
+          "dietary_fit": 0.1111,
+          "packaging": 0.0185
         }
       },
       "earliest_review": "2025-11-13",
-      "latest_review": "2026-06-25"
+      "latest_review": "2026-08-21"
     },
     {
       "product_id": "beef_broccoli_kit",
@@ -588,59 +989,65 @@
       "cohort": "grocery",
       "official_url": "https://www.kevinsnaturalfoods.com/products/beef-broccoli-stir-fry-kit",
       "all": {
-        "n": 0,
-        "average_rating": null,
-        "low_star_share": null,
-        "high_star_share": null,
+        "n": 49,
+        "rated_n": 49,
+        "average_rating": 4.39,
+        "low_star_share": 0.0408,
+        "high_star_share": 0.8776,
+        "low_value_count": 3,
+        "low_value_share": 0.0612,
         "topic_counts": {
-          "taste": 0,
-          "portion_value": 0,
-          "protein_quantity": 0,
-          "vegetables": 0,
-          "texture": 0,
-          "convenience": 0,
-          "dietary_fit": 0,
+          "taste": 32,
+          "portion_value": 7,
+          "protein_quantity": 1,
+          "vegetables": 7,
+          "texture": 4,
+          "convenience": 28,
+          "dietary_fit": 5,
           "packaging": 0
         },
         "topic_shares": {
-          "taste": null,
-          "portion_value": null,
-          "protein_quantity": null,
-          "vegetables": null,
-          "texture": null,
-          "convenience": null,
-          "dietary_fit": null,
-          "packaging": null
+          "taste": 0.6531,
+          "portion_value": 0.1429,
+          "protein_quantity": 0.0204,
+          "vegetables": 0.1429,
+          "texture": 0.0816,
+          "convenience": 0.5714,
+          "dietary_fit": 0.102,
+          "packaging": 0.0
         }
       },
       "recent_6m": {
-        "n": 0,
-        "average_rating": null,
-        "low_star_share": null,
-        "high_star_share": null,
+        "n": 47,
+        "rated_n": 47,
+        "average_rating": 4.36,
+        "low_star_share": 0.0426,
+        "high_star_share": 0.8723,
+        "low_value_count": 3,
+        "low_value_share": 0.0638,
         "topic_counts": {
-          "taste": 0,
-          "portion_value": 0,
-          "protein_quantity": 0,
-          "vegetables": 0,
-          "texture": 0,
-          "convenience": 0,
-          "dietary_fit": 0,
+          "taste": 32,
+          "portion_value": 7,
+          "protein_quantity": 1,
+          "vegetables": 7,
+          "texture": 4,
+          "convenience": 27,
+          "dietary_fit": 5,
           "packaging": 0
         },
         "topic_shares": {
-          "taste": null,
-          "portion_value": null,
-          "protein_quantity": null,
-          "vegetables": null,
-          "texture": null,
-          "convenience": null,
-          "dietary_fit": null,
-          "packaging": null
+          "taste": 0.6809,
+          "portion_value": 0.1489,
+          "protein_quantity": 0.0213,
+          "vegetables": 0.1489,
+          "texture": 0.0851,
+          "convenience": 0.5745,
+          "dietary_fit": 0.1064,
+          "packaging": 0.0
         }
       },
-      "earliest_review": null,
-      "latest_review": null
+      "earliest_review": "2026-02-18",
+      "latest_review": "2026-07-17"
     },
     {
       "product_id": "chicken_fajitas_kit",
@@ -648,59 +1055,65 @@
       "cohort": "grocery",
       "official_url": "https://www.kevinsnaturalfoods.com/products/chicken-fajitas-skillet-meal-kit",
       "all": {
-        "n": 30,
-        "average_rating": 3.2,
-        "low_star_share": 0.4333,
-        "high_star_share": 0.5333,
+        "n": 91,
+        "rated_n": 91,
+        "average_rating": 3.82,
+        "low_star_share": 0.2198,
+        "high_star_share": 0.7143,
+        "low_value_count": 17,
+        "low_value_share": 0.1868,
         "topic_counts": {
-          "taste": 21,
-          "portion_value": 13,
-          "protein_quantity": 4,
-          "vegetables": 12,
+          "taste": 56,
+          "portion_value": 25,
+          "protein_quantity": 5,
+          "vegetables": 20,
           "texture": 0,
-          "convenience": 9,
-          "dietary_fit": 3,
-          "packaging": 2
+          "convenience": 35,
+          "dietary_fit": 5,
+          "packaging": 4
         },
         "topic_shares": {
-          "taste": 0.7,
-          "portion_value": 0.4333,
-          "protein_quantity": 0.1333,
-          "vegetables": 0.4,
+          "taste": 0.6154,
+          "portion_value": 0.2747,
+          "protein_quantity": 0.0549,
+          "vegetables": 0.2198,
           "texture": 0.0,
-          "convenience": 0.3,
-          "dietary_fit": 0.1,
-          "packaging": 0.0667
+          "convenience": 0.3846,
+          "dietary_fit": 0.0549,
+          "packaging": 0.044
         }
       },
       "recent_6m": {
-        "n": 15,
-        "average_rating": 2.6,
-        "low_star_share": 0.5333,
-        "high_star_share": 0.4,
+        "n": 74,
+        "rated_n": 74,
+        "average_rating": 3.85,
+        "low_star_share": 0.1892,
+        "high_star_share": 0.7297,
+        "low_value_count": 10,
+        "low_value_share": 0.1351,
         "topic_counts": {
-          "taste": 12,
-          "portion_value": 7,
-          "protein_quantity": 2,
-          "vegetables": 6,
+          "taste": 45,
+          "portion_value": 18,
+          "protein_quantity": 3,
+          "vegetables": 13,
           "texture": 0,
-          "convenience": 4,
-          "dietary_fit": 2,
-          "packaging": 0
+          "convenience": 29,
+          "dietary_fit": 4,
+          "packaging": 2
         },
         "topic_shares": {
-          "taste": 0.8,
-          "portion_value": 0.4667,
-          "protein_quantity": 0.1333,
-          "vegetables": 0.4,
+          "taste": 0.6081,
+          "portion_value": 0.2432,
+          "protein_quantity": 0.0405,
+          "vegetables": 0.1757,
           "texture": 0.0,
-          "convenience": 0.2667,
-          "dietary_fit": 0.1333,
-          "packaging": 0.0
+          "convenience": 0.3919,
+          "dietary_fit": 0.0541,
+          "packaging": 0.027
         }
       },
       "earliest_review": "2025-06-28",
-      "latest_review": "2026-08-12"
+      "latest_review": "2026-08-20"
     },
     {
       "product_id": "general_tso_chicken_kit",
@@ -709,9 +1122,12 @@
       "official_url": "https://www.kevinsnaturalfoods.com/products/general-tso-s-chicken-with-green-beans",
       "all": {
         "n": 24,
+        "rated_n": 24,
         "average_rating": 2.54,
         "low_star_share": 0.5833,
         "high_star_share": 0.3333,
+        "low_value_count": 9,
+        "low_value_share": 0.375,
         "topic_counts": {
           "taste": 19,
           "portion_value": 7,
@@ -735,9 +1151,12 @@
       },
       "recent_6m": {
         "n": 5,
+        "rated_n": 5,
         "average_rating": 3.2,
         "low_star_share": 0.4,
         "high_star_share": 0.6,
+        "low_value_count": 1,
+        "low_value_share": 0.2,
         "topic_counts": {
           "taste": 4,
           "portion_value": 1,
@@ -769,9 +1188,12 @@
       "official_url": "https://www.kevinsnaturalfoods.com/products/sichuan-chicken-stir-fry-kit",
       "all": {
         "n": 1,
+        "rated_n": 1,
         "average_rating": 5.0,
         "low_star_share": 0.0,
         "high_star_share": 1.0,
+        "low_value_count": 0,
+        "low_value_share": 0.0,
         "topic_counts": {
           "taste": 1,
           "portion_value": 0,
@@ -795,9 +1217,12 @@
       },
       "recent_6m": {
         "n": 0,
+        "rated_n": 0,
         "average_rating": null,
         "low_star_share": null,
         "high_star_share": null,
+        "low_value_count": 0,
+        "low_value_share": null,
         "topic_counts": {
           "taste": 0,
           "portion_value": 0,
@@ -828,41 +1253,47 @@
       "cohort": "grocery",
       "official_url": "https://www.kevinsnaturalfoods.com/products/honey-garlic-chicken-stir-fry-kit",
       "all": {
-        "n": 54,
-        "average_rating": 3.13,
-        "low_star_share": 0.3889,
-        "high_star_share": 0.4444,
+        "n": 57,
+        "rated_n": 57,
+        "average_rating": 3.14,
+        "low_star_share": 0.386,
+        "high_star_share": 0.4386,
+        "low_value_count": 19,
+        "low_value_share": 0.3333,
         "topic_counts": {
-          "taste": 33,
-          "portion_value": 20,
+          "taste": 36,
+          "portion_value": 23,
           "protein_quantity": 8,
-          "vegetables": 12,
+          "vegetables": 15,
           "texture": 6,
-          "convenience": 23,
-          "dietary_fit": 5,
-          "packaging": 6
+          "convenience": 25,
+          "dietary_fit": 6,
+          "packaging": 7
         },
         "topic_shares": {
-          "taste": 0.6111,
-          "portion_value": 0.3704,
-          "protein_quantity": 0.1481,
-          "vegetables": 0.2222,
-          "texture": 0.1111,
-          "convenience": 0.4259,
-          "dietary_fit": 0.0926,
-          "packaging": 0.1111
+          "taste": 0.6316,
+          "portion_value": 0.4035,
+          "protein_quantity": 0.1404,
+          "vegetables": 0.2632,
+          "texture": 0.1053,
+          "convenience": 0.4386,
+          "dietary_fit": 0.1053,
+          "packaging": 0.1228
         }
       },
       "recent_6m": {
         "n": 15,
-        "average_rating": 2.4,
+        "rated_n": 15,
+        "average_rating": 2.47,
         "low_star_share": 0.5333,
         "high_star_share": 0.2667,
+        "low_value_count": 9,
+        "low_value_share": 0.6,
         "topic_counts": {
           "taste": 7,
-          "portion_value": 9,
-          "protein_quantity": 4,
-          "vegetables": 5,
+          "portion_value": 10,
+          "protein_quantity": 3,
+          "vegetables": 6,
           "texture": 3,
           "convenience": 6,
           "dietary_fit": 1,
@@ -870,9 +1301,9 @@
         },
         "topic_shares": {
           "taste": 0.4667,
-          "portion_value": 0.6,
-          "protein_quantity": 0.2667,
-          "vegetables": 0.3333,
+          "portion_value": 0.6667,
+          "protein_quantity": 0.2,
+          "vegetables": 0.4,
           "texture": 0.2,
           "convenience": 0.4,
           "dietary_fit": 0.0667,
@@ -889,9 +1320,12 @@
       "official_url": "https://www.kevinsnaturalfoods.com/products/orange-chicken-stir-fry",
       "all": {
         "n": 1,
+        "rated_n": 1,
         "average_rating": 5.0,
         "low_star_share": 0.0,
         "high_star_share": 1.0,
+        "low_value_count": 0,
+        "low_value_share": 0.0,
         "topic_counts": {
           "taste": 1,
           "portion_value": 0,
@@ -915,9 +1349,12 @@
       },
       "recent_6m": {
         "n": 0,
+        "rated_n": 0,
         "average_rating": null,
         "low_star_share": null,
         "high_star_share": null,
+        "low_value_count": 0,
+        "low_value_share": null,
         "topic_counts": {
           "taste": 0,
           "portion_value": 0,
@@ -949,9 +1386,12 @@
       "official_url": "https://www.kevinsnaturalfoods.com/products/honey-garlic-chicken-green-bean-stir-fry",
       "all": {
         "n": 3,
+        "rated_n": 3,
         "average_rating": 5.0,
         "low_star_share": 0.0,
         "high_star_share": 1.0,
+        "low_value_count": 0,
+        "low_value_share": 0.0,
         "topic_counts": {
           "taste": 3,
           "portion_value": 0,
@@ -975,9 +1415,12 @@
       },
       "recent_6m": {
         "n": 0,
+        "rated_n": 0,
         "average_rating": null,
         "low_star_share": null,
         "high_star_share": null,
+        "low_value_count": 0,
+        "low_value_share": null,
         "topic_counts": {
           "taste": 0,
           "portion_value": 0,
@@ -1009,9 +1452,12 @@
       "official_url": "https://www.kevinsnaturalfoods.com/products/beef-broccoli-stir-fry",
       "all": {
         "n": 23,
+        "rated_n": 23,
         "average_rating": 3.96,
         "low_star_share": 0.2609,
         "high_star_share": 0.6957,
+        "low_value_count": 2,
+        "low_value_share": 0.087,
         "topic_counts": {
           "taste": 15,
           "portion_value": 5,
@@ -1035,9 +1481,12 @@
       },
       "recent_6m": {
         "n": 6,
+        "rated_n": 6,
         "average_rating": 2.5,
         "low_star_share": 0.6667,
         "high_star_share": 0.3333,
+        "low_value_count": 1,
+        "low_value_share": 0.1667,
         "topic_counts": {
           "taste": 4,
           "portion_value": 1,
@@ -1069,9 +1518,12 @@
       "official_url": "https://www.kevinsnaturalfoods.com/products/sichuan-chicken-green-bean-stir-fry",
       "all": {
         "n": 11,
+        "rated_n": 11,
         "average_rating": 4.36,
         "low_star_share": 0.0909,
         "high_star_share": 0.9091,
+        "low_value_count": 1,
+        "low_value_share": 0.0909,
         "topic_counts": {
           "taste": 8,
           "portion_value": 4,
@@ -1094,10 +1546,13 @@
         }
       },
       "recent_6m": {
-        "n": 5,
-        "average_rating": 4.4,
+        "n": 4,
+        "rated_n": 4,
+        "average_rating": 4.25,
         "low_star_share": 0.0,
         "high_star_share": 1.0,
+        "low_value_count": 0,
+        "low_value_share": 0.0,
         "topic_counts": {
           "taste": 3,
           "portion_value": 1,
@@ -1109,14 +1564,14 @@
           "packaging": 1
         },
         "topic_shares": {
-          "taste": 0.6,
-          "portion_value": 0.2,
+          "taste": 0.75,
+          "portion_value": 0.25,
           "protein_quantity": 0.0,
-          "vegetables": 0.8,
-          "texture": 0.2,
-          "convenience": 0.8,
-          "dietary_fit": 0.4,
-          "packaging": 0.2
+          "vegetables": 1.0,
+          "texture": 0.25,
+          "convenience": 1.0,
+          "dietary_fit": 0.5,
+          "packaging": 0.25
         }
       },
       "earliest_review": "2023-09-03",
@@ -1129,9 +1584,12 @@
       "official_url": "https://www.kevinsnaturalfoods.com/products/hot-honey-garlic-chicken-stir-fry",
       "all": {
         "n": 7,
+        "rated_n": 7,
         "average_rating": 5.0,
         "low_star_share": 0.0,
         "high_star_share": 1.0,
+        "low_value_count": 0,
+        "low_value_share": 0.0,
         "topic_counts": {
           "taste": 6,
           "portion_value": 1,
@@ -1155,9 +1613,12 @@
       },
       "recent_6m": {
         "n": 0,
+        "rated_n": 0,
         "average_rating": null,
         "low_star_share": null,
         "high_star_share": null,
+        "low_value_count": 0,
+        "low_value_share": null,
         "topic_counts": {
           "taste": 0,
           "portion_value": 0,
@@ -1189,9 +1650,12 @@
       "official_url": "https://www.kevinsnaturalfoods.com/products/teriyaki-style-chicken-stir-fry",
       "all": {
         "n": 5,
+        "rated_n": 5,
         "average_rating": 4.8,
         "low_star_share": 0.0,
         "high_star_share": 1.0,
+        "low_value_count": 0,
+        "low_value_share": 0.0,
         "topic_counts": {
           "taste": 3,
           "portion_value": 2,
@@ -1215,9 +1679,12 @@
       },
       "recent_6m": {
         "n": 0,
+        "rated_n": 0,
         "average_rating": null,
         "low_star_share": null,
         "high_star_share": null,
+        "low_value_count": 0,
+        "low_value_share": null,
         "topic_counts": {
           "taste": 0,
           "portion_value": 0,
@@ -1247,9 +1714,12 @@
     {
       "month": "2023-04",
       "n": 1,
+      "rated_n": 1,
       "average_rating": 5.0,
       "low_star_share": 0.0,
       "high_star_share": 1.0,
+      "low_value_count": 0,
+      "low_value_share": 0.0,
       "topic_counts": {
         "taste": 0,
         "portion_value": 1,
@@ -1274,9 +1744,12 @@
     {
       "month": "2023-06",
       "n": 1,
+      "rated_n": 1,
       "average_rating": 5.0,
       "low_star_share": 0.0,
       "high_star_share": 1.0,
+      "low_value_count": 0,
+      "low_value_share": 0.0,
       "topic_counts": {
         "taste": 1,
         "portion_value": 0,
@@ -1301,9 +1774,12 @@
     {
       "month": "2023-07",
       "n": 2,
+      "rated_n": 2,
       "average_rating": 5.0,
       "low_star_share": 0.0,
       "high_star_share": 1.0,
+      "low_value_count": 0,
+      "low_value_share": 0.0,
       "topic_counts": {
         "taste": 1,
         "portion_value": 0,
@@ -1328,9 +1804,12 @@
     {
       "month": "2023-08",
       "n": 1,
+      "rated_n": 1,
       "average_rating": 5.0,
       "low_star_share": 0.0,
       "high_star_share": 1.0,
+      "low_value_count": 0,
+      "low_value_share": 0.0,
       "topic_counts": {
         "taste": 1,
         "portion_value": 0,
@@ -1355,9 +1834,12 @@
     {
       "month": "2023-09",
       "n": 1,
+      "rated_n": 1,
       "average_rating": 5.0,
       "low_star_share": 0.0,
       "high_star_share": 1.0,
+      "low_value_count": 0,
+      "low_value_share": 0.0,
       "topic_counts": {
         "taste": 1,
         "portion_value": 1,
@@ -1382,9 +1864,12 @@
     {
       "month": "2023-11",
       "n": 2,
+      "rated_n": 2,
       "average_rating": 5.0,
       "low_star_share": 0.0,
       "high_star_share": 1.0,
+      "low_value_count": 0,
+      "low_value_share": 0.0,
       "topic_counts": {
         "taste": 1,
         "portion_value": 0,
@@ -1409,9 +1894,12 @@
     {
       "month": "2023-12",
       "n": 3,
+      "rated_n": 3,
       "average_rating": 5.0,
       "low_star_share": 0.0,
       "high_star_share": 1.0,
+      "low_value_count": 0,
+      "low_value_share": 0.0,
       "topic_counts": {
         "taste": 3,
         "portion_value": 0,
@@ -1436,9 +1924,12 @@
     {
       "month": "2024-01",
       "n": 4,
+      "rated_n": 4,
       "average_rating": 5.0,
       "low_star_share": 0.0,
       "high_star_share": 1.0,
+      "low_value_count": 0,
+      "low_value_share": 0.0,
       "topic_counts": {
         "taste": 1,
         "portion_value": 1,
@@ -1463,9 +1954,12 @@
     {
       "month": "2024-02",
       "n": 4,
+      "rated_n": 4,
       "average_rating": 5.0,
       "low_star_share": 0.0,
       "high_star_share": 1.0,
+      "low_value_count": 0,
+      "low_value_share": 0.0,
       "topic_counts": {
         "taste": 2,
         "portion_value": 1,
@@ -1490,9 +1984,12 @@
     {
       "month": "2024-03",
       "n": 2,
+      "rated_n": 2,
       "average_rating": 5.0,
       "low_star_share": 0.0,
       "high_star_share": 1.0,
+      "low_value_count": 0,
+      "low_value_share": 0.0,
       "topic_counts": {
         "taste": 2,
         "portion_value": 1,
@@ -1517,9 +2014,12 @@
     {
       "month": "2024-05",
       "n": 2,
+      "rated_n": 2,
       "average_rating": 5.0,
       "low_star_share": 0.0,
       "high_star_share": 1.0,
+      "low_value_count": 0,
+      "low_value_share": 0.0,
       "topic_counts": {
         "taste": 2,
         "portion_value": 0,
@@ -1544,9 +2044,12 @@
     {
       "month": "2024-06",
       "n": 1,
+      "rated_n": 1,
       "average_rating": 5.0,
       "low_star_share": 0.0,
       "high_star_share": 1.0,
+      "low_value_count": 0,
+      "low_value_share": 0.0,
       "topic_counts": {
         "taste": 0,
         "portion_value": 1,
@@ -1571,9 +2074,12 @@
     {
       "month": "2024-07",
       "n": 1,
+      "rated_n": 1,
       "average_rating": 5.0,
       "low_star_share": 0.0,
       "high_star_share": 1.0,
+      "low_value_count": 0,
+      "low_value_share": 0.0,
       "topic_counts": {
         "taste": 1,
         "portion_value": 0,
@@ -1598,9 +2104,12 @@
     {
       "month": "2025-01",
       "n": 1,
+      "rated_n": 1,
       "average_rating": 5.0,
       "low_star_share": 0.0,
       "high_star_share": 1.0,
+      "low_value_count": 0,
+      "low_value_share": 0.0,
       "topic_counts": {
         "taste": 1,
         "portion_value": 0,
@@ -1625,9 +2134,12 @@
     {
       "month": "2025-02",
       "n": 2,
+      "rated_n": 2,
       "average_rating": 5.0,
       "low_star_share": 0.0,
       "high_star_share": 1.0,
+      "low_value_count": 0,
+      "low_value_share": 0.0,
       "topic_counts": {
         "taste": 1,
         "portion_value": 1,
@@ -1652,9 +2164,12 @@
     {
       "month": "2025-03",
       "n": 3,
+      "rated_n": 3,
       "average_rating": 3.67,
       "low_star_share": 0.3333,
       "high_star_share": 0.6667,
+      "low_value_count": 0,
+      "low_value_share": 0.0,
       "topic_counts": {
         "taste": 3,
         "portion_value": 0,
@@ -1679,9 +2194,12 @@
     {
       "month": "2025-04",
       "n": 6,
+      "rated_n": 6,
       "average_rating": 4.83,
       "low_star_share": 0.0,
       "high_star_share": 1.0,
+      "low_value_count": 0,
+      "low_value_share": 0.0,
       "topic_counts": {
         "taste": 6,
         "portion_value": 1,
@@ -1706,9 +2224,12 @@
     {
       "month": "2025-05",
       "n": 3,
+      "rated_n": 3,
       "average_rating": 3.67,
       "low_star_share": 0.3333,
       "high_star_share": 0.6667,
+      "low_value_count": 0,
+      "low_value_share": 0.0,
       "topic_counts": {
         "taste": 3,
         "portion_value": 2,
@@ -1733,9 +2254,12 @@
     {
       "month": "2025-06",
       "n": 6,
+      "rated_n": 6,
       "average_rating": 4.5,
       "low_star_share": 0.1667,
       "high_star_share": 0.8333,
+      "low_value_count": 1,
+      "low_value_share": 0.1667,
       "topic_counts": {
         "taste": 4,
         "portion_value": 1,
@@ -1760,9 +2284,12 @@
     {
       "month": "2025-07",
       "n": 1,
+      "rated_n": 1,
       "average_rating": 5.0,
       "low_star_share": 0.0,
       "high_star_share": 1.0,
+      "low_value_count": 0,
+      "low_value_share": 0.0,
       "topic_counts": {
         "taste": 1,
         "portion_value": 0,
@@ -1787,9 +2314,12 @@
     {
       "month": "2025-08",
       "n": 12,
+      "rated_n": 12,
       "average_rating": 3.0,
       "low_star_share": 0.4167,
       "high_star_share": 0.4167,
+      "low_value_count": 5,
+      "low_value_share": 0.4167,
       "topic_counts": {
         "taste": 9,
         "portion_value": 6,
@@ -1814,9 +2344,12 @@
     {
       "month": "2025-09",
       "n": 3,
+      "rated_n": 3,
       "average_rating": 3.0,
       "low_star_share": 0.3333,
       "high_star_share": 0.3333,
+      "low_value_count": 1,
+      "low_value_share": 0.3333,
       "topic_counts": {
         "taste": 2,
         "portion_value": 1,
@@ -1841,9 +2374,12 @@
     {
       "month": "2025-10",
       "n": 10,
+      "rated_n": 10,
       "average_rating": 3.3,
       "low_star_share": 0.4,
       "high_star_share": 0.5,
+      "low_value_count": 5,
+      "low_value_share": 0.5,
       "topic_counts": {
         "taste": 5,
         "portion_value": 4,
@@ -1868,9 +2404,12 @@
     {
       "month": "2025-11",
       "n": 9,
+      "rated_n": 9,
       "average_rating": 3.56,
       "low_star_share": 0.2222,
       "high_star_share": 0.5556,
+      "low_value_count": 1,
+      "low_value_share": 0.1111,
       "topic_counts": {
         "taste": 6,
         "portion_value": 2,
@@ -1895,9 +2434,12 @@
     {
       "month": "2025-12",
       "n": 11,
+      "rated_n": 11,
       "average_rating": 2.82,
       "low_star_share": 0.5455,
       "high_star_share": 0.3636,
+      "low_value_count": 2,
+      "low_value_share": 0.1818,
       "topic_counts": {
         "taste": 8,
         "portion_value": 3,
@@ -1921,218 +2463,242 @@
     },
     {
       "month": "2026-01",
-      "n": 15,
-      "average_rating": 2.93,
-      "low_star_share": 0.4667,
-      "high_star_share": 0.4,
+      "n": 17,
+      "rated_n": 17,
+      "average_rating": 2.88,
+      "low_star_share": 0.4706,
+      "high_star_share": 0.3529,
+      "low_value_count": 7,
+      "low_value_share": 0.4118,
       "topic_counts": {
-        "taste": 10,
-        "portion_value": 5,
+        "taste": 12,
+        "portion_value": 7,
         "protein_quantity": 1,
-        "vegetables": 9,
+        "vegetables": 11,
         "texture": 3,
-        "convenience": 5,
-        "dietary_fit": 2,
-        "packaging": 3
+        "convenience": 6,
+        "dietary_fit": 3,
+        "packaging": 4
       },
       "topic_shares": {
-        "taste": 0.6667,
-        "portion_value": 0.3333,
-        "protein_quantity": 0.0667,
-        "vegetables": 0.6,
-        "texture": 0.2,
-        "convenience": 0.3333,
-        "dietary_fit": 0.1333,
-        "packaging": 0.2
+        "taste": 0.7059,
+        "portion_value": 0.4118,
+        "protein_quantity": 0.0588,
+        "vegetables": 0.6471,
+        "texture": 0.1765,
+        "convenience": 0.3529,
+        "dietary_fit": 0.1765,
+        "packaging": 0.2353
       }
     },
     {
       "month": "2026-02",
-      "n": 10,
-      "average_rating": 2.7,
-      "low_star_share": 0.6,
-      "high_star_share": 0.4,
+      "n": 13,
+      "rated_n": 13,
+      "average_rating": 3.23,
+      "low_star_share": 0.4615,
+      "high_star_share": 0.5385,
+      "low_value_count": 6,
+      "low_value_share": 0.4615,
       "topic_counts": {
-        "taste": 7,
+        "taste": 8,
         "portion_value": 3,
         "protein_quantity": 3,
-        "vegetables": 3,
+        "vegetables": 4,
         "texture": 1,
-        "convenience": 2,
+        "convenience": 4,
         "dietary_fit": 0,
         "packaging": 1
       },
       "topic_shares": {
-        "taste": 0.7,
-        "portion_value": 0.3,
-        "protein_quantity": 0.3,
-        "vegetables": 0.3,
-        "texture": 0.1,
-        "convenience": 0.2,
+        "taste": 0.6154,
+        "portion_value": 0.2308,
+        "protein_quantity": 0.2308,
+        "vegetables": 0.3077,
+        "texture": 0.0769,
+        "convenience": 0.3077,
         "dietary_fit": 0.0,
-        "packaging": 0.1
+        "packaging": 0.0769
       }
     },
     {
       "month": "2026-03",
-      "n": 5,
-      "average_rating": 2.4,
-      "low_star_share": 0.6,
-      "high_star_share": 0.2,
+      "n": 26,
+      "rated_n": 26,
+      "average_rating": 3.96,
+      "low_star_share": 0.1923,
+      "high_star_share": 0.7308,
+      "low_value_count": 3,
+      "low_value_share": 0.1154,
       "topic_counts": {
-        "taste": 2,
-        "portion_value": 2,
+        "taste": 13,
+        "portion_value": 8,
         "protein_quantity": 0,
-        "vegetables": 0,
-        "texture": 0,
-        "convenience": 3,
-        "dietary_fit": 0,
+        "vegetables": 3,
+        "texture": 1,
+        "convenience": 11,
+        "dietary_fit": 1,
         "packaging": 1
       },
       "topic_shares": {
-        "taste": 0.4,
-        "portion_value": 0.4,
+        "taste": 0.5,
+        "portion_value": 0.3077,
         "protein_quantity": 0.0,
-        "vegetables": 0.0,
-        "texture": 0.0,
-        "convenience": 0.6,
-        "dietary_fit": 0.0,
-        "packaging": 0.2
+        "vegetables": 0.1154,
+        "texture": 0.0385,
+        "convenience": 0.4231,
+        "dietary_fit": 0.0385,
+        "packaging": 0.0385
       }
     },
     {
       "month": "2026-04",
-      "n": 2,
-      "average_rating": 3.5,
-      "low_star_share": 0.0,
-      "high_star_share": 0.5,
+      "n": 34,
+      "rated_n": 33,
+      "average_rating": 4.15,
+      "low_star_share": 0.1515,
+      "high_star_share": 0.7879,
+      "low_value_count": 6,
+      "low_value_share": 0.1765,
       "topic_counts": {
-        "taste": 2,
-        "portion_value": 1,
-        "protein_quantity": 0,
-        "vegetables": 0,
-        "texture": 0,
-        "convenience": 1,
+        "taste": 25,
+        "portion_value": 8,
+        "protein_quantity": 1,
+        "vegetables": 7,
+        "texture": 3,
+        "convenience": 11,
         "dietary_fit": 0,
-        "packaging": 0
+        "packaging": 3
       },
       "topic_shares": {
-        "taste": 1.0,
-        "portion_value": 0.5,
-        "protein_quantity": 0.0,
-        "vegetables": 0.0,
-        "texture": 0.0,
-        "convenience": 0.5,
+        "taste": 0.7353,
+        "portion_value": 0.2353,
+        "protein_quantity": 0.0294,
+        "vegetables": 0.2059,
+        "texture": 0.0882,
+        "convenience": 0.3235,
         "dietary_fit": 0.0,
-        "packaging": 0.0
+        "packaging": 0.0882
       }
     },
     {
       "month": "2026-05",
-      "n": 12,
-      "average_rating": 1.08,
-      "low_star_share": 1.0,
-      "high_star_share": 0.0,
+      "n": 58,
+      "rated_n": 58,
+      "average_rating": 3.69,
+      "low_star_share": 0.2414,
+      "high_star_share": 0.6724,
+      "low_value_count": 9,
+      "low_value_share": 0.1552,
       "topic_counts": {
-        "taste": 7,
-        "portion_value": 7,
+        "taste": 35,
+        "portion_value": 13,
         "protein_quantity": 2,
-        "vegetables": 8,
+        "vegetables": 12,
         "texture": 3,
-        "convenience": 2,
-        "dietary_fit": 0,
+        "convenience": 30,
+        "dietary_fit": 2,
         "packaging": 1
       },
       "topic_shares": {
-        "taste": 0.5833,
-        "portion_value": 0.5833,
-        "protein_quantity": 0.1667,
-        "vegetables": 0.6667,
-        "texture": 0.25,
-        "convenience": 0.1667,
-        "dietary_fit": 0.0,
-        "packaging": 0.0833
+        "taste": 0.6034,
+        "portion_value": 0.2241,
+        "protein_quantity": 0.0345,
+        "vegetables": 0.2069,
+        "texture": 0.0517,
+        "convenience": 0.5172,
+        "dietary_fit": 0.0345,
+        "packaging": 0.0172
       }
     },
     {
       "month": "2026-06",
-      "n": 13,
-      "average_rating": 3.0,
-      "low_star_share": 0.3077,
-      "high_star_share": 0.4615,
+      "n": 46,
+      "rated_n": 46,
+      "average_rating": 3.91,
+      "low_star_share": 0.1304,
+      "high_star_share": 0.7391,
+      "low_value_count": 8,
+      "low_value_share": 0.1739,
       "topic_counts": {
-        "taste": 8,
-        "portion_value": 6,
-        "protein_quantity": 3,
-        "vegetables": 4,
+        "taste": 24,
+        "portion_value": 10,
+        "protein_quantity": 4,
+        "vegetables": 6,
         "texture": 0,
-        "convenience": 5,
-        "dietary_fit": 2,
+        "convenience": 22,
+        "dietary_fit": 9,
         "packaging": 0
       },
       "topic_shares": {
-        "taste": 0.6154,
-        "portion_value": 0.4615,
-        "protein_quantity": 0.2308,
-        "vegetables": 0.3077,
+        "taste": 0.5217,
+        "portion_value": 0.2174,
+        "protein_quantity": 0.087,
+        "vegetables": 0.1304,
         "texture": 0.0,
-        "convenience": 0.3846,
-        "dietary_fit": 0.1538,
+        "convenience": 0.4783,
+        "dietary_fit": 0.1957,
         "packaging": 0.0
       }
     },
     {
       "month": "2026-07",
-      "n": 9,
-      "average_rating": 3.0,
-      "low_star_share": 0.4444,
-      "high_star_share": 0.4444,
+      "n": 34,
+      "rated_n": 34,
+      "average_rating": 4.26,
+      "low_star_share": 0.1176,
+      "high_star_share": 0.7941,
+      "low_value_count": 1,
+      "low_value_share": 0.0294,
       "topic_counts": {
-        "taste": 7,
-        "portion_value": 1,
-        "protein_quantity": 1,
-        "vegetables": 3,
-        "texture": 1,
-        "convenience": 4,
-        "dietary_fit": 2,
+        "taste": 22,
+        "portion_value": 3,
+        "protein_quantity": 2,
+        "vegetables": 6,
+        "texture": 2,
+        "convenience": 20,
+        "dietary_fit": 3,
         "packaging": 1
       },
       "topic_shares": {
-        "taste": 0.7778,
-        "portion_value": 0.1111,
-        "protein_quantity": 0.1111,
-        "vegetables": 0.3333,
-        "texture": 0.1111,
-        "convenience": 0.4444,
-        "dietary_fit": 0.2222,
-        "packaging": 0.1111
+        "taste": 0.6471,
+        "portion_value": 0.0882,
+        "protein_quantity": 0.0588,
+        "vegetables": 0.1765,
+        "texture": 0.0588,
+        "convenience": 0.5882,
+        "dietary_fit": 0.0882,
+        "packaging": 0.0294
       }
     },
     {
       "month": "2026-08",
-      "n": 8,
-      "average_rating": 4.12,
-      "low_star_share": 0.125,
-      "high_star_share": 0.875,
+      "n": 11,
+      "rated_n": 11,
+      "average_rating": 4.27,
+      "low_star_share": 0.0909,
+      "high_star_share": 0.9091,
+      "low_value_count": 1,
+      "low_value_share": 0.0909,
       "topic_counts": {
-        "taste": 5,
+        "taste": 7,
         "portion_value": 2,
         "protein_quantity": 0,
         "vegetables": 5,
         "texture": 1,
-        "convenience": 7,
-        "dietary_fit": 2,
+        "convenience": 9,
+        "dietary_fit": 3,
         "packaging": 1
       },
       "topic_shares": {
-        "taste": 0.625,
-        "portion_value": 0.25,
+        "taste": 0.6364,
+        "portion_value": 0.1818,
         "protein_quantity": 0.0,
-        "vegetables": 0.625,
-        "texture": 0.125,
-        "convenience": 0.875,
-        "dietary_fit": 0.25,
-        "packaging": 0.125
+        "vegetables": 0.4545,
+        "texture": 0.0909,
+        "convenience": 0.8182,
+        "dietary_fit": 0.2727,
+        "packaging": 0.0909
       }
     }
   ],
@@ -2575,6 +3141,96 @@
       "rating_count": 0,
       "source": "Kroger",
       "written_review_count": 0
+    },
+    {
+      "product_id": "beef_broccoli_kit",
+      "product": "Beef & Broccoli Stir-Fry Kit",
+      "cohort": "grocery",
+      "source": "Thrive Market",
+      "page_url": "https://thrivemarket.com/p/kevins-natural-foods-beef-and-broccoli-stir-fry-kit",
+      "sku": "810264028111",
+      "average_rating": 4.33,
+      "rating_count": 83,
+      "written_review_count": 51,
+      "captured_written_reviews": 51,
+      "distribution": {
+        "1": 1,
+        "2": 1,
+        "3": 4,
+        "4": 15,
+        "5": 30
+      },
+      "distribution_scope": "written_reviews",
+      "status": "review_history_complete",
+      "captured_at": "2026-08-27"
+    },
+    {
+      "product_id": "teriyaki_chicken_kit",
+      "product": "Teriyaki-Style Chicken Stir-Fry Kit",
+      "cohort": "grocery",
+      "source": "Thrive Market",
+      "page_url": "https://thrivemarket.com/p/kevins-natural-foods-teriyaki-style-chicken-stir-fry-kit",
+      "sku": "810264028135",
+      "average_rating": 4.51,
+      "rating_count": 76,
+      "written_review_count": 52,
+      "captured_written_reviews": 52,
+      "distribution": {
+        "1": 1,
+        "2": 1,
+        "3": 3,
+        "4": 4,
+        "5": 42
+      },
+      "distribution_scope": "written_reviews",
+      "status": "review_history_complete",
+      "captured_at": "2026-08-27"
+    },
+    {
+      "product_id": "chicken_fajitas_kit",
+      "product": "Chicken Fajitas Skillet Meal Kit",
+      "cohort": "grocery",
+      "source": "Thrive Market",
+      "page_url": "https://thrivemarket.com/p/kevins-natural-foods-chicken-fajitas-skillet-meal-kit",
+      "sku": "810264028180",
+      "average_rating": 4.2,
+      "rating_count": 87,
+      "written_review_count": 61,
+      "captured_written_reviews": 61,
+      "distribution": {
+        "1": 2,
+        "2": 5,
+        "3": 5,
+        "4": 20,
+        "5": 29
+      },
+      "distribution_scope": "written_reviews",
+      "status": "review_history_complete",
+      "captured_at": "2026-08-27"
+    },
+    {
+      "product_id": "honey_garlic_chicken_kit",
+      "product": "Honey Garlic Chicken Stir-Fry Kit",
+      "cohort": "grocery",
+      "source": "Meijer",
+      "page_url": "https://www.instacart.com/products/64414811-kevins-natural-foods-honey-garlic-chicken-stirfry?retailer_id=1840",
+      "sku": "810264028159",
+      "average_rating": 3.8,
+      "rating_count": 11,
+      "written_review_count": 11,
+      "captured_written_reviews": 3,
+      "native_source_written_count": 3,
+      "distribution": {
+        "1": 1,
+        "2": 2,
+        "3": 2,
+        "4": 0,
+        "5": 6
+      },
+      "distribution_scope": "listing_total_including_syndicated_reviews",
+      "status": "review_history_complete",
+      "captured_at": "2026-08-27",
+      "note": "Listing total includes syndicated Kevin's reviews; three native Meijer-origin rows are incremental."
     }
   ],
   "snapshot_summary": [
@@ -2609,6 +3265,21 @@
       "note": "Channel total; may include syndicated or overlapping ratings and is not a unique-consumer count."
     },
     {
+      "source": "Meijer",
+      "products_with_exact_page": 1,
+      "products_with_ratings": 1,
+      "rating_observations": 11,
+      "weighted_average_rating": 3.8,
+      "distribution": {
+        "1": 1,
+        "2": 2,
+        "3": 2,
+        "4": 0,
+        "5": 6
+      },
+      "note": "Channel total; may include syndicated or overlapping ratings and is not a unique-consumer count."
+    },
+    {
       "source": "Target",
       "products_with_exact_page": 3,
       "products_with_ratings": 3,
@@ -2620,6 +3291,21 @@
         "3": 16,
         "4": 17,
         "5": 68
+      },
+      "note": "Channel total; may include syndicated or overlapping ratings and is not a unique-consumer count."
+    },
+    {
+      "source": "Thrive Market",
+      "products_with_exact_page": 3,
+      "products_with_ratings": 3,
+      "rating_observations": 246,
+      "weighted_average_rating": 4.34,
+      "distribution": {
+        "1": 4,
+        "2": 7,
+        "3": 12,
+        "4": 39,
+        "5": 101
       },
       "note": "Channel total; may include syndicated or overlapping ratings and is not a unique-consumer count."
     }
@@ -2687,6 +3373,24 @@
       "official_assignment_page_unindexed": 0,
       "searched_no_exact_page": 6,
       "not_applicable": 7
+    },
+    {
+      "source": "Thrive Market",
+      "exact_pages": 3,
+      "review_histories_complete": 3,
+      "listing_no_public_reviews": 0,
+      "official_assignment_page_unindexed": 0,
+      "searched_no_exact_page": 0,
+      "not_applicable": 0
+    },
+    {
+      "source": "Meijer",
+      "exact_pages": 1,
+      "review_histories_complete": 1,
+      "listing_no_public_reviews": 0,
+      "official_assignment_page_unindexed": 0,
+      "searched_no_exact_page": 0,
+      "not_applicable": 0
     }
   ],
   "coverage": [
@@ -3781,23 +4485,63 @@
       "note": null,
       "search_scope": null,
       "confidence": "governed_scope"
+    },
+    {
+      "product_id": "beef_broccoli_kit",
+      "product": "Beef & Broccoli Stir-Fry Kit",
+      "cohort": "grocery",
+      "source": "Thrive Market",
+      "match_type": "exact_sku",
+      "status": "review_history_complete",
+      "page_url": "https://thrivemarket.com/p/kevins-natural-foods-beef-and-broccoli-stir-fry-kit",
+      "note": "Exact UPC 810264028111; complete public written review history captured."
+    },
+    {
+      "product_id": "teriyaki_chicken_kit",
+      "product": "Teriyaki-Style Chicken Stir-Fry Kit",
+      "cohort": "grocery",
+      "source": "Thrive Market",
+      "match_type": "exact_sku",
+      "status": "review_history_complete",
+      "page_url": "https://thrivemarket.com/p/kevins-natural-foods-teriyaki-style-chicken-stir-fry-kit",
+      "note": "Exact UPC 810264028135; complete public written review history captured."
+    },
+    {
+      "product_id": "chicken_fajitas_kit",
+      "product": "Chicken Fajitas Skillet Meal Kit",
+      "cohort": "grocery",
+      "source": "Thrive Market",
+      "match_type": "exact_sku",
+      "status": "review_history_complete",
+      "page_url": "https://thrivemarket.com/p/kevins-natural-foods-chicken-fajitas-skillet-meal-kit",
+      "note": "Exact UPC 810264028180; complete public written review history captured."
+    },
+    {
+      "product_id": "honey_garlic_chicken_kit",
+      "product": "Honey Garlic Chicken Stir-Fry Kit",
+      "cohort": "grocery",
+      "source": "Meijer",
+      "match_type": "exact_sku",
+      "status": "review_history_complete",
+      "page_url": "https://www.instacart.com/products/64414811-kevins-natural-foods-honey-garlic-chicken-stirfry?retailer_id=1840",
+      "note": "Exact 16 oz product; all three retailer-native Meijer reviews captured separately from syndicated rows."
     }
   ],
   "complaint_topics": {
-    "taste": 34,
-    "portion_value": 28,
-    "vegetables": 23,
-    "texture": 11,
-    "packaging": 10,
+    "taste": 42,
+    "portion_value": 32,
+    "vegetables": 30,
+    "texture": 13,
+    "packaging": 12,
     "protein_quantity": 9,
-    "convenience": 5,
-    "dietary_fit": 1
+    "convenience": 6,
+    "dietary_fit": 3
   },
   "provocations": [
     {
       "id": "portion_architecture",
       "title": "Is the 2.5-serving promise creating an expectation gap?",
-      "evidence": "41 of 112 grocery-kit written reviews mention portion or value; 16 specifically flag protein quantity.",
+      "evidence": "51 of 277 grocery-kit written reviews contain a precise low-value signal; 23 specifically flag protein quantity.",
       "implication": "Test pack communication and protein-to-vegetable balance before treating the issue as flavor reformulation.",
       "confidence": "strongest_directional_signal"
     },
@@ -3810,15 +4554,15 @@
     },
     {
       "id": "early_incentive_bias",
-      "title": "The early Costco baseline is not a clean launch benchmark.",
-      "evidence": "All 16 reviews carrying the disclosed future-purchase incentive badge were 5-star and concentrated in the early Costco period.",
-      "implication": "Use the Costco time series for issue discovery, but do not interpret the launch-to-now rating gap as a like-for-like decline.",
+      "title": "Incentive-bearing cohorts must remain visible, not blended away.",
+      "evidence": "165 written reviews carry a disclosed future-purchase or Thrive Cash incentive; source-specific views preserve that context.",
+      "implication": "Use owned-site trends for launch-to-now comparison and retailer cohorts for issue discovery; do not treat the combined rating as a like-for-like trend.",
       "confidence": "strong_methodological_finding"
     },
     {
       "id": "convenience_equity",
       "title": "Convenience appears to be an equity worth protecting.",
-      "evidence": "Convenience language appears in 69 of 166 deduplicated written reviews.",
+      "evidence": "Convenience language appears in 153 of 331 deduplicated written reviews.",
       "implication": "Any product or pack change should preserve the under-10-minute, low-mess preparation benefit.",
       "confidence": "directional"
     },

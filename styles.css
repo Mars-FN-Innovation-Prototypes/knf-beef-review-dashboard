@@ -90,11 +90,12 @@ a { color: inherit; }
 .filter-context { display: block; margin-top: 10px; color: var(--muted); font-size: 9px; line-height: 1.45; }
 .inline-check { display: grid !important; grid-template-columns: 16px 1fr; justify-content: initial !important; gap: 8px; align-items: start; margin: 0 !important; color: #40515c !important; font-size: 10px !important; font-weight: 700 !important; letter-spacing: 0 !important; line-height: 1.4; text-transform: none !important; cursor: pointer; }
 .inline-check input { width: 15px; height: 15px; margin: 0; accent-color: var(--color-mars-blue); }
-.rating-filter { display: grid; grid-template-columns: repeat(5, 1fr); gap: 5px; }
+.rating-filter { display: grid; grid-template-columns: repeat(6, 1fr); gap: 5px; }
 .rating-filter label { cursor: pointer; }
 .rating-filter input { position: absolute; opacity: 0; }
 .rating-filter span { display: grid; place-items: center; height: 32px; border: 1px solid var(--line); color: var(--muted); border-radius: 4px; font-size: 12px; }
 .rating-filter input:checked + span { border-color: var(--blue); color: white; background: var(--blue); }
+.rating-filter label:last-child span { font-size: 8px; }
 .filter-group select, .control-row select { width: 100%; min-height: 36px; padding: 7px 30px 7px 9px; border: 1px solid var(--line); border-radius: 5px; background: white; color: var(--ink); }
 .search-box { display: grid; grid-template-columns: 27px 1fr; align-items: center; min-height: 38px; border: 1px solid var(--line); border-radius: 5px; background: white; }
 .search-box span { color: #7f8d95; text-align: center; font-size: 18px; }
@@ -187,6 +188,25 @@ a { color: inherit; }
 .theme-meter.benchmark i { background: var(--orange); }
 .theme-card small { display: block; margin-top: 7px; color: #8a979e; font-size: 9px; }
 .stir-theme-grid { grid-template-columns: repeat(4, 1fr); }
+.filter-value-check { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--line); }
+.value-summary { display: grid; grid-template-columns: repeat(4, 1fr); gap: 11px; margin-bottom: 14px; }
+.value-summary article { padding: 17px 18px; border: 1px solid var(--line); border-top: 4px solid var(--color-pea); border-radius: 8px; background: white; box-shadow: var(--shadow); }
+.value-summary span { color: var(--color-water); font-size: 9px; font-weight: 850; letter-spacing: .08em; text-transform: uppercase; }
+.value-summary strong { display: block; margin: 8px 0 5px; color: var(--color-mars-blue); font-size: 26px; font-variant-numeric: tabular-nums; }
+.value-summary small { color: var(--muted); font-size: 9px; line-height: 1.4; }
+.value-grid { display: grid; grid-template-columns: minmax(310px, .75fr) minmax(0, 1.25fr); gap: 14px; }
+.value-grid h3 { margin: 4px 0 0; color: var(--navy); font-size: 18px; }
+.value-bars { display: grid; gap: 19px; }
+.value-bar-row { display: grid; gap: 8px; }
+.value-bar-row > div:first-child { display: flex; justify-content: space-between; gap: 14px; }
+.value-bar-row strong { color: #40515c; font-size: 11px; }
+.value-bar-row span { color: var(--muted); font-size: 9px; }
+.value-bar-row .bar-track { height: 8px; }
+.value-bar-row .bar-track i { background: var(--color-orange); }
+.compact-table { margin: 0; box-shadow: none; }
+.compact-table th, .compact-table td { padding: 10px 9px; font-size: 9px; }
+.value-product-shell { margin-top: 14px; }
+.value-product-shell tbody th { color: var(--ink); font-size: 10px; text-transform: none; letter-spacing: 0; }
 
 .cohort-comparison { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
 .cohort-card { padding: 21px; border: 1px solid var(--line); border-top: 5px solid var(--color-water); border-radius: 9px; background: white; box-shadow: var(--shadow); }
@@ -315,6 +335,8 @@ td.product-name { min-width: 240px; font-weight: 750; font-variant-numeric: norm
 .review-meta span { margin-top: 4px; color: var(--muted); font-size: 9px; }
 .topic-tags { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 4px; margin-top: 10px; }
 .topic-tag { padding: 3px 5px; border-radius: 3px; background: var(--blue-soft); color: #2f668d; font-size: 8px; font-weight: 800; text-transform: uppercase; letter-spacing: .04em; }
+.value-tags { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 4px; margin-top: 10px; }
+.value-tag { padding: 4px 6px; border-radius: 3px; background: #fff0e4; color: #9f470f !important; font-size: 8px !important; font-weight: 850; letter-spacing: .04em; text-transform: uppercase; }
 .disclosure-tag { display: inline-block; margin-top: 10px; padding: 4px 7px; border-radius: 12px; background: #fff3c4; color: #6d5500; font-size: 8px; font-weight: 850; letter-spacing: .04em; text-transform: uppercase; }
 .load-more { display: block; margin: 18px auto 0; min-width: 190px; }
 .empty-results { padding: 38px; text-align: center; background: white; border: 1px dashed #bdc8ce; border-radius: 8px; color: var(--muted); }
@@ -361,6 +383,7 @@ footer a { color: white; }
   .snapshot-grid { grid-template-columns: repeat(3, 1fr); }
   .coverage-summary { grid-template-columns: repeat(3, 1fr); }
   .benchmark-summary { grid-template-columns: repeat(2, 1fr); }
+  .value-summary { grid-template-columns: repeat(2, 1fr); }
   .stir-theme-grid { grid-template-columns: repeat(4, 1fr); }
   .vp-comparison-heading { flex-direction: column; }
   .vp-comparison-actions { justify-content: flex-start; }
@@ -383,6 +406,7 @@ footer a { color: white; }
   .vp-comparison-metrics { grid-template-columns: 1fr; }
   .method-grid { grid-template-columns: 1fr 1fr; }
   .cohort-comparison { grid-template-columns: 1fr; }
+  .value-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 620px) {
   .topbar { height: 62px; padding: 0 14px; }
@@ -407,6 +431,7 @@ footer a { color: white; }
   .chart-wrap { height: 250px; }
   .theme-grid, .snapshot-grid, .action-grid, .method-grid, .coverage-summary, .benchmark-summary { grid-template-columns: 1fr; }
   .stir-theme-grid, .stir-snapshot-grid, .provocation-grid, .cohort-comparison { grid-template-columns: 1fr; }
+  .value-summary { grid-template-columns: 1fr; }
   .period-pair { grid-template-columns: 1fr; }
   .period-pair b { transform: rotate(90deg); }
   .vp-comparison { padding: 17px; }
@@ -420,6 +445,7 @@ footer a { color: white; }
   .review-card { grid-template-columns: 1fr; gap: 9px; }
   .review-meta { text-align: left; }
   .topic-tags { justify-content: flex-start; }
+  .value-tags { justify-content: flex-start; }
   .review-rating small { display: inline; margin-left: 8px; }
   footer { flex-direction: column; }
 }
