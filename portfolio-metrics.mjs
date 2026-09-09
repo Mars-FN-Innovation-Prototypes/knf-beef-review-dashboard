@@ -17,15 +17,20 @@ export function stats(rows, weighting = 'reviews') {
     incentiveShare:rows.filter(r=>r.incentive==='disclosed').length/n};
 }
 
+export function matches(selection, value) {
+  return Array.isArray(selection) ? selection.includes(value) : selection==='all'||selection===value;
+}
+export function sourceMatches(selection,value){
+  if(Array.isArray(selection))return selection.includes(value);
+  return selection==='all'||(selection==='owned'?value==="Kevin's Natural Foods":selection==='retailers'?value!=="Kevin's Natural Foods":selection===value);
+}
 export function selectRows(rows, products, filters, quarters) {
   let selected = rows.filter(r => {
     const p=products.get(r.product_id);
     return p && quarters.includes(r.quarter) && (filters.evidence==='all'||r.coverage_tier==='history') &&
-      (filters.category==='all'||p.category===filters.category) &&
-      (filters.product==='all'||r.product_id===filters.product) &&
-      (filters.format==='all'||p.format===filters.format) &&
+      matches(filters.category,p.category) && matches(filters.product,r.product_id) && matches(filters.format,p.format) &&
       (!filters.currentOnly||p.current_assortment) &&
-      (filters.source==='all'||(filters.source==='owned'?r.source==="Kevin's Natural Foods":filters.source==='retailers'?r.source!=="Kevin's Natural Foods":r.source===filters.source)) &&
+      sourceMatches(filters.source,r.source) &&
       (!filters.incentives||r.incentive!=='disclosed') && (!filters.written||r.written);
   });
   if (filters.weighting==='comparable') {

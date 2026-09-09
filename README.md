@@ -7,8 +7,10 @@ Interactive, static dashboard with separately managed Beef HMR, Stir-Fry and Por
 Open `portfolio.html` or choose **Portfolio** in the use-case switch. The original modules and their governed datasets are unchanged.
 
 - 105 current individual food products plus one verified historical listing; 11 categories.
-- 5,646 deduplicated dated ratings, July 1, 2024–September 9, 2026, across 89 products. 5,109 are from retrieved public histories; 537 are partial or earlier-archive evidence.
-- Default: 4,015 ratings across Q3 2024–Q2 2026. Six completed quarters and current-quarter-to-date are optional.
+- 5,823 deduplicated dated ratings, July 1, 2024–September 9, 2026, across 89 products. 5,318 are from retrieved public histories; 505 are partial or earlier-archive evidence.
+- Default: eight completed quarters plus current-quarter-to-date, 5,318 ratings. Unchecking current quarter leaves 4,114 records through Q2 2026. Six completed quarters are also available.
+- Searchable checkbox multi-selects cover category, product, source and format, with Select all / Clear all. Retailer coverage explains missing dated history instead of implying zero reviews.
+- Follow-up: 42 public Instacart listing IDs assessed, 38 matched feeds retrieved, 393 in-window observations and 177 net additional unique records. Hosted reviews retain their disclosed origin; four unresolved identities remain excluded.
 - Review-weighted, equal-product and fixed comparable-product/source views; source/category overlays; product/format/current-assortment/incentive filters; quarter drill-down and review explorer.
 - PNG/SVG chart export and CSV exports of quarterly metrics, selected reviews and listing coverage.
 - Cumulative rating snapshots remain separate. Legacy/current brand provider reconciliation, incomplete retailer pagination and unconfirmed listings remain explicitly disclosed gaps; this is not complete market coverage.

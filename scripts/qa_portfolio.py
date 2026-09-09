@@ -1,5 +1,7 @@
 """Validate normalized snapshots and, when present, raw public source provenance."""
-import json, random, re
+import json, random, re, hashlib
+from urllib.parse import urlparse,parse_qs
+from datetime import datetime
 from collections import Counter, defaultdict
 from portfolio_sources import ROOT,CACHE,registry,record,match_product,embedded_judge,next_data,walk,clean,dump
 
@@ -16,6 +18,7 @@ def main():
     assert match_product("kevin's foods Gluten Free Size Pesto Chicken Pasta - 28oz")[0]['category']=='Frozen Family Meals'
     assert match_product("Kevin's Entrees and Sides Bundle")[0] is None
     assert match_product("Kevin's Korean BBQ Chicken bowl 9.5 oz")[0]['category']=='Frozen Bowls'
+    assert match_product("Kevin's Chicken Piccata with Cauliflower Pasta 26 oz")[0]['category']=='Pastas'
     assert match_product('Buffalo Sauce','810264028814')[0]['current_assortment'] is False
     # All exact UPC matches must resolve uniquely to the same registered product.
     identity=[];provider_pids=defaultdict(set)
@@ -37,7 +40,21 @@ def main():
         info=load(meta);url=info['url'];path=meta.with_name(meta.name.replace('.meta.json','.txt'))
         if not path.exists():continue
         raw=path.read_text(encoding='utf-8');batch=[];provider=None
-        if 'judge.me/reviews/reviews_for_widget' in url:
+        if 'instacart.com/graphql?' in url:
+            variables=json.loads(parse_qs(urlparse(url).query)['variables'][0])
+            cs=[c for c in evidence.get('instacart',{}).get('coverage',[]) if re.search(r'products/'+str(variables['id'])+r'(?:-|$)',c['url']) and c.get('product_id')]
+            if not cs:continue
+            pid=cs[0]['product_id'];provider='Instacart'
+            batch=(json.loads(raw).get('data') or {}).get('productReviews',{}).get('reviews',[])
+            for r in batch:
+                v=r.get('viewSection') or {};m=re.search(r'Reviewed on ([A-Za-z]+ \d{1,2}, \d{4})',v.get('reviewMetadataString',''))
+                if not m:continue
+                day=datetime.strptime(m.group(1),'%B %d, %Y').date().isoformat();rating=r['reviewRating']['value']
+                rid=hashlib.sha256((pid+'|'+day+'|'+str(rating)+'|'+clean(v.get('reviewTitleString'))+'|'+clean(v.get('reviewContentString'))).encode()).hexdigest()
+                lookup[(provider,rid)]=({'date':day,'rating':rating/20,'text':v.get('reviewContentString')},url)
+            files+=bool(batch)
+            continue
+        elif 'judge.me/reviews/reviews_for_widget' in url:
             batch=json.loads(raw).get('reviews',[]);provider='Judge.me'
         elif 'kevinsnaturalfoods.com/products/' in url:
             widget=embedded_judge(raw) or {}
@@ -69,8 +86,8 @@ def main():
             if r['provider']=='Judge.me':day=original['created_at'][:10];rating=original['rating'];text=original.get('body_html') or original.get('body')
             elif r['provider']=='Thrive Market':day=original['created_at'][:10];rating=original['value'];text=original.get('detail')
             elif r['provider']=='Target':day=original['rating']['submitted_at'][:10];rating=original['rating']['value'];text=original.get('text')
+            elif r['provider']=='Instacart':day=original['date'];rating=original['rating'];text=original['text']
             else:
-                from datetime import datetime
                 day=datetime.strptime(original['reviewSubmissionTime'],'%m/%d/%Y').date().isoformat();rating=original['rating'];text=original.get('reviewText')
             assert r['date']==day and r['rating']==int(rating) and r['text']==clean(text),(group,r['id'])
             sample.append({'id':r['id'],'product':products[r['product_id']]['name'],'provider':r['provider'],'date':day,'rating':int(rating),'raw_verified':True})
