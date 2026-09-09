@@ -1,0 +1,497 @@
+{
+  "as_of": "2026-09-09",
+  "raw_payloads_available": 349,
+  "stratified_records_verified": 58,
+  "categories_verified": 11,
+  "provider_id_product_conflicts": [],
+  "sample": [
+    {
+      "id": "3976f32d8143aa2afe7f628f",
+      "product": "Chimichurri Beef",
+      "provider": "Judge.me",
+      "date": "2025-01-29",
+      "rating": 5,
+      "raw_verified": true
+    },
+    {
+      "id": "e1630eb14cfe4941e9fd9e73",
+      "product": "Korean BBQ-Style Beef",
+      "provider": "Judge.me",
+      "date": "2026-07-05",
+      "rating": 5,
+      "raw_verified": true
+    },
+    {
+      "id": "6b825ed320319da06ed6cb6b",
+      "product": "Denver-Style Ham & White Cheddar",
+      "provider": "Judge.me",
+      "date": "2026-08-01",
+      "rating": 5,
+      "raw_verified": true
+    },
+    {
+      "id": "9e07946983d27ce42efa5876",
+      "product": "Denver-Style Ham & White Cheddar",
+      "provider": "Judge.me",
+      "date": "2026-08-01",
+      "rating": 5,
+      "raw_verified": true
+    },
+    {
+      "id": "43fba17c15d2e653e2df5574",
+      "product": "Korean BBQ-Style Chicken",
+      "provider": "Judge.me",
+      "date": "2026-01-21",
+      "rating": 1,
+      "raw_verified": true
+    },
+    {
+      "id": "82827245fdcde85086580064",
+      "product": "Hawaiian-Style Chicken",
+      "provider": "Judge.me",
+      "date": "2026-08-04",
+      "rating": 5,
+      "raw_verified": true
+    },
+    {
+      "id": "1146c975c688736c9350d4df",
+      "product": "Parmesan Basil Chicken Frozen Bowl",
+      "provider": "Judge.me",
+      "date": "2026-02-12",
+      "rating": 2,
+      "raw_verified": true
+    },
+    {
+      "id": "4faba4a5e2dece517732c1d1",
+      "product": "Parmesan Basil Chicken Frozen Bowl",
+      "provider": "Judge.me",
+      "date": "2026-07-20",
+      "rating": 5,
+      "raw_verified": true
+    },
+    {
+      "id": "d58d6588f5604f8a4b701a5e",
+      "product": "Teriyaki-Style Chicken - Family Size",
+      "provider": "Judge.me",
+      "date": "2026-07-15",
+      "rating": 5,
+      "raw_verified": true
+    },
+    {
+      "id": "9a4f4037a76c964ac3d730b9",
+      "product": "Teriyaki-Style Chicken - Family Size",
+      "provider": "Judge.me",
+      "date": "2026-08-11",
+      "rating": 4,
+      "raw_verified": true
+    },
+    {
+      "id": "394d3929b8d8e15a0321076f",
+      "product": "Pesto Garlic Chicken with Cauliflower Pasta",
+      "provider": "Judge.me",
+      "date": "2026-03-16",
+      "rating": 1,
+      "raw_verified": true
+    },
+    {
+      "id": "3e4497a30920faa737fe7324",
+      "product": "Tomato Basil Chicken with Cauliflower Pasta",
+      "provider": "Judge.me",
+      "date": "2026-04-14",
+      "rating": 5,
+      "raw_verified": true
+    },
+    {
+      "id": "6ac8a548d446656cf7150252",
+      "product": "Honey Garlic Sauce",
+      "provider": "Judge.me",
+      "date": "2026-03-10",
+      "rating": 5,
+      "raw_verified": true
+    },
+    {
+      "id": "aa4cdad9e8c10d825d3c9707",
+      "product": "Cilantro Lime Sauce",
+      "provider": "Judge.me",
+      "date": "2025-12-15",
+      "rating": 5,
+      "raw_verified": true
+    },
+    {
+      "id": "c20f4178f984947c13e67270",
+      "product": "Turkey Gravy",
+      "provider": "Judge.me",
+      "date": "2024-12-11",
+      "rating": 5,
+      "raw_verified": true
+    },
+    {
+      "id": "e297a052dc92feb5b012e4c4",
+      "product": "Turkey Gravy",
+      "provider": "Judge.me",
+      "date": "2026-01-10",
+      "rating": 5,
+      "raw_verified": true
+    },
+    {
+      "id": "a4403ee6b9f48c53659c1532",
+      "product": "Mashed Sweet Potatoes",
+      "provider": "Judge.me",
+      "date": "2026-05-04",
+      "rating": 1,
+      "raw_verified": true
+    },
+    {
+      "id": "c27ef94dc6417b452bed7a9f",
+      "product": "Stir-Fry Rice",
+      "provider": "Judge.me",
+      "date": "2026-02-18",
+      "rating": 1,
+      "raw_verified": true
+    },
+    {
+      "id": "f00a236a777ce99aa84d61a2",
+      "product": "Chicken Soup with Cauliflower Pasta",
+      "provider": "Judge.me",
+      "date": "2026-01-13",
+      "rating": 3,
+      "raw_verified": true
+    },
+    {
+      "id": "65f95c09577eef0bd7f36589",
+      "product": "Thai-Style Coconut Chicken Soup",
+      "provider": "Judge.me",
+      "date": "2024-07-09",
+      "rating": 5,
+      "raw_verified": true
+    },
+    {
+      "id": "8018f8df954a379db83a1d3e",
+      "product": "Teriyaki-Style Chicken Stir-Fry Kit",
+      "provider": "Judge.me",
+      "date": "2026-06-25",
+      "rating": 4,
+      "raw_verified": true
+    },
+    {
+      "id": "b2b9f8901a57f4630d477285",
+      "product": "Chicken Fajitas Skillet Meal Kit",
+      "provider": "Judge.me",
+      "date": "2026-04-14",
+      "rating": 4,
+      "raw_verified": true
+    },
+    {
+      "id": "7c6ca4154dd36340c8c6353a",
+      "product": "Sirloin Steak Tips with Gravy",
+      "provider": "Target",
+      "date": "2026-05-24",
+      "rating": 5,
+      "raw_verified": true
+    },
+    {
+      "id": "c0a60a807599f9ce78f29575",
+      "product": "Teriyaki-Style Beef",
+      "provider": "Target",
+      "date": "2026-08-01",
+      "rating": 5,
+      "raw_verified": true
+    },
+    {
+      "id": "b0f51f7458a5f57e4f4271a4",
+      "product": "Hawaiian-Style Chicken",
+      "provider": "Target",
+      "date": "2026-08-24",
+      "rating": 5,
+      "raw_verified": true
+    },
+    {
+      "id": "3b6de35161921fc973bce10c",
+      "product": "Hawaiian-Style Chicken",
+      "provider": "Target",
+      "date": "2026-08-09",
+      "rating": 5,
+      "raw_verified": true
+    },
+    {
+      "id": "266d0ba2b8151a8e928e7b1e",
+      "product": "Thai-Style Coconut Chicken Frozen Bowl",
+      "provider": "Target",
+      "date": "2026-08-27",
+      "rating": 5,
+      "raw_verified": true
+    },
+    {
+      "id": "cc73a18364e540b9f2258fca",
+      "product": "Thai-Style Coconut Chicken Frozen Bowl",
+      "provider": "Target",
+      "date": "2026-08-01",
+      "rating": 2,
+      "raw_verified": true
+    },
+    {
+      "id": "0a14a42849db38b7c1ab8a64",
+      "product": "Pesto Chicken Pasta - Family Size",
+      "provider": "Target",
+      "date": "2026-08-22",
+      "rating": 2,
+      "raw_verified": true
+    },
+    {
+      "id": "04de1c0e20bd0ce9d142beda",
+      "product": "Pesto Chicken Pasta - Family Size",
+      "provider": "Target",
+      "date": "2026-08-21",
+      "rating": 1,
+      "raw_verified": true
+    },
+    {
+      "id": "a64f1e893900fef5abef8488",
+      "product": "Pesto Garlic Chicken with Cauliflower Pasta",
+      "provider": "Target",
+      "date": "2026-07-03",
+      "rating": 2,
+      "raw_verified": true
+    },
+    {
+      "id": "c06abd00f70e6d6b079c7a51",
+      "product": "Pesto Garlic Chicken with Cauliflower Pasta",
+      "provider": "Target",
+      "date": "2026-05-18",
+      "rating": 4,
+      "raw_verified": true
+    },
+    {
+      "id": "b7aed4d9a1f2dd6e159a975f",
+      "product": "Cilantro Lime Sauce",
+      "provider": "Target",
+      "date": "2026-07-16",
+      "rating": 4,
+      "raw_verified": true
+    },
+    {
+      "id": "beac7b80e2628d54c389ce2f",
+      "product": "Korean BBQ Sauce",
+      "provider": "Target",
+      "date": "2026-03-22",
+      "rating": 5,
+      "raw_verified": true
+    },
+    {
+      "id": "3ad434815bbc16a5790c8826",
+      "product": "Chicken Soup with Cauliflower Pasta",
+      "provider": "Target",
+      "date": "2026-01-16",
+      "rating": 5,
+      "raw_verified": true
+    },
+    {
+      "id": "0a9353283ba4e249abe30c40",
+      "product": "Chicken Soup with Cauliflower Pasta",
+      "provider": "Target",
+      "date": "2026-06-07",
+      "rating": 4,
+      "raw_verified": true
+    },
+    {
+      "id": "b61cf45656d2144709b043f3",
+      "product": "General Tso’s Chicken Stir Fry-Kit",
+      "provider": "Target",
+      "date": "2026-07-19",
+      "rating": 5,
+      "raw_verified": true
+    },
+    {
+      "id": "5c90224d10f5ae6ce74ac884",
+      "product": "Chicken Fajitas Skillet Meal Kit",
+      "provider": "Target",
+      "date": "2026-06-17",
+      "rating": 4,
+      "raw_verified": true
+    },
+    {
+      "id": "06e9a765f93b19ce94bd40b8",
+      "product": "Korean BBQ-Style Beef",
+      "provider": "Thrive Market",
+      "date": "2026-03-24",
+      "rating": 5,
+      "raw_verified": true
+    },
+    {
+      "id": "80912b2f231e0337b9b38cd0",
+      "product": "Sirloin Steak Tips with Gravy",
+      "provider": "Thrive Market",
+      "date": "2024-11-25",
+      "rating": 1,
+      "raw_verified": true
+    },
+    {
+      "id": "48472b993acff7e83206282f",
+      "product": "Hawaiian-Style Chicken",
+      "provider": "Thrive Market",
+      "date": "2026-04-09",
+      "rating": 5,
+      "raw_verified": true
+    },
+    {
+      "id": "6b6393f39ee63cd4dda74637",
+      "product": "Cilantro Lime Chicken",
+      "provider": "Thrive Market",
+      "date": "2024-10-23",
+      "rating": 5,
+      "raw_verified": true
+    },
+    {
+      "id": "25100fa4cbacce08bc99db49",
+      "product": "Savory Mushroom Chicken Frozen Bowl",
+      "provider": "Thrive Market",
+      "date": "2026-06-13",
+      "rating": 1,
+      "raw_verified": true
+    },
+    {
+      "id": "4f55e0ecd0d5e057d7b2b51d",
+      "product": "Chicken Burrito Bowl Frozen Bowl",
+      "provider": "Thrive Market",
+      "date": "2026-09-01",
+      "rating": 2,
+      "raw_verified": true
+    },
+    {
+      "id": "736faf732638d98b11a32dc2",
+      "product": "Butter Chicken - Family Size",
+      "provider": "Thrive Market",
+      "date": "2026-06-13",
+      "rating": 5,
+      "raw_verified": true
+    },
+    {
+      "id": "7a7c7899132da3de1063528e",
+      "product": "Teriyaki-Style Chicken - Family Size",
+      "provider": "Thrive Market",
+      "date": "2026-05-11",
+      "rating": 4,
+      "raw_verified": true
+    },
+    {
+      "id": "4c823c8e7082031250bd7b5e",
+      "product": "Beef Stroganoff with Cauliflower Pasta",
+      "provider": "Thrive Market",
+      "date": "2025-03-28",
+      "rating": 5,
+      "raw_verified": true
+    },
+    {
+      "id": "eaadd3fe7a76ed276dac73b4",
+      "product": "Chicken Piccata with Cauliflower Pasta",
+      "provider": "Thrive Market",
+      "date": "2025-08-29",
+      "rating": 5,
+      "raw_verified": true
+    },
+    {
+      "id": "ad5cf67b097fe40e72924a64",
+      "product": "Korean BBQ Sauce",
+      "provider": "Thrive Market",
+      "date": "2024-08-06",
+      "rating": 5,
+      "raw_verified": true
+    },
+    {
+      "id": "8b559f60f334f52a81204180",
+      "product": "Lemongrass Basil Sauce",
+      "provider": "Thrive Market",
+      "date": "2024-10-04",
+      "rating": 5,
+      "raw_verified": true
+    },
+    {
+      "id": "af626cbd05230da68cb86f49",
+      "product": "Stir-Fry Rice",
+      "provider": "Thrive Market",
+      "date": "2026-09-08",
+      "rating": 5,
+      "raw_verified": true
+    },
+    {
+      "id": "daab3243942706334604ef68",
+      "product": "Mashed Sweet Potatoes",
+      "provider": "Thrive Market",
+      "date": "2026-03-09",
+      "rating": 5,
+      "raw_verified": true
+    },
+    {
+      "id": "4eca2d831c70e31bf8578772",
+      "product": "Beef & Broccoli Stir-Fry Kit",
+      "provider": "Thrive Market",
+      "date": "2026-05-08",
+      "rating": 5,
+      "raw_verified": true
+    },
+    {
+      "id": "dbabe366b5fbe1b0c390b6ee",
+      "product": "Teriyaki-Style Chicken Stir-Fry Kit",
+      "provider": "Thrive Market",
+      "date": "2026-04-21",
+      "rating": 5,
+      "raw_verified": true
+    },
+    {
+      "id": "18f08557588dacbf51967934",
+      "product": "Orange Chicken Frozen Bowl",
+      "provider": "Walmart",
+      "date": "2026-07-11",
+      "rating": 5,
+      "raw_verified": true
+    },
+    {
+      "id": "f018a0078d6af8ba7f507f82",
+      "product": "Thai-Style Coconut Chicken Frozen Bowl",
+      "provider": "Walmart",
+      "date": "2026-05-30",
+      "rating": 5,
+      "raw_verified": true
+    },
+    {
+      "id": "de13f6bb87c7c1a571a7f10e",
+      "product": "Thai Coconut Sauce",
+      "provider": "Walmart",
+      "date": "2025-08-31",
+      "rating": 5,
+      "raw_verified": true
+    },
+    {
+      "id": "af562e805f64e941386e5503",
+      "product": "Thai Coconut Sauce",
+      "provider": "Walmart",
+      "date": "2025-05-08",
+      "rating": 5,
+      "raw_verified": true
+    }
+  ],
+  "source_statuses": {
+    "brand": {
+      "legacy_window_retrieved": 105
+    },
+    "thrive": {
+      "history_retrieved": 52,
+      "identity_excluded": 1
+    },
+    "walmart": {
+      "identity_excluded": 2,
+      "window_retrieved": 4,
+      "access_limited": 34
+    },
+    "target": {
+      "recent_public_sample": 24,
+      "shared_flavor_pool": 1
+    },
+    "other_sources": {
+      "access_limited": 4,
+      "ratings_snapshot_only": 5,
+      "listing_only": 3,
+      "page_unverified": 3
+    }
+  }
+}

@@ -1,6 +1,33 @@
 # KNF Review Intelligence
 
-Interactive, static dashboard with separately managed Beef HMR and Stir-Fry analysis modules.
+Interactive, static dashboard with separately managed Beef HMR, Stir-Fry and Portfolio Trends analysis modules.
+
+## Portfolio Trends — September 9, 2026
+
+Open `portfolio.html` or choose **Portfolio** in the use-case switch. The original modules and their governed datasets are unchanged.
+
+- 105 current individual food products plus one verified historical listing; 11 categories.
+- 5,646 deduplicated dated ratings, July 1, 2024–September 9, 2026, across 89 products. 5,109 are from retrieved public histories; 537 are partial or earlier-archive evidence.
+- Default: 4,015 ratings across Q3 2024–Q2 2026. Six completed quarters and current-quarter-to-date are optional.
+- Review-weighted, equal-product and fixed comparable-product/source views; source/category overlays; product/format/current-assortment/incentive filters; quarter drill-down and review explorer.
+- PNG/SVG chart export and CSV exports of quarterly metrics, selected reviews and listing coverage.
+- Cumulative rating snapshots remain separate. Legacy/current brand provider reconciliation, incomplete retailer pagination and unconfirmed listings remain explicitly disclosed gaps; this is not complete market coverage.
+
+See [collection summary](downloads/KNF_Portfolio_Trends_Collection_Summary.md) and [validation report](data/portfolio_validation.json).
+
+### Rebuild and validate the frozen portfolio snapshot
+
+```text
+python scripts/build_portfolio.py
+node portfolio-tests.mjs
+node tests.mjs
+python scripts/qa_portfolio.py
+python -m http.server 8765
+```
+
+The default build uses committed `data/portfolio_source_evidence.json` and `data/portfolio_product_registry.json`; no network or credentials are required. The QA script performs additional raw-record checks when the local raw cache exists. The static application fetches only the summary and normalized records, not the larger evidence archive. Collection helpers are standard-library Python; browser calculations use native JavaScript modules.
+
+`scripts/portfolio_sources.py` implements paced public-page/feed collection. Its raw cache is outside this repository under the workspace's `analysis/portfolio_collection_2026-09-09` directory. Raw pages, reviewer metadata and widget keys must not be published. `python scripts/build_portfolio.py --from-cache` explicitly freezes a new sanitized collection. Cutoff dates are fixed in this version; future refreshes must update and validate the period contract before release. Access/rate-limit responses are recorded as gaps, not bypassed. No scheduled refresh or new cloud service is configured.
 
 ## Included data
 

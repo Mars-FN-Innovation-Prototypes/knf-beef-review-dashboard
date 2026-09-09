@@ -1,0 +1,16 @@
+[
+  {
+    "id": "historical-buffalo-sauce",
+    "name": "Buffalo Sauce (historical assortment)",
+    "category": "Sauces",
+    "shopify_id": null,
+    "url": "https://thrivemarket.com/p/kevins-natural-foods-buffalo-sauce",
+    "upcs": ["810264028814"],
+    "variants": [],
+    "current_assortment": false,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store",
+    "format": "Sauce",
+    "metadata_status": "historical_brand_locator_name_and_exact_thrive_upc",
+    "identity_note": "Listed in the official locator's legacy category configuration and exact Kevin's Natural Foods Thrive product page; absent from the September 9 visible brand collection. Not asserted discontinued."
+  }
+]

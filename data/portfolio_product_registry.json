@@ -1,0 +1,3053 @@
+[
+  {
+    "id": "korean-bbq-style-chicken",
+    "name": "Korean BBQ-Style Chicken",
+    "category": "Chicken Entrées",
+    "shopify_id": "3690781311029",
+    "url": "https://www.kevinsnaturalfoods.com/products/korean-bbq-style-chicken",
+    "upcs": [
+      "810264023710",
+      "810264024021",
+      "810264024250",
+      "810264026223"
+    ],
+    "variants": [
+      {
+        "id": 31966441996388,
+        "title": "Boxed Entrée",
+        "sku": "FKPZ0004",
+        "barcode": "810264023710,810264024250,810264024021",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 42758414205142,
+        "title": "Entrée Pouch",
+        "sku": "FKE00004-EA",
+        "barcode": "810264026223",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 43804169765078,
+        "title": "Reset Bundle Entrée Pouch",
+        "sku": "FKE00004-EA",
+        "barcode": "810264026223",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 43804171206870,
+        "title": "Kevin's Best Sellers Entrée Pouch",
+        "sku": "FKE00004-EA",
+        "barcode": "810264026223",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 44051265323222,
+        "title": "Family Favorites Entrée Pouch",
+        "sku": "FKE00004-EA",
+        "barcode": "810264026223",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 44127778767062,
+        "title": "Variety Pack Entrée Pouch",
+        "sku": "FKE00004-EA",
+        "barcode": "810264026223",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 44298140582102,
+        "title": "Quick Ship Bundle Entrée Pouch",
+        "sku": "FKE00004-EA",
+        "barcode": "810264026223",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 44390691406038,
+        "title": "Birthday Bundle Entrée Pouch",
+        "sku": "FKE00004-EA",
+        "barcode": "810264026223",
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264023710,810264024250,810264024021",
+    "format": "Refrigerated",
+    "metadata_status": "barcode_enriched"
+  },
+  {
+    "id": "teriyaki-style-chicken",
+    "name": "Teriyaki-Style Chicken",
+    "category": "Chicken Entrées",
+    "shopify_id": "3690781704245",
+    "url": "https://www.kevinsnaturalfoods.com/products/teriyaki-style-chicken",
+    "upcs": [
+      "810264023727",
+      "810264026247"
+    ],
+    "variants": [
+      {
+        "id": 31966447796324,
+        "title": "Boxed Entrée",
+        "sku": "FKPZ0005",
+        "barcode": "810264023727",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 42758480953558,
+        "title": "Entrée Pouch",
+        "sku": "FKE00006-EA",
+        "barcode": "810264026247",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 43804155543766,
+        "title": "Reset Bundle Entrée Pouch",
+        "sku": "FKE00006-EA",
+        "barcode": "810264026247",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 43804156887254,
+        "title": "Kevin's Best Sellers Entrée Pouch",
+        "sku": "FKE00006-EA",
+        "barcode": "810264026247",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 44051264930006,
+        "title": "Family Favorites Entrée Pouch",
+        "sku": "FKE00006-EA",
+        "barcode": "810264026247",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 44127779651798,
+        "title": "Variety Pack Entrée Pouch",
+        "sku": "FKE00006-EA",
+        "barcode": "810264026247",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 44298140123350,
+        "title": "Quick Ship Bundle Entrée Pouch",
+        "sku": "FKE00006-EA",
+        "barcode": "810264026247",
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264023727",
+    "format": "Refrigerated",
+    "metadata_status": "barcode_enriched"
+  },
+  {
+    "id": "thai-style-coconut-chicken",
+    "name": "Thai-Style Coconut Chicken",
+    "category": "Chicken Entrées",
+    "shopify_id": "3690781671477",
+    "url": "https://www.kevinsnaturalfoods.com/products/thai-style-coconut-chicken",
+    "upcs": [
+      "810264023734",
+      "810264024052",
+      "810264024229",
+      "810264026254"
+    ],
+    "variants": [
+      {
+        "id": 31966449565796,
+        "title": "Boxed Entrée",
+        "sku": "FKPZ0006",
+        "barcode": "810264023734,810264024052,810264024229",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 42758484394198,
+        "title": "Entrée Pouch",
+        "sku": "FKE00007-EA",
+        "barcode": "810264026254",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 43804145811670,
+        "title": "Reset Bundle Entrée Pouch",
+        "sku": "FKE00007-EA",
+        "barcode": "810264026254",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 43804150530262,
+        "title": "Kevin's Best Sellers Entrée Pouch",
+        "sku": "FKE00007-EA",
+        "barcode": "810264026254",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 44127778275542,
+        "title": "Variety Pack Entrée Pouch",
+        "sku": "FKE00007-EA",
+        "barcode": "810264026254",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 44298142286038,
+        "title": "Quick Ship Bundle Entrée Pouch",
+        "sku": "FKE00007-EA",
+        "barcode": "810264026254",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 44390688162006,
+        "title": "Birthday Bundle Entrée Pouch",
+        "sku": "FKE00007-EA",
+        "barcode": "810264026254",
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264023734,810264024052,810264024229",
+    "format": "Refrigerated",
+    "metadata_status": "barcode_enriched"
+  },
+  {
+    "id": "roasted-garlic-chicken",
+    "name": "Roasted Garlic Chicken",
+    "category": "Chicken Entrées",
+    "shopify_id": "5246008918169",
+    "url": "https://www.kevinsnaturalfoods.com/products/roasted-garlic-chicken",
+    "upcs": [
+      "810264024434",
+      "810264024687",
+      "810264024922",
+      "810264026230"
+    ],
+    "variants": [
+      {
+        "id": 34474980540569,
+        "title": "Boxed Entrée",
+        "sku": "FKPZ0018",
+        "barcode": "810264024434,810264024687,810264024922",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 42758451036374,
+        "title": "Entrée Pouch",
+        "sku": "FKE00005-EA",
+        "barcode": "810264026230",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 43804159312086,
+        "title": "Reset Bundle Entrée Pouch",
+        "sku": "FKE00005-EA",
+        "barcode": "810264026230",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 43804160360662,
+        "title": "Kevin's Best Sellers Entrée Pouch",
+        "sku": "FKE00005-EA",
+        "barcode": "810264026230",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 44033936097494,
+        "title": "Family Favorites Entrée Pouch",
+        "sku": "FKE00005-EA",
+        "barcode": "810264026230",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 44298139140310,
+        "title": "Quick Ship Bundle Entrée Pouch",
+        "sku": "FKE00005-EA",
+        "barcode": "810264026230",
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264024434,810264024687,810264024922",
+    "format": "Refrigerated",
+    "metadata_status": "barcode_enriched"
+  },
+  {
+    "id": "chicken-tikka-masala",
+    "name": "Chicken Tikka Masala",
+    "category": "Chicken Entrées",
+    "shopify_id": "4504761172068",
+    "url": "https://www.kevinsnaturalfoods.com/products/chicken-tikka-masala",
+    "upcs": [
+      "810264024458",
+      "810264024908",
+      "810264026209"
+    ],
+    "variants": [
+      {
+        "id": 31966433345636,
+        "title": "Boxed Entrée",
+        "sku": "FKPZ0020",
+        "barcode": "810264024458,810264024908",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 42758373802198,
+        "title": "Entrée Pouch",
+        "sku": "FKE00002-EA",
+        "barcode": "810264026209",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 43804181496022,
+        "title": "Reset Bundle Entrée Pouch",
+        "sku": "FKE00002-EA",
+        "barcode": "810264026209",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 43804182282454,
+        "title": "Kevin's Best Sellers Entrée Pouch",
+        "sku": "FKE00002-EA",
+        "barcode": "810264026209",
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264024458,810264024908",
+    "format": "Refrigerated",
+    "metadata_status": "barcode_enriched"
+  },
+  {
+    "id": "cilantro-lime-chicken",
+    "name": "Cilantro Lime Chicken",
+    "category": "Chicken Entrées",
+    "shopify_id": "3690781442101",
+    "url": "https://www.kevinsnaturalfoods.com/products/cilantro-lime-chicken",
+    "upcs": [
+      "810264023697",
+      "810264024014",
+      "810264024243",
+      "810264026216"
+    ],
+    "variants": [
+      {
+        "id": 31966440554596,
+        "title": "Boxed Entrée",
+        "sku": "FKPZ0002",
+        "barcode": "810264023697,810264024014,810264024243",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 42758385008854,
+        "title": "Entrée Pouch",
+        "sku": "FKE00003-EA",
+        "barcode": "810264026216",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 43804178579670,
+        "title": "Reset Bundle Entrée Pouch",
+        "sku": "FKE00003-EA",
+        "barcode": "810264026216",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 44051265552598,
+        "title": "Family Favorites Entrée Pouch",
+        "sku": "FKE00003-EA",
+        "barcode": null,
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264023697,810264024014,810264024243",
+    "format": "Refrigerated",
+    "metadata_status": "barcode_enriched"
+  },
+  {
+    "id": "lemongrass-chicken",
+    "name": "Lemongrass Chicken",
+    "category": "Chicken Entrées",
+    "shopify_id": "3690781540405",
+    "url": "https://www.kevinsnaturalfoods.com/products/lemongrass-chicken",
+    "upcs": [
+      "810264023703",
+      "810264023765",
+      "810264024212",
+      "810264026896"
+    ],
+    "variants": [
+      {
+        "id": 44054986621142,
+        "title": "Boxed Entrée",
+        "sku": "FKPZ0003",
+        "barcode": "810264023703,810264023765,810264024212",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 44054986653910,
+        "title": "Entrée Pouch",
+        "sku": "FKE00012-EA",
+        "barcode": "810264026896",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 44390684557526,
+        "title": "Birthday Bundle Entrée Pouch",
+        "sku": "FKE00012-EA",
+        "barcode": "810264026896",
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264023703,810264023765,810264024212",
+    "format": "Refrigerated",
+    "metadata_status": "barcode_enriched"
+  },
+  {
+    "id": "chicken-chile-verde",
+    "name": "Chicken Chile Verde",
+    "category": "Chicken Entrées",
+    "shopify_id": "7548442771670",
+    "url": "https://www.kevinsnaturalfoods.com/products/chicken-chile-verde",
+    "upcs": [
+      "810264025653",
+      "810264026100",
+      "810264026193",
+      "810264026667"
+    ],
+    "variants": [
+      {
+        "id": 42452675920086,
+        "title": "Boxed Entrée",
+        "sku": "FKP00099",
+        "barcode": "810264025653,810264026100,810264026667",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 42758362235094,
+        "title": "Entrée Pouch",
+        "sku": "FKE00001-EA",
+        "barcode": "810264026193",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 43804184445142,
+        "title": "Reset Bundle Entrée Pouch",
+        "sku": "FKE00001-EA",
+        "barcode": "810264026193",
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264025653,810264026100,810264026667",
+    "format": "Refrigerated",
+    "metadata_status": "barcode_enriched"
+  },
+  {
+    "id": "chicken-marsala",
+    "name": "Chicken Marsala",
+    "category": "Chicken Entrées",
+    "shopify_id": "6677716598937",
+    "url": "https://www.kevinsnaturalfoods.com/products/chicken-marsala",
+    "upcs": [
+      "810264025332"
+    ],
+    "variants": [
+      {
+        "id": 39741265346713,
+        "title": "Default Title",
+        "sku": "FKPZ0070",
+        "barcode": "810264025332",
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264025332",
+    "format": "Refrigerated",
+    "metadata_status": "barcode_enriched"
+  },
+  {
+    "id": "orange-chicken",
+    "name": "Orange Chicken",
+    "category": "Chicken Entrées",
+    "shopify_id": "7980405850326",
+    "url": "https://www.kevinsnaturalfoods.com/products/orange-chicken",
+    "upcs": [
+      "810264026629",
+      "810264027626"
+    ],
+    "variants": [
+      {
+        "id": 44548020601046,
+        "title": "Boxed Entrée",
+        "sku": "",
+        "barcode": "810264026629",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 44548020633814,
+        "title": "Entrée Pouch",
+        "sku": "FKE00019-EA",
+        "barcode": "810264027626",
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264026629",
+    "format": "Refrigerated",
+    "metadata_status": "barcode_enriched"
+  },
+  {
+    "id": "citrus-tropical-chicken",
+    "name": "Citrus Tropical Chicken",
+    "category": "Chicken Entrées",
+    "shopify_id": "9490113396950",
+    "url": "https://www.kevinsnaturalfoods.com/products/citrus-tropical-chicken",
+    "upcs": [
+      "810264029323"
+    ],
+    "variants": [
+      {
+        "id": 50313936994518,
+        "title": "Default Title",
+        "sku": "810264029323",
+        "barcode": "810264029323",
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264029323",
+    "format": "Refrigerated",
+    "metadata_status": "barcode_enriched"
+  },
+  {
+    "id": "honey-mustard-chicken",
+    "name": "Honey Mustard Chicken",
+    "category": "Chicken Entrées",
+    "shopify_id": "9192554102998",
+    "url": "https://www.kevinsnaturalfoods.com/products/honey-mustard-chicken",
+    "upcs": [
+      "810264028487"
+    ],
+    "variants": [
+      {
+        "id": 47600551723222,
+        "title": "Default Title",
+        "sku": "810264028487",
+        "barcode": "810264028487",
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264028487",
+    "format": "Refrigerated",
+    "metadata_status": "barcode_enriched"
+  },
+  {
+    "id": "mango-habanero-chicken",
+    "name": "Mango Habanero Chicken",
+    "category": "Chicken Entrées",
+    "shopify_id": "9192543355094",
+    "url": "https://www.kevinsnaturalfoods.com/products/mango-habanero-chicken",
+    "upcs": [
+      "810264028692"
+    ],
+    "variants": [
+      {
+        "id": 47600537206998,
+        "title": "Default Title",
+        "sku": "810264028692",
+        "barcode": "810264028692",
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264028692",
+    "format": "Refrigerated",
+    "metadata_status": "barcode_enriched"
+  },
+  {
+    "id": "queso-blanco-chicken",
+    "name": "Queso Blanco Chicken",
+    "category": "Chicken Entrées",
+    "shopify_id": "9192531067094",
+    "url": "https://www.kevinsnaturalfoods.com/products/queso-blanco-chicken",
+    "upcs": [
+      "810264026582"
+    ],
+    "variants": [
+      {
+        "id": 47600519315670,
+        "title": "Default Title",
+        "sku": "810264026582",
+        "barcode": "810264026582",
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264026582",
+    "format": "Refrigerated",
+    "metadata_status": "barcode_enriched"
+  },
+  {
+    "id": "buffalo-style-chicken",
+    "name": "Buffalo-Style Chicken",
+    "category": "Chicken Entrées",
+    "shopify_id": "9080815616214",
+    "url": "https://www.kevinsnaturalfoods.com/products/buffalo-style-chicken",
+    "upcs": [
+      "810264025226"
+    ],
+    "variants": [
+      {
+        "id": 47215518056662,
+        "title": "Default Title",
+        "sku": "810264025226",
+        "barcode": "810264025226",
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264025226",
+    "format": "Refrigerated",
+    "metadata_status": "barcode_enriched"
+  },
+  {
+    "id": "greek-style-lemon-chicken",
+    "name": "Greek-Style Lemon Chicken",
+    "category": "Chicken Entrées",
+    "shopify_id": "9067526127830",
+    "url": "https://www.kevinsnaturalfoods.com/products/greek-style-lemon-chicken",
+    "upcs": [
+      "810264028463"
+    ],
+    "variants": [
+      {
+        "id": 47147019927766,
+        "title": "Default Title",
+        "sku": "810264028463",
+        "barcode": "810264028463",
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264028463",
+    "format": "Refrigerated",
+    "metadata_status": "barcode_enriched"
+  },
+  {
+    "id": "butter-chicken-1",
+    "name": "Butter Chicken",
+    "category": "Chicken Entrées",
+    "shopify_id": "9063637549270",
+    "url": "https://www.kevinsnaturalfoods.com/products/butter-chicken-1",
+    "upcs": [
+      "810264028456"
+    ],
+    "variants": [
+      {
+        "id": 47132746678486,
+        "title": "Default Title",
+        "sku": "810264028456",
+        "barcode": "810264028456",
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264028456",
+    "format": "Refrigerated",
+    "metadata_status": "barcode_enriched"
+  },
+  {
+    "id": "hawaiian-style-chicken",
+    "name": "Hawaiian-Style Chicken",
+    "category": "Chicken Entrées",
+    "shopify_id": "8938608525526",
+    "url": "https://www.kevinsnaturalfoods.com/products/hawaiian-style-chicken",
+    "upcs": [
+      "810264025738"
+    ],
+    "variants": [
+      {
+        "id": 46726966771926,
+        "title": "Default Title",
+        "sku": "810264025738",
+        "barcode": "810264025738",
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264025738",
+    "format": "Refrigerated",
+    "metadata_status": "barcode_enriched"
+  },
+  {
+    "id": "chicken-piccata",
+    "name": "Chicken Piccata",
+    "category": "Chicken Entrées",
+    "shopify_id": "8451153363158",
+    "url": "https://www.kevinsnaturalfoods.com/products/chicken-piccata",
+    "upcs": [
+      "810264027800"
+    ],
+    "variants": [
+      {
+        "id": 45377582989526,
+        "title": "Default Title",
+        "sku": "",
+        "barcode": "810264027800",
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264027800",
+    "format": "Refrigerated",
+    "metadata_status": "barcode_enriched"
+  },
+  {
+    "id": "thai-chicken-panang",
+    "name": "Thai-Style Chicken Panang",
+    "category": "Chicken Entrées",
+    "shopify_id": "8224578011350",
+    "url": "https://www.kevinsnaturalfoods.com/products/thai-chicken-panang",
+    "upcs": [
+      "810264027688"
+    ],
+    "variants": [
+      {
+        "id": 44656813736150,
+        "title": "Default Title",
+        "sku": null,
+        "barcode": "810264027688",
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264027688",
+    "format": "Refrigerated",
+    "metadata_status": "barcode_enriched"
+  },
+  {
+    "id": "jamaican-jerk-style-chicken",
+    "name": "Jamaican Jerk-Style Chicken",
+    "category": "Chicken Entrées",
+    "shopify_id": "8073328820438",
+    "url": "https://www.kevinsnaturalfoods.com/products/jamaican-jerk-style-chicken",
+    "upcs": [
+      "810264026926"
+    ],
+    "variants": [
+      {
+        "id": 44228662657238,
+        "title": "Default Title",
+        "sku": "",
+        "barcode": "810264026926",
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264026926",
+    "format": "Refrigerated",
+    "metadata_status": "barcode_enriched"
+  },
+  {
+    "id": "chicken-chile-rojo",
+    "name": "Chicken Chile Rojo",
+    "category": "Chicken Entrées",
+    "shopify_id": "7964306243798",
+    "url": "https://www.kevinsnaturalfoods.com/products/chicken-chile-rojo",
+    "upcs": [
+      "810264026650"
+    ],
+    "variants": [
+      {
+        "id": 43911145947350,
+        "title": "Default Title",
+        "sku": "FKP00128",
+        "barcode": "810264026650",
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264026650",
+    "format": "Refrigerated",
+    "metadata_status": "barcode_enriched"
+  },
+  {
+    "id": "general-tsos-chicken",
+    "name": "General Tso's Chicken",
+    "category": "Chicken Entrées",
+    "shopify_id": "7549670686934",
+    "url": "https://www.kevinsnaturalfoods.com/products/general-tsos-chicken",
+    "upcs": [
+      "810264026094"
+    ],
+    "variants": [
+      {
+        "id": 42452568146134,
+        "title": "Default Title",
+        "sku": "FKP00100",
+        "barcode": "810264026094",
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264026094",
+    "format": "Refrigerated",
+    "metadata_status": "barcode_enriched"
+  },
+  {
+    "id": "korean-bbq-style-steak-tips",
+    "name": "Korean BBQ-Style Beef",
+    "category": "Beef Entrées",
+    "shopify_id": "6145044840601",
+    "url": "https://www.kevinsnaturalfoods.com/products/korean-bbq-style-steak-tips",
+    "upcs": [
+      "810264024984",
+      "810264025004",
+      "810264026261"
+    ],
+    "variants": [
+      {
+        "id": 38048389988505,
+        "title": "Boxed Entrée",
+        "sku": "FKPZ0040",
+        "barcode": "810264024984,810264025004",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 42758416924886,
+        "title": "Entrée Pouch",
+        "sku": "FKE00008-EA",
+        "barcode": "810264026261",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 43804177694934,
+        "title": "Kevin's Best Sellers Entrée Pouch",
+        "sku": "FKE00008-EA",
+        "barcode": "810264026261",
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264024984,810264025004",
+    "format": "Refrigerated",
+    "metadata_status": "barcode_enriched"
+  },
+  {
+    "id": "mongolian-style-beef",
+    "name": "Mongolian-Style Beef",
+    "category": "Beef Entrées",
+    "shopify_id": "6677730689177",
+    "url": "https://www.kevinsnaturalfoods.com/products/mongolian-style-beef",
+    "upcs": [
+      "810264025172",
+      "810264025509",
+      "810264026278",
+      "810264026797"
+    ],
+    "variants": [
+      {
+        "id": 39741323346073,
+        "title": "Boxed Entrée",
+        "sku": "FKPZ0058",
+        "barcode": "810264025509,810264025172,810264026797",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 42758428295382,
+        "title": "Entrée Pouch",
+        "sku": "FKE00009-EA",
+        "barcode": "810264026278",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 43804166684886,
+        "title": "Reset Bundle Entrée Pouch",
+        "sku": "FKE00009-EA",
+        "barcode": "810264026278",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 43804168519894,
+        "title": "Kevin's Best Sellers Entrée Pouch",
+        "sku": "FKE00009-EA",
+        "barcode": "810264026278",
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264025509,810264025172,810264026797",
+    "format": "Refrigerated",
+    "metadata_status": "barcode_enriched"
+  },
+  {
+    "id": "peppercorn-steak-tips",
+    "name": "Peppercorn Steak Tips",
+    "category": "Beef Entrées",
+    "shopify_id": "7526689210582",
+    "url": "https://www.kevinsnaturalfoods.com/products/peppercorn-steak-tips",
+    "upcs": [
+      "810264025295",
+      "810264026018",
+      "810264026285"
+    ],
+    "variants": [
+      {
+        "id": 42336295944406,
+        "title": "Boxed Entrée",
+        "sku": "FKP00073",
+        "barcode": "810264026018,810264025295",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 42758436978902,
+        "title": "Entrée Pouch",
+        "sku": "FKE00010-EA",
+        "barcode": "810264026285",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 43804163866838,
+        "title": "Kevin's Best Sellers Entrée Pouch",
+        "sku": "FKE00010-EA",
+        "barcode": "810264026285",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 44127822250198,
+        "title": "Variety Pack Entrée Pouch",
+        "sku": "FKE00010-EA",
+        "barcode": "810264026285",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 44298144645334,
+        "title": "Quick Ship Bundle Entrée Pouch",
+        "sku": "FKE00010-EA",
+        "barcode": "810264026285",
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264026018,810264025295",
+    "format": "Refrigerated",
+    "metadata_status": "barcode_enriched"
+  },
+  {
+    "id": "sirloin-steak-tips-with-gravy",
+    "name": "Sirloin Steak Tips with Gravy",
+    "category": "Beef Entrées",
+    "shopify_id": "7933268918486",
+    "url": "https://www.kevinsnaturalfoods.com/products/sirloin-steak-tips-with-gravy",
+    "upcs": [
+      "810264026612",
+      "810264026902",
+      "810264026933"
+    ],
+    "variants": [
+      {
+        "id": 43999481069782,
+        "title": "Boxed Entrée",
+        "sku": "FKP00131",
+        "barcode": "810264026612,810264026933",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 43999481102550,
+        "title": "Entrée Pouch",
+        "sku": "FKE00013-EA",
+        "barcode": "810264026902",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 44127822545110,
+        "title": "Variety Pack Entrée Pouch",
+        "sku": "FKE00013-EA",
+        "barcode": "810264026902",
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264026612,810264026933",
+    "format": "Refrigerated",
+    "metadata_status": "barcode_enriched"
+  },
+  {
+    "id": "honey-garlic-beef",
+    "name": "Honey Garlic Beef",
+    "category": "Beef Entrées",
+    "shopify_id": "7964307128534",
+    "url": "https://www.kevinsnaturalfoods.com/products/honey-garlic-beef",
+    "upcs": [
+      "810264026773",
+      "810264026841"
+    ],
+    "variants": [
+      {
+        "id": 44047342829782,
+        "title": "Boxed Entrée",
+        "sku": "FKPZ0136",
+        "barcode": "810264026773",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 44047342862550,
+        "title": "Entrée Pouch",
+        "sku": "FKE00011-EA",
+        "barcode": "810264026841",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 44390692159702,
+        "title": "Birthday Bundle Entrée Pouch",
+        "sku": "FKE00011-EA",
+        "barcode": "810264026841",
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264026773",
+    "format": "Refrigerated",
+    "metadata_status": "barcode_enriched"
+  },
+  {
+    "id": "thai-style-basil-beef",
+    "name": "Thai-Style Basil Beef",
+    "category": "Beef Entrées",
+    "shopify_id": "9080810701014",
+    "url": "https://www.kevinsnaturalfoods.com/products/thai-style-basil-beef",
+    "upcs": [
+      "810264028494"
+    ],
+    "variants": [
+      {
+        "id": 47215503737046,
+        "title": "Default Title",
+        "sku": null,
+        "barcode": "810264028494",
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264028494",
+    "format": "Refrigerated",
+    "metadata_status": "barcode_enriched"
+  },
+  {
+    "id": "top-sirloin-beef-with-creamy-mushroom-sauce",
+    "name": "Sirloin Beef Tips with a Savory Mushroom Sauce",
+    "category": "Beef Entrées",
+    "shopify_id": "8010290987222",
+    "url": "https://www.kevinsnaturalfoods.com/products/top-sirloin-beef-with-creamy-mushroom-sauce",
+    "upcs": [
+      "810264026575"
+    ],
+    "variants": [
+      {
+        "id": 44047910174934,
+        "title": "Default Title",
+        "sku": "",
+        "barcode": "810264026575",
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264026575",
+    "format": "Refrigerated",
+    "metadata_status": "barcode_enriched"
+  },
+  {
+    "id": "chimichurri-beef",
+    "name": "Chimichurri Beef",
+    "category": "Beef Entrées",
+    "shopify_id": "7984443818198",
+    "url": "https://www.kevinsnaturalfoods.com/products/chimichurri-beef",
+    "upcs": [
+      "810264026780",
+      "810264026834"
+    ],
+    "variants": [
+      {
+        "id": 43972526932182,
+        "title": "Default Title",
+        "sku": "FKP00144",
+        "barcode": "810264026834,810264026780",
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264026834,810264026780",
+    "format": "Refrigerated",
+    "metadata_status": "barcode_enriched"
+  },
+  {
+    "id": "teriyaki-style-beef",
+    "name": "Teriyaki-Style Beef",
+    "category": "Beef Entrées",
+    "shopify_id": "7159139303577",
+    "url": "https://www.kevinsnaturalfoods.com/products/teriyaki-style-beef",
+    "upcs": [
+      "810264025851"
+    ],
+    "variants": [
+      {
+        "id": 41385630695577,
+        "title": "Default Title",
+        "sku": "FKP00090",
+        "barcode": "810264025851",
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264025851",
+    "format": "Refrigerated",
+    "metadata_status": "barcode_enriched"
+  },
+  {
+    "id": "beef-fajitas",
+    "name": "Beef Fajitas",
+    "category": "Stir-Fry Entrées",
+    "shopify_id": "9232761356502",
+    "url": "https://www.kevinsnaturalfoods.com/products/beef-fajitas",
+    "upcs": [
+      "810264028302"
+    ],
+    "variants": [
+      {
+        "id": 47749754093782,
+        "title": "Default Title",
+        "sku": null,
+        "barcode": "810264028302",
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264028302",
+    "format": "Club stir-fry",
+    "metadata_status": "barcode_enriched"
+  },
+  {
+    "id": "teriyaki-style-chicken-stir-fry-kit",
+    "name": "Teriyaki-Style Chicken Stir-Fry Kit",
+    "category": "Stir-Fry Entrées",
+    "shopify_id": "9043039420630",
+    "url": "https://www.kevinsnaturalfoods.com/products/teriyaki-style-chicken-stir-fry-kit",
+    "upcs": [
+      "810264028135"
+    ],
+    "variants": [
+      {
+        "id": 47057324277974,
+        "title": "Default Title",
+        "sku": "810264028135",
+        "barcode": "810264028135",
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264028135",
+    "format": "Grocery stir-fry",
+    "metadata_status": "barcode_enriched"
+  },
+  {
+    "id": "beef-broccoli-stir-fry-kit",
+    "name": "Beef & Broccoli Stir-Fry Kit",
+    "category": "Stir-Fry Entrées",
+    "shopify_id": "9042958614742",
+    "url": "https://www.kevinsnaturalfoods.com/products/beef-broccoli-stir-fry-kit",
+    "upcs": [
+      "810264028111"
+    ],
+    "variants": [
+      {
+        "id": 47057139368150,
+        "title": "Default Title",
+        "sku": "810264028111",
+        "barcode": "810264028111",
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264028111",
+    "format": "Grocery stir-fry",
+    "metadata_status": "barcode_enriched"
+  },
+  {
+    "id": "chicken-fajitas-skillet-meal-kit",
+    "name": "Chicken Fajitas Skillet Meal Kit",
+    "category": "Stir-Fry Entrées",
+    "shopify_id": "8904583315670",
+    "url": "https://www.kevinsnaturalfoods.com/products/chicken-fajitas-skillet-meal-kit",
+    "upcs": [
+      "810264028180"
+    ],
+    "variants": [
+      {
+        "id": 46628775067862,
+        "title": "Default Title",
+        "sku": "810264028180",
+        "barcode": "810264028180",
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264028180",
+    "format": "Grocery stir-fry",
+    "metadata_status": "barcode_enriched"
+  },
+  {
+    "id": "general-tso-s-chicken-with-green-beans",
+    "name": "General Tso’s Chicken Stir Fry-Kit",
+    "category": "Stir-Fry Entrées",
+    "shopify_id": "8818225610966",
+    "url": "https://www.kevinsnaturalfoods.com/products/general-tso-s-chicken-with-green-beans",
+    "upcs": [
+      "810264028128"
+    ],
+    "variants": [
+      {
+        "id": 46400908099798,
+        "title": "Default Title",
+        "sku": "810264028128",
+        "barcode": "810264028128",
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264028128",
+    "format": "Grocery stir-fry",
+    "metadata_status": "barcode_enriched"
+  },
+  {
+    "id": "sichuan-chicken-stir-fry-kit",
+    "name": "Sichuan Chicken Stir-Fry Kit",
+    "category": "Stir-Fry Entrées",
+    "shopify_id": "8742765166806",
+    "url": "https://www.kevinsnaturalfoods.com/products/sichuan-chicken-stir-fry-kit",
+    "upcs": [
+      "810264028166"
+    ],
+    "variants": [
+      {
+        "id": 46189397803222,
+        "title": "Default Title",
+        "sku": "810264028166",
+        "barcode": "810264028166",
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264028166",
+    "format": "Grocery stir-fry",
+    "metadata_status": "barcode_enriched"
+  },
+  {
+    "id": "honey-garlic-chicken-stir-fry-kit",
+    "name": "Honey Garlic Chicken Stir-Fry Kit",
+    "category": "Stir-Fry Entrées",
+    "shopify_id": "8742753140950",
+    "url": "https://www.kevinsnaturalfoods.com/products/honey-garlic-chicken-stir-fry-kit",
+    "upcs": [
+      "810264028159"
+    ],
+    "variants": [
+      {
+        "id": 46189378699478,
+        "title": "Default Title",
+        "sku": "810264028159",
+        "barcode": "810264028159",
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264028159",
+    "format": "Grocery stir-fry",
+    "metadata_status": "barcode_enriched"
+  },
+  {
+    "id": "orange-chicken-stir-fry",
+    "name": "Orange Chicken Stir Fry",
+    "category": "Stir-Fry Entrées",
+    "shopify_id": "8359006240982",
+    "url": "https://www.kevinsnaturalfoods.com/products/orange-chicken-stir-fry",
+    "upcs": [],
+    "variants": [
+      {
+        "id": 45126154453206,
+        "title": "Default Title",
+        "sku": null,
+        "barcode": null,
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=",
+    "format": "Club stir-fry",
+    "metadata_status": "catalog_identity_only"
+  },
+  {
+    "id": "honey-garlic-chicken-green-bean-stir-fry",
+    "name": "Honey Garlic Chicken Stir-Fry",
+    "category": "Stir-Fry Entrées",
+    "shopify_id": "8173746847958",
+    "url": "https://www.kevinsnaturalfoods.com/products/honey-garlic-chicken-green-bean-stir-fry",
+    "upcs": [
+      "810264026643"
+    ],
+    "variants": [
+      {
+        "id": 44522183983318,
+        "title": "Default Title",
+        "sku": null,
+        "barcode": "810264026643",
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264026643",
+    "format": "Club stir-fry",
+    "metadata_status": "barcode_enriched"
+  },
+  {
+    "id": "beef-broccoli-stir-fry",
+    "name": "Beef & Broccoli Stir-Fry",
+    "category": "Stir-Fry Entrées",
+    "shopify_id": "8129985085654",
+    "url": "https://www.kevinsnaturalfoods.com/products/beef-broccoli-stir-fry",
+    "upcs": [
+      "810264026551",
+      "810264026926"
+    ],
+    "variants": [
+      {
+        "id": 44368216883414,
+        "title": "Default Title",
+        "sku": "",
+        "barcode": "810264026926,810264026551",
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264026926,810264026551",
+    "format": "Club stir-fry",
+    "metadata_status": "barcode_enriched"
+  },
+  {
+    "id": "sichuan-chicken-green-bean-stir-fry",
+    "name": "Sichuan Chicken Green Bean Stir-Fry",
+    "category": "Stir-Fry Entrées",
+    "shopify_id": "8074410918102",
+    "url": "https://www.kevinsnaturalfoods.com/products/sichuan-chicken-green-bean-stir-fry",
+    "upcs": [
+      "810264026476",
+      "810264026810"
+    ],
+    "variants": [
+      {
+        "id": 44234579411158,
+        "title": "Default Title",
+        "sku": "",
+        "barcode": "810264026810,810264026476",
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264026810,810264026476",
+    "format": "Club stir-fry",
+    "metadata_status": "barcode_enriched"
+  },
+  {
+    "id": "hot-honey-garlic-chicken-stir-fry",
+    "name": "Hot Honey Garlic Chicken Stir-Fry",
+    "category": "Stir-Fry Entrées",
+    "shopify_id": "8068350443734",
+    "url": "https://www.kevinsnaturalfoods.com/products/hot-honey-garlic-chicken-stir-fry",
+    "upcs": [
+      "810264026810"
+    ],
+    "variants": [
+      {
+        "id": 44210425364694,
+        "title": "Default Title",
+        "sku": "",
+        "barcode": "810264026810",
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264026810",
+    "format": "Club stir-fry",
+    "metadata_status": "barcode_enriched"
+  },
+  {
+    "id": "teriyaki-style-chicken-stir-fry",
+    "name": "Teriyaki-Style Chicken Stir-Fry",
+    "category": "Stir-Fry Entrées",
+    "shopify_id": "7753403433174",
+    "url": "https://www.kevinsnaturalfoods.com/products/teriyaki-style-chicken-stir-fry",
+    "upcs": [
+      "810264026148"
+    ],
+    "variants": [
+      {
+        "id": 43207308181718,
+        "title": "Default Title",
+        "sku": "FKP00104",
+        "barcode": "810264026148",
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264026148",
+    "format": "Club stir-fry",
+    "metadata_status": "barcode_enriched"
+  },
+  {
+    "id": "spinach-bacon-florentine",
+    "name": "Spinach & Bacon Florentine",
+    "category": "Breakfast",
+    "shopify_id": "9366147137750",
+    "url": "https://www.kevinsnaturalfoods.com/products/spinach-bacon-florentine",
+    "upcs": [],
+    "variants": [
+      {
+        "id": 48304980984022,
+        "title": "Default Title",
+        "sku": null,
+        "barcode": null,
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=",
+    "format": "Refrigerated",
+    "metadata_status": "catalog_identity_only"
+  },
+  {
+    "id": "denver-style-ham-white-cheddar",
+    "name": "Denver-Style Ham & White Cheddar",
+    "category": "Breakfast",
+    "shopify_id": "9366146777302",
+    "url": "https://www.kevinsnaturalfoods.com/products/denver-style-ham-white-cheddar",
+    "upcs": [],
+    "variants": [
+      {
+        "id": 48304978591958,
+        "title": "Default Title",
+        "sku": null,
+        "barcode": null,
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=",
+    "format": "Refrigerated",
+    "metadata_status": "catalog_identity_only"
+  },
+  {
+    "id": "ranchero-sirloin-steak",
+    "name": "Ranchero Sirloin Steak",
+    "category": "Breakfast",
+    "shopify_id": "9380644716758",
+    "url": "https://www.kevinsnaturalfoods.com/products/ranchero-sirloin-steak",
+    "upcs": [],
+    "variants": [
+      {
+        "id": 48352287686870,
+        "title": "Default Title",
+        "sku": null,
+        "barcode": null,
+        "grams": null,
+        "available": true
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=",
+    "format": "Refrigerated",
+    "metadata_status": "catalog_identity_only"
+  },
+  {
+    "id": "tex-mex-style-avocado-chicken",
+    "name": "Tex-Mex Style Avocado Chicken",
+    "category": "Breakfast",
+    "shopify_id": "9380651401430",
+    "url": "https://www.kevinsnaturalfoods.com/products/tex-mex-style-avocado-chicken",
+    "upcs": [],
+    "variants": [
+      {
+        "id": 48352300695766,
+        "title": "Default Title",
+        "sku": null,
+        "barcode": null,
+        "grams": null,
+        "available": true
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=",
+    "format": "Refrigerated",
+    "metadata_status": "catalog_identity_only"
+  },
+  {
+    "id": "chicken-sausage-and-roasted-sweet-potato",
+    "name": "Chicken Sausage & Roasted Sweet Potato",
+    "category": "Breakfast",
+    "shopify_id": "9455362179286",
+    "url": "https://www.kevinsnaturalfoods.com/products/chicken-sausage-and-roasted-sweet-potato",
+    "upcs": [],
+    "variants": [
+      {
+        "id": 50040995348694,
+        "title": "Default Title",
+        "sku": null,
+        "barcode": null,
+        "grams": null,
+        "available": true
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=",
+    "format": "Refrigerated",
+    "metadata_status": "catalog_identity_only"
+  },
+  {
+    "id": "tomato-chicken-primavera-with-cauliflower-pasta",
+    "name": "Tomato Chicken Primavera with Cauliflower Pasta",
+    "category": "Pastas",
+    "shopify_id": "9083936342230",
+    "url": "https://www.kevinsnaturalfoods.com/products/tomato-chicken-primavera-with-cauliflower-pasta",
+    "upcs": [
+      "810264026858"
+    ],
+    "variants": [
+      {
+        "id": 47228834873558,
+        "title": "Entrée Pouch",
+        "sku": "FKE00017-EA",
+        "barcode": "810264026858",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 47228834906326,
+        "title": "Variety Pack Entrée Pouch",
+        "sku": "FKE00017-EA",
+        "barcode": "810264026858",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 47228834939094,
+        "title": "Pasta for Two Sampler Entrée Pouch",
+        "sku": "FKE00017-EA",
+        "barcode": "810264026858",
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264026858",
+    "format": "Refrigerated",
+    "metadata_status": "barcode_enriched"
+  },
+  {
+    "id": "southwest-chipotle-chicken-with-cauliflower-pasta",
+    "name": "Southwest Chipotle Chicken with Cauliflower Pasta",
+    "category": "Pastas",
+    "shopify_id": "9083934998742",
+    "url": "https://www.kevinsnaturalfoods.com/products/southwest-chipotle-chicken-with-cauliflower-pasta",
+    "upcs": [
+      "810264026858"
+    ],
+    "variants": [
+      {
+        "id": 47228828582102,
+        "title": "Entrée Pouch",
+        "sku": "FKE00017-EA",
+        "barcode": "810264026858",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 47228828614870,
+        "title": "Variety Pack Entrée Pouch",
+        "sku": "FKE00017-EA",
+        "barcode": "810264026858",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 47228828647638,
+        "title": "Pasta for Two Sampler Entrée Pouch",
+        "sku": "FKE00017-EA",
+        "barcode": "810264026858",
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264026858",
+    "format": "Refrigerated",
+    "metadata_status": "barcode_enriched"
+  },
+  {
+    "id": "pesto-garlic-chicken-with-cauliflower-pasta-copy",
+    "name": "Pesto Garlic Chicken with Cauliflower Pasta",
+    "category": "Pastas",
+    "shopify_id": "9083933360342",
+    "url": "https://www.kevinsnaturalfoods.com/products/pesto-garlic-chicken-with-cauliflower-pasta-copy",
+    "upcs": [
+      "810264026858"
+    ],
+    "variants": [
+      {
+        "id": 47228821536982,
+        "title": "Entrée Pouch",
+        "sku": "FKE00017-EA",
+        "barcode": "810264026858",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 47228821569750,
+        "title": "Variety Pack Entrée Pouch",
+        "sku": "FKE00017-EA",
+        "barcode": "810264026858",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 47228821602518,
+        "title": "Pasta for Two Sampler Entrée Pouch",
+        "sku": "FKE00017-EA",
+        "barcode": "810264026858",
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264026858",
+    "format": "Refrigerated",
+    "metadata_status": "barcode_enriched"
+  },
+  {
+    "id": "parmesan-basil-chicken-with-cauliflower-pasta",
+    "name": "Parmesan Basil Chicken with Cauliflower Pasta",
+    "category": "Pastas",
+    "shopify_id": "9083931656406",
+    "url": "https://www.kevinsnaturalfoods.com/products/parmesan-basil-chicken-with-cauliflower-pasta",
+    "upcs": [
+      "810264026858"
+    ],
+    "variants": [
+      {
+        "id": 47228816949462,
+        "title": "Entrée Pouch",
+        "sku": "FKE00017-EA",
+        "barcode": "810264026858",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 47228816982230,
+        "title": "Variety Pack Entrée Pouch",
+        "sku": "FKE00017-EA",
+        "barcode": "810264026858",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 47228817014998,
+        "title": "Pasta for Two Sampler Entrée Pouch",
+        "sku": "FKE00017-EA",
+        "barcode": "810264026858",
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264026858",
+    "format": "Refrigerated",
+    "metadata_status": "barcode_enriched"
+  },
+  {
+    "id": "beef-stroganoff",
+    "name": "Beef Stroganoff with Cauliflower Pasta",
+    "category": "Pastas",
+    "shopify_id": "7824955080918",
+    "url": "https://www.kevinsnaturalfoods.com/products/beef-stroganoff",
+    "upcs": [
+      "810264026292",
+      "810264027336"
+    ],
+    "variants": [
+      {
+        "id": 44016599433430,
+        "title": "Default Title",
+        "sku": "FKP00105",
+        "barcode": "810264026292,810264027336",
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264026292,810264027336",
+    "format": "Refrigerated",
+    "metadata_status": "barcode_enriched"
+  },
+  {
+    "id": "chicken-piccata-with-cauliflower-pasta",
+    "name": "Chicken Piccata with Cauliflower Pasta",
+    "category": "Pastas",
+    "shopify_id": "7824929849558",
+    "url": "https://www.kevinsnaturalfoods.com/products/chicken-piccata-with-cauliflower-pasta",
+    "upcs": [
+      "810264026322",
+      "810264026728",
+      "810264026858"
+    ],
+    "variants": [
+      {
+        "id": 44016602448086,
+        "title": "Boxed Entrée",
+        "sku": "FKP00107",
+        "barcode": "810264026322,810264026728",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 44016602480854,
+        "title": "Entrée Pouch",
+        "sku": "FKE00017-EA",
+        "barcode": "810264026858",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 44127767527638,
+        "title": "Variety Pack Entrée Pouch",
+        "sku": "FKE00017-EA",
+        "barcode": "810264026858",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 44127766970582,
+        "title": "Pasta for Two Sampler Entrée Pouch",
+        "sku": "FKE00017-EA",
+        "barcode": "810264026858",
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264026322,810264026728",
+    "format": "Refrigerated",
+    "metadata_status": "barcode_enriched"
+  },
+  {
+    "id": "tomato-basil-chicken",
+    "name": "Tomato Basil Chicken with Cauliflower Pasta",
+    "category": "Pastas",
+    "shopify_id": "7824923099350",
+    "url": "https://www.kevinsnaturalfoods.com/products/tomato-basil-chicken",
+    "upcs": [
+      "810264026315",
+      "810264026735",
+      "810264026865"
+    ],
+    "variants": [
+      {
+        "id": 44016601530582,
+        "title": "Boxed Entrée",
+        "sku": "FKP00108",
+        "barcode": "810264026315,810264026735",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 44016601563350,
+        "title": "Entrée Pouch",
+        "sku": "FKE00016-EA",
+        "barcode": "810264026865",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 44127766872278,
+        "title": "Pasta for Two Sampler Entrée Pouch",
+        "sku": "FKE00016-EA",
+        "barcode": "810264026865",
+        "grams": null,
+        "available": false
+      },
+      {
+        "id": 44390693503190,
+        "title": "Birthday Bundle Entrée Pouch",
+        "sku": "FKE00016-EA",
+        "barcode": "810264026865",
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264026315,810264026735",
+    "format": "Refrigerated",
+    "metadata_status": "barcode_enriched"
+  },
+  {
+    "id": "beef-bolognese-frozen-bowl",
+    "name": "Beef Bolognese Frozen Bowl",
+    "category": "Frozen Bowls",
+    "shopify_id": "8343213768918",
+    "url": "https://www.kevinsnaturalfoods.com/products/beef-bolognese-frozen-bowl",
+    "upcs": [
+      "810264027459"
+    ],
+    "variants": [
+      {
+        "id": 45082948796630,
+        "title": "Default Title",
+        "sku": "FKSZ0007-CS",
+        "barcode": "810264027459",
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264027459",
+    "format": "Frozen",
+    "metadata_status": "barcode_enriched"
+  },
+  {
+    "id": "chicken-burrito-bowl",
+    "name": "Chicken Burrito Bowl Frozen Bowl",
+    "category": "Frozen Bowls",
+    "shopify_id": "8343213932758",
+    "url": "https://www.kevinsnaturalfoods.com/products/chicken-burrito-bowl",
+    "upcs": [
+      "810264027107"
+    ],
+    "variants": [
+      {
+        "id": 45082949845206,
+        "title": "Default Title",
+        "sku": "FKSZ0001-CS",
+        "barcode": "810264027107",
+        "grams": null,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264027107",
+    "format": "Frozen",
+    "metadata_status": "barcode_enriched"
+  },
+  {
+    "id": "korean-bbq-style-chicken-frozen-bowl",
+    "name": "Korean BBQ-Style Chicken Frozen Bowl",
+    "category": "Frozen Bowls",
+    "shopify_id": "8343214325974",
+    "url": "https://www.kevinsnaturalfoods.com/products/korean-bbq-style-chicken-frozen-bowl",
+    "upcs": [
+      "810264027114"
+    ],
+    "variants": [
+      {
+        "id": 45082951680214,
+        "title": "Default Title",
+        "sku": "FKSZ0002-CS",
+        "barcode": null,
+        "grams": 0,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264027114",
+    "format": "Frozen",
+    "metadata_status": "catalog_identity_only"
+  },
+  {
+    "id": "orange-chicken-frozen-bowl",
+    "name": "Orange Chicken Frozen Bowl",
+    "category": "Frozen Bowls",
+    "shopify_id": "8343214522582",
+    "url": "https://www.kevinsnaturalfoods.com/products/orange-chicken-frozen-bowl",
+    "upcs": [
+      "810264027152"
+    ],
+    "variants": [
+      {
+        "id": 45082952401110,
+        "title": "Default Title",
+        "sku": "FKSZ0006-CS",
+        "barcode": null,
+        "grams": 0,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264027152",
+    "format": "Frozen",
+    "metadata_status": "catalog_identity_only"
+  },
+  {
+    "id": "parmesan-basil-chicken",
+    "name": "Parmesan Basil Chicken Frozen Bowl",
+    "category": "Frozen Bowls",
+    "shopify_id": "8343215243478",
+    "url": "https://www.kevinsnaturalfoods.com/products/parmesan-basil-chicken",
+    "upcs": [
+      "810264027138"
+    ],
+    "variants": [
+      {
+        "id": 45082956497110,
+        "title": "Default Title",
+        "sku": "FKSZ0004-CS",
+        "barcode": null,
+        "grams": 0,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264027138",
+    "format": "Frozen",
+    "metadata_status": "catalog_identity_only"
+  },
+  {
+    "id": "savory-mushroom-chicken",
+    "name": "Savory Mushroom Chicken Frozen Bowl",
+    "category": "Frozen Bowls",
+    "shopify_id": "8343214129366",
+    "url": "https://www.kevinsnaturalfoods.com/products/savory-mushroom-chicken",
+    "upcs": [
+      "810264027466"
+    ],
+    "variants": [
+      {
+        "id": 45082950762710,
+        "title": "Default Title",
+        "sku": "FKSZ0008-CS",
+        "barcode": null,
+        "grams": 0,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264027466",
+    "format": "Frozen",
+    "metadata_status": "catalog_identity_only"
+  },
+  {
+    "id": "roasted-tomato-chicken-pasta",
+    "name": "Roasted Tomato Chicken Pasta Frozen Bowl",
+    "category": "Frozen Bowls",
+    "shopify_id": "8343214620886",
+    "url": "https://www.kevinsnaturalfoods.com/products/roasted-tomato-chicken-pasta",
+    "upcs": [
+      "810264027145"
+    ],
+    "variants": [
+      {
+        "id": 45082952597718,
+        "title": "Default Title",
+        "sku": "FKSZ0005-CS",
+        "barcode": null,
+        "grams": 0,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264027145",
+    "format": "Frozen",
+    "metadata_status": "catalog_identity_only"
+  },
+  {
+    "id": "thai-style-coconut-chicken-frozen-bowl",
+    "name": "Thai-Style Coconut Chicken Frozen Bowl",
+    "category": "Frozen Bowls",
+    "shopify_id": "8343214948566",
+    "url": "https://www.kevinsnaturalfoods.com/products/thai-style-coconut-chicken-frozen-bowl",
+    "upcs": [
+      "810264027121"
+    ],
+    "variants": [
+      {
+        "id": 45082955055318,
+        "title": "Default Title",
+        "sku": "FKSZ0003-CS",
+        "barcode": null,
+        "grams": 0,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264027121",
+    "format": "Frozen",
+    "metadata_status": "catalog_identity_only"
+  },
+  {
+    "id": "teriyaki-style-chicken-frozen-bowl",
+    "name": "Teriyaki Style Chicken Frozen Bowl",
+    "category": "Frozen Bowls",
+    "shopify_id": "8941341114582",
+    "url": "https://www.kevinsnaturalfoods.com/products/teriyaki-style-chicken-frozen-bowl",
+    "upcs": [
+      "810264028326"
+    ],
+    "variants": [
+      {
+        "id": 46735594193110,
+        "title": "Default Title",
+        "sku": null,
+        "barcode": null,
+        "grams": 0,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264028326",
+    "format": "Frozen",
+    "metadata_status": "catalog_identity_only"
+  },
+  {
+    "id": "butter-chicken",
+    "name": "Butter Chicken Frozen Bowl",
+    "category": "Frozen Bowls",
+    "shopify_id": "8999786873046",
+    "url": "https://www.kevinsnaturalfoods.com/products/butter-chicken",
+    "upcs": [
+      "810264028319"
+    ],
+    "variants": [
+      {
+        "id": 46914487484630,
+        "title": "Default Title",
+        "sku": null,
+        "barcode": null,
+        "grams": 0,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264028319",
+    "format": "Frozen",
+    "metadata_status": "catalog_identity_only"
+  },
+  {
+    "id": "greek-style-chicken-frozen-bowl",
+    "name": "Greek-Style Chicken Frozen Bowl",
+    "category": "Frozen Bowls",
+    "shopify_id": "9468164866262",
+    "url": "https://www.kevinsnaturalfoods.com/products/greek-style-chicken-frozen-bowl",
+    "upcs": [
+      "810264029231"
+    ],
+    "variants": [
+      {
+        "id": 50076160131286,
+        "title": "Default Title",
+        "sku": null,
+        "barcode": null,
+        "grams": 0,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264029231",
+    "format": "Frozen",
+    "metadata_status": "catalog_identity_only"
+  },
+  {
+    "id": "hawaiian-style-chicken-frozen-bowl",
+    "name": "Hawaiian-Style Chicken Frozen Bowl",
+    "category": "Frozen Bowls",
+    "shopify_id": "9468164899030",
+    "url": "https://www.kevinsnaturalfoods.com/products/hawaiian-style-chicken-frozen-bowl",
+    "upcs": [
+      "810264029248"
+    ],
+    "variants": [
+      {
+        "id": 50076160196822,
+        "title": "Default Title",
+        "sku": null,
+        "barcode": null,
+        "grams": 0,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264029248",
+    "format": "Frozen",
+    "metadata_status": "catalog_identity_only"
+  },
+  {
+    "id": "creamy-pesto-chicken-frozen-bowl",
+    "name": "Creamy Pesto Chicken Frozen Bowl",
+    "category": "Frozen Bowls",
+    "shopify_id": "9490269929686",
+    "url": "https://www.kevinsnaturalfoods.com/products/creamy-pesto-chicken-frozen-bowl",
+    "upcs": [
+      "810264029224"
+    ],
+    "variants": [
+      {
+        "id": 50314759831766,
+        "title": "Default Title",
+        "sku": null,
+        "barcode": null,
+        "grams": 0,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264029224",
+    "format": "Frozen",
+    "metadata_status": "catalog_identity_only"
+  },
+  {
+    "id": "queso-blanco-chicken-frozen-bowl",
+    "name": "Queso Blanco Chicken Frozen Bowl",
+    "category": "Frozen Bowls",
+    "shopify_id": "9490272420054",
+    "url": "https://www.kevinsnaturalfoods.com/products/queso-blanco-chicken-frozen-bowl",
+    "upcs": [
+      "810264029255"
+    ],
+    "variants": [
+      {
+        "id": 50314787094742,
+        "title": "Default Title",
+        "sku": null,
+        "barcode": null,
+        "grams": 0,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264029255",
+    "format": "Frozen",
+    "metadata_status": "catalog_identity_only"
+  },
+  {
+    "id": "teriyaki-style-chicken-family-size",
+    "name": "Teriyaki-Style Chicken - Family Size",
+    "category": "Frozen Family Meals",
+    "shopify_id": "8999779008726",
+    "url": "https://www.kevinsnaturalfoods.com/products/teriyaki-style-chicken-family-size",
+    "upcs": [
+      "810264028210"
+    ],
+    "variants": [
+      {
+        "id": 46914460385494,
+        "title": "Default Title",
+        "sku": null,
+        "barcode": null,
+        "grams": 0,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264028210",
+    "format": "Frozen",
+    "metadata_status": "catalog_identity_only"
+  },
+  {
+    "id": "pesto-chicken-with-cauliflower-pasta-family-size",
+    "name": "Pesto Chicken Pasta - Family Size",
+    "category": "Frozen Family Meals",
+    "shopify_id": "8999766622422",
+    "url": "https://www.kevinsnaturalfoods.com/products/pesto-chicken-with-cauliflower-pasta-family-size",
+    "upcs": [
+      "810264028203"
+    ],
+    "variants": [
+      {
+        "id": 46914425454806,
+        "title": "Default Title",
+        "sku": null,
+        "barcode": null,
+        "grams": 0,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264028203",
+    "format": "Frozen",
+    "metadata_status": "catalog_identity_only"
+  },
+  {
+    "id": "lemongrass-chicken-family-size",
+    "name": "Lemongrass Chicken - Family Size",
+    "category": "Frozen Family Meals",
+    "shopify_id": "8999765541078",
+    "url": "https://www.kevinsnaturalfoods.com/products/lemongrass-chicken-family-size",
+    "upcs": [
+      "810264028234"
+    ],
+    "variants": [
+      {
+        "id": 46914421227734,
+        "title": "Default Title",
+        "sku": null,
+        "barcode": null,
+        "grams": 0,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264028234",
+    "format": "Frozen",
+    "metadata_status": "catalog_identity_only"
+  },
+  {
+    "id": "butter-chicken-family-size",
+    "name": "Butter Chicken - Family Size",
+    "category": "Frozen Family Meals",
+    "shopify_id": "8938614259926",
+    "url": "https://www.kevinsnaturalfoods.com/products/butter-chicken-family-size",
+    "upcs": [
+      "810264028197"
+    ],
+    "variants": [
+      {
+        "id": 46726983450838,
+        "title": "Default Title",
+        "sku": "",
+        "barcode": null,
+        "grams": 0,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264028197",
+    "format": "Frozen",
+    "metadata_status": "catalog_identity_only"
+  },
+  {
+    "id": "mashed-cauliflower",
+    "name": "Mashed Cauliflower",
+    "category": "Sides",
+    "shopify_id": "6130444435609",
+    "url": "https://www.kevinsnaturalfoods.com/products/mashed-cauliflower",
+    "upcs": [
+      "810264025165",
+      "810264025202"
+    ],
+    "variants": [
+      {
+        "id": 38000162504857,
+        "title": "Default Title",
+        "sku": "",
+        "barcode": null,
+        "grams": 0,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264025165,810264025202",
+    "format": "Refrigerated",
+    "metadata_status": "catalog_identity_only"
+  },
+  {
+    "id": "stir-fry-rice",
+    "name": "Stir-Fry Rice",
+    "category": "Sides",
+    "shopify_id": "8333905166550",
+    "url": "https://www.kevinsnaturalfoods.com/products/stir-fry-rice",
+    "upcs": [
+      "810264027671"
+    ],
+    "variants": [
+      {
+        "id": 45058069594326,
+        "title": "Default Title",
+        "sku": "FKP00182",
+        "barcode": null,
+        "grams": 0,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264027671",
+    "format": "Refrigerated",
+    "metadata_status": "catalog_identity_only"
+  },
+  {
+    "id": "cilantro-lime-rice",
+    "name": "Cilantro Lime Rice",
+    "category": "Sides",
+    "shopify_id": "8333905002710",
+    "url": "https://www.kevinsnaturalfoods.com/products/cilantro-lime-rice",
+    "upcs": [
+      "810264027657"
+    ],
+    "variants": [
+      {
+        "id": 45058069430486,
+        "title": "Default Title",
+        "sku": "FK00181",
+        "barcode": null,
+        "grams": 0,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264027657",
+    "format": "Refrigerated",
+    "metadata_status": "catalog_identity_only"
+  },
+  {
+    "id": "homestyle-mashed-potatoes",
+    "name": "Homestyle Mashed Potatoes",
+    "category": "Sides",
+    "shopify_id": "7189821915289",
+    "url": "https://www.kevinsnaturalfoods.com/products/homestyle-mashed-potatoes",
+    "upcs": [
+      "810264026049"
+    ],
+    "variants": [
+      {
+        "id": 41489264574617,
+        "title": "Default Title",
+        "sku": "FKP00091",
+        "barcode": null,
+        "grams": 0,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264026049",
+    "format": "Refrigerated",
+    "metadata_status": "catalog_identity_only"
+  },
+  {
+    "id": "mashed-sweet-potatoes",
+    "name": "Mashed Sweet Potatoes",
+    "category": "Sides",
+    "shopify_id": "6144531988633",
+    "url": "https://www.kevinsnaturalfoods.com/products/mashed-sweet-potatoes",
+    "upcs": [
+      "810264025240"
+    ],
+    "variants": [
+      {
+        "id": 38046815322265,
+        "title": "Default Title",
+        "sku": "FKP00097",
+        "barcode": null,
+        "grams": 0,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264025240",
+    "format": "Refrigerated",
+    "metadata_status": "catalog_identity_only"
+  },
+  {
+    "id": "lemongrass-chicken-shiitake-mushroom-soup",
+    "name": "Lemongrass Chicken & Shiitake Mushroom Soup",
+    "category": "Soups",
+    "shopify_id": "9232752115926",
+    "url": "https://www.kevinsnaturalfoods.com/products/lemongrass-chicken-shiitake-mushroom-soup",
+    "upcs": [
+      "810264028531"
+    ],
+    "variants": [
+      {
+        "id": 47749714116822,
+        "title": "Default Title",
+        "sku": null,
+        "barcode": null,
+        "grams": 45,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264028531",
+    "format": "Refrigerated",
+    "metadata_status": "catalog_identity_only"
+  },
+  {
+    "id": "greek-style-lemon-chicken-soup",
+    "name": "Greek-Style Lemon Chicken Soup",
+    "category": "Soups",
+    "shopify_id": "9192573763798",
+    "url": "https://www.kevinsnaturalfoods.com/products/greek-style-lemon-chicken-soup",
+    "upcs": [
+      "810264028470"
+    ],
+    "variants": [
+      {
+        "id": 47600580002006,
+        "title": "Default Title",
+        "sku": "810264028470",
+        "barcode": null,
+        "grams": 45,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264028470",
+    "format": "Refrigerated",
+    "metadata_status": "catalog_identity_only"
+  },
+  {
+    "id": "beef-vegetable-soup",
+    "name": "Beef & Vegetable Soup",
+    "category": "Soups",
+    "shopify_id": "8165159928022",
+    "url": "https://www.kevinsnaturalfoods.com/products/beef-vegetable-soup",
+    "upcs": [
+      "810264027510"
+    ],
+    "variants": [
+      {
+        "id": 44494972715222,
+        "title": "Default Title",
+        "sku": null,
+        "barcode": null,
+        "grams": 45,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264027510",
+    "format": "Refrigerated",
+    "metadata_status": "catalog_identity_only"
+  },
+  {
+    "id": "chicken-soup-with-cauliflower-pasta",
+    "name": "Chicken Soup with Cauliflower Pasta",
+    "category": "Soups",
+    "shopify_id": "8165121523926",
+    "url": "https://www.kevinsnaturalfoods.com/products/chicken-soup-with-cauliflower-pasta",
+    "upcs": [
+      "810264027558"
+    ],
+    "variants": [
+      {
+        "id": 44494869004502,
+        "title": "Default Title",
+        "sku": null,
+        "barcode": null,
+        "grams": 45,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264027558",
+    "format": "Refrigerated",
+    "metadata_status": "catalog_identity_only"
+  },
+  {
+    "id": "tuscan-chicken-soup",
+    "name": "Tuscan-Style Chicken Soup",
+    "category": "Soups",
+    "shopify_id": "8142461239510",
+    "url": "https://www.kevinsnaturalfoods.com/products/tuscan-chicken-soup",
+    "upcs": [
+      "810264025592"
+    ],
+    "variants": [
+      {
+        "id": 44420339073238,
+        "title": "Default Title",
+        "sku": "",
+        "barcode": null,
+        "grams": 45,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264025592",
+    "format": "Refrigerated",
+    "metadata_status": "catalog_identity_only"
+  },
+  {
+    "id": "thai-style-coconut-chicken-soup",
+    "name": "Thai-Style Coconut Chicken Soup",
+    "category": "Soups",
+    "shopify_id": "7823407087830",
+    "url": "https://www.kevinsnaturalfoods.com/products/thai-style-coconut-chicken-soup",
+    "upcs": [
+      "810264025592"
+    ],
+    "variants": [
+      {
+        "id": 43496740815062,
+        "title": "Default Title",
+        "sku": "FSC00164",
+        "barcode": null,
+        "grams": 45,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264025592",
+    "format": "Refrigerated",
+    "metadata_status": "catalog_identity_only"
+  },
+  {
+    "id": "chicken-queso-soup",
+    "name": "Chicken Queso Soup with Hatch Chiles",
+    "category": "Soups",
+    "shopify_id": "7819479744726",
+    "url": "https://www.kevinsnaturalfoods.com/products/chicken-queso-soup",
+    "upcs": [
+      "810264026162"
+    ],
+    "variants": [
+      {
+        "id": 43485969416406,
+        "title": "Default Title",
+        "sku": "FSC00165",
+        "barcode": null,
+        "grams": 45,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264026162",
+    "format": "Refrigerated",
+    "metadata_status": "catalog_identity_only"
+  },
+  {
+    "id": "mango-habanero-sauce",
+    "name": "Mango Habanero Sauce",
+    "category": "Sauces",
+    "shopify_id": "9193180627158",
+    "url": "https://www.kevinsnaturalfoods.com/products/mango-habanero-sauce",
+    "upcs": [
+      "810264028821"
+    ],
+    "variants": [
+      {
+        "id": 47603499172054,
+        "title": "Default Title",
+        "sku": "810264028821",
+        "barcode": null,
+        "grams": 206,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264028821",
+    "format": "Sauce",
+    "metadata_status": "catalog_identity_only"
+  },
+  {
+    "id": "classic-taco-sauce",
+    "name": "Classic Taco Sauce",
+    "category": "Sauces",
+    "shopify_id": "3690776756277",
+    "url": "https://www.kevinsnaturalfoods.com/products/classic-taco-sauce",
+    "upcs": [
+      "810264023482"
+    ],
+    "variants": [
+      {
+        "id": 35808697188505,
+        "title": "Default Title",
+        "sku": "60004065",
+        "barcode": null,
+        "grams": 206,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264023482",
+    "format": "Sauce",
+    "metadata_status": "catalog_identity_only"
+  },
+  {
+    "id": "lemongrass-basil-sauce",
+    "name": "Lemongrass Basil Sauce",
+    "category": "Sauces",
+    "shopify_id": "3690776985653",
+    "url": "https://www.kevinsnaturalfoods.com/products/lemongrass-basil-sauce",
+    "upcs": [],
+    "variants": [
+      {
+        "id": 35808707870873,
+        "title": "Default Title",
+        "sku": "60004067",
+        "barcode": null,
+        "grams": 206,
+        "available": true
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": null,
+    "format": "Sauce",
+    "metadata_status": "catalog_identity_only"
+  },
+  {
+    "id": "teriyaki-sauce",
+    "name": "Teriyaki Sauce",
+    "category": "Sauces",
+    "shopify_id": "3690777149493",
+    "url": "https://www.kevinsnaturalfoods.com/products/teriyaki-sauce",
+    "upcs": [
+      "810264023529"
+    ],
+    "variants": [
+      {
+        "id": 50076169109718,
+        "title": "Default Title",
+        "sku": "60004068",
+        "barcode": null,
+        "grams": 207,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264023529",
+    "format": "Sauce",
+    "metadata_status": "catalog_identity_only"
+  },
+  {
+    "id": "thai-coconut-sauce",
+    "name": "Thai Coconut Sauce",
+    "category": "Sauces",
+    "shopify_id": "3690778263605",
+    "url": "https://www.kevinsnaturalfoods.com/products/thai-coconut-sauce",
+    "upcs": [
+      "810264023451"
+    ],
+    "variants": [
+      {
+        "id": 35808726646937,
+        "title": "Default Title",
+        "sku": "60004069",
+        "barcode": null,
+        "grams": 206,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264023451",
+    "format": "Sauce",
+    "metadata_status": "catalog_identity_only"
+  },
+  {
+    "id": "cilantro-lime-sauce",
+    "name": "Cilantro Lime Sauce",
+    "category": "Sauces",
+    "shopify_id": "3694612643893",
+    "url": "https://www.kevinsnaturalfoods.com/products/cilantro-lime-sauce",
+    "upcs": [],
+    "variants": [
+      {
+        "id": 50076169076950,
+        "title": "Default Title",
+        "sku": "60004064",
+        "barcode": null,
+        "grams": 207,
+        "available": true
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": null,
+    "format": "Sauce",
+    "metadata_status": "catalog_identity_only"
+  },
+  {
+    "id": "korean-bbq-simmer-sauce",
+    "name": "Korean BBQ Sauce",
+    "category": "Sauces",
+    "shopify_id": "3694613037109",
+    "url": "https://www.kevinsnaturalfoods.com/products/korean-bbq-simmer-sauce",
+    "upcs": [],
+    "variants": [
+      {
+        "id": 35808699089049,
+        "title": "Default Title",
+        "sku": "60004066",
+        "barcode": null,
+        "grams": 206,
+        "available": true
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": null,
+    "format": "Sauce",
+    "metadata_status": "catalog_identity_only"
+  },
+  {
+    "id": "tikka-masala-sauce",
+    "name": "Tikka Masala Sauce",
+    "category": "Sauces",
+    "shopify_id": "3694613594165",
+    "url": "https://www.kevinsnaturalfoods.com/products/tikka-masala-sauce",
+    "upcs": [
+      "810264023468"
+    ],
+    "variants": [
+      {
+        "id": 35808731988121,
+        "title": "Default Title",
+        "sku": "60004070",
+        "barcode": null,
+        "grams": 206,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264023468",
+    "format": "Sauce",
+    "metadata_status": "catalog_identity_only"
+  },
+  {
+    "id": "honey-garlic-sauce",
+    "name": "Honey Garlic Sauce",
+    "category": "Sauces",
+    "shopify_id": "8306991038678",
+    "url": "https://www.kevinsnaturalfoods.com/products/honey-garlic-sauce",
+    "upcs": [
+      "810264027732"
+    ],
+    "variants": [
+      {
+        "id": 44963749462230,
+        "title": "Default Title",
+        "sku": "60003919",
+        "barcode": null,
+        "grams": 206,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264027732",
+    "format": "Sauce",
+    "metadata_status": "catalog_identity_only"
+  },
+  {
+    "id": "kung-pao-sauce",
+    "name": "Kung Pao Sauce",
+    "category": "Sauces",
+    "shopify_id": "8307032883414",
+    "url": "https://www.kevinsnaturalfoods.com/products/kung-pao-sauce",
+    "upcs": [],
+    "variants": [
+      {
+        "id": 44963879747798,
+        "title": "Default Title",
+        "sku": "60003920",
+        "barcode": null,
+        "grams": 206,
+        "available": true
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": null,
+    "format": "Sauce",
+    "metadata_status": "catalog_identity_only"
+  },
+  {
+    "id": "lemon-herb-sauce",
+    "name": "Lemon Herb Sauce",
+    "category": "Sauces",
+    "shopify_id": "8307034095830",
+    "url": "https://www.kevinsnaturalfoods.com/products/lemon-herb-sauce",
+    "upcs": [
+      "810264027756"
+    ],
+    "variants": [
+      {
+        "id": 44963882467542,
+        "title": "Default Title",
+        "sku": "60003921",
+        "barcode": null,
+        "grams": 206,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264027756",
+    "format": "Sauce",
+    "metadata_status": "catalog_identity_only"
+  },
+  {
+    "id": "orange-sauce",
+    "name": "Orange Sauce",
+    "category": "Sauces",
+    "shopify_id": "8307035111638",
+    "url": "https://www.kevinsnaturalfoods.com/products/orange-sauce",
+    "upcs": [],
+    "variants": [
+      {
+        "id": 44963885777110,
+        "title": "Default Title",
+        "sku": "60003922",
+        "barcode": null,
+        "grams": 206,
+        "available": true
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": null,
+    "format": "Sauce",
+    "metadata_status": "catalog_identity_only"
+  },
+  {
+    "id": "thai-red-curry-sauce",
+    "name": "Thai Red Curry Sauce",
+    "category": "Sauces",
+    "shopify_id": "8307035472086",
+    "url": "https://www.kevinsnaturalfoods.com/products/thai-red-curry-sauce",
+    "upcs": [
+      "810264027770"
+    ],
+    "variants": [
+      {
+        "id": 44963886366934,
+        "title": "Default Title",
+        "sku": "60003923",
+        "barcode": null,
+        "grams": 206,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264027770",
+    "format": "Sauce",
+    "metadata_status": "catalog_identity_only"
+  },
+  {
+    "id": "turkey-gravy",
+    "name": "Turkey Gravy",
+    "category": "Seasonal Favorites",
+    "shopify_id": "5706693935257",
+    "url": "https://www.kevinsnaturalfoods.com/products/turkey-gravy",
+    "upcs": [
+      "810264026360"
+    ],
+    "variants": [
+      {
+        "id": 36358191677593,
+        "title": "Default Title",
+        "sku": "FSC00163",
+        "barcode": null,
+        "grams": 0,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264026360",
+    "format": "Refrigerated",
+    "metadata_status": "catalog_identity_only"
+  },
+  {
+    "id": "homestyle-roasted-gravy",
+    "name": "Homestyle Roasted Gravy",
+    "category": "Seasonal Favorites",
+    "shopify_id": "9145230754006",
+    "url": "https://www.kevinsnaturalfoods.com/products/homestyle-roasted-gravy",
+    "upcs": [
+      "810264028272"
+    ],
+    "variants": [
+      {
+        "id": 47453880582358,
+        "title": "Default Title",
+        "sku": null,
+        "barcode": null,
+        "grams": 0,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264028272",
+    "format": "Refrigerated",
+    "metadata_status": "catalog_identity_only"
+  },
+  {
+    "id": "turkey-breast-and-gravy-with-cranberry-sauce",
+    "name": "Turkey Breast & Gravy with Cranberry Sauce",
+    "category": "Seasonal Favorites",
+    "shopify_id": "9080797167830",
+    "url": "https://www.kevinsnaturalfoods.com/products/turkey-breast-and-gravy-with-cranberry-sauce",
+    "upcs": [
+      "810264028371"
+    ],
+    "variants": [
+      {
+        "id": 47215475687638,
+        "title": "Default Title",
+        "sku": null,
+        "barcode": null,
+        "grams": 0,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264028371",
+    "format": "Refrigerated",
+    "metadata_status": "catalog_identity_only"
+  },
+  {
+    "id": "holiday-mashed-sweet-potatoes",
+    "name": "Mashed Sweet Potatoes - Holiday Recipe",
+    "category": "Seasonal Favorites",
+    "shopify_id": "7159186718873",
+    "url": "https://www.kevinsnaturalfoods.com/products/holiday-mashed-sweet-potatoes",
+    "upcs": [
+      "810264020030"
+    ],
+    "variants": [
+      {
+        "id": 41428695154841,
+        "title": "Default Title",
+        "sku": "FKPZ0085",
+        "barcode": null,
+        "grams": 0,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264020030",
+    "format": "Refrigerated",
+    "metadata_status": "catalog_identity_only"
+  },
+  {
+    "id": "turkey-breast-gravy",
+    "name": "Turkey Breast & Gravy",
+    "category": "Seasonal Favorites",
+    "shopify_id": "8746201252054",
+    "url": "https://www.kevinsnaturalfoods.com/products/turkey-breast-gravy",
+    "upcs": [
+      "810264027794"
+    ],
+    "variants": [
+      {
+        "id": 46200710398166,
+        "title": "Default Title",
+        "sku": null,
+        "barcode": null,
+        "grams": 0,
+        "available": false
+      }
+    ],
+    "current_assortment": true,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store?APO=810264027794",
+    "format": "Refrigerated",
+    "metadata_status": "catalog_identity_only"
+  },
+  {
+    "id": "historical-buffalo-sauce",
+    "name": "Buffalo Sauce (historical assortment)",
+    "category": "Sauces",
+    "shopify_id": null,
+    "url": "https://thrivemarket.com/p/kevins-natural-foods-buffalo-sauce",
+    "upcs": [
+      "810264028814"
+    ],
+    "variants": [],
+    "current_assortment": false,
+    "locator_url": "https://www.kevinsnaturalfoods.com/pages/find-a-store",
+    "format": "Sauce",
+    "metadata_status": "historical_brand_locator_name_and_exact_thrive_upc",
+    "identity_note": "Listed in the official locator's legacy category configuration and exact Kevin's Natural Foods Thrive product page; absent from the September 9 visible brand collection. Not asserted discontinued."
+  }
+]

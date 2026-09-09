@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Quarterly consumer rating trends across the Kevin's Natural Foods portfolio, with transparent product and retailer coverage.">
+  <meta name="theme-color" content="#0000A0"><title>Portfolio Trends | KNF Review Intelligence</title>
+  <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="portfolio.css">
+</head>
+<body class="portfolio-page filters-collapsed">
+  <a class="skip-link" href="#workspace">Skip to dashboard</a>
+  <header class="topbar">
+    <a class="identity" href="portfolio.html"><img src="brand/better-food-text.png" alt="Better food today. A better world tomorrow."><span class="identity-divider"></span><span><strong>Review Intelligence</strong><small>Whole portfolio</small></span></a>
+    <nav aria-label="Portfolio sections"><a href="#trend">Trend</a><a href="#breakdown">Explore</a><a href="#coverage">Coverage</a><a href="#method">Method</a></nav>
+    <div class="top-actions"><div class="use-case-switch" aria-label="Analysis module"><a href="index.html">Beef HMR</a><a href="stir-fry.html">Stir Fry</a><a href="portfolio.html" aria-current="page">Portfolio</a></div></div>
+  </header>
+  <button id="toggleFilters" class="p-mobile-filters" type="button" aria-expanded="false" aria-controls="portfolioFilters">Show filters</button>
+  <div class="app-shell">
+    <aside id="portfolioFilters" class="filter-rail" aria-label="Portfolio filters">
+      <div class="rail-brand"><img src="brand/logo-lockup.png" alt="Mars Food and Nutrition"></div>
+      <div class="filter-header"><div><span class="kicker">Current view</span><strong id="viewCount">Loading…</strong></div><button id="reset" class="text-button" type="button">Reset</button></div>
+      <fieldset class="filter-group"><legend>Timeframe</legend><select id="window" aria-label="Completed quarters"><option value="8">Last 8 completed quarters</option><option value="6">Last 6 completed quarters</option></select><label class="inline-check p-check"><input id="qtd" type="checkbox"><span>Include current quarter to date</span></label></fieldset>
+      <fieldset class="filter-group"><legend>Evidence scope</legend><select id="evidence" aria-label="Evidence scope"><option value="history">Retrieved public histories</option><option value="all">All collected evidence + samples</option></select><small class="filter-context">The broader view includes incomplete retailer samples and earlier archives. It can change the mix, not just the volume.</small></fieldset>
+      <fieldset class="filter-group"><legend>Product category</legend><select id="category" aria-label="Product category"><option value="all">All categories</option></select></fieldset>
+      <fieldset class="filter-group"><legend>Product</legend><select id="product" aria-label="Product"><option value="all">All products</option></select><label class="inline-check p-check"><input id="currentOnly" type="checkbox"><span>Current assortment only</span></label></fieldset>
+      <fieldset class="filter-group"><legend>Originating source</legend><select id="source" aria-label="Originating source"><option value="all">All sources</option><option value="owned">Kevin's site only</option><option value="retailers">Retailers only</option></select><small class="filter-context">Syndicated copies are counted once, not once per storefront.</small></fieldset>
+      <fieldset class="filter-group"><legend>Format</legend><select id="format" aria-label="Product format"><option value="all">All formats</option></select></fieldset>
+      <fieldset class="filter-group"><legend>Calculation</legend><select id="weighting" aria-label="Calculation"><option value="reviews">Review-weighted average</option><option value="products">Equal-product average</option><option value="comparable">Comparable product/source cells</option></select><small id="weightNote" class="filter-context">Each unique dated rating gets one vote.</small></fieldset>
+      <fieldset class="filter-group"><legend>Review characteristics</legend><label class="inline-check"><input id="incentives" type="checkbox"><span>Exclude disclosed incentives</span></label><label class="inline-check p-check"><input id="written" type="checkbox"><span>Written reviews only</span></label></fieldset>
+      <p class="filter-context">Point-in-time research · September 9, 2026<br>No recurring collection feed.</p>
+    </aside>
+    <main id="workspace" class="p-workspace">
+      <div id="loadStatus" role="status" class="p-status">Loading portfolio evidence…</div>
+      <section class="p-hero"><span class="kicker">Kevin's Natural Foods · Portfolio Trends</span><h1>The bigger picture.<br><span>One quarter at a time.</span></h1><p>Explore how consumer ratings change across the portfolio—and see the products, sources and review volumes behind every point.</p><div class="p-chips"><span id="assortmentChip">105 current food products</span><span>11 categories</span><span>Public-source evidence</span></div></section>
+      <section id="kpis" class="p-kpis" aria-label="Latest completed quarter metrics"></section>
+      <section id="trend" class="p-card">
+        <div class="p-card-head"><div><span class="kicker">Quarterly consumer ratings</span><h2>Average rating over time</h2><p id="trendSubtitle"></p></div><div class="p-actions"><select id="chartFormat" aria-label="Chart export format"><option value="png">PNG image</option><option value="svg">SVG vector</option></select><button id="exportChart" class="button button-secondary" type="button">Export chart</button><button id="exportQuarter" class="button button-primary" type="button">Export quarterly CSV</button></div></div>
+        <div class="p-chart-controls"><label>Compare by <select id="overlay" aria-label="Chart overlay"><option value="none">Portfolio only</option><option value="source">Source</option><option value="category">Category</option></select></label><label class="inline-check"><input id="zoom" type="checkbox"><span>Zoom rating axis</span></label></div>
+        <div id="chart" class="p-chart" aria-label="Quarterly ratings chart"></div><div id="legend" class="p-legend"></div>
+        <p id="chartNote" class="p-note"></p>
+        <details class="p-details"><summary>Quarterly data table</summary><div id="quarterTable" class="p-table-wrap"></div></details>
+      </section>
+      <section id="breakdown" class="p-card"><div class="p-card-head"><div><span class="kicker">Dissect the data</span><h2 id="detailTitle">Quarter detail</h2><p>Select a quarter on the chart to inspect its mix.</p></div><label>Detail quarter <select id="detailQuarter" aria-label="Detail quarter"></select></label></div>
+        <h3>Rating distribution</h3><div id="ratingDistribution" class="p-table-wrap"></div><div class="p-split"><div><h3>By category</h3><div id="categoryTable" class="p-table-wrap"></div></div><div><h3>By source</h3><div id="sourceTable" class="p-table-wrap"></div></div></div><h3>Product contribution</h3><div id="productTable" class="p-table-wrap p-scroll-table"></div>
+      </section>
+      <section class="p-card" id="reviews"><div class="p-card-head"><div><span class="kicker">Evidence explorer</span><h2>Read the underlying reviews</h2><p id="reviewCount"></p></div><button id="exportReviews" class="button button-secondary" type="button">Export filtered reviews</button></div><div class="p-search"><label for="reviewSearch">Search selected quarter</label><input id="reviewSearch" type="search" placeholder="Search review text or product…"><label for="starFilter">Stars</label><select id="starFilter"><option value="all">All ratings</option><option value="low">1–2 stars</option><option value="3">3 stars</option><option value="4">4 stars</option><option value="5">5 stars</option></select></div><div id="reviewList"></div><button id="moreReviews" class="button button-secondary" type="button">Show more reviews</button></section>
+      <section id="coverage" class="p-card"><div class="p-card-head"><div><span class="kicker">Know the denominator</span><h2>Assortment & source coverage</h2><p>A product listing, cumulative rating total and retrieved dated review are different evidence types.</p></div><button id="exportCoverage" class="button button-secondary" type="button">Export coverage</button></div><div id="coverageSummary" class="p-coverage-summary"></div><div id="sourceCoverage" class="p-table-wrap"></div>
+        <details class="p-details"><summary>Product × source matching matrix</summary><p class="p-note">— means no exact match established in this audit, not zero reviews or no distribution. Filter category/product/source above to narrow the matrix.</p><div id="matrix" class="p-table-wrap p-matrix"></div></details>
+        <details class="p-details"><summary>Cumulative rating snapshots—separate from the trend</summary><p class="p-note">These are current or retained provider totals, not quarterly submissions. Counts can overlap across syndicated sources and shared product pools; do not add them into the trend.</p><div id="snapshots" class="p-table-wrap p-scroll-table"></div></details>
+        <details class="p-details"><summary>Exact listing evidence and access notes</summary><div id="listingTable" class="p-table-wrap p-scroll-table"></div></details>
+      </section>
+      <section id="method" class="p-card"><span class="kicker">Method & interpretation</span><h2>Read the trend with confidence—and context.</h2><div id="methodText" class="p-method"></div><p class="p-note">No sales volumes or consumer-care complaint data are included. Ratings describe the collected review evidence; they do not establish causation or represent every purchaser.</p><a href="downloads/KNF_Portfolio_Trends_Collection_Summary.md" target="_blank" rel="noopener">Download collection and methodology summary</a></section>
+      <footer class="p-footer">Mars Food & Nutrition · Kevin's Natural Foods Review Intelligence · Public-source research prototype</footer>
+    </main>
+  </div>
+  <script type="module" src="portfolio.js"></script>
+</body></html>
