@@ -271,6 +271,7 @@ def match_product(title,upc=None):
         c=p['category'];name=norm(p['name']);tokens=set(name.split())-stop
         if (c=='Frozen Bowls')!=isbowl:continue
         if (c=='Frozen Family Meals')!=isfamily:continue
+        if 'pasta' in t and c in ['Chicken Entrées','Beef Entrées']:continue
         if (c=='Stir-Fry Entrées')!=iskit:continue
         if ('soup' in t)!=(c=='Soups'):continue
         if c=='Sauces' and not ('sauce' in t and not ('chicken' in t or 'beef' in t)):continue

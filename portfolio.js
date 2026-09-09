@@ -1,4 +1,5 @@
-import {stats,selectRows,quarterly,csvCell} from './portfolio-metrics.mjs';
+import {stats,selectRows,quarterly,csvCell,matches,sourceMatches} from './portfolio-metrics.mjs';
+import {coverageReason} from './portfolio-coverage.mjs';
 const $=id=>document.getElementById(id);
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const num=n=>new Intl.NumberFormat('en-US').format(n);
@@ -9,11 +10,22 @@ const OWNED="Kevin's Natural Foods";
 const COLORS=['#19738D','#62BB46','#EB6916','#8C3C68','#00634D','#B45378','#7B6C00','#67728D'];
 const state={summary:null,reviews:[],products:new Map(),filtered:[],quarters:[],series:[],limit:15,explorer:[]};
 const checks=['qtd','incentives','written','zoom','currentOnly'];
-const controls=['window','qtd','evidence','category','product','source','format','weighting','incentives','written','overlay','zoom','currentOnly'];
-function filters(){return Object.fromEntries(controls.map(id=>[id,checks.includes(id)?$(id).checked:$(id).value]));}
+const multiIds=['category','product','source','format'],multi={};
+const controls=['window','qtd','evidence','weighting','incentives','written','overlay','zoom','currentOnly'];
+function filters(){return {...Object.fromEntries(controls.map(id=>[id,checks.includes(id)?$(id).checked:$(id).value])),...Object.fromEntries(multiIds.map(id=>[id,[...multi[id].selected]]))};}
+function multiLabel(id){const m=multi[id];return m.selected.size===m.options.length?'All '+id+' selections':m.selected.size===0?'None selected':m.options.filter(o=>m.selected.has(o.value)).map(o=>o.label).join('; ');}
+function updateMulti(id){const m=multi[id];$(id).querySelector('[data-selection-count]').textContent=`${m.selected.size} of ${m.options.length} selected`;$(id).querySelectorAll('input[type=checkbox]').forEach(el=>el.checked=m.selected.has(el.value));}
+function setMulti(id,values){multi[id].selected=new Set(values);updateMulti(id);}
+function mountMulti(id,options){
+  multi[id]={options,selected:new Set(options.map(o=>o.value))};
+  $(id).innerHTML=`<details><summary><span data-selection-count></span></summary><div class="p-multi-actions"><button type="button" data-pick="all">Select all</button><button type="button" data-pick="none">Clear all</button>${id==='source'?'<button type="button" data-pick="retailers">Retailers only</button><button type="button" data-pick="owned">Kevin’s only</button>':''}</div><input type="search" aria-label="Search ${id} choices" placeholder="Search choices…"><div class="p-multi-list">${options.map(o=>`<label><input type="checkbox" value="${esc(o.value)}" checked><span>${esc(o.label)}${o.note?`<small>${esc(o.note)}</small>`:''}</span></label>`).join('')}</div></details>`;
+  $(id).addEventListener('change',e=>{if(e.target.type!=='checkbox')return;e.target.checked?multi[id].selected.add(e.target.value):multi[id].selected.delete(e.target.value);updateMulti(id);render();});
+  $(id).addEventListener('input',e=>{if(e.target.type==='search')$(id).querySelectorAll('.p-multi-list label').forEach(el=>el.hidden=!el.textContent.toLowerCase().includes(e.target.value.toLowerCase().trim()));});
+  $(id).addEventListener('click',e=>{const action=e.target.dataset.pick;if(!action)return;setMulti(id,options.filter(o=>action==='all'||(action==='owned'&&o.value===OWNED)||(action==='retailers'&&o.value!==OWNED)).map(o=>o.value));render();});
+  updateMulti(id);
+}
 function table(headers,rows,numeric=[]){return `<table><thead><tr>${headers.map((h,i)=>`<th scope="col" class="${numeric.includes(i)?'num':''}">${esc(h)}</th>`).join('')}</tr></thead><tbody>${rows.length?rows.map(row=>`<tr>${row.map((cell,i)=>`<td class="${numeric.includes(i)?'num':''}">${cell}</td>`).join('')}</tr>`).join(''):`<tr><td colspan="${headers.length}">No eligible evidence for this selection.</td></tr>`}</tbody></table>`;}
 function option(value,label){return `<option value="${esc(value)}">${esc(label)}</option>`;}
-function updateProducts(){const current=$('product').value;const category=$('category').value;const products=state.summary.products.filter(p=>(category==='all'||p.category===category)&&(!$('currentOnly').checked||p.current_assortment));$('product').innerHTML=option('all','All products')+products.map(p=>option(p.id,p.name)).join('');if(products.some(p=>p.id===current))$('product').value=current;}
 function render(){
   const f=filters();state.quarters=state.summary.default_quarters.slice(-Number(f.window));if(f.qtd)state.quarters.push(state.summary.current_quarter);
   state.filtered=selectRows(state.reviews,state.products,f,state.quarters);state.series=quarterly(state.filtered,state.quarters,f.weighting);
@@ -75,12 +87,12 @@ function renderReviews(){const text=$('reviewSearch').value.toLowerCase().trim()
   $('moreReviews').hidden=rows.length<=state.limit;
 }
 function renderCoverage(){
-  const f=filters(),summary=state.summary;const products=summary.products.filter(p=>(f.category==='all'||p.category===f.category)&&(f.product==='all'||p.id===f.product)&&(f.format==='all'||p.format===f.format)&&(!f.currentOnly||p.current_assortment));const ids=new Set(products.map(p=>p.id));
-  const sourceMatch=s=>f.source==='all'||(f.source==='owned'?s===OWNED:f.source==='retailers'?s!==OWNED:s===f.source);
+  const f=filters(),summary=state.summary;const products=summary.products.filter(p=>matches(f.category,p.category)&&matches(f.product,p.id)&&matches(f.format,p.format)&&(!f.currentOnly||p.current_assortment));const ids=new Set(products.map(p=>p.id));
+  const sourceMatch=s=>sourceMatches(f.source,s);
   const cov=summary.coverage.filter(c=>ids.has(c.product_id)&&sourceMatch(c.source));
   const auditRows=state.reviews.filter(r=>ids.has(r.product_id)&&sourceMatch(r.source));
   $('coverageSummary').innerHTML=`<span><strong>${num(auditRows.length)}</strong> collected dated records</span><span><strong>${new Set(auditRows.map(r=>r.product_id)).size} / ${products.length}</strong> selected products with dated evidence</span><span><strong>${num(summary.quality.duplicates_removed)}</strong> overlaps removed across the full collection</span><span>Audit covers July 2024–September 9, 2026, including samples. Product/source filters apply; quarter and review-characteristic filters do not.</span>`;
-  $('sourceCoverage').innerHTML=table(['Originating source','All dated records','Retrieved histories','Products with records','Latest dated record'],summary.sources.filter(s=>sourceMatch(s.source)).map(s=>{const rs=auditRows.filter(r=>r.source===s.source);return [esc(s.source),num(rs.length),num(rs.filter(r=>r.coverage_tier==='history').length),num(new Set(rs.map(r=>r.product_id)).size),esc(rs.map(r=>r.date).sort().at(-1)||'No dated records')];}),[1,2,3]);
+  $('sourceCoverage').innerHTML=table(['Originating source','Dated records collected','History-tier records','Coverage status & reason','Latest collected date'],summary.sources.filter(s=>sourceMatch(s.source)).map(s=>{const rs=auditRows.filter(r=>r.source===s.source),cs=cov.filter(c=>c.source===s.source),ss=summary.snapshots.filter(x=>x.source===s.source&&ids.has(x.product_id)),reason=coverageReason(s.source,rs,cs,ss,state.reviews);return [esc(s.source),s.source==='Instacart (hosted review pool)'?'Attributed to origins':rs.length?num(rs.length):'<span class="p-missing">Not collected</span>',rs.filter(r=>r.coverage_tier==='history').length?num(rs.filter(r=>r.coverage_tier==='history').length):'None collected',`<strong>${esc(reason.label)}</strong><p class="p-note">${esc(reason.detail)}</p>`,esc(rs.map(r=>r.date).sort().at(-1)||'Unknown')];}),[1,2]);
   const sources=summary.sources.filter(s=>sourceMatch(s.source)).map(s=>s.source);
   $('matrix').innerHTML=table(['Product',...sources],products.map(p=>[esc(p.name),...sources.map(s=>{const cells=cov.filter(c=>c.product_id===p.id&&c.source===s);if(!cells.length)return '<span title="Exact page not established in this audit">—</span>';const c=cells.find(c=>/retrieved/.test(c.status))||cells.find(c=>c.records)||cells[0];const hist=/retrieved/.test(c.status);const labels={shared_flavor_pool:'Pooled',ratings_snapshot_only:'Snapshot',access_limited:'Access gap',page_unverified:'Unverified',identity_excluded:'Excluded',error:'Unverified'};return `<a class="${hist?'hist':c.records?'sample':''}" href="${esc(c.url)}" target="_blank" rel="noopener noreferrer" title="${esc(c.status+' · '+(c.note||''))}">${hist?'History':c.records?'Sample':labels[c.status]||'Listing'}</a>`;})]));
   $('listingTable').innerHTML=table(['Product','Source','Status','Capture date','Notes'],cov.map(c=>[`<a href="${esc(c.url)}" target="_blank" rel="noopener noreferrer">${esc(state.products.get(c.product_id).name)}</a>`,esc(c.source),esc(c.status.replaceAll('_',' ')),esc(c.captured_at),esc(c.note||'')]));
@@ -92,8 +104,8 @@ function exportQuarter(){const f=filters();download('KNF_Quarterly_Ratings.csv',
 async function exportChart(){
   const svg=$('chart').querySelector('svg').cloneNode(true),f=filters();
   const captions=['KNF portfolio — '+$('trendSubtitle').textContent,$('weightNote').textContent,
-    `Category: ${$('category').selectedOptions[0].text} · Product: ${$('product').selectedOptions[0].text}`,
-    `Source: ${$('source').selectedOptions[0].text} · Format: ${$('format').selectedOptions[0].text}`,
+    `Category: ${multiLabel('category')} · Product: ${multiLabel('product')}`,
+    `Source: ${multiLabel('source')} · Format: ${multiLabel('format')}`,
     `Current assortment only: ${f.currentOnly} · Written only: ${f.written} · Disclosed incentives excluded: ${f.incentives}`];
   const lines=captions.flatMap(text=>text.match(/.{1,140}(?:\s|$)|\S+/g)||[text]);
   const legendItems=[...$('legend').querySelectorAll('span')].map(el=>({text:el.textContent,color:el.querySelector('i')?.style.background}));
@@ -113,14 +125,15 @@ async function boot(){try{
   const [summary,reviews]=await Promise.all(['data/portfolio_summary.json','data/portfolio_reviews.json'].map(async url=>{const r=await fetch(url);if(!r.ok)throw new Error(`Data request failed (${r.status})`);return r.json();}));
   state.summary=summary;state.reviews=reviews;state.products=new Map(summary.products.map(p=>[p.id,p]));
   $('assortmentChip').textContent=`${summary.products.filter(p=>p.current_assortment).length} current + ${summary.products.filter(p=>!p.current_assortment).length} historical products`;
-  $('category').innerHTML+=Array.from(new Set(summary.products.map(p=>p.category))).map(c=>option(c,c)).join('');
-  $('source').innerHTML+=summary.sources.map(s=>option(s.source,s.source+(s.dated_records?'':' · no dated data'))).join('');
-  $('format').innerHTML+=Array.from(new Set(summary.products.map(p=>p.format))).map(c=>option(c,c)).join('');updateProducts();
+  mountMulti('category',Array.from(new Set(summary.products.map(p=>p.category))).map(c=>({value:c,label:c})));
+  mountMulti('product',summary.products.map(p=>({value:p.id,label:p.name,note:p.category})));
+  mountMulti('source',summary.sources.map(s=>({value:s.source,label:s.source,note:s.source==='Instacart (hosted review pool)'?'Counted under original sources':s.dated_records?`${num(s.dated_records)} collected records`:'Dated reviews not collected'})));
+  mountMulti('format',Array.from(new Set(summary.products.map(p=>p.format))).map(c=>({value:c,label:c})));
   $('methodText').innerHTML=Object.entries(summary.methodology).map(([k,v])=>`<p><strong>${esc(k.replaceAll('_',' '))}</strong>${esc(v)}</p>`).join('');
-  for(const id of controls)$(id).addEventListener('change',()=>{if(['category','currentOnly'].includes(id))updateProducts();render();});
-  $('reset').addEventListener('click',()=>{for(const id of controls){if(checks.includes(id))$(id).checked=false;else $(id).selectedIndex=0;}updateProducts();$('reviewSearch').value='';$('starFilter').value='all';render();});
+  for(const id of controls)$(id).addEventListener('change',render);
+  $('reset').addEventListener('click',()=>{for(const id of controls){if(checks.includes(id))$(id).checked=id==='qtd';else $(id).selectedIndex=0;}for(const id of multiIds){setMulti(id,multi[id].options.map(o=>o.value));$(id).querySelector('input[type=search]').value='';$(id).querySelectorAll('label').forEach(el=>el.hidden=false);}$('reviewSearch').value='';$('starFilter').value='all';render();});
   $('detailQuarter').addEventListener('change',()=>{state.limit=15;renderDetail();});$('reviewSearch').addEventListener('input',()=>{state.limit=15;renderReviews();});$('starFilter').addEventListener('change',()=>{state.limit=15;renderReviews();});$('moreReviews').addEventListener('click',()=>{state.limit+=15;renderReviews();});
-  document.addEventListener('click',e=>{const q=e.target.closest('[data-quarter]'),p=e.target.closest('[data-product]');if(q){$('detailQuarter').value=q.dataset.quarter;state.limit=15;renderDetail();$('breakdown').scrollIntoView({behavior:'smooth',block:'start'});}if(p){$('product').value=p.dataset.product;render();}});
+  document.addEventListener('click',e=>{const q=e.target.closest('[data-quarter]'),p=e.target.closest('[data-product]');if(q){$('detailQuarter').value=q.dataset.quarter;state.limit=15;renderDetail();$('breakdown').scrollIntoView({behavior:'smooth',block:'start'});}if(p){setMulti('product',[p.dataset.product]);render();}});
   $('chart').addEventListener('keydown',e=>{if(['Enter',' '].includes(e.key)&&e.target.dataset.quarter){e.preventDefault();e.target.dispatchEvent(new MouseEvent('click',{bubbles:true}));}});
   $('exportQuarter').addEventListener('click',exportQuarter);$('exportChart').addEventListener('click',exportChart);
   $('exportReviews').addEventListener('click',()=>download('KNF_Filtered_Quarter_Reviews.csv',csv(['product','category','source','date','rating','title','text','incentive_disclosure','evidence_tier','captured_at','source_url'],state.explorer.map(r=>[state.products.get(r.product_id).name,state.products.get(r.product_id).category,r.source,r.date,r.rating,r.title,r.text,r.incentive,r.coverage_tier,r.captured_at,r.source_url]))));

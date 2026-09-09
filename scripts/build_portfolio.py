@@ -25,7 +25,7 @@ def build(from_cache=False):
     archive=DATA/'portfolio_source_evidence.json'
     evidence=load(archive) if archive.exists() and not from_cache else {}
     completed={'legacy_window_retrieved','history_retrieved','window_retrieved'}
-    for name in ['brand','thrive','walmart','target','other_sources']:
+    for name in ['brand','thrive','walmart','target','other_sources','instacart']:
         path=CACHE/(name+'.json')
         if name not in evidence and not path.exists():continue
         d=evidence.get(name) or load(path);evidence[name]=d;cov=d.get('coverage',[])
@@ -78,7 +78,9 @@ def build(from_cache=False):
             coverage.append({'product_id':pid,'source':source,'url':url,'status':'prior_listing_evidence','match':c.get('match_type'),'captured_at':d.get('as_of','2026-08-25'),'note':c.get('note') or 'Retained previous exact listing evidence; not a newly collected full history.'})
     # Current provider has a separate access contract. Do not call legacy completion
     # equivalent to complete current brand coverage.
-    provider_note='Current brand pages also load Bazaarvoice. The tested public Conversations endpoint rejected the widget key; no current-provider history was added. Legacy Judge.me histories are identified separately.'
+    coverage=[c for c in coverage if c['source']!='Instacart / Sprouts / Meijer']
+    snapshots=[s for s in snapshots if s['source']!='Instacart / Sprouts / Meijer']
+    provider_note='Current brand pages also load Bazaarvoice. Direct current-provider history remains unavailable through the tested public endpoint. Some newer Kevin’s-origin records were retrieved from publicly hosted Instacart feeds; these do not certify complete current brand coverage. Legacy Judge.me histories are identified separately.'
     source_names=sorted(set(c['source'] for c in coverage)|set(r['source'] for r in unique)|{'Food Lion','Giant','Stop & Shop','The Fresh Market','Sprouts','Meijer'})
     tiers=[]
     for source in source_names:

@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {stats,selectRows,quarterly,csvCell} from './portfolio-metrics.mjs';
+import {coverageReason} from './portfolio-coverage.mjs';
 
 const read=n=>JSON.parse(readFileSync(new URL(`./data/${n}.json`,import.meta.url),'utf8'));
 const s=read('portfolio_summary'),rows=read('portfolio_reviews'),products=new Map(s.products.map(p=>[p.id,p]));
@@ -34,6 +35,18 @@ assert.ok(!selectRows(rows,products,{...defaults,written:true},s.default_quarter
 const comp=selectRows(rows,products,{...defaults,weighting:'comparable'},s.default_quarters);
 for(const r of comp){assert.equal(new Set(comp.filter(x=>x.product_id===r.product_id&&x.source===r.source).map(x=>x.quarter)).size,8);}
 assert.equal(stats([]).average,null);
+const categories=[...new Set(s.products.map(p=>p.category))].slice(0,2),sources=["Kevin's Natural Foods",'Thrive Market'];
+const multi=selectRows(rows,products,{...defaults,category:categories,source:sources},s.default_quarters);
+assert.ok(multi.length>0&&multi.every(r=>categories.includes(products.get(r.product_id).category)&&sources.includes(r.source)));
+for(const dimension of ['source','category','product','format'])assert.equal(selectRows(rows,products,{...defaults,[dimension]:[]},s.default_quarters).length,0);
+assert.equal(selectRows(rows,products,{...defaults,source:s.sources.map(x=>x.source)},s.default_quarters).length,selected.length);
+assert.ok(selectRows(rows,products,defaults,[...s.default_quarters,s.current_quarter]).length>selected.length);
+assert.equal(coverageReason('Hannaford',[],[],[{rating_count:202}]).label,'Ratings visible; dated history missing');
+assert.equal(coverageReason('Costco',[],[{status:'access_limited'}],[]).label,'Access limited');
+assert.equal(coverageReason('Candidate',[],[],[]).label,'Not fully assessed');
+assert.equal(coverageReason('Target',[{coverage_tier:'sample'}],[],[]).label,'Partial / archived evidence');
+assert.equal(coverageReason('Instacart (hosted review pool)',[],[{feed_end_reached:true}],[]).label,'Hosted reviews counted under their origins');
+assert.ok(readFileSync(new URL('portfolio.html',import.meta.url),'utf8').includes('id="qtd" type="checkbox" checked'));
 assert.equal(stats([{product_id:'a',source:'x',rating:1},{product_id:'a',source:'x',rating:1},{product_id:'b',source:'x',rating:5}]).average,7/3);
 assert.equal(stats([{product_id:'a',source:'x',rating:1},{product_id:'a',source:'x',rating:1},{product_id:'b',source:'x',rating:5}],'products').average,3);
 assert.ok(csvCell('=WEBSERVICE("bad")').startsWith('"\''));
@@ -41,4 +54,4 @@ assert.ok(csvCell(' +SUM(1)').startsWith('"\''));
 assert.equal(csvCell('line,"two"'),'"line,""two"""');
 for(const page of ['index.html','stir-fry.html'])assert.ok(readFileSync(new URL(page,import.meta.url),'utf8').includes('href="portfolio.html"'));
 console.log('Portfolio integrity and calculation tests passed.');
-console.log(JSON.stringify({default_n:selected.length,comparable_n:comp.length,quarters:series.map(q=>({quarter:q.quarter,n:q.n,average:q.average,products:q.products,sources:q.sources}))},null,2));
+console.log(JSON.stringify({completed_quarters_n:selected.length,default_with_qtd_n:selectRows(rows,products,defaults,[...s.default_quarters,s.current_quarter]).length,comparable_n:comp.length,quarters:series.map(q=>({quarter:q.quarter,n:q.n,average:q.average,products:q.products,sources:q.sources}))},null,2));
